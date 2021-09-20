@@ -1,0 +1,247 @@
+#!/bin/sh
+
+csize -h `cat ListOfSourcefiles`
+
+#From lott@bogner.informatik.uni-kl.de (Christopher Lott)
+#Newsgroups: comp.software-eng,comp.lang.c
+#Subject: Pgm to measure size of C source files
+#Date: Tue, 7 Jun 1994 15:49:00 GMT
+#
+#Hi,
+#
+#In the course of preparing code for an experiment involving our
+#students, I found the need for accurate measures of the size of
+#C source files.  I had code lying around for a C recognizer, and
+#using that I cobbled together a program for measuring the size of
+#C source files. 
+#
+#Yes, I have the kdsi program that was posted to comp.sources.unix. 
+#
+#gatekeeper.dec.com:/pub/usenet/comp.sources.unix
+#ftp.uu.net /usenet/comp.sources.unix
+#
+#However, I do not like the measures that it calculates, I do not
+#care for the approach taken, and the documentation is very light. 
+#Yes, I'm afraid that I did reinvent the wheel this time.  Guilty
+#as charged.  The primary difference between csize and other programs
+#that I've found is that mine uses lex to analyze the input and is
+#documented at length.
+#
+#Here is the output from the program when run upon two of its files:
+#
+#% csize -h csize.h csize.c
+#   total    blank lines w/   nb, nc    semi- preproc. file
+#   lines    lines comments    lines   colons  direct.
+#--------+--------+--------+--------+--------+--------+----
+#      19        4        5       10        4        0 csize.h
+#     117       12       10       96       43        3 csize.c
+#     136       16       15      106       47        3 total
+#
+#
+#Below I attach the man page for my version.  If anyone would like
+#to play with it, I'll send out the source and test suite.  I would
+#very much welcome the chance to get feedback about portability,
+#remaining faults, etc.  After I get a little more confident about
+#the program's stability, I will try to submit it to one of the
+#source newsgroups.
+#
+#I plan a version for C++ but have not yet started it.
+#
+#Thanks for your time.
+#
+#chris...
+#
+#----
+#
+#CSIZE(1)                 USER COMMANDS                   CSIZE(1)
+#
+#
+#
+#NAME
+#     csize - measure the size of C source files
+#
+#SYNOPSIS
+#     csize [ -eh ] filename.c [ ...  ]
+#
+#DESCRIPTION
+#     csize performs lexical analysis on the named C source  files
+#     to  collect  various  size  measures.  It also keeps a total
+#     count for all named files.  Both old-style  (K&R)  and  new-
+#     style  (ANSI)  C  files are accepted.  The C preprocessor is
+#     not run, and preprocessor directives are counted instead  of
+#     being  expanded.   The  program  was designed to measure the
+#     source as the programmer sees it, not the  version  that  is
+#     fed to the compiler.  The input is expected to be in accept-
+#     able form for a C compiler; lexically incorrect  input  will
+#     cause unreliable output ("GIGO").
+#
+#OPTIONS
+#     -e   Echo the input file while it is being processed.
+#
+#     -h   Include a descriptive header when printing the results.
+#
+#MEASURES
+#     csize collects data for the following  size  measures  of  C
+#     source  code: total lines, blank lines, lines with comments,
+#     nonblank  noncomment  lines,  semicolons,  and  preprocessor
+#     directives.  A line is defined as the sequence of characters
+#     between two newline characters.  The sole exception to  this
+#     definition  is the first line of a file, which starts at the
+#     beginning of the input file.  If the  last  character  in  a
+#     file  is  not  a  newline (users of emacs should be familiar
+#     with this phenomenon), then the last line will not be  prop-
+#     erly counted.
+#
+#     total lines
+#          The number of newline characters in the file.  This  is
+#          identical  to  the result computed by wc with the lines
+#          ("-l") option.
+#
+#          Pitfalls: arguably a poor measure  of  a  file's  size,
+#          because  this  measure is heavily influenced by bracing
+#          style, spacing, and continuation  lines.  (If  it  were
+#          sufficient  to  use  wc  , this program would be wholly
+#          unnecessary!)
+#
+#     blank lines
+#          The number of lines in the file with nothing  but  whi-
+#          tespace  between  the previous newline charater and the
+#          newline  that  terminates  the  line.   Whitespace   is
+#          defined  as  a blank, a horizontal tab, a vertical tab,
+#          or a formfeed character.
+#
+#
+#
+#Sun Release 4.1     Last change: June 7, 1994                   1
+#
+#
+#
+#
+#
+#
+#CSIZE(1)                 USER COMMANDS                   CSIZE(1)
+#
+#
+#
+#     lines with comments
+#          The number of lines on  which  a  comment  occurs.  The
+#          appearance  of a comment anywhere on a line causes that
+#          line to be marked as having a comment.  Any  number  of
+#          comments,  each with its own start token ("/*") and end
+#          token ("*/"), may occur on a single line; the line will
+#          only  be counted once. If a comment extends over multi-
+#          ple lines, each line is counted as  having  a  comment.
+#          See also the note below in preprocessor directives .
+#
+#          Pitfalls: in C, unlike FORTRAN, there is no such  thing
+#          as  a  pure  comment line.  Comments can appear before,
+#          within, or after normal C statements on the  same  line
+#          as  the  statements,  as well as on lines of their own.
+#          Therefore the sum of  the  measures  "lines  with  com-
+#          ments,"  "blank lines," and "noncomment nonblank lines"
+#          will only sometimes be equal to the measure "number  of
+#          newlines," and then only by chance.
+#
+#     nonblank noncomment lines
+#          The number of lines that are not blank and do not  con-
+#          sist  entirely of a comment. This includes preprocessor
+#          directives.  This measure approximates  the  number  of
+#          nonblank,  noncommentary  source  lines  (often labeled
+#          NCSL) in a C source file.
+#
+#          Pitfalls: This measure includes lines with nothing  but
+#          curly  braces,  so  choosing  a different bracing style
+#          will affect this measure significantly.
+#
+#     semicolons
+#          The number of semicolons that do not appear  in  string
+#          constants.   This  measure  approximates  the number of
+#          variable declarations, function prototypes, and execut-
+#          able statements in a C source file.
+#
+#          Pitfalls: Although most statements are terminated  with
+#          a  semicolon,  function  headers  have  no  semicolons,
+#          "while" statements and "case" statements can be written
+#          with  a  bare  minimum  of semicolons, and a single for
+#          statement has a minimum of two semicolons. See also the
+#          note below in preprocessor directives .
+#
+#     preprocessor directives
+#          The number of  lines  on  which  the  hash  sign  ("#")
+#          appears as the first character on the line.
+#
+#          Pitfalls: All characters from the hash sign to the next
+#          nonescaped  newline are ignored, meaning that any char-
+#          acters on the same line as the directive or on  a  con-
+#          tinuation  line  of  a  directive are not counted; this
+#          includes   comments   and   semicolons.   Again,    the
+#
+#
+#
+#Sun Release 4.1     Last change: June 7, 1994                   2
+#
+#
+#
+#
+#
+#
+#CSIZE(1)                 USER COMMANDS                   CSIZE(1)
+#
+#
+#
+#          preprocessor  is not run: included files are not pulled
+#          in, no macro substitutions are done, etc.
+#
+#EXAMPLE
+#     A version of the hello, world program is  measured  in  this
+#     example.
+#
+#     % cat hello.c
+#     /* hello, world */
+#
+#     #include <stdio.h>
+#     int main(argc, argv) /* what about envp? */
+#     int argc;
+#     char **argv;
+#     {
+#        printf("hello, world.0);
+#     }
+#     % csize -h hello.c
+#        total    blank lines w/   nb, nc    semi- preproc. file
+#        lines    lines comments    lines   colons  direct.
+#     --------+--------+--------+--------+--------+--------+----
+#            9        1        2        7        3        1 hello.c
+#
+#DIAGNOSTICS
+#     The program will complain about lexical errors such as ille-
+#     gal characters outside of string constants.
+#
+#BUGS
+#     This entire program can justifiably be considered  called  a
+#     bug, because these measures should be computed by the C com-
+#     piler. Compiler  support  is  required  to  obtain  accurate
+#     counts of declarations and executable statements.
+#
+#     The measures are strongly tied to the newline character.  If
+#     the  last  character  in  a file is not a newline character,
+#     then the sequence of characters between the end of the  file
+#     and  the  previous  newline  is  not a line according to the
+#     definition used by csize and will not  be  included  in  the
+#     counts of total lines or nonblank noncomment lines.
+#
+#     There are certainly pathological cases out there  that  will
+#     confuse the program, although they are acccepted by a C com-
+#     piler.  The author would much appreciate being told of  such
+#     cases and any possible remedies.
+#
+#AUTHOR
+#     Christopher Lott <lott@informatik.uni-kl.de>
+#
+#
+#
+#Sun Release 4.1     Last change: June 7, 1994                   3
+#-- 
+#"Christopher Lott / Email: lott@informatik.uni-kl.de / Tel: +49 (631) 205-3334"
+#"Address: FB Informatik - Bau 57 / Universitaet KL / D--67653 Kaiserslautern"
+#"World-wide web: http://uomo.informatik.uni-kl.de:2080/Personalia/cml.html"
+#

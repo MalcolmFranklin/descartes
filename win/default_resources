@@ -1,0 +1,135 @@
+!Resource values used for Thesis diagrams:
+Descartes*foreground:           #800000
+Descartes*background:           #e0e0e0
+Descartes.display_text_shell.mainwindow.XmScrolledWindow.text_scrolled_window.ro
+ws:             16
+Descartes.display_text_shell.mainwindow.XmScrolledWindow.text_scrolled_window.co
+lumns:          50
+Descartes.mainwindow.pane*history_text.columns: 50
+Descartes.mainwindow.message_text.columns:              50
+
+Descartes.*XmText*fontList:     "*prestige-medium-r-normal-*-*-128-*=text"
+==============================================================
+
+
+! Use a proportional width font for menus, buttons & stuff.
+Descartes*fontList:		*helvetica-bold-r-normal-*-*-140-*=master1,*helvetica-bold-r-normal--14-*=master2,*helvetica-medium-o-normal-*-*-140-*=small_italic,*helvetica-medium-r-normal-*-*-140-*=unbold
+! Use a fixed-width font for messages, and viewing file contents, so that columns! line up between lines of text.
+Descartes*XmText*fontList:	*courier-bold-r-normal-*-14-*=text
+! The following font is prettier.  If you have it on your system, then put! the next line in your .Xdefaults file.!Descartes*XmText*fontList:	*prestige-medium-r-normal-*-*-128-*=text
+!
+! Main window pulldown menus
+Descartes.mainwindow.menubar.file_cbtn.labelString:	File
+Descartes.mainwindow.menubar.file_cbtn.mnemonic:	F
+Descartes.mainwindow.menubar.view_cbtn.labelString:	View
+Descartes.mainwindow.menubar.view_cbtn.mnemonic:	V
+Descartes.mainwindow.menubar.options_cbtn.labelString:	Options
+Descartes.mainwindow.menubar.options_cbtn.mnemonic:	O
+Descartes.mainwindow.menubar.help_cbtn.labelString:	Help
+Descartes.mainwindow.menubar.help_cbtn.mnemonic:	H
+!
+! Message hisory window below the drawing area
+Descartes.mainwindow.pane*history_text.rows:		6
+Descartes.mainwindow.pane*history_text.columns:	80
+!
+! Message window at the bottom of the Motif main window
+Descartes.mainwindow.message_text.columns:		80
+! We have to use class-names to access children of any menu widgets
+! created by the XmCreatePulldonwMenu() (or any other XmCreate[]Menu() call)
+! because the Motif library assigns an instance name for the XmMenuShell(),
+! not the programmer.  There is no way to determine this instance name
+! before runtime.
+!
+! File menu choices:
+Descartes.mainwindow.menubar.XmMenuShell.file_pmnu.open_pbtn.labelString:		Open...
+Descartes.mainwindow.menubar.XmMenuShell.file_pmnu.open_pbtn.mnemonic:			O
+Descartes.mainwindow.menubar.XmMenuShell.file_pmnu.run_pbtn.labelString:		Run
+Descartes.mainwindow.menubar.XmMenuShell.file_pmnu.run_pbtn.mnemonic:			R
+Descartes.mainwindow.menubar.XmMenuShell.file_pmnu.exit_pbtn.labelString:		Exit
+Descartes.mainwindow.menubar.XmMenuShell.file_pmnu.exit_pbtn.mnemonic:			x
+!
+! File->Open submenu choices
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.file_open_pulldown.load_descartes_spec.labelString:	Load Descartes Spec...
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.file_open_pulldown.load_descartes_spec.mnemonic: D
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.file_open_pulldown.read_tree_file.labelString:   Read Tree File...
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.file_open_pulldown.read_tree_file.mnemonic:      T
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.file_open_pulldown.read_log_file.labelString:    Read Log File...
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.file_open_pulldown.read_log_file.mnemonic:       L
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.file_open_pulldown.read_input_file.labelString:  Read Input File...
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.file_open_pulldown.read_input_file.mnemonic:     I
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.file_open_pulldown.read_output_file.labelString: Read Output File...
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.file_open_pulldown.read_output_file.mnemonic:    O
+!
+! View menu choices:  (Note: the Animate button is really an XmToggleButton)
+Descartes.mainwindow.menubar.XmMenuShell.view_pmnu.animate_pbtn.labelString:		Animation
+Descartes.mainwindow.menubar.XmMenuShell.view_pmnu.animate_pbtn.mnemonic:		A
+Descartes.mainwindow.menubar.XmMenuShell.view_pmnu.animate_pbtn.set:			True
+Descartes.mainwindow.menubar.XmMenuShell.view_pmnu.animate_pbtn.visibleWhenOff:	True
+Descartes.mainwindow.menubar.XmMenuShell.view_pmnu.toolbar_pbtn.labelString:		Tool Bar
+Descartes.mainwindow.menubar.XmMenuShell.view_pmnu.toolbar_pbtn.mnemonic:		T
+Descartes.mainwindow.menubar.XmMenuShell.view_pmnu.toolbar_pbtn.visibleWhenOff:		True
+Descartes.mainwindow.menubar.XmMenuShell.view_pmnu.toolbar_pbtn.set:			True
+!
+! Options menu choices:
+Descartes.mainwindow.menubar.XmMenuShell.options_pmnu.set_filenames_pbtn.labelString:	Set Filenames...
+Descartes.mainwindow.menubar.XmMenuShell.options_pmnu.set_filenames_pbtn.mnemonic:	n
+Descartes.mainwindow.menubar.XmMenuShell.options_pmnu.set_trace.labelString:		Trace Messages
+Descartes.mainwindow.menubar.XmMenuShell.options_pmnu.set_trace.mnemonic:		T
+Descartes.mainwindow.menubar.XmMenuShell.options_pmnu.set_trace.visibleWhenOff:	True
+Descartes.mainwindow.menubar.XmMenuShell.options_pmnu.set_trace.set:		True
+Descartes.mainwindow.menubar.XmMenuShell.options_pmnu.default_x_resource_values_pbtn.labelString:	Show Default X Resource Values...
+Descartes.mainwindow.menubar.XmMenuShell.options_pmnu.default_x_resource_values_pbtn.mnemonic:	D
+!
+! Options->Set Filenames submenu choices:
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.options_set_filenames_pmnu.log_file.labelString: Log File...
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.options_set_filenames_pmnu.log_file.mnemonic: L
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.options_set_filenames_pmnu.input_file.labelString: Input File...
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.options_set_filenames_pmnu.input_file.mnemonic: I
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.options_set_filenames_pmnu.output_file.labelString: Output File...
+Descartes.mainwindow.menubar.XmMenuShell.XmMenuShell.options_set_filenames_pmnu.output_file.mnemonic: O
+!
+! Help menu choices:
+Descartes.mainwindow.menubar.XmMenuShell.help_pmnu.overview_pbtn.labelString:			Overview
+Descartes.mainwindow.menubar.XmMenuShell.help_pmnu.overview_pbtn.mnemonic:			O
+Descartes.mainwindow.menubar.XmMenuShell.help_pmnu.product_information_pbtn.labelString:	Product Information
+Descartes.mainwindow.menubar.XmMenuShell.help_pmnu.product_information_pbtn.mnemonic:		P
+!
+! The toolbar has a scale for controlling execution speed, and pushbuttons to
+! access the most commonly used selections from the pulldown menus at the top
+! of the mainwindow.
+! Pushbuttons for quick access to the most common functions.
+Descartes.mainwindow.pane.ttoolbar_mgr.load_btn.labelString:	Load
+Descartes.mainwindow.pane.ttoolbar_mgr.load_btn.leftOffset:	3
+Descartes.mainwindow.pane.ttoolbar_mgr.run_btn.labelString:	Run
+Descartes.mainwindow.pane.ttoolbar_mgr.run_btn.leftOffset:	3
+Descartes.mainwindow.pane.ttoolbar_mgr.exit_btn.labelString:	Exit
+Descartes.mainwindow.pane.ttoolbar_mgr.exit_btn.leftOffset:	3
+!  Scale widget for controlling execution speed.
+Descartes.mainwindow.pane.ttoolbar_mgr.delay_scale.titleString:	Execution Speed
+!  Increase the following number if you need to slow down execution still further.
+Descartes.mainwindow.pane.ttoolbar_mgr.delay_scale.maximum:		50
+Descartes.mainwindow.pane.ttoolbar_mgr.delay_scale.minimum:		0
+Descartes.mainwindow.pane.ttoolbar_mgr.delay_scale.value:		0
+Descartes.mainwindow.pane.ttoolbar_mgr.delay_scale.processingDirection:	max_on_left
+Descartes.mainwindow.pane.ttoolbar_mgr.delay_scale.scaleWidth:	200
+Descartes.mainwindow.pane.ttoolbar_mgr.delay_scale.showValue:	False
+Descartes.mainwindow.pane.ttoolbar_mgr.slowlbl.labelString:	Slow
+Descartes.mainwindow.pane.ttoolbar_mgr.slowlbl.leftOffset:	10
+Descartes.mainwindow.pane.ttoolbar_mgr.slowlbl.rightMargin:	2
+Descartes.mainwindow.pane.ttoolbar_mgr.fastlbl.labelString:	Fast
+!
+"! Size of the animation window behind the scrolled window.",
+"Descartes.drawing_width:       1280",
+"Descartes.drawing_height:      1500",
+!
+! Height of the animation viewing window.
+Descartes.mainwindow.pane.scrollwin.height: 300
+!
+! Resources for secondary TopLevelShell used to display text in a standalone window:
+Descartes.display_text_shell.mainwindow.menubar.file_cbtn.labelString:				File
+Descartes.display_text_shell.mainwindow.menubar.file_cbtn.mnemonic:				F
+Descartes.display_text_shell.mainwindow.menubar.XmMenuShell.file_pmnu.exit_pbtn.labelString:	Exit
+Descartes.display_text_shell.mainwindow.menubar.XmMenuShell.file_pmnu.exit_pbtn.mnemonic:	x
+Descartes.display_text_shell.mainwindow.XmScrolledWindow.text_scrolled_window.rows:		24
+Descartes.display_text_shell.mainwindow.XmScrolledWindow.text_scrolled_window.columns:		80
+

@@ -1,0 +1,40 @@
+TWO_OF_(OPERANDS)
+	OPERANDS
+		x*
+			DIGIT
+		NL
+		y*
+			DIGIT
+		NL
+	return
+		'X = '
+		X
+		NL
+		'Y = '
+		Y
+		NL
+		decide_eqal_1+
+			(X)_EQUAL_(Y)
+				'(X)_EQUAL_(Y) is TRUE'
+			'(X)_EQUAL_(Y) is FALSE'
+		NL
+		decide_eqal_2+
+			(Y)_EQUAL_(Y)
+				'(Y)_EQUAL_(Y) is TRUE'
+			'(Y)_EQUAL_(Y) is FALSE'
+		NL
+		decide_notequal_1+
+			(X)_NOT_EQUAL_(Y)
+				'(X)_NOT_EQUAL_(Y) is TRUE'
+			'(X)_NOT_EQUAL_(Y) is FALSE'
+		NL
+		greater_than+
+			(X)_GREATER_THAN_(Y)
+				'(X)_GREATER_THAN_(Y) is TRUE'
+			'(X)_GREATER_THAN_(Y) is FALSE'
+		NL
+		less_than+
+			(X)_LESS_THAN_(Y)
+				'(X)_LESS_THAN_(Y) is TRUE'
+			'(X)_LESS_THAN_(Y) is FALSE'
+		NL

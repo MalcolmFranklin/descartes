@@ -1,0 +1,49 @@
+CHECKSEMANTICS_(SPECIFICATION)
+	SPECIFICATION
+		descartes_spec*
+			WORD
+		NL
+	descartes_semantics
+		ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES_SPEC)
+	return+
+		DESCARTES_SEMANTICS
+		'Semantic Error!'
+ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES)
+	DESCARTES
+		title(1.. )
+			arguments_or_non+
+				with_arguments
+					before_argument*
+						WORD
+					argument
+						'('
+						argument_name(1.. )
+							name_ascii+
+								LETTER
+								'_'
+						')'
+				without_argument*
+					WORD
+		rest*
+			WORD
+		NL
+	return
+		TITLE(1.. )
+			ARGUMENTS_OR_NON+
+				WITH_ARGUMENTS
+					(ARGUMENT_NAME)_MATCH_WITH_(REST)
+				WITHOUT_ARGUMENTS
+(NAME)_MATCH_WITH_(REST_OF_TREE)
+	NAME
+		node_name*
+			WORD
+	REST_OF_TREE
+		tree
+			node_before*
+				WORD
+			NODE_NAME
+			node_after*
+				WORD
+		NL
+	return
+		TREE

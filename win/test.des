@@ -1,0 +1,19 @@
+TEST(VAL)
+	VAL
+		d*
+			DIGIT
+		NL
+	return
+		time
+			'TIMER_ returns '
+			TIMER_(D)
+			NL
+		delay
+			'DELAY_ returns '
+			DELAY_(D)
+			NL
+		gettime
+			'GTIME_ returns '
+			GTIME_
+			NL
+

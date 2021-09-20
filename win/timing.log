@@ -1,0 +1,157 @@
+Descartes' Trace Log  Ver 1.0   Time: Sun Aug 21 16:33:35 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/timing.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/timing.log.
+
+Contents of the Descartes specification file:
+c9
+
+
+Module Title OCCURRENCE_OF_(C_STRING)
+$reference direct product - C_STRING
+__(aDP_first) Direct Product C_STRING
+ >> Go to Node b(1.. )
+__(AS_first) Sequence Node b(1.. )
+ >>(Suc_1) Go to node 'c'
+$literal - 'c'
+__(AL_first) Literal 'c'
+ => Successful matching at node 'c' with input string
+ -> Forward input buffer pointer to location 1
+ << Back to Node b(1.. )
+__(AS_succeed) Sequence Node b(1.. )
+B sequecne pointer0 1
+A sequecne pointer1 1
+Input_File 0 1
+ <<(Suc_2) Succeed; Back to node C_STRING
+A sequecne pointer0 1
+$reference direct product - C_STRING
+__(aDP_succeed) Direct Product C_STRING
+__(aDP_succeed) Direct Product C_STRING
+ >> Succeed; Go to Node d
+$match direct product - d
+__(aDP_first) Direct Product d
+ >> Go to Node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node d
+$match direct product - d
+__(aDP_succeed) Direct Product d
+__(aDP_succeed) Direct Product d
+ << Succeed; Back to Node C_STRING
+$reference direct product - C_STRING
+__(aDP_succeed) Direct Product C_STRING
+__(aDP_succeed) Direct Product C_STRING
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node C_STRING
+$reference direct product - C_STRING
+__(aDP_succeed) Direct Product C_STRING
+__(aDP_succeed) Direct Product C_STRING
+ << Succeed; Back to Node OCCURRENCE_OF_(C_STRING)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node time
+$match direct product - time
+__(sDP_first) Direct Product time
+ >> Go to Node TIMER_(D)
+__(ST_first) primitive TIMER_(D)
+__(SDP1_first)Node D
+9 => Found a corresponding match node
+16675 SUCCEED<< Back to Node time
+$match direct product - time
+__(sDP_succeed) Direct Product time
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node var
+$match direct product - var
+__(sDP_first) Direct Product var
+ >> Go to Node '2'
+$literal - '2'
+__(SL_first) Literal '2'
+ => Output a string with Literal
+ << Back to Node var
+$match direct product - var
+__(sDP_succeed) Direct Product var
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node (D)_PLUS_(VAR)
+__(SP_first) primitive  (D)_PLUS_(VAR)
+__(SDP1_first)Node D
+9 => Found a corresponding match node
+__(SDP1_first)Node VAR
+2 => Found a corresponding match node
+11 SUCCEED<< Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node DELAY_('1')
+__(SD_first) Delay DELAY_('1')
+1 SUCCEED<< Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node check
+$match direct product - check
+__(sDP_first) Direct Product check
+ >> Go to Node GTIME_(TIME)
+__(ST_first) primitive GTIME_(TIME)
+__(SDP1_first)Node TIME
+16675 => Found a corresponding match node
+TIMEOUT SUCCEED<< Back to Node check
+$match direct product - check
+__(sDP_succeed) Direct Product check
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node (CHECK)_EQUAL_('TIMEOUT')
+__(SP_first) primitive  (CHECK)_EQUAL_('TIMEOUT')
+__(SDP1_first)Node CHECK
+TIMEOUT => Found a corresponding match node
+equal compare TIMEOUT,TIMEOUT
+equal compare TIMEOUT,TIMEOUT
+ SUCCEED<< Go to Node 'The string will be '
+$literal - 'The string will be '
+__(SL_first) Literal 'The string will be '
+ => Output a string with Literal
+ << Back to Node (CHECK)_EQUAL_('TIMEOUT')
+__(SP1_succeed) Primitive1 (CHECK)_EQUAL_('TIMEOUT')
+ >> Succeed; Go to Node B
+$reference direct product - B
+(SDP)_Node B
+__(SDP_first)Node B
+match node->b(1.. ) B
+match node->b(1.. )->
+cInput_File 0 1
+ => Found a corresponding match node
+ << Back to Node (CHECK)_EQUAL_('TIMEOUT')
+__(SP1_succeed) Primitive1 (CHECK)_EQUAL_('TIMEOUT')
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ << Succeed; Back to Node OCCURRENCE_OF_(C_STRING)
+Your specificaton ran successfully.
+Output file length = 36.  Contents:
+16675211TIMEOUT
+The string will be c
+#####   THE  END   #####

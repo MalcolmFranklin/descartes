@@ -1,0 +1,18 @@
+#!/bin/csh
+set OUT="./.purify"
+
+echo "suppress umr writev; ...; XtVaAppInitialize"	>> $OUT
+echo "suppress umr write; ...; XtVaAppInitialize"	>> $OUT
+echo "suppress umr malloc; ...; XtVaAppInitialize"	>> $OUT
+echo "suppress umr write; ...; XtVaCreateManagedWidget"	>> $OUT
+echo "suppress umr write; ...; XtAppMainLoop"		>> $OUT
+echo "suppress mlk malloc; ...; XtAppMainLoop"		>> $OUT
+echo "suppress mlk malloc; ...; XtVaAppInitialize"	>> $OUT
+
+foreach ff ( `/bin/ls /usr/lib/X11R5/libX11.* /usr/lib/X11R5/libXt.* /usr/lib/Motif1.2/libXm.*` )
+	echo ---------------------------
+	echo $ff
+	echo ---------------------------
+	purify_libsuppress umr $ff
+end
+

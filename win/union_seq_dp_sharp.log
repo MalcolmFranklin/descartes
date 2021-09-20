@@ -1,0 +1,677 @@
+Descartes' Trace Log  Ver 1.0   Time: Sat Aug 13 11:48:08 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/union_seq_dp_sharp.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/union_seq_dp_sharp.log.
+
+Contents of the Descartes specification file:
+1963BBCAB
+
+
+Module Title TWO_OF_(A)
+$reference direct product - A
+__(aDP_first) Direct Product A
+ >> Go to Node numerics*
+$match sequence - numerics*
+__(AS_first) Sequence Node numerics*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node abcees*
+$match sequence - abcees*
+__(AS_first) Sequence Node abcees*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node abcees*
+$match sequence - abcees*
+__(AS_next) Sequence Node abcees*
+ >> (No. < upper) Go to node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_first) Discriminated Union a_or_b_or_c+
+ >> Go to Node 'A'
+$literal - 'A'
+__(AL_first) Literal 'A'
+ => Unsuccessful matching at node 'A' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'B'
+$literal - 'B'
+__(AL_first) Literal 'B'
+ => Unsuccessful matching at node 'B' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'C'
+$literal - 'C'
+__(AL_first) Literal 'C'
+ => Unsuccessful matching at node 'C' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ // All subnodes are tried; none of them matched
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node a_or_b_or_c+; adjust stack & input pointers.
+ << Back to Node abcees*
+$match sequence - abcees*
+__(AS_fail) Sequence Node abcees*
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node abcees*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node numerics*
+$match sequence - numerics*
+__(AS_next) Sequence Node numerics*
+ >> (No. < upper) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node numerics*
+$match sequence - numerics*
+__(AS_succeed) Sequence Node numerics*
+B sequecne pointer0 1
+A sequecne pointer1 1
+Input_File 0 1
+ <<(Suc_4) Succeed; Back to node A
+A sequecne pointer0 1
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node abcees*
+$match sequence - abcees*
+__(AS_first) Sequence Node abcees*
+A sequecne pointer1 1
+Input_File 1 1
+ <<(Suc_2) Succeed; Back to node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node abcees*
+$match sequence - abcees*
+__(AS_next) Sequence Node abcees*
+ >> (No. < upper) Go to node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_first) Discriminated Union a_or_b_or_c+
+ >> Go to Node 'A'
+$literal - 'A'
+__(AL_first) Literal 'A'
+ => Unsuccessful matching at node 'A' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'B'
+$literal - 'B'
+__(AL_first) Literal 'B'
+ => Unsuccessful matching at node 'B' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'C'
+$literal - 'C'
+__(AL_first) Literal 'C'
+ => Unsuccessful matching at node 'C' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ // All subnodes are tried; none of them matched
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node a_or_b_or_c+; adjust stack & input pointers.
+ << Back to Node abcees*
+$match sequence - abcees*
+__(AS_fail) Sequence Node abcees*
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node abcees*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node numerics*
+$match sequence - numerics*
+__(AS_next) Sequence Node numerics*
+ >> (No. < upper) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+
+ !!!assign value to prev_stack_element
+ << Back to Node numerics*
+$match sequence - numerics*
+__(AS_succeed) Sequence Node numerics*
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 0 2
+ <<(Suc_4) Succeed; Back to node A
+A sequecne pointer1 2
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node abcees*
+$match sequence - abcees*
+__(AS_first) Sequence Node abcees*
+A sequecne pointer2 2
+Input_File 2 2
+ <<(Suc_2) Succeed; Back to node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node abcees*
+$match sequence - abcees*
+__(AS_next) Sequence Node abcees*
+ >> (No. < upper) Go to node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_first) Discriminated Union a_or_b_or_c+
+ >> Go to Node 'A'
+$literal - 'A'
+__(AL_first) Literal 'A'
+ => Unsuccessful matching at node 'A' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'B'
+$literal - 'B'
+__(AL_first) Literal 'B'
+ => Unsuccessful matching at node 'B' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'C'
+$literal - 'C'
+__(AL_first) Literal 'C'
+ => Unsuccessful matching at node 'C' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ // All subnodes are tried; none of them matched
+ <- Backward input buffer pointer at location 2
+ ** Free a stack element at Node a_or_b_or_c+; adjust stack & input pointers.
+ << Back to Node abcees*
+$match sequence - abcees*
+__(AS_fail) Sequence Node abcees*
+ <- Backward input buffer pointer at location 2
+ ** Free a stack element at Node abcees*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node numerics*
+$match sequence - numerics*
+__(AS_next) Sequence Node numerics*
+ >> (No. < upper) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+
+ !!!assign value to prev_stack_element
+ << Back to Node numerics*
+$match sequence - numerics*
+__(AS_succeed) Sequence Node numerics*
+B sequecne pointer2 3
+A sequecne pointer3 3
+Input_File 0 3
+ <<(Suc_4) Succeed; Back to node A
+A sequecne pointer2 3
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node abcees*
+$match sequence - abcees*
+__(AS_first) Sequence Node abcees*
+A sequecne pointer3 3
+Input_File 3 3
+ <<(Suc_2) Succeed; Back to node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node abcees*
+$match sequence - abcees*
+__(AS_next) Sequence Node abcees*
+ >> (No. < upper) Go to node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_first) Discriminated Union a_or_b_or_c+
+ >> Go to Node 'A'
+$literal - 'A'
+__(AL_first) Literal 'A'
+ => Unsuccessful matching at node 'A' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'B'
+$literal - 'B'
+__(AL_first) Literal 'B'
+ => Unsuccessful matching at node 'B' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'C'
+$literal - 'C'
+__(AL_first) Literal 'C'
+ => Unsuccessful matching at node 'C' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ // All subnodes are tried; none of them matched
+ <- Backward input buffer pointer at location 3
+ ** Free a stack element at Node a_or_b_or_c+; adjust stack & input pointers.
+ << Back to Node abcees*
+$match sequence - abcees*
+__(AS_fail) Sequence Node abcees*
+ <- Backward input buffer pointer at location 3
+ ** Free a stack element at Node abcees*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node numerics*
+$match sequence - numerics*
+__(AS_next) Sequence Node numerics*
+ >> (No. < upper) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 4
+
+ !!!assign value to prev_stack_element
+ << Back to Node numerics*
+$match sequence - numerics*
+__(AS_succeed) Sequence Node numerics*
+B sequecne pointer3 4
+A sequecne pointer4 4
+Input_File 0 4
+ <<(Suc_4) Succeed; Back to node A
+A sequecne pointer3 4
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node abcees*
+$match sequence - abcees*
+__(AS_first) Sequence Node abcees*
+A sequecne pointer4 4
+Input_File 4 4
+ <<(Suc_2) Succeed; Back to node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node abcees*
+$match sequence - abcees*
+__(AS_next) Sequence Node abcees*
+ >> (No. < upper) Go to node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_first) Discriminated Union a_or_b_or_c+
+ >> Go to Node 'A'
+$literal - 'A'
+__(AL_first) Literal 'A'
+ => Unsuccessful matching at node 'A' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'B'
+$literal - 'B'
+__(AL_first) Literal 'B'
+ => Successful matching at node 'B' with input string
+ -> Forward input buffer pointer to location 5
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_succeed) Discriminated Union a_or_b_or_c+
+__(ADU_succeed) Discriminated Union a_or_b_or_c+
+ << Succeed; Back to Node abcees*
+$match sequence - abcees*
+__(AS_succeed) Sequence Node abcees*
+B sequecne pointer4 5
+A sequecne pointer5 5
+Input_File 4 5
+ <<(Suc_4) Succeed; Back to node A
+A sequecne pointer4 5
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node abcees*
+$match sequence - abcees*
+__(AS_next) Sequence Node abcees*
+ >> (No. < upper) Go to node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_first) Discriminated Union a_or_b_or_c+
+
+ !!!assign value to prev_stack_element
+ >> Go to Node 'A'
+$literal - 'A'
+__(AL_first) Literal 'A'
+ => Unsuccessful matching at node 'A' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'B'
+$literal - 'B'
+__(AL_first) Literal 'B'
+ => Successful matching at node 'B' with input string
+ -> Forward input buffer pointer to location 6
+
+ !!!assign value to prev_stack_element
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_succeed) Discriminated Union a_or_b_or_c+
+__(ADU_succeed) Discriminated Union a_or_b_or_c+
+ << Succeed; Back to Node abcees*
+$match sequence - abcees*
+__(AS_succeed) Sequence Node abcees*
+B sequecne pointer5 6
+A sequecne pointer6 6
+Input_File 4 6
+ <<(Suc_4) Succeed; Back to node A
+A sequecne pointer5 6
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node abcees*
+$match sequence - abcees*
+__(AS_next) Sequence Node abcees*
+ >> (No. < upper) Go to node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_first) Discriminated Union a_or_b_or_c+
+
+ !!!assign value to prev_stack_element
+ >> Go to Node 'A'
+$literal - 'A'
+__(AL_first) Literal 'A'
+ => Unsuccessful matching at node 'A' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'B'
+$literal - 'B'
+__(AL_first) Literal 'B'
+ => Unsuccessful matching at node 'B' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'C'
+$literal - 'C'
+__(AL_first) Literal 'C'
+ => Successful matching at node 'C' with input string
+ -> Forward input buffer pointer to location 7
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_succeed) Discriminated Union a_or_b_or_c+
+__(ADU_succeed) Discriminated Union a_or_b_or_c+
+ << Succeed; Back to Node abcees*
+$match sequence - abcees*
+__(AS_succeed) Sequence Node abcees*
+B sequecne pointer6 7
+A sequecne pointer7 7
+Input_File 4 7
+ <<(Suc_4) Succeed; Back to node A
+A sequecne pointer6 7
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node abcees*
+$match sequence - abcees*
+__(AS_next) Sequence Node abcees*
+ >> (No. < upper) Go to node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_first) Discriminated Union a_or_b_or_c+
+
+ !!!assign value to prev_stack_element
+ >> Go to Node 'A'
+$literal - 'A'
+__(AL_first) Literal 'A'
+ => Successful matching at node 'A' with input string
+ -> Forward input buffer pointer to location 8
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_succeed) Discriminated Union a_or_b_or_c+
+__(ADU_succeed) Discriminated Union a_or_b_or_c+
+ << Succeed; Back to Node abcees*
+$match sequence - abcees*
+__(AS_succeed) Sequence Node abcees*
+B sequecne pointer7 8
+A sequecne pointer8 8
+Input_File 4 8
+ <<(Suc_4) Succeed; Back to node A
+A sequecne pointer7 8
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node A
+$reference direct product - A
+__(aDP_fail) Direct Product A
+ ?? Try to check node abcees*
+$match sequence - abcees*
+__(AS_next) Sequence Node abcees*
+ >> (No. < upper) Go to node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_first) Discriminated Union a_or_b_or_c+
+
+ !!!assign value to prev_stack_element
+ >> Go to Node 'A'
+$literal - 'A'
+__(AL_first) Literal 'A'
+ => Unsuccessful matching at node 'A' with input string
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_fail) Discriminated Union a_or_b_or_c+
+ ?? Try to check node 'B'
+$literal - 'B'
+__(AL_first) Literal 'B'
+ => Successful matching at node 'B' with input string
+ -> Forward input buffer pointer to location 9
+
+ !!!assign value to prev_stack_element
+ << Back to Node a_or_b_or_c+
+$match discriminated union - a_or_b_or_c+
+__(ADU_succeed) Discriminated Union a_or_b_or_c+
+__(ADU_succeed) Discriminated Union a_or_b_or_c+
+ << Succeed; Back to Node abcees*
+$match sequence - abcees*
+__(AS_succeed) Sequence Node abcees*
+B sequecne pointer8 9
+A sequecne pointer9 9
+Input_File 4 9
+ <<(Suc_4) Succeed; Back to node A
+A sequecne pointer8 9
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 10
+ << Back to Node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ << Succeed; Back to Node TWO_OF_(A)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node 'NUMERICS matched '
+$literal - 'NUMERICS matched '
+__(SL_first) Literal 'NUMERICS matched '
+ => Output a string with Literal
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node NUMERICS
+$reference direct product - NUMERICS
+(SDP)_Node NUMERICS
+__(SDP_first)Node NUMERICS
+match node->numerics* NUMERICS
+match node->numerics*->
+1963Input_File 0 4
+ => Found a corresponding match node
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node 'Num chars matched with NUMERICS = '
+$literal - 'Num chars matched with NUMERICS = '
+__(SL_first) Literal 'Num chars matched with NUMERICS = '
+ => Output a string with Literal
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node NUMERICS#
+$reference sequence no - NUMERICS#
+__(SSN_first) Squence No. NUMERICS#
+ => Output a string with Sequence No
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node 'ABCEES matched '
+$literal - 'ABCEES matched '
+__(SL_first) Literal 'ABCEES matched '
+ => Output a string with Literal
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node ABCEES
+$reference direct product - ABCEES
+(SDP)_Node ABCEES
+__(SDP_first)Node ABCEES
+match node->abcees* ABCEES
+match node->abcees*->
+BBCABInput_File 4 9
+ => Found a corresponding match node
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node 'Num chars matched with ABCEES = '
+$literal - 'Num chars matched with ABCEES = '
+__(SL_first) Literal 'Num chars matched with ABCEES = '
+ => Output a string with Literal
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node ABCEES#
+$reference sequence no - ABCEES#
+__(SSN_first) Squence No. ABCEES#
+ => Output a string with Sequence No
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ << Succeed; Back to Node TWO_OF_(A)
+Your specificaton ran successfully.
+Output file length = 113.  Contents:
+NUMERICS matched 1963
+Num chars matched with NUMERICS = 4
+ABCEES matched BBCAB
+Num chars matched with ABCEES = 5
+
+#####   THE  END   #####

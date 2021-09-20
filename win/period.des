@@ -1,0 +1,12 @@
+CONTROL_PERIOD_(TIME_SPAN)
+	TIME_SPAN
+		set_time
+			INTEGER
+		NL
+	return+
+		(SET_TIME)_EQUAL_('0')
+			'CONTROL PERIOD OVER'
+		(SET_TIME)_NOT_EQUAL_('0')
+			decrement
+				(SET_TIME)_MINUS_('1')
+			CONTROL_PERIOD_(DECREMENT)

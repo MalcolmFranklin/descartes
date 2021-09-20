@@ -1,0 +1,65 @@
+Article: 51221 of comp.windows.x
+Xref: newsgate comp.windows.x:51221 comp.windows.x.motif:20336
+Newsgroups: comp.windows.x,comp.windows.x.motif
+From: neil@corefact.demon.co.uk (Neil Mackie)
+Path: newsgate!mogate!oakhill!cs.utexas.edu!howland.reston.ans.net!EU.net!uknet!demon!corefact.demon.co.uk!neil
+Subject: Re: How to create a Pulldown Menu withOUT XmVaCreateSimplePulldownMenu
+References: <1994Apr29.040251.4489@rai.juice.or.jp>
+Organization: CoreFacts
+Reply-To: neil@corefact.demon.co.uk
+X-Newsreader: Demon Internet Simple News v1.27
+Lines: 48
+Date: Tue, 3 May 1994 21:53:01 +0000
+Message-ID: <768001981snz@corefact.demon.co.uk>
+Sender: usenet@demon.co.uk
+
+> I'm programming with Motif 1.2, and wondering how to create a pulldown
+> menu.   I know how to create one with XmVaCreateSimplePulldownMenu
+> under MenuBar widget, but don't know how to do it without it.  The
+> reason I don't use the function (XmVaCreateSimplePulldownMenu) is
+> that I'm using C++ class library motif++, which doesn't use that 
+> function (but uses XmCreatePulldownMenu internally).  It sounds
+> simple, but difficult actually.
+>   Any help (especially a simple example) is highly appreciated!
+> 
+> regards.
+> 
+> -Tetsuji Rai
+> ----
+
+static char *file_pd_names[] = {"New","Open","Close","Save","Exit"};
+
+/*Create and manage the the menubar */
+ac = 0;
+menubar = XmCreateMenuBar(main, "menubar", widArgs, ac);
+XtManageChild(menubar);
+
+/*Create but do not manage the pulldown menu */
+file_pd = XmCreatePulldownMenu(menubar, "file_pd", widArgs, ac);
+
+/*Set the subMenuId resource for the CascadeButton, link between the */
+/*CascadeButton and the pulldown menu */
+file = XtVaCreateManagedWidget("file", xmCascadeButtonGadgetClass
+				menubar,
+				XmNsubMenuId, file_pd,
+				NULL);
+
+/*Create the buttons for the pulldown menu */
+for(i = 0; i < XtNumber(file_pd_names); i++)
+	file_pd_button[i] = XtVaCreateManageWidget(file_pd_names[i],
+				xmPushButtonGadgetClass,
+				file_pd,
+				NULL);
+
+Hope this helps
+-- 
+Regards
+Neil Mackie
+--------------------------------------------------------------------
+Tel. +44 223 574786                    CoreFacts
+Fax. +44 223 359055                    Cambridge, CB4 2TZ
+email neil@corefact.demon.co.uk
+Useless Information to you is someone elses' solution,
+don't waste it - pass it on
+
+

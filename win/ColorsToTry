@@ -1,0 +1,74 @@
+Article: 1997 of comp.cad.cadence
+Newsgroups: comp.cad.cadence
+Path: newsgate!mogate!spsgate!uunet!nntp.cadence.com!cds592!markham
+From: markham@cds592 (Jeff Markham)
+Subject: Re: Openbook
+Message-ID: <CrJvyy.33B@Cadence.COM>
+Sender: news@Cadence.COM
+Nntp-Posting-Host: cds592.cadence.com
+Organization: Cadence Design System, Inc.
+X-Newsreader: TIN [version 1.2 PL0]
+References: <CrGArn.DGp@maunakea.Data-IO.COM> <1994Jun16.042511.28067@imag.fr> <CrIsIB.1I4@Cadence.COM>
+Date: Fri, 17 Jun 94 09:47:21 MST
+Lines: 58
+
+Hi
+ Thanks Pete...
+If you want it to look like the Opus default colors and fonts ... 
+
+Try:
+	Iview*foreground: #800000
+	Iview*background: #e0e0e0
+	Iview*topShadowColor: #ffffff
+	Iview*bottomShadowColor: #999999
+	Iview*fontList: -adobe-helvetica-bold-r-*-*-12-*
+	Iview*XmText.defaultFontList:  -adobe-courier-medium-r-normal--12-*
+	Iview*XmText*background: #c0c0c0
+
+Jeff
+
+One other note for those of you who like to try things out right away,
+after you make changes to your ~/.Xdefaults file, you can:
+
+xrdb -merge ~/.Xdefaults
+
+and then restart OpenBook. Your changes should now appear. One day, as
+soon as everybody buys into the Xmu stuff, the resources will update
+without having to restart the application..
+
+
+Pete Zakel (phz@cadence.com) wrote:
+: In article <1994Jun16.042511.28067@imag.fr> boutamin@verdon (Hicham Boutamine) writes:
+: >Hi,
+: > 
+: > If the online documentation uses Ileaf viewer, which is my case,
+: > the ressources for the control panel are (.Xdefaults) :
+: > -----------------------------------------
+: > Iview*iconMenu*background: pink
+: > Iview*iconMenu*pageGroup*background: light blue
+: > Iview*iconMenu*pageGroup*pageSep1*background: wheat
+: > Iview*iconMenu*pageGroup*pageFirst*background: yellow
+: > Iview*iconMenu*pageGroup*pagePrev*background: red
+: > Iview*iconMenu*pageGroup*pageNext*background: green
+: > Iview*iconMenu*pageGroup*pageLast*background: tan
+: > Iview*iconMenu*pageSeparator*background: black
+: > ----------------------------------------------
+
+: Those only control the iconMenu line.  For the general background and
+: foreground (other than the actual document pages, which I don't think you
+: can override), use:
+
+: Iview*background:	blue
+: Iview*foreground:	black
+
+: Changing to whatever colors you want.  To be safe, put these BEFORE other
+: Iview color specifications to make sure they don't override the others.
+
+: -Pete Zakel
+:  (phz@cadence.com or ..!uunet!cadence!phz)
+
+: DISCLAIMER:  I am NOT speaking for Cadence either officially or unofficially.
+
+: Be different: conform.
+
+

@@ -1,0 +1,27 @@
+co -rh4_2_1 share_var.c,v
+co -rh4_2_1 analysis1.c,v
+co -rh4_2_1 analysis1.h,v
+co -rh4_2_1 token.c,v
+co -rh4_2_1 Package.config,v
+co -rh4_2_1 share_rtn.c,v
+co -rh4_2_1 share_rtn.h,v
+co -rh4_2_1 build_rtn.c,v
+co -rh4_2_1 alert_dcl.h,v
+co -rh4_2_1 sem.c,v
+co -rh4_2_1 makefile,v
+co -rh4_2_1 desc_table.h,v
+co -rh4_2_1 msg.c,v
+co -rh4_2_1 des2.y,v
+co -rh4_2_1 build_rtn.h,v
+co -rh4_2_1 wid1.c,v
+co -rh4_2_1 exec_rtn1.c,v
+co -rh4_2_1 des.l,v
+co -rh4_2_1 build_hoare_tree.c,v
+co -rh4_2_1 wid1.h,v
+strip_nonprintables < wid1.h > out
+rm -f wid1.h
+cp out wid1.h
+co -rh4_2_1 exec_rtn1.h,v
+co -rh4_2_1 desc_struct.h,v
+co -rh4_2_1 build_hoare_tree.h,v
+co -rh4_2_1 mesg.h,v

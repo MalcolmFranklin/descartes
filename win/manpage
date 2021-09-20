@@ -1,0 +1,613 @@
+ cc(1)                                                                 cc(1)
+
+ NAME
+      cc, c89 - C compiler
+
+ SYNOPSIS
+      cc [options] files
+      c89 [options] files
+
+ DESCRIPTION
+      cc is the HP-UX C compiler.  c89 is the HP-UX POSIX-conformant C
+      compiler.  Both accept several types of arguments as files:
+
+           +  Arguments whose names end with .c are understood to POSIX-conformant C
+      compiler.  Both accept several types of arguments as files:
+
+           +  Arguments whose names end with .c are understood to be C
+              source files.  Each is compiled and the resulting object file
+              is left in a file having the corresponding basename, but
+              suffixed with .o instead of .c.ting object file
+              is left in a file having the corresponding basename, but
+              suffixed with .o insteadpt to resolve currently
+              unresolved external references.  Because a library is searched
+              when its name is encountered, placement of a -l is
+              significant.  If a file contains an unresolved external
+              reference, the library containing the definition must be
+              placed after the file on the command line.  See ld(1) for
+              further details.
+
+           +  All other arguments, such as those whose names end with .o or
+              .a, are taken to be relocatable object files that are to be
+              included in the link operation.
+
+      Arguments and options can be passed to the compiler through the CCOPTS
+      environment variable as well as on the command line.  The compiler
+      reads the value of CCOPTS and divides these options into two sets;
+      those options which appear before a vertical bar (|), and those
+      options which appear after the vertical bar.  The first set of options
+      are placed before any of the command-line parameters to cc; the second
+      set of options are placed after the command-line parameters to cc.  If
+      the vertical bar is not present, all options are placed before the
+      command-line parameters.  For example (in sh(1) notation),
+
+ Hewlett-Packard Company            - 1 -     HP-UX Release 9.0: August 1992
+
+ cc(1)                                                                 cc(1)
+
+           CCOPTS="-v | -lmalloc"
+           export CCOPTS
+                       c    Compile in a mode compatible with HP-UX
+                             releases prior to 7.0.  (See The C Programming
+                             Language, First Edition by Kernighan and
+                             Ritchie).  This option is currently the
+                             default.  The default may change in future
+                             releaslinked before
+                     being executed.
+
+      -C             Prevent the preprocessor from stripping C-style
+                     comments (see cpp(1) for details).
+
+      -Dname=def
+      -Dname         Define name to the preprocessor, as if by '#define'.
+                     See cpp(1) for details.
+
+ Hewlett-Packard Company            - 2 -     HP-UX Release 9.0: August 1992
+
+ cc(1)                                                                 cc(1)
+
+      -E             Run only cpp on the named C or assembly files, and send
+                     the result to the standard output.
+
+      -g             Cause the compiler to generate additional information
+                     needed by the sym-n             Cause the output file from the linker to be marked as
+                     shareable.  For details and system defaults, see ld(1).
+
+      -N             Cause the output file from the linker to be marked as
+                     unshareable.  For details and system defaults, see
+                     ld(1).
+
+      -ooutfile      Name the output file from the linker outfile.  The
+                     default name is a.out.
+
+      -O             Invokeles suffixed .i.  The -P option is
+                     also passed along to cpp.
+
+      -q             Cause the output file from the linker to be marked as
+                     demand loadable.  For details and system defaults, see
+                     ld(1).
+
+ Hewlett-Packard Company            - 3 -     HP-UX Release 9.0: August 1992
+
+ cc(1)                                                                 cc(1)
+
+      -Q             Cause the output file from the linker to be marked as
+                     not demand loadable.  For details and system defaults,
+                     see ld(1).
+
+      -s             Cause the output of the linker to be stripped of symbol
+                     table information.  See strip(1) for more details.  The
+                     use of this option prevents the use of a symbolic
+                     debugger on the resulting program.  See ld(1) for more
+                     details.
+
+      -S             Compile the named C files, and leave the assembly
+                     language output on corresponding files suffixed .s.
+
+      -tx,name       Substitute subprocess x with name where x is one or
+                     more of a set of identifiers indicating the
+                     subprocess(es).  This option works in two modes:  1) if
+                     x is a single identifier, name represents the full path
+                     name of the new subprocess; 2) if x is a set of
+                     identifiers, name represents a prefix to which the
+                     standard suffixes are concatenated to construct the
+                     full path names of the new subprocesses.
+
+                     The x can take one or more of the values:
+
+                        p    Preprocessor (standard suffix is cpp)
+                        c    Compiler (standard suffix is ccom)
+                        0    Same as c
+                        a    Assembler (standard suffix is as)
+                        l    Linker (standard suffix is ld)
+
+      -Uname         Remove any initial definition of name in the
+                     preprocessor.  See cpp(1) for details.
+
+      -v             Enable verbose mode, which produces a step-by-step
+                     description of the compilation process on the standard
+                     error.
+
+      -w             Suppress warning messages.
+
+      -Wx,arg1[,arg2...]
+                    tation for
+                     this mechanism can be used by placing + in front of the
+                     option name as in
+
+                          +M
+
+                     which is equivalent to
+
+                          -Wc,-M
+
+                     +M is the Series 300/400 option that causes the
+                     compiler to generate calls to the math library instead
+                     of generating code for the MC68881 or MC68882 math
+                     coprocessor.  Options that can be abbreviated using +
+                     are implementation dependent, and are listed under
+                     DEPENDENCIES.
+
+      -y             Generate additional information needed by static
+                     analysis tools, and ensure that the program is linked
+                     as required for static analysis.  This option is
+                     incompatible with optimization.
+
+      -Y             Enable support of 16-bit characters inside string
+                     literals and comments.  Note that 8-bit parsing is
+                     always supported.  See hpnls(5) for more details on
+                     International Support.
+
+      -z             Do not bind anything to address zero.  This option
+                     allows runtime detection of null pointers.  See the
+                     note on pointers below.
+
+      -Z             Allow dereferencing of null pointers.  See the note on
+                     pointers below.  The -z and -Z are linker options.  See
+                     ld(1) for more details.
+
+      +z,+Z          Both of these options cause the compiler to generate
+                     position independent code (PIC) for use in building
+                     shared libraries.  The -G and -p options are ignored if
+                     +z or +Z is used.  Normally, +z should be used to
+                     generate PIC; however, when certain limits are
+                     exceeded, +Z is required to generate PIC.  The ld
+                     linker issues the error indicating when +Z is required.
+                     If both +z and +Z are specified, onlya.out.
+
+      The first edition of The C Programming Language by Kernighan and
+      Ritchie and the various addenda to it are intentionally ambiguous in
+      some areas.  HP-UX specifies some of these below for compatibility
+      mode (-Ac) compilations.
+
+      char           The char type is treated as signed by default.  It can
+                     be declared unsigned.
+
+      pointers       Accessing the object of a NULL (zero) pointer is
+                     technically illegal (see Kernighan and Ritchie), but
+                     many systems have permitted it in the past.  The
+                     following is provided to maximize portability of code.
+                     If the hardware is able to return zero for reads of
+                     location zero (when accessing at least 8- and 16-bit
+                     quantities), it must do so unless the -z flag is
+                     present.  The -z flag requests that SIGSEGV be
+                     generated if an access to location zero is attempted.
+                     Writes of location zero may be detected as errors even
+                     if reads are not.  If the hardware cannot assure that
+                     location zero acts as if it was initialized to zero or
+                     is locked at zero, the hardware should act as if the -z
+                     flag is always set.
+
+      identifiers    Identifiers are significant up to 255 characters.
+
+      types          Certain programs require that a type be a specific
+                     number of bits wide.  It can be assumed that an int can
+                     hold at least as much information as a short, and that
+                     a long can hold at least as much information as an int.
+                     Additionally, either an int or a long can hold a
+                     pointer.
+
+ EXTERNAL INFLUENCES
+    Environment Variables
+      When the -Y option is invoked, LC_CTYPE determines the interpretation
+      of string literals and comments as single and/or multi-byte
+      characters.
+
+      LANG determines the language in which messages are displayed.
+
+      If LC_CTYPE is not specified in the environment or is set to the empty
+      string, the value of LANG is used as a default for each unspecified or
+      empty variable.  If LANG is not specified or is set to the empty
+      string, a default of "C" (see lang(5)) is used instead of LANG. If any
+       C file prog.c to create a prog.o file, then
+      invokes the ld link editor to link prog.o and procedure.o with all the
+      C startup routines in /lib/crt0.o and library routines from the C
+      library libc.sl or libc.a.  The resulting executable program is placed
+      in file prog:
+
+           cc prog.c procedure.o -o prog
+
+ WARNINGS
+      Options not recognized by cc are not passed on to the link editor.
+      The option -W l,arg can be used to pass any such option to the link
+      editor.
+
+      By default, the return value from a C program is completely random.
+      The only two guaranteed ways to return a specific value are to
+      explicitly call exit() (see exit(2)) or leave the function main() with
+      a return expression; construct.
+
+ DEPENDENCIES
+    Series 300/400
+      Note that in the following list, the cc and c89 options +e, +O, +y are
+      not supported by the C compiler provided as part of the standard HP-UX
+      operating system.  They are supported by the C compiler sold as an
+      optional separate product.
+
+      The -z option is not supported.
+
+      The default is to allow null pointer dereferencing; hence using -Z has
+      no effect.
+
+      The compiler supports the following additional options.  The +opt1
+      notation can be used as a shorthand notation for some -W options.
+
+           +bfpa             Cause the compiler to generate code that uses
+                             the HP98248A or HP98248B floating point
+                             accelerator card, if it is installed at run
+                             time.  If the card is not installed, floating
+                             point operations are done on the MC68881 or
+                             MC68882 math coprocessor or the MC68040.
+
+ Hewlett-Packard Company            - 7 -     HP-UX Release 9.0: August 1992
+
+ cc(1)                                                                 cc(1)
+
+           +e or -Wc,-We     Enables HP value added features when compiling
+                             in ANSI C mode, -Aa.  This option is ignored
+                             with -Ac since these features are already
+                             provided.  Features enabled:
+
+                                  +  $ as an identifier character
+                                  +  Accept embedded assembly code
+
+           +ffpa             Cause the compiler to generate code for the
+                             HP98248A or HP98248B floating point accelerator
+                             card.  This code does not run unless the card
+                             is installed.
+
+           +M                Cause the compiler not to generate in-line
+                             floating point code for the MC68881, MC68882,
+                             or MC68040.  Library routines are referenced
+                             for matherr() capability.
+
+           +NsecondaryN      Adjust the initial size of internal compiler
+                             tables.  secondary is one of the letters from
+                             the set {abdepstw}, and N is an integer value.
+                             secondary and N are not optional.  The Series
+                             300/400 compiler automatically expands the
+                             tables if they become full.  The +N option is
+                             supported only for backwards compatibility.
+
+           +Oopt             Invoke optimizations selected by opt.  If opt
+                             is 1, only level 1 optimizations are handled.
+                             If opt is 2, all optimizations except in-lining
+                             are performed.  The -O option is equivalent to
+                             +O2.  If opt is V, optimization level 2 is
+                             selected, but all global variables and objects
+                             dereferenced by global pointers are treated as
+                             if they were declared with the keyword
+                             volatile, meaning that references to the object
+                             cannot be optimized away.  If opt is 3, all
+                             level 2 optimizations are performed and in
+                             addition, code for certain f                            This results in better compile time performance
+
+ Hewlett-Packard Company            - 8 -     HP-UX Release 9.0: August 1992
+
+ cc(1)                                                                 cc(1)
+
+                             except when available compilation memory is
+                             scarce.  Invoking this option executes the
+                             processes sequentially and executes cpp and
+                             ccom (cpass1) as distinct processes, thereby
+                             minimizing memory consumption.
+
+           -tx,name          Specify additional subprocess identifiers.
+
+                                  0    First pass of the compiler with level
+                                       2 optimization.  It is not the same
+                                       as subprocess c (standard suffix is
+                                       cpass1 or cpass1.ansi if compiling
+                                       with -Aa)
+                                  1    Second pass of the compiler with
+                                       level 2 optimization (standard suffix
+                                       is cpass2)
+                                  c    Compiler (standard suffix is ccom or
+                                       ccom.ansi if compiling with -Aa)
+                                  g    Level 2 global optimizer (standard
+                                       suffix is c.c1)
+                                  2    Peephole optimizer (standard suffix
+                                       is c.c2)
+                                  i    Procedure integrator (standard suffix
+                                       is c.c0)
+
+           -v                Enables verbose mode in the global optimizer as
+                             well.
+
+           -W c,-F           Perform some function in-lining.  The functions
+                             that are 'in-lined' are strcpy(), and the
+                             transcendental functions available on the
+                             MC68881 or MC68882 math coproditionally apply
+                             all optimizations.
+
+           +y                The default behavior for generating symbolic
+                             debugging information (-g) and static analysis
+                             information (-y) is to generate such
+                             information only for items referenced in the
+
+ Hewlett-Packard Company            - 9 -     HP-UX Release 9.0: August 1992
+
+ cc(1)                                                                 cc(1)
+
+                             file being compiled.  For example, if a
+                             structure is defined in some included header
+                             file yet never referenced, no symbolic
+                             debugging information or static analysis
+                             information iser dereferencing, hence using -Z has
+      no effect.
+
+      The -g option is incompatible with optimization.  If both debug and
+      optimization are specified, only the first option encountered takes
+      effect.
+
+      The -y option is incompatible with optimization.  If both static
+      analysis and optimization are specified, only the first option
+      encountered takes effect.
+
+      The -s option is incompatible with the -g, -G, -p, and -y o                           Files assembled with this option cannot be
+                             linked unless they contain the equivalent
+                             information.
+
+           -Ae               Extended ANSI mode.  Same as -D_HPUX_SOURCE and
+                             -Aa and allows the following extensions: $
+                             characters can appear in identifier names, and
+
+ Hewlett-Packard Company           - 10 -     HP-UX Release 9.0: August 1992
+
+ cc(1)                                                                 cc(1)
+
+                             enum declarations can include integral type
+                             specifiers.  Additional extensions may be added
+                             to this option in the future.
+
+           +DAarchitecture   Generate code for the architecture specified.
+                             architecture is required.  The default code
+                             generated for the Series 800 is PA_RISC_1.0.
+                             The default code generated for the Series 700
+                             is PA_RISC_1.1.  The default code generation
+                             can be overridden using the CCOPTS environment
+                             variable or the command line option +DA.
+                             architecture can be either a model number
+                             (e.g., 750 for the HP 9000/750 or 870 for the
+                             HP 9000/870) or one of the following generic
+                             specifications:
+
+                                  1.0  Precision Architecture RISC, version
+                                       1.0 or higher.  This is the default
+                                       for all Series 800 models.
+                                  1.1  Precision Architecture RISC, version
+                                       1.1.  This is the default for all
+                                       Series 700 models.
+
+                             The compiler determines the target architecture
+                             using the following precedence:
+
+                                  1. Command line specification of +DA.
+                                  2. Specification of +DA in the CCOPTS
+                                     environment variable.
+                                  3. The default as Architecture RISC,
+                                            version 1.0.
+                                  1.1       Precision Architecture RISC,
+                                            version 1.1, general scheduling
+                                            foHP value-added features while compiling
+                             in ANSI C mode, -Aa.  This option is ignored
+                             with -Ac because these features are already
+                             provided.  Features enabled:
+
+                                  +  Long pointers
+                                  +  Integral type specifiers can appear in
+                                     enum declarations.
+                                  +  The $ character can appear in
+                                     identifier names.
+                                  +  Missing parameters on intrinsic calls
+
+           +ESlit            Place string literals and const-qualified data
+                             into read-only memory.  This may save space in
+                             the resulting executable by coalescing
+                             identical string literals, and can promote data
+                             sharing in a multi-user application.
+
+           +ESsfc            Replace millicode calls with in-line code when
+                             performing function pointer comparisons.  Care
+                             should be taken when using this option and
+                             pointers to shared library routines are being
+                             compared.
+
+           +f                Inhibit the automatic promotion of float to
+                             double when evaluating expressions.  This
+                             differs from +r (see below) in that parameters
+                             and function return values are promoted.  This
+                             option is ignored and a warning is produced if
+                             ANSI mode is in effect.
+
+           +FPstring         Specifies how the run time behavior for
+                    ondition checking.
+
+ Hewlett-Packard Company           - 12 -     HP-UX Release 9.0: August 1992
+
+ cc(1)                                                                 cc(1)
+
+                             This option generates in-line assembly for the
+                             routines strcpy(), sqrt(), and fabs(), under
+                             certain conditions.  The matherr() function is
+                             not called nor is errno set on error conditions
+                             for the above-mentioned routines (see
+                             matherr(3M)).  This option may also alter the
+                             error handling of many routines declared in
+                             <math.h>.  -J may in-line or alter the error
+                             handling of additional routines in future
+                             releases.
+
+           +L                Enable the listing facility and any listing
+                             pragmas.  A straight listing prints:
+
+                                  +  A header on the top of each page
+                                  +  Line numbers
+                                  +  The nesting level of each statement
+                                  +  The postprocessed source file with
+                                     expanded macros, included files, and no
+                                     user comments (unless the -C option is
+                                     used).
+
+                             If the -Aa option is used to compile under ANSI
+                             C, the listing shows the original source file
+                             rather than the postprocessed source file.
+
+           +Lp               Print a listing as described above, but show
+                             the postprocessed source file even if one of
+                             the ANSI compilation levels is selected.  This
+                             option is ineffective if the -y option is used.
+
+           +m                Cause the identifier maps to be printed.
+                             First, locals by function are listed, then all
+                             global identifiers are listed.  All other
+                             identifiers are then listed by function at the
+                             end of the listing.  For struct and union
+                             members, the address column contains B@b, where
+                             B is the byte offset and b is the bit offset.
+                             Both B and b are in hexadecimal.  This option
+                             is incompatible with +I and +P.
+
+           +o                Cause the code offsets to be printed in
+                             hexadecimal; they are grouped by function at
+                             the end of the listing.  This option is
+                             incompatible with +I and +P.
+
+           +Oopt             Invoke optimizations selected by opt.  Defined
+                             values for opt are:
+
+                                  0    Perform no optimizations.  This is
+                                       the default.
+
+ Hewlett-Packard Company           - 13 -     HP-UX Release 9.0: August 1992
+
+ cc(1)                                                                 cc(1)
+
+                                  1    Perform optimizations within basic
+                                       blocks only.
+                                  2    Perform level 1 and global
+                                       optimizations.  Same as -O.
+                                  3    Perform level 2 as well as
+                                       interprocedural global optimizations.
+                                       Also sends -O to the linker (see
+                                       ld(1)).
+                                  E    Same as -O but notify the optimizer
+                                       that floating point traps have been
+                                       enabled.  Prevents the optimizer from
+                                       performing loop-invariant code motion
+                                       on floating point operations.
+                                  m1   Same as -O and allow the optimizer to
+                                       assume no parameters in function
+                                       calls refer to the same memory.
+                                  s    Same as -O but notify the optimizer
+                                       to suppress any optimizations which
+                                       might result in a significant code-
+                                       size expansion.
+                                  V    Same as -O but assume all global
+                                       memory references are to be treated
+                                       as if they were declared with the
+                                      in the database file flow.data, produced
+                             by compilation with +I.  See ld(1), +I, +df,
+                             and +pgm for more details.  This option is
+                             incompatible with -G, -g, +m, +o, -p, -S, and
+                             -y.
+
+           +pgmname          Smode is in effect
+                             (see also +f).
+
+           +Rnum             Allow only the first num register variables to
+                             actually have the register class.  Use this
+                             option when the register allocator issues an
+                             out of general registers message.
+
+           +unum             Allow pointers to access non-natively aligned
+                             data.  This option alters the way that the
+                             compiler accesses dereferenced data.  Use of
+                             this option may reduce the efficiency of
+                             generated code.
+
+                                  1    Assume single byte alignment.
+                                       Dereferences are performed with a
+                                       series of single-byte loads and
+                                       stores.
+
+                                  2    Dereferences are performed with a
+                                       series of two-byte loads and stores.
+
+                                  4    Dereferences are performed with a
+                                       series of four-byte loads and stores.
+
+           +wn               Specify the level of the warning messages.  The
+                             value of n can be one of the following values:
+
+                                  1    All warnings are issued.
+                                  2    Only warnings indicating that code
+                                       generation might be affected are
+                                       issued.  Equivalent to the compiler
+                                       default without any w opts.
+                                  3    No warnings are issued.  Equivalent
+                                       to the -w option.
+
+           +y                Generate static analysis information for all
+                             global identifiers not seen in the original
+                             source file.  This option only has effect if
+                             used in conjunction with the -y option.
+             startoff for profiling via prof(1)
+      /lib/gcrt0.o                  startoff for profiling via gprof(1)
+0                     procedure in-liner
+      /lib/c.c1                     global optimizer
+      /lib/c.c2                     peephole optimizer
+
+    Series 700/800
+      /lib/icrt0.o                  Startoff for Instrumentation via +I
+      /usr/lib/nls/$LANG/cc.cat     C Compiler message catalog
+      /usr/lib/uccom                Stand-alone code generator
+      /usr/lib/sched.models         processor implementation file
+
+ SEE ALSO
+    Program management and analysis ap math errors
+      fpgetround(3M)    floating-point mode-control functions
+      strip(1)          strip symbol and line number information from an
+                        object file
+
+ Hewlett-Packard Company           - 16 -     HP-UX Release 9.0: August 1992
+
+ cc(1)                                                                 cc(1)
+
+      crt0(3)           execution startup routine
+      end(3C)           symbol of the last locations in program
+      exit(2)           termination of a process
+
+    Tutorials and Standards Documents:
+      B. W. Kernighan and D. M. Ritchie, The C Programming Language,
+      Prentice-Hall, 1978.
+
+      American National Standard for Information Systems - Programming
+      language C, ANS X3.159-1989
+
+ STANDARDS CONFORMANCE
+      cc: SVID2, XPG2, XPG3
+
+      c89: POSIX.2
+
+ Hewlett-Packard Company           - 17 -     HP-UX Release 9.0: August 1992

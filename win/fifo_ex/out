@@ -1,0 +1,20 @@
+Executing parent code.
+Child created.  PID = 17472
+SRV_CONNECT: Parent received a connect message from 17472.
+Process 17472 changed shared from 0 to 1.
+Sub-Child created.  PID = 17473
+Sub-Child created.  PID = 17474
+Sub-Child created.  PID = 17475
+SRV_CONNECT: Parent received a connect message from 17473.
+SRV_CONNECT: Parent received a connect message from 17474.
+SRV_CONNECT: Parent received a connect message from 17475.
+Process 17473 changed shared from 1 to 2.
+shared = 3 in sub-child 17475.
+Process 17475 changed shared from 2 to 3.
+Sub-client 17475 completed
+shared = 4 in sub-child 17474.
+Process 17474 changed shared from 3 to 4.
+Sub-client 17474 completed
+shared = 2 in sub-child 17473.
+Sub-client 17473 completed
+SRV_SHUTDOWN: Received from 17472.

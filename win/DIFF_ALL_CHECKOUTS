@@ -1,0 +1,12 @@
+#!/bin/csh
+
+set CHECKED_OUT_FILES = `all | cut -f1 -d' '`
+
+foreach ff ( $CHECKED_OUT_FILES )
+	echo -------------------------------------------------
+	echo $ff
+	echo -------------------------------------------------
+	rcsdiff $ff
+	ci $ff
+end
+

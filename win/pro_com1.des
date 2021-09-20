@@ -1,0 +1,45 @@
+(MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+	MESSAGE_ONE
+		input_one
+			INTEGER
+		NL
+
+	MESSAGE_TWO
+		input_two
+			INTEGER
+		NL
+	return
+		NL
+		PARALLEL
+			PRODUCER_(INPUT_ONE)
+			COMSUMER_(INPUT_TWO)
+
+
+PRODUCER_(MESSAGE_ONE)
+	MESSAGE_ONE
+		input_one
+			INTEGER
+		NL
+	message_queue
+		'3'
+	return
+		update_message
+			(INPUT_ONE)_PLUS_('2')
+		(UPDATE_MESSAGE)_SEND_TO_(MESSAGE_QUEUE)
+
+
+
+COMSUMER_(MESSAGE_TWO)
+	MESSAGE_TWO
+		input_two
+			INTEGER
+		NL
+
+	message_queue
+		'3'
+	return
+		receive_message
+			RECEIVE_FROM_(MESSAGE_QUEUE)
+		NL
+		update_message
+			(INPUT_TWO)_PLUS_(RECEIVE_MESSAGE)

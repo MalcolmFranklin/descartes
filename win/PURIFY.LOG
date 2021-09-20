@@ -1,0 +1,1706 @@
+Purify'd h4.purify  (pid 27986 at Thu Aug 11 12:38:11 1994) 
+Purify 2.1.0 SunOS 4.1, Copyright 1992, 1993 Pure Software Inc.
+For contact information type: "purify -help"
+Purify licensed to Motorola Inc.
+Warning: Cannot convert string "<Key>InsertChar" to type VirtualBinding
+Warning: Cannot convert string "<Key>DeleteChar" to type VirtualBinding
+Warning: Cannot convert string "<Key>InsertLine" to type VirtualBinding
+Warning: Cannot convert string "<Key>DeleteLine" to type VirtualBinding
+Warning: Cannot convert string "*prestige-medium-r-normal-*-*-128-*=text" to type FontStruct
+*------ width 1280; height 1500; max 302; value 0; -----*
+*------ From widget: win_width == 50; win_height == 300 -----*
+Purify'd h4.purify  (pid 28041, forked from pid 27986, at Thu Aug 11 12:39:53 1994)
+Purify 2.1.0 SunOS 4.1, Copyright 1992, 1993 Pure Software Inc.
+For contact information type: "purify -help"
+Purify licensed to Motorola Inc.
+CAP sym OCCURRENCE_OF_ 267
+rule 20 yylval OCCURRENCE_OF_ 265  
+token OCCURRENCE_OF_
+sym (
+CAP sym C_STRING 267
+rule 20 yylval C_STRING 265  
+token C_STRING
+sym )
+rule 3 indent 0
+indent 0
+Build_Hoare_Tree(): type = 1000 0010 = 0x82; name = OCCURRENCE_OF_(C_STRING); level = 0
+Current_Node->name = "OCCURRENCE_OF_(C_STRING)"
+	MODULE_TITLE
+x=(name2 C_STRING
+name1 OCCURRENCE_OF_
+level_no = 0 Immediate son of "ROOT_DUMMY"
+rule 30 new line
+REFER sym C_STRING 265
+indent 1
+rule 30 new line
+rule 4 indent 0
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = C_STRING; level = 1
+Current_Node->name = "C_STRING"
+name1 C_STRING
+level_no = 1 Immediate son of "OCCURRENCE_OF_(C_STRING)"
+rule 61 1
+rule 62 2
+MATCH sym b 266
+rule 192 266
+yylval b 266  
+token b
+low_ 1
+up_  
+rule 135 (1.. )
+token (1.. ) up 2147483647 low 1
+indent 2
+rule 14 (1.. )
+rule 30 new line
+rule 122 b (1.. ) 266 indent2
+rule 122 b(1.. ) (1.. ) 266 indent2
+Build_Hoare_Tree(): type = 1000 0111 = 0x87; name = b(1.. ); level = 2
+Current_Node->name = "b(1.. )"
+x=(name2 1.. 
+name1 b
+level_no = 2 Immediate son of "C_STRING"
+rule 122 b(1.. ) 135
+rule 61 1
+rule 62 2
+rule 62 3
+rule 17 
+indent 3
+rule 30 new line
+rule 123 'c' 264 item_type 0
+rule 123 'c' 264 indent3
+rule 123'c' 129
+Build_Hoare_Tree(): type = 1000 0001 = 0x81; name = 'c'; level = 3
+Current_Node->name = "'c'"
+level_no = 3 Immediate son of "b(1.. )"
+rule 61 1
+rule 62 2
+MATCH sym d 266
+rule 192 266
+yylval d 266  
+token d
+indent 2
+rule 30 new line
+rule 123 d 266 item_type 0
+rule 123 d 266 indent2
+rule 123d 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = d; level = 2
+Current_Node->name = "d"
+level_no = 2  Another sibling of "'c'"
+level_no = 2
+rule 61 1
+rule 62 2
+rule 62 3
+REFER sym DIGIT 265
+rule 18 
+indent 3
+rule 30 new line
+rule 123 DIGIT 265 item_type 0
+rule 123 DIGIT 265 indent3
+rule 123DIGIT 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = DIGIT; level = 3
+Current_Node->name = "DIGIT"
+name1 DIGIT
+level_no = 3 Immediate son of "d"
+rule 61 1
+rule 62 2
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 123 NL 257 item_type 0
+rule 123 NL 257 indent2
+rule 123NL 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = NL; level = 2
+Current_Node->name = "NL"
+name1 NL
+level_no = 2  Another sibling of "DIGIT"
+level_no = 2
+sym return
+rule 8 
+rule 7 
+indent 0
+rule 30 new line
+rule 101 indent0
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = return; level = 1
+Current_Node->name = "return"
+level_no = 1  Another sibling of "NL"
+level_no = 1
+rule 61 1
+rule 62 2
+MATCH sym time 266
+rule 192 266
+yylval time 266  
+token time
+indent 2
+rule 30 new line
+rule 121 time 266 item_type0
+rule 121 time 266 indent2
+rule 121 time 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = time; level = 2
+Current_Node->name = "time"
+level_no = 2 Immediate son of "return"
+rule 61 1
+rule 62 2
+rule 62 3
+CAP sym TIMER_ 242
+rule 20 yylval TIMER_ 242  
+token TIMER_
+sym (
+CAP sym D 267
+rule 20 yylval D 265  
+token D
+sym )
+rule 003 indent 3
+indent 3
+rule 184 
+rule 30 new line
+rule 123 TIMER_(D) 242 item_type 242
+rule 123 TIMER_(D) 266 indent3
+rule 123TIMER_(D) 242
+Build_Hoare_Tree(): type = 1111 0010 = 0xF2; name = TIMER_(D); level = 3
+Current_Node->name = "TIMER_(D)"
+x=(name2 D
+name1 TIMER_
+level_no = 3 Immediate son of "time"
+rule 61 1
+rule 62 2
+MATCH sym var 266
+rule 192 266
+yylval var 266  
+token var
+indent 2
+rule 30 new line
+rule 123 var 266 item_type 0
+rule 123 var 266 indent2
+rule 123var 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = var; level = 2
+Current_Node->name = "var"
+level_no = 2  Another sibling of "TIMER_(D)"
+level_no = 2
+rule 61 1
+rule 62 2
+rule 62 3
+rule 17 
+indent 3
+rule 30 new line
+rule 123 '2' 264 item_type 0
+rule 123 '2' 264 indent3
+rule 123'2' 129
+Build_Hoare_Tree(): type = 1000 0001 = 0x81; name = '2'; level = 3
+Current_Node->name = "'2'"
+level_no = 3 Immediate son of "var"
+rule 61 1
+rule 62 2
+sym (
+CAP sym D 267
+rule 20 yylval D 265  
+token D
+sym )
+CAP sym _PLUS_ 193
+rule 20 yylval _PLUS_ 193  
+token _PLUS_
+rule 0041 indent 2 2
+rule 0041 (D)_PLUS_ (D)_PLUS_
+sym (
+CAP sym VAR 267
+rule 20 yylval VAR 265  
+token VAR
+sym )
+indent 2
+rule 0044 
+rule 0044 (D)_PLUS_(VAR) (D)_PLUS_(VAR)
+rule 2 
+rule 184 
+rule 30 new line
+rule 123 (D)_PLUS_(VAR) 261 item_type 193
+rule 123 (D)_PLUS_(VAR) 264 indent2
+rule 123(D)_PLUS_(VAR) 193
+Build_Hoare_Tree(): type = 1100 0001 = 0xC1; name = (D)_PLUS_(VAR); level = 2
+Current_Node->name = "(D)_PLUS_(VAR)"
+x=(name2 D
+x=(name2 VAR
+name2 D
+name1 _PLUS_
+level_no = 2  Another sibling of "'2'"
+level_no = 2
+rule 61 1
+rule 62 2
+CAP sym DELAY_ 247
+rule 20 yylval DELAY_ 247  
+token DELAY_
+sym (
+rule 193 yylval '1' 264  
+token '1'
+sym )
+rule 003 indent 2
+indent 2
+rule 184 
+rule 30 new line
+rule 123 DELAY_('1') 247 item_type 247
+rule 123 DELAY_('1') 264 indent2
+rule 123DELAY_('1') 247
+Build_Hoare_Tree(): type = 1111 0111 = 0xF7; name = DELAY_('1'); level = 2
+Current_Node->name = "DELAY_('1')"
+x=(name2 '1'
+name1 DELAY_
+level_no = 2  Immediate sibling of (D)_PLUS_(VAR)
+rule 61 1
+rule 62 2
+MATCH sym check 266
+rule 192 266
+yylval check 266  
+token check
+indent 2
+rule 30 new line
+rule 123 check 266 item_type 0
+rule 123 check 266 indent2
+rule 123check 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = check; level = 2
+Current_Node->name = "check"
+level_no = 2  Immediate sibling of DELAY_('1')
+rule 61 1
+rule 62 2
+rule 62 3
+CAP sym GTIME_ 248
+rule 20 yylval GTIME_ 248  
+token GTIME_
+sym (
+CAP sym TIME 267
+rule 20 yylval TIME 265  
+token TIME
+sym )
+rule 003 indent 3
+indent 3
+rule 184 
+rule 30 new line
+rule 123 GTIME_(TIME) 248 item_type 248
+rule 123 GTIME_(TIME) 266 indent3
+rule 123GTIME_(TIME) 248
+Build_Hoare_Tree(): type = 1111 1000 = 0xF8; name = GTIME_(TIME); level = 3
+Current_Node->name = "GTIME_(TIME)"
+x=(name2 TIME
+name1 GTIME_
+level_no = 3 Immediate son of "check"
+rule 61 1
+rule 62 2
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 123 NL 257 item_type 0
+rule 123 NL 257 indent2
+rule 123NL 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = NL; level = 2
+Current_Node->name = "NL"
+name1 NL
+level_no = 2  Another sibling of "GTIME_(TIME)"
+level_no = 2
+rule 61 1
+rule 62 2
+sym (
+CAP sym CHECK 267
+rule 20 yylval CHECK 265  
+token CHECK
+sym )
+CAP sym _EQUAL_ 209
+rule 20 yylval _EQUAL_ 209  
+token _EQUAL_
+rule 0041 indent 2 2
+rule 0041 (CHECK)_EQUAL_ (CHECK)_EQUAL_
+sym (
+rule 193 yylval 'TIMEOUT' 264  
+token 'TIMEOUT'
+sym )
+indent 2
+rule 0044 
+rule 0044 (CHECK)_EQUAL_('TIMEOUT') (CHECK)_EQUAL_('TIMEOUT')
+rule 2 
+rule 184 
+rule 30 new line
+rule 123 (CHECK)_EQUAL_('TIMEOUT') 261 item_type 209
+rule 123 (CHECK)_EQUAL_('TIMEOUT') 257 indent2
+rule 123(CHECK)_EQUAL_('TIMEOUT') 209
+Build_Hoare_Tree(): type = 1101 0001 = 0xD1; name = (CHECK)_EQUAL_('TIMEOUT'); level = 2
+Current_Node->name = "(CHECK)_EQUAL_('TIMEOUT')"
+x=(name2 CHECK
+x=(name2 'TIMEOUT'
+name2 CHECK
+name1 _EQUAL_
+level_no = 2  Immediate sibling of NL
+rule 61 1
+rule 62 2
+rule 62 3
+rule 17 
+indent 3
+rule 30 new line
+rule 123 'The string will be ' 264 item_type 0
+rule 123 'The string will be ' 264 indent3
+rule 123'The string will be ' 129
+Build_Hoare_Tree(): type = 1000 0001 = 0x81; name = 'The string will be '; level = 3
+Current_Node->name = "'The string will be '"
+level_no = 3 Immediate son of "(CHECK)_EQUAL_('TIMEOUT')"
+rule 61 1
+rule 62 2
+rule 62 3
+REFER sym B 265
+rule 18 
+indent 3
+rule 30 new line
+rule 123 B 265 item_type 0
+rule 123 B 265 indent3
+rule 123B 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = B; level = 3
+Current_Node->name = "B"
+name1 B
+level_no = 3  Immediate sibling of 'The string will be '
+rule 11 
+rule 10 indent0
+rule 1 
+rule 0 
+CAP sym OCCURRENCE_OF_ 267
+rule 20 yylval OCCURRENCE_OF_ 265  
+token OCCURRENCE_OF_
+sym (
+CAP sym C_STRING 267
+rule 20 yylval C_STRING 265  
+token C_STRING
+sym )
+rule 3 indent 0
+indent 0
+Build_Hoare_Tree(): type = 1000 0010 = 0x82; name = OCCURRENCE_OF_(C_STRING); level = 0
+Current_Node->name = "OCCURRENCE_OF_(C_STRING)"
+	MODULE_TITLE
+x=(name2 C_STRING
+name1 OCCURRENCE_OF_
+level_no = 0 Immediate son of "ROOT_DUMMY"
+rule 30 new line
+REFER sym C_STRING 265
+indent 1
+rule 30 new line
+rule 4 indent 0
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = C_STRING; level = 1
+Current_Node->name = "C_STRING"
+name1 C_STRING
+level_no = 1 Immediate son of "OCCURRENCE_OF_(C_STRING)"
+rule 61 1
+rule 62 2
+MATCH sym b 266
+rule 192 266
+yylval b 266  
+token b
+low_ 1
+up_  
+rule 135 (1.. )
+token (1.. ) up 2147483647 low 1
+indent 2
+rule 14 (1.. )
+rule 30 new line
+rule 122 b (1.. ) 266 indent2
+rule 122 b(1.. ) (1.. ) 266 indent2
+Build_Hoare_Tree(): type = 1000 0111 = 0x87; name = b(1.. ); level = 2
+Current_Node->name = "b(1.. )"
+x=(name2 1.. 
+name1 b
+level_no = 2 Immediate son of "C_STRING"
+rule 122 b(1.. ) 135
+rule 61 1
+rule 62 2
+rule 62 3
+rule 17 
+indent 3
+rule 30 new line
+rule 123 'c' 264 item_type 0
+rule 123 'c' 264 indent3
+rule 123'c' 129
+Build_Hoare_Tree(): type = 1000 0001 = 0x81; name = 'c'; level = 3
+Current_Node->name = "'c'"
+level_no = 3 Immediate son of "b(1.. )"
+rule 61 1
+rule 62 2
+MATCH sym d 266
+rule 192 266
+yylval d 266  
+token d
+indent 2
+rule 30 new line
+rule 123 d 266 item_type 0
+rule 123 d 266 indent2
+rule 123d 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = d; level = 2
+Current_Node->name = "d"
+level_no = 2  Another sibling of "'c'"
+level_no = 2
+rule 61 1
+rule 62 2
+rule 62 3
+REFER sym DIGIT 265
+rule 18 
+indent 3
+rule 30 new line
+rule 123 DIGIT 265 item_type 0
+rule 123 DIGIT 265 indent3
+rule 123DIGIT 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = DIGIT; level = 3
+Current_Node->name = "DIGIT"
+name1 DIGIT
+level_no = 3 Immediate son of "d"
+rule 61 1
+rule 62 2
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 123 NL 257 item_type 0
+rule 123 NL 257 indent2
+rule 123NL 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = NL; level = 2
+Current_Node->name = "NL"
+name1 NL
+level_no = 2  Another sibling of "DIGIT"
+level_no = 2
+sym return
+rule 8 
+rule 7 
+indent 0
+rule 30 new line
+rule 101 indent0
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = return; level = 1
+Current_Node->name = "return"
+level_no = 1  Another sibling of "NL"
+level_no = 1
+rule 61 1
+rule 62 2
+MATCH sym time 266
+rule 192 266
+yylval time 266  
+token time
+indent 2
+rule 30 new line
+rule 121 time 266 item_type0
+rule 121 time 266 indent2
+rule 121 time 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = time; level = 2
+Current_Node->name = "time"
+level_no = 2 Immediate son of "return"
+rule 61 1
+rule 62 2
+rule 62 3
+CAP sym TIMER_ 242
+rule 20 yylval TIMER_ 242  
+token TIMER_
+sym (
+CAP sym D 267
+rule 20 yylval D 265  
+token D
+sym )
+rule 003 indent 3
+indent 3
+rule 184 
+rule 30 new line
+rule 123 TIMER_(D) 242 item_type 242
+rule 123 TIMER_(D) 266 indent3
+rule 123TIMER_(D) 242
+Build_Hoare_Tree(): type = 1111 0010 = 0xF2; name = TIMER_(D); level = 3
+Current_Node->name = "TIMER_(D)"
+x=(name2 D
+name1 TIMER_
+level_no = 3 Immediate son of "time"
+rule 61 1
+rule 62 2
+MATCH sym var 266
+rule 192 266
+yylval var 266  
+token var
+indent 2
+rule 30 new line
+rule 123 var 266 item_type 0
+rule 123 var 266 indent2
+rule 123var 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = var; level = 2
+Current_Node->name = "var"
+level_no = 2  Another sibling of "TIMER_(D)"
+level_no = 2
+rule 61 1
+rule 62 2
+rule 62 3
+rule 17 
+indent 3
+rule 30 new line
+rule 123 '2' 264 item_type 0
+rule 123 '2' 264 indent3
+rule 123'2' 129
+Build_Hoare_Tree(): type = 1000 0001 = 0x81; name = '2'; level = 3
+Current_Node->name = "'2'"
+level_no = 3 Immediate son of "var"
+rule 61 1
+rule 62 2
+sym (
+CAP sym D 267
+rule 20 yylval D 265  
+token D
+sym )
+CAP sym _PLUS_ 193
+rule 20 yylval _PLUS_ 193  
+token _PLUS_
+rule 0041 indent 2 2
+rule 0041 (D)_PLUS_ (D)_PLUS_
+sym (
+CAP sym VAR 267
+rule 20 yylval VAR 265  
+token VAR
+sym )
+indent 2
+rule 0044 
+rule 0044 (D)_PLUS_(VAR) (D)_PLUS_(VAR)
+rule 2 
+rule 184 
+rule 30 new line
+rule 123 (D)_PLUS_(VAR) 261 item_type 193
+rule 123 (D)_PLUS_(VAR) 264 indent2
+rule 123(D)_PLUS_(VAR) 193
+Build_Hoare_Tree(): type = 1100 0001 = 0xC1; name = (D)_PLUS_(VAR); level = 2
+Current_Node->name = "(D)_PLUS_(VAR)"
+x=(name2 D
+x=(name2 VAR
+name2 D
+name1 _PLUS_
+level_no = 2  Another sibling of "'2'"
+level_no = 2
+rule 61 1
+rule 62 2
+CAP sym DELAY_ 247
+rule 20 yylval DELAY_ 247  
+token DELAY_
+sym (
+rule 193 yylval '1' 264  
+token '1'
+sym )
+rule 003 indent 2
+indent 2
+rule 184 
+rule 30 new line
+rule 123 DELAY_('1') 247 item_type 247
+rule 123 DELAY_('1') 264 indent2
+rule 123DELAY_('1') 247
+Build_Hoare_Tree(): type = 1111 0111 = 0xF7; name = DELAY_('1'); level = 2
+Current_Node->name = "DELAY_('1')"
+x=(name2 '1'
+name1 DELAY_
+level_no = 2  Immediate sibling of (D)_PLUS_(VAR)
+rule 61 1
+rule 62 2
+MATCH sym check 266
+rule 192 266
+yylval check 266  
+token check
+indent 2
+rule 30 new line
+rule 123 check 266 item_type 0
+rule 123 check 266 indent2
+rule 123check 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = check; level = 2
+Current_Node->name = "check"
+level_no = 2  Immediate sibling of DELAY_('1')
+rule 61 1
+rule 62 2
+rule 62 3
+CAP sym GTIME_ 248
+rule 20 yylval GTIME_ 248  
+token GTIME_
+sym (
+CAP sym TIME 267
+rule 20 yylval TIME 265  
+token TIME
+sym )
+rule 003 indent 3
+indent 3
+rule 184 
+rule 30 new line
+rule 123 GTIME_(TIME) 248 item_type 248
+rule 123 GTIME_(TIME) 266 indent3
+rule 123GTIME_(TIME) 248
+Build_Hoare_Tree(): type = 1111 1000 = 0xF8; name = GTIME_(TIME); level = 3
+Current_Node->name = "GTIME_(TIME)"
+x=(name2 TIME
+name1 GTIME_
+level_no = 3 Immediate son of "check"
+rule 61 1
+rule 62 2
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 123 NL 257 item_type 0
+rule 123 NL 257 indent2
+rule 123NL 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = NL; level = 2
+Current_Node->name = "NL"
+name1 NL
+level_no = 2  Another sibling of "GTIME_(TIME)"
+level_no = 2
+rule 61 1
+rule 62 2
+sym (
+CAP sym CHECK 267
+rule 20 yylval CHECK 265  
+token CHECK
+sym )
+CAP sym _EQUAL_ 209
+rule 20 yylval _EQUAL_ 209  
+token _EQUAL_
+rule 0041 indent 2 2
+rule 0041 (CHECK)_EQUAL_ (CHECK)_EQUAL_
+sym (
+rule 193 yylval 'TIMEOUT' 264  
+token 'TIMEOUT'
+sym )
+indent 2
+rule 0044 
+rule 0044 (CHECK)_EQUAL_('TIMEOUT') (CHECK)_EQUAL_('TIMEOUT')
+rule 2 
+rule 184 
+rule 30 new line
+rule 123 (CHECK)_EQUAL_('TIMEOUT') 261 item_type 209
+rule 123 (CHECK)_EQUAL_('TIMEOUT') 257 indent2
+rule 123(CHECK)_EQUAL_('TIMEOUT') 209
+Build_Hoare_Tree(): type = 1101 0001 = 0xD1; name = (CHECK)_EQUAL_('TIMEOUT'); level = 2
+Current_Node->name = "(CHECK)_EQUAL_('TIMEOUT')"
+x=(name2 CHECK
+x=(name2 'TIMEOUT'
+name2 CHECK
+name1 _EQUAL_
+level_no = 2  Immediate sibling of NL
+rule 61 1
+rule 62 2
+rule 62 3
+rule 17 
+indent 3
+rule 30 new line
+rule 123 'The string will be ' 264 item_type 0
+rule 123 'The string will be ' 264 indent3
+rule 123'The string will be ' 129
+Build_Hoare_Tree(): type = 1000 0001 = 0x81; name = 'The string will be '; level = 3
+Current_Node->name = "'The string will be '"
+level_no = 3 Immediate son of "(CHECK)_EQUAL_('TIMEOUT')"
+rule 61 1
+rule 62 2
+rule 62 3
+REFER sym B 265
+rule 18 
+indent 3
+rule 30 new line
+rule 123 B 265 item_type 0
+rule 123 B 265 indent3
+rule 123B 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = B; level = 3
+Current_Node->name = "B"
+name1 B
+level_no = 3  Immediate sibling of 'The string will be '
+rule 11 
+rule 10 indent0
+rule 1 
+rule 0 
+Child process forked() successfully.  Child will execute exec_run() now.
+drawing diagram 
+*---- In exec_draw() Draw_Flag = 0; Hoare_Root_Dummy->level_point = 2030424 ----*
+Drawing the Hoare tree structure in block diagram.(level_no)node->C_STRING
+(level_no)node->b(1.. )
+(level_no)node->'c'
+(back)node->d
+(level_no)node->DIGIT
+(back)node->NL
+(back)node->return
+(level_no)node->time
+(level_no)node->TIMER_(D)
+(back)node->var
+(level_no)node->'2'
+(back)node->(D)_PLUS_(VAR)
+(back)node->DELAY_('1')
+(back)node->check
+(level_no)node->GTIME_(TIME)
+(back)node->NL
+(back)node->(CHECK)_EQUAL_('TIMEOUT')
+(level_no)node->'The string will be '
+(back)node->B
+__(sDP_first) Direct Product return
+sDP -1 1 
+__(sDP_first) Direct Product time
+sDP -1 1 
+Process 738808 ENTERING S_Timer()
+current stck 1 time
+S_Timer() looking for ESC(39): cur_para-> name == "D" first ch = 'D' == 68
+check parameteres 
+ search  parameter
+initial search->C_STRING d
+initial search->b(1.. ) d
+initial search->'c' d
+initial search->d d
+matching in tree 
+matched node name ->d
+match in analysis tree 0
+match in analysis tree 0
+match with match node 1<=
+ => Found a corresponding match node for para
+pointer loc 1
+S_Timer() read "1
+" from S_Output_File "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/timing.tmp" line 3480 of analysis1.c
+***pid 28041 28041 5
+ SUCCEED<< Back to Node 
+Process 738808 LEAVING S_Timer()
+__(sDP_succeed) Direct Product time
+sDP w output file ptr 0
+end w output file ptr 0
+__(sDP_succeed) Direct Product return
+sDP w output file ptr 0
+end w output file ptr 0
+__(sDP_first) Direct Product var
+sDP -1 1 
+__(sDP_succeed) Direct Product var
+sDP w output file ptr 0
+end w output file ptr 0
+__(sDP_succeed) Direct Product return
+sDP w output file ptr 0
+end w output file ptr 0
+check parameteres 
+ search  parameter
+initial search->C_STRING d
+initial search->b(1.. ) d
+initial search->'c' d
+initial search->d d
+matching in tree 
+matched node name ->d
+match in analysis tree 0
+match in analysis tree 0
+match with match node 1<=
+ => Found a corresponding match node for para
+pointer loc 1
+check parameteres 
+ search  parameter
+initial search->C_STRING var
+initial search->b(1.. ) var
+initial search->'c' var
+initial search->d var
+initial search->DIGIT var
+initial search->NL var
+initial search->return var
+initial search->time var
+initial search->TIMER_(D) var
+initial search->var var
+matching in tree 
+matched node name ->var
+match in synthesis tree 
+ptr 6 5 0
+o ptr 6 5 6
+match with match node 2<=
+ => Found a corresponding match node for para
+pointer loc 2
+sep 1 2 3
+sum of  
+sum of  1,12
+
+sum of  1,12
+
+sum of output 1, 2
+paramers 12
+sum of output 1, 2
+sum of output 3 2
+ => Output a string l
+ => Output a string with Literal
+ SUCCEED<< Back to Node 
+__(sDP_succeed) Direct Product return
+sDP w output file ptr 0
+end w output file ptr 0
+Process 738808 ENTERING S_Delay()
+current stck 1 (D)_PLUS_(VAR)
+S_Delay() looking for ESC(39): cur_para-> name == "'1'" first ch = ''' == 39
+S_Delay() wrote "1" to S_Output_File "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/timing.tmp" line 3707 of analysis1.c
+pointer loc 0
+pointer loc 1
+=====>para_data 1------ '1'
+S_Delay() read "1
+" from S_Output_File "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/timing.tmp" line 3765 of analysis1.c
+delay time= 1
+ SUCCEED<< Back to Node 
+Process 738808 LEAVING S_Delay()
+Purify'd h4.purify  (pid 28061, forked from pid 28041, at Thu Aug 11 12:40:40 1994)
+Purify 2.1.0 SunOS 4.1, Copyright 1992, 1993 Pure Software Inc.
+For contact information type: "purify -help"
+Purify licensed to Motorola Inc.
+
+In timeout signal handler, received SIGALRM
+__(sDP_succeed) Direct Product return
+sDP w output file ptr 0
+end w output file ptr 0
+__(sDP_first) Direct Product check
+sDP -1 1 
+current stck 1 check
+check parameteres 
+ search  parameter
+initial search->C_STRING time
+initial search->b(1.. ) time
+initial search->'c' time
+initial search->d time
+initial search->DIGIT time
+initial search->NL time
+initial search->return time
+initial search->time time
+matching in tree 
+matched node name ->time
+match in synthesis tree 
+ptr 5 0 0
+o ptr 5 0 7
+match with match node 28041<=
+ => Found a corresponding match node for para
+pointer loc 5
+(Processing TIMEOUT:)$$$$$$$pid in gtime 28041 (actually para_datai)
+Received "TIMEOUT" from timeout() in pid 28041.
+__(sDP_succeed) Direct Product time
+sDP w output file ptr 0
+end w output file ptr 0
+__(sDP_succeed) Direct Product return
+sDP w output file ptr 0
+end w output file ptr 0
+__(sDP_first) Direct Product var
+sDP -1 1 
+__(sDP_succeed) Direct Product var
+sDP w output file ptr 0
+
+****  Purify'd h4.purify  (pid 28061, forked from pid 28041)  ****
+Purify: Searching for all memory leaks...
+
+There are 5223 leaked bytes (2.18% of the 239737 allocated bytes in the heap)
+
+Purify (mlk): 11 bytes at 0x1d3fe0 lost, allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	Allocate_Hoare_Root_Dummy [line 223, build_hoare_tree.c, pc=0x1ecfc]
+	Read_Spec_And_Build_Tree [line 248, build_rtn.c, pc=0x1daf0]
+	Build_Proc   [line 381, build_rtn.c, pc=0x1e1e8]
+	reset_descartes_specname [line 577, main.c, pc=0x562fc]
+	load_pixmap  [line 572, wid1.c, pc=0x4dc34]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	FileSelectionPB [FileSB.o, pc=0xf727c2ec]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	ArmAndActivate [PushBG.o, pc=0xf72dd000]
+	ListCallback [FileSB.o, pc=0xf727a400]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	DefaultAction [List.o, pc=0xf72b0c88]
+	UnSelectElement [List.o, pc=0xf72af5c4]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleSimpleState [TMstate.o, pc=0xf71cde34]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce92c]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+
+Purify [mlk]: 5212 bytes lost,
+       allocated by malloc in 61 chunks
+       whose messages were suppressed with a .purify file.
+
+Purify Heap Analysis (combining suppressed and unsuppressed chunks)
+
+                         Chunks      Bytes
+              Leaked         62       5223
+  Potentially Leaked          0          0
+              In-Use       3274     234514
+  ----------------------------------------
+     Total Allocated       3336     239737
+
+****  Purify'd h4.purify  (pid 28061, forked from pid 28041)  ****
+  * No access errors.
+  * Basic memory usage:
+      737272 code
+      596520 data/bss
+      884744 heap
+       12896 stack
+  * Shared library memory usage:
+     2359296 libXm_pure_210.so.1.2	(shared code)
+      150168 libXm_pure_210.so.1.2	(private data)
+      409600 libXt_pure_210.so.4.10	(shared code)
+       40960 libXt_pure_210.so.4.10	(private data)
+      688128 libX11_pure_210.so.4.10	(shared code)
+       49152 libX11_pure_210.so.4.10	(private data)
+      122880 libXmu_pure_210.so.4.10	(shared code)
+       16384 libXmu_pure_210.so.4.10	(private data)
+      696320 libc_pure_210.so.1.9	(shared code)
+       16384 libc_pure_210.so.1.9	(private data)
+        8192 libinternal_stubs.so.1.0	(shared code)
+        8192 libinternal_stubs.so.1.0	(private data)
+
+
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify (umr): uninitialized memory read:
+  * This is occurring while in:
+	_doprnt      [doprnt.o, pc=0xf6f68374]
+	printf       [printf.o, pc=0xf6f76990]
+	S_Primitives [line 2699, analysis1.c, pc=0x7c45c]
+	S_Node_Type_Check [line 6769, analysis1.c, pc=0x910ac]
+	execution_proc [line 6841, analysis1.c, pc=0x91310]
+	exec_run     [line 1116, exec_rtn1.c, pc=0x2471c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+  * Reading 1 byte from 0xf7ffe567 on the stack.
+  * This is 7 bytes past start of local variable "para_data1" in function S_Primitives.
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify (umr): uninitialized memory read:
+  * This is occurring while in:
+	_doprnt      [doprnt.o, pc=0xf6f68374]
+	printf       [printf.o, pc=0xf6f76990]
+	S_Primitives [line 2699, analysis1.c, pc=0x7c45c]
+	S_Node_Type_Check [line 6769, analysis1.c, pc=0x910ac]
+	execution_proc [line 6841, analysis1.c, pc=0x91310]
+	exec_run     [line 1116, exec_rtn1.c, pc=0x2471c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+  * Reading 1 byte from 0xf7ffe568 on the stack.
+  * This is 8 bytes past start of local variable "para_data1" in function S_Primitives.
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify (umr): uninitialized memory read:
+  * This is occurring while in:
+	strlen       [p9.o, pc=0xd094]
+	fputs        [fputs.o, pc=0xf6f7fb78]
+	S_Primitives [line 2700, analysis1.c, pc=0x7c478]
+	S_Node_Type_Check [line 6769, analysis1.c, pc=0x910ac]
+	execution_proc [line 6841, analysis1.c, pc=0x91310]
+	exec_run     [line 1116, exec_rtn1.c, pc=0x2471c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+  * Reading 9 bytes from 0xf7ffe560 on the stack (2 bytes at 0xf7ffe567 uninit).
+  * This is local variable "para_data1" in function S_Primitives.
+ SUCCEED<< Back to Node 
+__(sDP_succeed) Direct Product check
+sDP w output file ptr 0
+end w output file ptr 0
+__(sDP_succeed) Direct Product return
+sDP w output file ptr 0
+end w output file ptr 0
+ << Back to Node return
+__(sDP_succeed) Direct Product return
+sDP w output file ptr 0
+end w output file ptr 0
+__(SP_first) primitive  (CHECK)_EQUAL_('TIMEOUT')
+check parameteres 
+ search  parameter
+initial search->C_STRING check
+initial search->b(1.. ) check
+initial search->'c' check
+initial search->d check
+initial search->DIGIT check
+initial search->NL check
+initial search->return check
+initial search->time check
+initial search->TIMER_(D) check
+initial search->var check
+initial search->'2' check
+initial search->(D)_PLUS_(VAR) check
+initial search->DELAY_('1') check
+initial search->check check
+matching in tree 
+matched node name ->check
+match in synthesis tree 
+ptr 14 7 0
+o ptr 14 7 15
+match with match node 280412T<=
+ => Found a corresponding match node for para
+=====>para_data TIMEOUT˜
+pointer loc 14
+=====>para_data  => Found a corresponding match node
+------ 'TIMEOUT'
+COMPARE compar 280412T TIMEOUT 
+ FAIL<< Back to Node 
+Process 738808 ENTERING S_Delay()
+Process 738808 LEAVING S_Delay()
+Process 738808 ENTERING S_Timer()
+Process 738808 LEAVING S_Timer()
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify (fum): free unallocated memory::
+  * This is occurring while in:
+	Template_Stack_Ptr_Free [line 683, exec_rtn1.c, pc=0x22560]
+	Stack_Free   [line 750, exec_rtn1.c, pc=0x22910]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+	start        [crt0.o, pc=0x2064]
+  * Attempting to free block at 0x1adb88 already freed.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	Stack_Allocation [line 564, exec_rtn1.c, pc=0x21de4]
+	exec_run     [line 967, exec_rtn1.c, pc=0x23c28]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+	start        [crt0.o, pc=0x2064]
+  * There have been 7 calls to free since this block was freed from:
+	free         [p6.o, pc=0x48e0]
+	Stack_Free   [line 734, exec_rtn1.c, pc=0x22868]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify (fum): free unallocated memory::
+  * This is occurring while in:
+	Template_Stack_Ptr_Free [line 683, exec_rtn1.c, pc=0x22560]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Stack_Free   [line 750, exec_rtn1.c, pc=0x22910]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+	start        [crt0.o, pc=0x2064]
+  * Attempting to free block at 0x1ef178 already freed.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	Stack_Allocation [line 564, exec_rtn1.c, pc=0x21de4]
+	A_Direct_Product [line 970, analysis1.c, pc=0x73f00]
+	A_Node_Type_Check [line 1691, analysis1.c, pc=0x770dc]
+	execution_proc [line 6838, analysis1.c, pc=0x91300]
+	exec_run     [line 1034, exec_rtn1.c, pc=0x2421c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+  * There have been 7 calls to free since this block was freed from:
+	free         [p6.o, pc=0x48e0]
+	Stack_Free   [line 734, exec_rtn1.c, pc=0x22868]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify (fum): free unallocated memory::
+  * This is occurring while in:
+	Template_Stack_Ptr_Free [line 683, exec_rtn1.c, pc=0x22560]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Stack_Free   [line 750, exec_rtn1.c, pc=0x22910]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+  * Attempting to free block at 0x1ef218 already freed.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	Stack_Allocation [line 564, exec_rtn1.c, pc=0x21de4]
+	A_Sequence   [line 1416, analysis1.c, pc=0x75ea4]
+	A_Node_Type_Check [line 1707, analysis1.c, pc=0x770fc]
+	execution_proc [line 6838, analysis1.c, pc=0x91300]
+	exec_run     [line 1034, exec_rtn1.c, pc=0x2421c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+  * There have been 7 calls to free since this block was freed from:
+	free         [p6.o, pc=0x48e0]
+	Stack_Free   [line 734, exec_rtn1.c, pc=0x22868]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify (fum): free unallocated memory::
+  * This is occurring while in:
+	Template_Stack_Ptr_Free [line 656, exec_rtn1.c, pc=0x22440]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Stack_Free   [line 750, exec_rtn1.c, pc=0x22910]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+  * Attempting to free block at 0x1ef2b8 already freed.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	Stack_Allocation [line 564, exec_rtn1.c, pc=0x21de4]
+	A_Literal    [line 660, analysis1.c, pc=0x72a84]
+	A_Node_Type_Check [line 1686, analysis1.c, pc=0x770cc]
+	execution_proc [line 6838, analysis1.c, pc=0x91300]
+	exec_run     [line 1034, exec_rtn1.c, pc=0x2421c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+  * There have been 7 calls to free since this block was freed from:
+	free         [p6.o, pc=0x48e0]
+	Stack_Free   [line 734, exec_rtn1.c, pc=0x22868]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify (fum): free unallocated memory::
+  * This is occurring while in:
+	Template_Stack_Ptr_Free [line 683, exec_rtn1.c, pc=0x22560]
+	Template_Stack_Ptr_Free [line 704, exec_rtn1.c, pc=0x226a4]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Stack_Free   [line 750, exec_rtn1.c, pc=0x22910]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+  * Attempting to free block at 0x1ef358 already freed.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	Stack_Allocation [line 564, exec_rtn1.c, pc=0x21de4]
+	A_Direct_Product [line 970, analysis1.c, pc=0x73f00]
+	A_Node_Type_Check [line 1691, analysis1.c, pc=0x770dc]
+	execution_proc [line 6838, analysis1.c, pc=0x91300]
+	exec_run     [line 1034, exec_rtn1.c, pc=0x2421c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+  * There have been 7 calls to free since this block was freed from:
+	free         [p6.o, pc=0x48e0]
+	Stack_Free   [line 734, exec_rtn1.c, pc=0x22868]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify (fum): free unallocated memory::
+  * This is occurring while in:
+	Template_Stack_Ptr_Free [line 656, exec_rtn1.c, pc=0x22440]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Template_Stack_Ptr_Free [line 704, exec_rtn1.c, pc=0x226a4]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Stack_Free   [line 750, exec_rtn1.c, pc=0x22910]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+  * Attempting to free block at 0x1eacf8 already freed.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	Stack_Allocation [line 564, exec_rtn1.c, pc=0x21de4]
+	A_Direct_Product [line 857, analysis1.c, pc=0x739a4]
+	A_Node_Type_Check [line 1691, analysis1.c, pc=0x770dc]
+	execution_proc [line 6838, analysis1.c, pc=0x91300]
+	exec_run     [line 1034, exec_rtn1.c, pc=0x2421c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+  * There have been 7 calls to free since this block was freed from:
+	free         [p6.o, pc=0x48e0]
+	Stack_Free   [line 734, exec_rtn1.c, pc=0x22868]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify (fum): free unallocated memory::
+  * This is occurring while in:
+	Template_Stack_Ptr_Free [line 656, exec_rtn1.c, pc=0x22440]
+	Template_Stack_Ptr_Free [line 704, exec_rtn1.c, pc=0x226a4]
+	Template_Stack_Ptr_Free [line 704, exec_rtn1.c, pc=0x226a4]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Template_Stack_Ptr_Free [line 699, exec_rtn1.c, pc=0x22660]
+	Stack_Free   [line 750, exec_rtn1.c, pc=0x22910]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+  * Attempting to free block at 0x1ead98 already freed.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	Stack_Allocation [line 564, exec_rtn1.c, pc=0x21de4]
+	A_Direct_Product [line 857, analysis1.c, pc=0x739a4]
+	A_Node_Type_Check [line 1691, analysis1.c, pc=0x770dc]
+	execution_proc [line 6838, analysis1.c, pc=0x91300]
+	exec_run     [line 1034, exec_rtn1.c, pc=0x2421c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+  * There have been 7 calls to free since this block was freed from:
+	free         [p6.o, pc=0x48e0]
+	Stack_Free   [line 734, exec_rtn1.c, pc=0x22868]
+	exec_run     [line 1186, exec_rtn1.c, pc=0x24af4]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+	main         [line 1195, main.c, pc=0x59868]
+	start        [crt0.o, pc=0x2064]
+end of execution proc 
+
+####final file length 0 0
+Shutting down the server line 1207 of exec_rtn1.c
+destroy_child2parent( 0x1EE928 ) called by PID 28041 line 672 of fifo.c
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+Purify: Searching for all memory leaks...
+
+destroy_fifos() is blasting the following:
+Shared parent FIFO:
+fd		= 5
+bufsiz	= 4096
+pathname	= "/usr/tmp/fifo.27986"
+semaphore	= 0
+fromstr	= ""
+data_gbuf	= ""
+reply_htab	= 0x1EE0A8
+
+Child FIFOs:
+pid	= 28041
+childstr	= ""
+fd		= 6
+bufsiz	= 4096
+pathname	= "/usr/tmp/fifo.28041"
+data_gbuf	= "(Null)"
+
+destroy_child2parent( 0x1EE1E8 ) called by PID 27986 line 672 of fifo.c
+There are 5229 leaked bytes (2.23% of the 234989 allocated bytes in the heap)
+
+Purify (mlk): 11 bytes at 0x1d3fe0 lost, allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	Allocate_Hoare_Root_Dummy [line 223, build_hoare_tree.c, pc=0x1ecfc]
+	Read_Spec_And_Build_Tree [line 248, build_rtn.c, pc=0x1daf0]
+	Build_Proc   [line 381, build_rtn.c, pc=0x1e1e8]
+	reset_descartes_specname [line 577, main.c, pc=0x562fc]
+	load_pixmap  [line 572, wid1.c, pc=0x4dc34]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	FileSelectionPB [FileSB.o, pc=0xf727c2ec]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	ArmAndActivate [PushBG.o, pc=0xf72dd000]
+	ListCallback [FileSB.o, pc=0xf727a400]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	DefaultAction [List.o, pc=0xf72b0c88]
+	UnSelectElement [List.o, pc=0xf72af5c4]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleSimpleState [TMstate.o, pc=0xf71cde34]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce92c]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+
+Purify (mlk): 3 bytes at 0x1eb018 lost, allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	S_Timer      [line 3475, analysis1.c, pc=0x801ec]
+	S_Node_Type_Check [line 6777, analysis1.c, pc=0x910cc]
+	execution_proc [line 6841, analysis1.c, pc=0x91310]
+	exec_run     [line 1116, exec_rtn1.c, pc=0x2471c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+
+Purify (mlk): 3 bytes at 0x1eb2f8 lost, allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	S_Delay      [line 3760, analysis1.c, pc=0x81b04]
+	S_Node_Type_Check [line 6801, analysis1.c, pc=0x9113c]
+	execution_proc [line 6841, analysis1.c, pc=0x91310]
+	exec_run     [line 1116, exec_rtn1.c, pc=0x2471c]
+	exec_proc    [line 1744, exec_rtn1.c, pc=0x27be0]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	Activate     [PushBG.o, pc=0xf72dc440]
+	ActivateCommonG [PushBG.o, pc=0xf72e2ec8]
+	InputDispatch [PushBG.o, pc=0xf72dbe20]
+	_XmDispatchGadgetInput [GadgetUtil.o, pc=0xf728b4c4]
+	_XmGadgetActivate [Manager.o, pc=0xf73ef594]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleComplexState [TMstate.o, pc=0xf71ce860]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce940]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+	XtDispatchEvent [Event.o, pc=0xf7194914]
+	XtAppMainLoop [Event.o, pc=0xf7194eb0]
+
+Purify [mlk]: 5212 bytes lost,
+       allocated by malloc in 61 chunks
+       whose messages were suppressed with a .purify file.
+
+Purify Heap Analysis (combining suppressed and unsuppressed chunks)
+
+                         Chunks      Bytes
+              Leaked         64       5229
+  Potentially Leaked          0          0
+              In-Use       3254     229760
+  ----------------------------------------
+     Total Allocated       3318     234989
+
+****  Purify'd h4.purify  (pid 28041, forked from pid 27986)  ****
+  * 10 access errors.
+  * Basic memory usage:
+      737272 code
+      596520 data/bss
+      884744 heap
+        6472 stack
+  * Shared library memory usage:
+     2359296 libXm_pure_210.so.1.2	(shared code)
+      150168 libXm_pure_210.so.1.2	(private data)
+      409600 libXt_pure_210.so.4.10	(shared code)
+       40960 libXt_pure_210.so.4.10	(private data)
+      688128 libX11_pure_210.so.4.10	(shared code)
+       49152 libX11_pure_210.so.4.10	(private data)
+      122880 libXmu_pure_210.so.4.10	(shared code)
+       16384 libXmu_pure_210.so.4.10	(private data)
+      696320 libc_pure_210.so.1.9	(shared code)
+       16384 libc_pure_210.so.1.9	(private data)
+        8192 libinternal_stubs.so.1.0	(shared code)
+        8192 libinternal_stubs.so.1.0	(private data)
+
+
+
+****  Purify'd h4.purify  (pid 27986)  ****
+Purify: Searching for all memory leaks...
+
+There are 5223 leaked bytes (1.68% of the 310937 allocated bytes in the heap)
+
+Purify (mlk): 11 bytes at 0x1d3fe0 lost, allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	calloc       [p6.o, pc=0x5108]
+	Allocate_Hoare_Root_Dummy [line 223, build_hoare_tree.c, pc=0x1ecfc]
+	Read_Spec_And_Build_Tree [line 248, build_rtn.c, pc=0x1daf0]
+	Build_Proc   [line 381, build_rtn.c, pc=0x1e1e8]
+	reset_descartes_specname [line 577, main.c, pc=0x562fc]
+	load_pixmap  [line 572, wid1.c, pc=0x4dc34]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	FileSelectionPB [FileSB.o, pc=0xf727c2ec]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	ArmAndActivate [PushBG.o, pc=0xf72dd000]
+	ListCallback [FileSB.o, pc=0xf727a400]
+	XtCallCallbackList [Callback.o, pc=0xf7181b68]
+	DefaultAction [List.o, pc=0xf72b0c88]
+	UnSelectElement [List.o, pc=0xf72af5c4]
+	HandleActions [TMstate.o, pc=0xf71cd220]
+	HandleSimpleState [TMstate.o, pc=0xf71cde34]
+	_XtTranslateEvent [TMstate.o, pc=0xf71ce92c]
+	DispatchEvent [Event.o, pc=0xf7193a64]
+	DecideToDispatch [Event.o, pc=0xf71947e0]
+
+Purify [mlk]: 5212 bytes lost,
+       allocated by malloc in 61 chunks
+       whose messages were suppressed with a .purify file.
+
+Purify Heap Analysis (combining suppressed and unsuppressed chunks)
+
+                         Chunks      Bytes
+              Leaked         62       5223
+  Potentially Leaked          0          0
+              In-Use       4042     305714
+  ----------------------------------------
+     Total Allocated       4104     310937
+
+****  Purify'd h4.purify  (pid 27986)  ****
+  * No access errors.
+  * Basic memory usage:
+      737272 code
+      596520 data/bss
+      892936 heap
+        6480 stack
+  * Shared library memory usage:
+     2359296 libXm_pure_210.so.1.2	(shared code)
+      150168 libXm_pure_210.so.1.2	(private data)
+      409600 libXt_pure_210.so.4.10	(shared code)
+       40960 libXt_pure_210.so.4.10	(private data)
+      688128 libX11_pure_210.so.4.10	(shared code)
+       49152 libX11_pure_210.so.4.10	(private data)
+      122880 libXmu_pure_210.so.4.10	(shared code)
+       16384 libXmu_pure_210.so.4.10	(private data)
+      696320 libc_pure_210.so.1.9	(shared code)
+       16384 libc_pure_210.so.1.9	(private data)
+        8192 libinternal_stubs.so.1.0	(shared code)
+        8192 libinternal_stubs.so.1.0	(private data)
+
+

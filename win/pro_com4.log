@@ -1,0 +1,276 @@
+Descartes' Trace Log  Ver 1.0   Time: Tue Oct 25 20:54:35 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/pro_com4.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/pro_com4.log.
+
+Contents of the Descartes specification file:
+12
+24
+
+
+Module Title (MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+$reference direct product - MESSAGE_ONE
+__(aDP_first) Direct Product MESSAGE_ONE
+ >> Go to Node input_one
+$match direct product - input_one
+__(aDP_first) Direct Product input_one
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node input_one
+$match direct product - input_one
+__(aDP_succeed) Direct Product input_one
+__(aDP_succeed) Direct Product input_one
+ << Succeed; Back to Node MESSAGE_ONE
+$reference direct product - MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node MESSAGE_ONE
+$reference direct product - MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+ << Succeed; Back to Node (MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+$reference direct product - MESSAGE_TWO
+__(aDP_first) Direct Product MESSAGE_TWO
+ >> Go to Node input_two
+$match direct product - input_two
+__(aDP_first) Direct Product input_two
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 5
+ << Back to Node input_two
+$match direct product - input_two
+__(aDP_succeed) Direct Product input_two
+__(aDP_succeed) Direct Product input_two
+ << Succeed; Back to Node MESSAGE_TWO
+$reference direct product - MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 6
+ << Back to Node MESSAGE_TWO
+$reference direct product - MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+ << Succeed; Back to Node (MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node COMSUMER_(INPUT_TWO)(COMSUMER_(INPUT_TWO))
+$reference direct product - COMSUMER_(INPUT_TWO)(COMSUMER_(INPUT_TWO))
+(SDP)_Node COMSUMER_(INPUT_TWO)(COMSUMER_(INPUT_TWO))
+__(SDP_first)Node COMSUMER_(INPUT_TWO)(COMSUMER_(INPUT_TWO))
+__(SM_first) module COMSUMER_(INPUT_TWO)(COMSUMER_(INPUT_TWO))
+__(SDP1_first)Node INPUT_TWO
+24 => Found a corresponding match node
+__(SDP1_first)Node COMSUMER_(INPUT_TWO)
+ => It is non-defined reference node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/pro_com4.des].
+
+Module Title COMSUMER_(MESSAGE_TWO)
+$reference direct product - MESSAGE_TWO
+__(aDP_first) Direct Product MESSAGE_TWO
+ >> Go to Node input_two
+$match direct product - input_two
+__(aDP_first) Direct Product input_two
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node input_two
+$match direct product - input_two
+__(aDP_succeed) Direct Product input_two
+__(aDP_succeed) Direct Product input_two
+ << Succeed; Back to Node MESSAGE_TWO
+$reference direct product - MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node MESSAGE_TWO
+$reference direct product - MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+ << Succeed; Back to Node COMSUMER_(MESSAGE_TWO)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - message_queue
+__(sDP_first) Direct Product message_queue
+ >> Go to Node '3'
+$literal - '3'
+__(SL_first) Literal '3'
+ => Output a string with Literal
+ << Back to Node message_queue
+$match direct product - message_queue
+__(sDP_succeed) Direct Product message_queue
+ << Succeed; Back to Node COMSUMER_(MESSAGE_TWO)
+$match direct product - latency
+__(sDP_first) Direct Product latency
+ >> Go to Node '2'
+$literal - '2'
+__(SL_first) Literal '2'
+ => Output a string with Literal
+ << Back to Node latency
+$match direct product - latency
+__(sDP_succeed) Direct Product latency
+ << Succeed; Back to Node COMSUMER_(MESSAGE_TWO)
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node time_set
+$match direct product - time_set
+__(sDP_first) Direct Product time_set
+ >> Go to Node TIMER_(LATENCY)
+__(ST_first) primitive TIMER_(LATENCY)
+__(SDP1_first)Node LATENCY
+2 => Found a corresponding match node
+26897 SUCCEED<< Back to Node time_set
+$match direct product - time_set
+__(sDP_succeed) Direct Product time_set
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node DELAY_('3')
+__(SD_first) Delay DELAY_('3')
+3 SUCCEED<< Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node receive_message
+$match direct product - receive_message
+__(sDP_first) Direct Product receive_message
+ >> Go to Node ARECEIVE_FROM_(MESSAGE_QUEUE)
+__(SR_first) Receive  ARECEIVE_FROM_(MESSAGE_QUEUE)
+__(SDP1_first)Node MESSAGE_QUEUE
+3 => Found a corresponding match node
+ч€—ачcач€—ич€—ачcач€—и SUCCEED<< Back to Node receive_message
+$match direct product - receive_message
+__(sDP_succeed) Direct Product receive_message
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node check
+$match direct product - check
+__(sDP_first) Direct Product check
+ >> Go to Node GET_TIME_(TIME_SET)
+$reference direct product - GET_TIME_(TIME_SET)
+(SDP)_Node GET_TIME_(TIME_SET)
+__(SDP_first)Node GET_TIME_(TIME_SET)
+__(SM_first) module GET_TIME_(TIME_SET)
+ => It is non-defined reference node
+ << Back to Node check
+$match direct product - check
+__(sDP_fail) Direct Product check
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 18
+ ** Free a stack element at Node check; adjust stack & output pointers.
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node receive_message
+$match direct product - receive_message
+__(sDP_next) Direct Product receive_message
+ >> Go to the last sibling ARECEIVE_FROM_(MESSAGE_QUEUE) under node receive_message
+__(SR_next) Receive  ARECEIVE_FROM_(MESSAGE_QUEUE)
+ <- Backward output buffer pointer at location 6
+ ** Free a stack element at Node ARECEIVE_FROM_(MESSAGE_QUEUE); adjust stack & output pointers.
+ << Fail; Back to Node receive_message
+$match direct product - receive_message
+__(sDP_fail) Direct Product receive_message
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 6
+ ** Free a stack element at Node receive_message; adjust stack & output pointers.
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node DELAY_('3')
+__(SD_next) Delay DELAY_('3')
+ <- Backward output buffer pointer at location 6
+ ** Free a stack element at Node DELAY_('3'); adjust stack & output pointers.
+ << Fail; Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node time_set
+$match direct product - time_set
+__(sDP_next) Direct Product time_set
+ >> Go to the last sibling TIMER_(LATENCY) under node time_set
+__(ST_next) Module TIMER_(LATENCY)
+ <- Backward output buffer pointer at location 1
+ ** Free a stack element at Node TIMER_(LATENCY); adjust stack & output pointers.
+ << Fail; Back to Node time_set
+$match direct product - time_set
+__(sDP_fail) Direct Product time_set
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 1
+ ** Free a stack element at Node time_set; adjust stack & output pointers.
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 1
+ ** Free a stack element at Node return; adjust stack & output pointers.
+ << Back to Node COMSUMER_(MESSAGE_TWO)
+The synthesis procedure failed.
+No output is produced at this execution.
+
+
+  #####   THE  END OF SUB MODULE  #####
+ FAIL<< Back to Node COMSUMER_(INPUT_TWO)(COMSUMER_(INPUT_TWO))
+ => It is non-defined reference node
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_next)Node NL
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node NL; adjust stack & output pointers.
+ << Fail; Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node return; adjust stack & output pointers.
+ << Back to Node (MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+The synthesis procedure failed.
+No output is produced at this execution.
+#####   THE  END   #####

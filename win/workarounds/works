@@ -1,0 +1,307 @@
+#ifndef CCHK_MISSING_SIGNAL_H
+#define CCHK_MISSING_SIGNAL_H	1
+/*******************************************************************************
+ * MODULE:	CCHK_MISSING_SIGNAL_H
+ *
+ * PURPOSE:	Provide function prototypes that CodeCheck doesn't see for
+ *		some unknown reason.
+ *
+ * FUNCTIONS DECLARED
+ *	EXTERNAL:	signal()
+ *
+ * AUTHOR:	Malcolm L. Franklin, Arizona State University
+ * $Author: franklin $
+ *******************************************************************************
+ * $Date: 1994/08/04 17:39:19 $
+ * $State: Exp $
+ * $Locker:  $
+ * $Source: /all/franklin/thesis/descartes/win/RCS/cchk_missing_signal.h,v $
+ *
+ ******************************************************************************/
+
+
+
+#if 0
+/******************************************************************************
+ *
+$Log: cchk_missing_signal.h,v $
+ * Revision 1.1  1994/08/04  17:39:19  franklin
+ * Initial revision
+ *
+ ******************************************************************************/
+#endif
+
+static char    *cchk_missing_signal_h_rcsid = "$Id: cchk_missing_signal.h,v 1.1, h4_3_8, h4_3_7, h4_3_6, h4_3_5, h4_3_4, h4_3_3 1994/08/04 17:39:19 franklin Exp $";
+
+#ifdef CODECHECK
+void            (*signal (int sig, void (*action) (int))) (int);
+
+#endif
+
+#endif				       /* CCHK_MISSING_SIGNAL_H */
+#ifndef CCHK_MISSING_STDARG_H
+#define CCHK_MISSING_STDARG_H	1
+/*******************************************************************************
+ * MODULE:	CCHK_MISSING_STDARG_H
+ *
+ * PURPOSE:	Provide function prototypes that CodeCheck doesn't see for
+ *		some unknown reason.
+ *
+ * FUNCTIONS DECLARED
+ *	EXTERNAL:	signal()
+ *
+ * AUTHOR:	Malcolm L. Franklin, Arizona State University
+ * $Author: franklin $
+ *******************************************************************************
+ * $Date: 1994/08/04 21:57:28 $
+ * $State: Exp $
+ * $Locker:  $
+ * $Source: /all/franklin/thesis/descartes/win/RCS/cchk_missing_stdarg.h,v $
+ *
+ ******************************************************************************/
+
+
+
+#if 0
+/******************************************************************************
+ *
+$Log: cchk_missing_stdarg.h,v $
+ * Revision 1.1  1994/08/04  21:57:28  franklin
+ * Initial revision
+ *
+ ******************************************************************************/
+#endif
+
+static char    *cchk_missing_stdarg_h_rcsid = "$Id: cchk_missing_stdarg.h,v 1.1, h4_3_8, h4_3_7, h4_3_6, h4_3_5, h4_3_4, h4_3_3 1994/08/04 21:57:28 franklin Exp $";
+
+#ifdef CODECHECK
+#define va_arg(ap,type) (*(type*) NULL)
+#define va_end(ap) ({;})
+typedef struct
+{
+	unsigned int    bogus;
+}               va_list;
+
+#define va_start(ap,T) ({;})
+#endif				       /* CODECHECK */
+
+#endif				       /* CCHK_MISSING_STDARG_H */
+#ifndef CCHK_MISSING_STDLIB_H
+#define CCHK_MISSING_STDLIB_H	1
+/*******************************************************************************
+ * MODULE:	CCHK_MISSING_STDLIB_H
+ *
+ * PURPOSE:	Provide function prototypes that CodeCheck doesn't see for
+ *		some unknown reason.
+ *
+ * FUNCTIONS DECLARED
+ *	EXTERNAL:	abort()
+ *
+ * AUTHOR:	Malcolm L. Franklin, Arizona State University
+ * $Author: franklin $
+ *******************************************************************************
+ * $Date: 1994/08/04 18:18:27 $
+ * $State: Exp $
+ * $Locker:  $
+ * $Source: /all/franklin/thesis/descartes/win/RCS/cchk_missing_stdlib.h,v $
+ *
+ ******************************************************************************/
+
+
+
+#if 0
+/******************************************************************************
+ *
+$Log: cchk_missing_stdlib.h,v $
+ * Revision 1.2  1994/08/04  18:18:27  franklin
+ * Shorten the RCS id variable name.
+ *
+ * Revision 1.1  1994/08/04  17:40:01  franklin
+ * Initial revision
+ *
+ ******************************************************************************/
+#endif
+
+static char    *cchk_missing_stdlib_h_rcsid = "$Id: cchk_missing_stdlib.h,v 1.2, h4_3_8, h4_3_7, h4_3_6, h4_3_5, h4_3_4, h4_3_3 1994/08/04 18:18:27 franklin Exp $";
+
+#ifdef CODECHECK
+void            abort (void);
+
+#endif
+
+#endif				       /* CCHK_MISSING_STDLIB_H */
+#ifndef CCHK_MISSING_UNISTD_H
+#define CCHK_MISSING_UNISTD_H	1
+/*******************************************************************************
+ * MODULE:	CCHK_MISSING_UNISTD
+ *
+ * PURPOSE:	Provide function prototypes that CodeCheck doesn't see for
+ *		some unknown reason.
+ *
+ * FUNCTIONS DECLARED
+ *	EXTERNAL:	getpid()
+ *			fork()
+ *
+ * AUTHOR:	Malcolm L. Franklin, Arizona State University
+ * $Author: franklin $
+ *******************************************************************************
+ * $Date: 1994/08/04 17:40:25 $
+ * $State: Exp $
+ * $Locker:  $
+ * $Source: /all/franklin/thesis/descartes/win/RCS/cchk_missing_unistd.h,v $
+ *
+ ******************************************************************************/
+
+
+
+#if 0
+/******************************************************************************
+ *
+$Log: cchk_missing_unistd.h,v $
+ * Revision 1.1  1994/08/04  17:40:25  franklin
+ * Initial revision
+ *
+ ******************************************************************************/
+#endif
+
+static char    *cchk_missing_unistd_h_rcsid = "$Id: cchk_missing_unistd.h,v 1.1, h4_3_8, h4_3_7, h4_3_6, h4_3_5, h4_3_4, h4_3_3 1994/08/04 17:40:25 franklin Exp $";
+
+#ifdef CODECHECK
+pid_t           getpid (void);
+pid_t           fork (void);
+
+#endif
+
+#endif				       /* CCHK_MISSING_UNISTD_H	 */
+#ifndef NEED_BEFORE_YTAB_H
+#define NEED_BEFORE_YTAB_H	1
+/*******************************************************************************
+ * HEADER:	NEED_BEFORE_YTAB.H
+ *
+ * PURPOSE:	Provide the definition of type NODE, which is used as an
+ *		element of the YACC-generated union YYSTYPE.  It has to be in
+ *		this seperate header, because there is no other way to make
+ *		it appear prior to the definition of YYSTYPE.
+ *
+ *		Also, declare "yylineno" so that it can be reset to 1
+ *		between each call to yyparse().  If you do not reset this
+ *		counter, yyerror() will not report the correct line number
+ *		in error messages.
+ *
+ * AUTHOR:	Malcolm L. Franklin, Arizona State University.
+ *******************************************************************************
+ * $Date: 1994/08/03 21:59:39 $
+ * $State: Exp $
+ * $Locker:  $
+ * $Source: /all/franklin/thesis/descartes/win/RCS/need_before_ytab.h,v $
+ *
+ ******************************************************************************/
+
+#if 0
+/******************************************************************************
+ *
+$Log: need_before_ytab.h,v $
+ * Revision 1.4  1994/08/03  21:59:39  franklin
+ * Changed "str" to "pstr"; prefix "str" is reserved by string.h
+ *
+ * Revision 1.3  1994/06/30  23:28:09  franklin
+ * Declare yylineno in this header, so that you can reset it ot
+ * 1 between each call to yyparse().  (Reset before you read/reread
+ * an input specification).
+ * If you do not reset yylineno, then you wont get the correct line
+ * number in error messages.
+ *
+ * Revision 1.2  1994/05/17  00:06:33  franklin
+ * Only declare yytext[] if the user passes -DUSE_BISON to the compiler.
+ *
+ * Revision 1.1  1994/05/13  02:40:46  franklin
+ * Initial revision
+ *
+ ******************************************************************************/
+#endif
+static char    *need_before_ytab_h_rcsid = "@(#) $Id: need_before_ytab.h,v 1.4, h4_3_8, h4_3_7, h4_3_6, h4_3_5, h4_3_4, h4_3_3 1994/08/03 21:59:39 franklin Exp $";
+
+/*
+ * The following struct is an element of the yacc YYSTYPE union. It has to be
+ * included befor y.tab.h, because there is no way to define code which will
+ * precede the definition of YYSTYPE in y.tab.h.
+ */
+typedef struct node
+{
+	int             val;
+	int             type;
+	char           *pstr;
+}               NODE;
+
+/*
+ * You will need the following declaration of yytext if you use Bison to
+ * process des2.y.
+ */
+
+#ifdef USE_BISON
+extern char     yytext[];
+
+#endif
+
+/* Reset this line counter before calling yyparse(). */
+extern int      yylineno;
+
+#endif				       /* NEED_BEFORE_YTAB_H */
+#ifndef SUNOS4_MISSING_H
+#define SUNOS4_MISSING_H 1
+/*******************************************************************************
+ * HEADER:	SUNOS4_MISSING.H
+ *
+ * PURPOSE:	Declarations of functions and globals that SHOULD have been
+ *		in the SunOS 4.x standard #include files, but were NOT!
+ *
+ * CREATED:	5/1/1994
+ *
+ * AUTHOR:	Malcolm L. Franklin, Arizona State University
+ *******************************************************************************
+ * $Date: 1994/06/01 16:42:44 $
+ * $State: Exp $
+ * $Locker:  $
+ * $Source: /all/franklin/thesis/descartes/win/RCS/sunos4_missing.h,v $
+ *
+ **-M**************************************************************************/
+
+#if 0
+/******************************************************************************
+ *
+$Log: sunos4_missing.h,v $
+ * Revision 1.4  1994/06/01  16:42:44  franklin
+ * SunOS 4.x does NOT have the declaration of "time()" in <time.h>.
+ *
+ * Revision 1.3  1994/05/16  22:46:21  franklin
+ * The declaration of "errno" was causeing CDE 1.1b to abort when running
+ * with ObjectCenter 2.0.2.
+ *
+ * Revision 1.2  1994/05/16  21:04:31  franklin
+ * Remove obsolete comments about sys/sem.h
+ *
+ * Revision 1.1  1994/05/02  06:00:08  franklin
+ * Initial revision
+ *
+ *
+ ******************************************************************************/
+#endif
+static char    *sunos4_missing_h_rcsid = "@(#) $Id: sunos4_missing.h,v 1.4, h4_3_8, h4_3_7, h4_3_6, h4_3_5, h4_3_4, h4_3_3, h4_3_2, h4_3_1, h4_3_0, h4_2_7, h4_2_6, h4_2_5, h4_2_4 1994/06/01 16:42:44 franklin Exp $";
+
+#ifdef sun			       /* Value of the PLATSPEC macro in makefile */
+
+/******************************************************************************
+ * On POSIX-compliant systems, errno and perror() are declared in errno.h
+ ******************************************************************************/
+/* extern int      errno; declaring "errno" causes the IdE CDE tool to bomb. */
+extern void     perror (const char *s);
+
+/******************************************************************************
+ * ANSI/ISO C requires the prototype of "time()" to be in <time.h>
+ ******************************************************************************/
+extern time_t time (time_t *tod);
+
+#endif /* This is a SunOS 4.x compilation. */
+
+
+#endif				       /* SUNOS4_MISSING_H */

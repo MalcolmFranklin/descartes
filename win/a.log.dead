@@ -1,0 +1,70 @@
+Descartes' Trace Log  Ver 1.0   Time: Thu Jun 30 19:13:22 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/a.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/a.log.
+
+Contents of the Descartes specification file:
+12
+
+
+Module Title TWO_OF_(A)
+$reference direct product - A
+__(aDP_first) Direct Product A
+ >> Go to Node x
+$match direct product - x
+__(aDP_first) Direct Product x
+ >> Go to Node '1'
+$literal - '1'
+__(AL_first) Literal '1'
+ => Successful matching at node '1' with input string
+ -> Forward input buffer pointer to location 1
+ << Back to Node x
+$match direct product - x
+__(aDP_succeed) Direct Product x
+__(aDP_succeed) Direct Product x
+ << Succeed; Back to Node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node y
+$match direct product - y
+__(aDP_first) Direct Product y
+ >> Go to Node '2'
+$literal - '2'
+__(AL_first) Literal '2'
+ => Successful matching at node '2' with input string
+ -> Forward input buffer pointer to location 2
+ << Back to Node y
+$match direct product - y
+__(aDP_succeed) Direct Product y
+__(aDP_succeed) Direct Product y
+ << Succeed; Back to Node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ << Succeed; Back to Node TWO_OF_(A)
+The analysis procedure was successful.
+A. Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node X
+$reference direct product - X
+(SDP)_Node X
+__(SDP_first)Node X
+match node->x X
+match node->x->
+1

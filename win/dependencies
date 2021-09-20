@@ -1,0 +1,30 @@
+# DO NOT DELETE THIS LINE -- make depend depends on it.
+
+$(UNAME)/analysis1.o: desc_struct.h share_rtn.h analysis1.h mesg.h wid1.h
+$(UNAME)/analysis1.o: exec_rtn1.h some_utils.h semops.h
+$(UNAME)/build_hoare_tree.o: desc_struct.h desc_table.h build_rtn.h mesg.h
+$(UNAME)/build_hoare_tree.o: wid1.h analysis1.h build_hoare_tree.h
+$(UNAME)/build_hoare_tree.o: some_utils.h
+$(UNAME)/build_rtn.o: desc_struct.h need_before_ytab.h y.tab.h mesg.h wid1.h
+$(UNAME)/build_rtn.o: share_rtn.h build_hoare_tree.h build_rtn.h
+$(UNAME)/command_line.o: command_line.h
+$(UNAME)/des2.o: mesg.h wid1.h desc_struct.h desc_table.h analysis1.h
+$(UNAME)/des2.o: build_hoare_tree.h need_before_ytab.h lex.yy.c
+$(UNAME)/des2.o: /usr/include/stdio.h
+$(UNAME)/desc_struct.o: desc_struct.h
+$(UNAME)/exec_rtn1.o: desc_struct.h share_rtn.h analysis1.h mesg.h wid1.h
+$(UNAME)/exec_rtn1.o: exec_rtn1.h semops.h some_utils.h
+$(UNAME)/lex.yy.o: /usr/include/stdio.h
+$(UNAME)/main.o: some_utils.h command_line.h build_rtn.h mesg.h desc_struct.h
+$(UNAME)/main.o: exec_rtn1.h wid1.h main.h
+$(UNAME)/msg.o: mesg.h
+$(UNAME)/semops.o: sunos4_missing.h some_utils.h semops.h
+$(UNAME)/share_rtn.o: desc_struct.h share_rtn.h
+$(UNAME)/some_utils.o: some_utils.h
+$(UNAME)/token.o: need_before_ytab.h y.tab.h desc_struct.h
+$(UNAME)/wid1.o: desc_struct.h build_rtn.h share_rtn.h semops.h mesg.h
+$(UNAME)/wid1.o: analysis1.h exec_rtn1.h some_utils.h command_line.h
+$(UNAME)/wid1.o: rene_descartes.h main.h wid1.h
+$(UNAME)/y.tab.o: mesg.h wid1.h desc_struct.h desc_table.h analysis1.h
+$(UNAME)/y.tab.o: build_hoare_tree.h need_before_ytab.h lex.yy.c
+$(UNAME)/y.tab.o: /usr/include/stdio.h

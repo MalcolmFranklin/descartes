@@ -1,0 +1,386 @@
+Descartes' Trace Log  Ver 1.0   Time: Sat Oct 22 15:40:22 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/good_recursion.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/good_recursion.log.
+
+Contents of the Descartes specification file:
+123
+
+
+Module Title REVERSAL_OF_(STRING)
+$reference direct product - STRING
+__(aDP_first) Direct Product STRING
+ >> Go to Node first
+$match direct product - first
+__(aDP_first) Direct Product first
+ >> Go to Node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node first
+$match direct product - first
+__(aDP_succeed) Direct Product first
+__(aDP_succeed) Direct Product first
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node rest+
+$match discriminated union - rest+
+__(ADU_first) Discriminated Union rest+
+ >> Go to Node none
+$match direct product - none
+__(aDP_first) Direct Product none
+ >> Go to Node NULL
+$reference direct product - NULL
+(ADP)_Node NULL
+__(ADP_first)Node NULL
+ => Unsuccessful matching with module call
+ << Back to Node none
+$match direct product - none
+__(aDP_fail) Direct Product none
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node none; adjust stack & input pointers.
+ << Back to Node rest+
+$match discriminated union - rest+
+__(ADU_fail) Discriminated Union rest+
+ ?? Try to check node some(1.. )
+__(AS_first) Sequence Node some(1.. )
+ >>(Suc_1) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node some(1.. )
+__(AS_succeed) Sequence Node some(1.. )
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 1 2
+ <<(Suc_2) Succeed; Back to node rest+
+A sequecne pointer0 2
+$match discriminated union - rest+
+__(ADU_succeed) Discriminated Union rest+
+__(ADU_succeed) Discriminated Union rest+
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node STRING
+$reference direct product - STRING
+__(aDP_fail) Direct Product STRING
+ ?? Try to check node rest+
+$match discriminated union - rest+
+__(ADU_next) Discriminated Union rest+
+ >> Go to the last processed some(1.. ) under node rest+
+__(AS_next) Sequence Node some(1.. )
+ >> (No. < upper) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+
+ !!!assign value to prev_stack_element
+ << Back to Node some(1.. )
+__(AS_succeed) Sequence Node some(1.. )
+B sequecne pointer2 3
+A sequecne pointer3 3
+Input_File 1 3
+ <<(Suc_4) Succeed; Back to node rest+
+A sequecne pointer2 3
+$match discriminated union - rest+
+__(ADU_succeed) Discriminated Union rest+
+__(ADU_succeed) Discriminated Union rest+
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 4
+ << Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ << Succeed; Back to Node REVERSAL_OF_(STRING)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ >> Go to Node NONE
+$reference direct product - NONE
+__(sDP_first) Direct Product NONE
+$match discriminated union - return+
+__(SDU_fail) Discriminated Union return+
+ ?? Try to check node SOME
+$reference direct product - SOME
+__(sDP_first) Direct Product SOME
+match node->some(1.. ) SOME
+ >> Go to Node REVERSAL_OF_(REST)
+$reference direct product - REVERSAL_OF_(REST)
+(SDP)_Node REVERSAL_OF_(REST)
+__(SDP_first)Node REVERSAL_OF_(REST)
+__(SM_first) module REVERSAL_OF_(REST)
+__(SDP1_first)Node REST
+23 => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/good_recursion.des].
+
+Module Title REVERSAL_OF_(STRING)
+$reference direct product - STRING
+__(aDP_first) Direct Product STRING
+ >> Go to Node first
+$match direct product - first
+__(aDP_first) Direct Product first
+ >> Go to Node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node first
+$match direct product - first
+__(aDP_succeed) Direct Product first
+__(aDP_succeed) Direct Product first
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node rest+
+$match discriminated union - rest+
+__(ADU_first) Discriminated Union rest+
+ >> Go to Node none
+$match direct product - none
+__(aDP_first) Direct Product none
+ >> Go to Node NULL
+$reference direct product - NULL
+(ADP)_Node NULL
+__(ADP_first)Node NULL
+ => Unsuccessful matching with module call
+ << Back to Node none
+$match direct product - none
+__(aDP_fail) Direct Product none
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node none; adjust stack & input pointers.
+ << Back to Node rest+
+$match discriminated union - rest+
+__(ADU_fail) Discriminated Union rest+
+ ?? Try to check node some(1.. )
+__(AS_first) Sequence Node some(1.. )
+ >>(Suc_1) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node some(1.. )
+__(AS_succeed) Sequence Node some(1.. )
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 1 2
+ <<(Suc_2) Succeed; Back to node rest+
+A sequecne pointer0 2
+$match discriminated union - rest+
+__(ADU_succeed) Discriminated Union rest+
+__(ADU_succeed) Discriminated Union rest+
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ << Succeed; Back to Node REVERSAL_OF_(STRING)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ >> Go to Node NONE
+$reference direct product - NONE
+__(sDP_first) Direct Product NONE
+$match discriminated union - return+
+__(SDU_fail) Discriminated Union return+
+ ?? Try to check node SOME
+$reference direct product - SOME
+__(sDP_first) Direct Product SOME
+match node->some(1.. ) SOME
+ >> Go to Node REVERSAL_OF_(REST)
+$reference direct product - REVERSAL_OF_(REST)
+(SDP)_Node REVERSAL_OF_(REST)
+__(SDP_first)Node REVERSAL_OF_(REST)
+__(SM_first) module REVERSAL_OF_(REST)
+__(SDP1_first)Node REST
+3 => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/good_recursion.des].
+
+Module Title REVERSAL_OF_(STRING)
+$reference direct product - STRING
+__(aDP_first) Direct Product STRING
+ >> Go to Node first
+$match direct product - first
+__(aDP_first) Direct Product first
+ >> Go to Node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node first
+$match direct product - first
+__(aDP_succeed) Direct Product first
+__(aDP_succeed) Direct Product first
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node rest+
+$match discriminated union - rest+
+__(ADU_first) Discriminated Union rest+
+ >> Go to Node none
+$match direct product - none
+__(aDP_first) Direct Product none
+ >> Go to Node NULL
+$reference direct product - NULL
+(ADP)_Node NULL
+__(ADP_first)Node NULL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node none
+$match direct product - none
+__(aDP_succeed) Direct Product none
+__(aDP_succeed) Direct Product none
+ << Succeed; Back to Node rest+
+$match discriminated union - rest+
+__(ADU_succeed) Discriminated Union rest+
+__(ADU_succeed) Discriminated Union rest+
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ << Succeed; Back to Node REVERSAL_OF_(STRING)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ >> Go to Node NONE
+$reference direct product - NONE
+__(sDP_first) Direct Product NONE
+match node->none NONE
+ >> Go to Node FIRST
+$reference direct product - FIRST
+(SDP)_Node FIRST
+__(SDP_first)Node FIRST
+match node->first FIRST
+match node->first->
+3Input_File 0 1
+ => Found a corresponding match node
+ << Back to Node NONE
+$reference direct product - NONE
+__(sDP_succeed) Direct Product NONE
+ << Succeed; Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node REVERSAL_OF_(STRING)
+Your specificaton ran successfully.
+Output file length = 0.  Contents:
+
+
+
+  #####   THE  END OF SUB MODULE  #####
+
+
+  #####   THE  END OF SUB MODULE  #####
+ SUCCEED11<< Back to Node REVERSAL_OF_(REST)
+ << Back to Node SOME
+$reference direct product - SOME
+__(sDP_succeed) Direct Product SOME
+ >> Succeed; Go to Node FIRST
+$reference direct product - FIRST
+(SDP)_Node FIRST
+__(SDP_first)Node FIRST
+match node->first FIRST
+match node->first->
+2Input_File 0 1
+ => Found a corresponding match node
+ << Back to Node SOME
+$reference direct product - SOME
+__(sDP_succeed) Direct Product SOME
+ << Succeed; Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node REVERSAL_OF_(STRING)
+Your specificaton ran successfully.
+Output file length = 0.  Contents:
+
+
+
+  #####   THE  END OF SUB MODULE  #####
+
+
+  #####   THE  END OF SUB MODULE  #####
+ SUCCEED11<< Back to Node REVERSAL_OF_(REST)
+ << Back to Node SOME
+$reference direct product - SOME
+__(sDP_succeed) Direct Product SOME
+ >> Succeed; Go to Node FIRST
+$reference direct product - FIRST
+(SDP)_Node FIRST
+__(SDP_first)Node FIRST
+match node->first FIRST
+match node->first->
+1Input_File 0 1
+ => Found a corresponding match node
+ << Back to Node SOME
+$reference direct product - SOME
+__(sDP_succeed) Direct Product SOME
+ << Succeed; Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node REVERSAL_OF_(STRING)
+Your specificaton ran successfully.
+Output file length = 3.  Contents:
+321
+#####   THE  END   #####

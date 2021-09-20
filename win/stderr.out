@@ -1,0 +1,188 @@
+
+Checking extended ANSI C file main.c with rules from ansi.cc, posix.cc:
+
+main.c(174): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+wid1.h(183): Warning W8016: Only 31 chars are significant.
+wid1.h(185): Warning W8016: Only 31 chars are significant.
+wid1.h(186): Warning W8016: Only 31 chars are significant.
+wid1.h(205): Warning W8016: Only 31 chars are significant.
+main.c(275): Warning W8016: Only 31 chars are significant.
+main.c(371): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(372): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(375): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(376): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(383): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(384): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(421): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(458): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(605): Warning W8016: Only 31 chars are significant.
+main.c(859): Warning W8016: Only 31 chars are significant.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File main.c check complete.
+
+Checking extended ANSI C file analysis1.c with rules from ansi.cc, posix.cc:
+
+analysis1.c(283): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+analysis1.c(452): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(484): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(530): Warning W1004: Precede this line with #undef S_Output_File_f_ptr
+analysis1.c(889): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(902): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(925): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(935): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(945): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(1937): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(1975): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(2307): Warning W8023: Function shmget has no prototype.
+analysis1.c(2310): Warning W8023: Function shmat has no prototype.
+analysis1.c(2314): Warning W8023: Function shmget has no prototype.
+analysis1.c(2317): Warning W8023: Function shmat has no prototype.
+analysis1.c(2319): Warning W8023: Function shmget has no prototype.
+analysis1.c(2322): Warning W8023: Function shmat has no prototype.
+analysis1.c(2614): Warning W8023: Function shmctl has no prototype.
+analysis1.c(2615): Warning W8023: Function shmctl has no prototype.
+analysis1.c(2616): Warning W8023: Function shmctl has no prototype.
+analysis1.c(4155): Warning W8023: Function msgget has no prototype.
+analysis1.c(4463): Warning W8023: Function msgget has no prototype.
+analysis1.c(6851): Warning W1004: Precede this line with #undef S_Unimplemented_feature
+
+Warning W8024: Too many macros for some ANSI compilers.
+File analysis1.c check complete.
+
+Checking extended ANSI C file build_hoare_tree.c with rules from ansi.cc, posix.cc:
+
+build_hoare_tree.c(131): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+desc_table.h(102): Warning W8006: ANSI C does not expand macros inside strings.
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File build_hoare_tree.c check complete.
+
+Checking extended ANSI C file build_rtn.c with rules from ansi.cc, posix.cc:
+
+build_rtn.c(164): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+build_rtn.c(375): Warning W8006: ANSI C does not expand macros inside strings.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File build_rtn.c check complete.
+
+Checking extended ANSI C file command_line.c with rules from ansi.cc, posix.cc:
+
+command_line.c(104): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+File command_line.c check complete.
+
+Checking extended ANSI C file desc_struct.c with rules from ansi.cc, posix.cc:
+
+desc_struct.c(54): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+File desc_struct.c check complete.
+
+Checking extended ANSI C file exec_rtn1.c with rules from ansi.cc, posix.cc:
+
+exec_rtn1.c(321): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+exec_rtn1.c(760): Warning W8023: Function shmget has no prototype.
+exec_rtn1.c(763): Warning W8023: Function shmat has no prototype.
+exec_rtn1.c(765): Warning W8023: Function shmget has no prototype.
+exec_rtn1.c(768): Warning W8023: Function shmat has no prototype.
+exec_rtn1.c(770): Warning W8023: Function shmget has no prototype.
+exec_rtn1.c(773): Warning W8023: Function shmat has no prototype.
+exec_rtn1.c(775): Warning W8023: Function shmget has no prototype.
+exec_rtn1.c(778): Warning W8023: Function shmat has no prototype.
+exec_rtn1.c(892): Warning W8023: Function msgget has no prototype.
+exec_rtn1.c(903): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(905): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(918): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(920): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(993): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(995): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(1094): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(1096): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(1107): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(1109): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(1192): Warning W8023: Function msgctl has no prototype.
+exec_rtn1.c(1195): Warning W8023: Function shmctl has no prototype.
+exec_rtn1.c(1198): Warning W8023: Function shmctl has no prototype.
+exec_rtn1.c(1201): Warning W8023: Function shmctl has no prototype.
+exec_rtn1.c(1204): Warning W8023: Function shmctl has no prototype.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File exec_rtn1.c check complete.
+
+Checking extended ANSI C file fifo.c with rules from ansi.cc, posix.cc:
+
+fifo.c(289): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+File fifo.c check complete.
+
+Checking extended ANSI C file hash.c with rules from ansi.cc, posix.cc:
+
+hash.c(78): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+File hash.c check complete.
+
+Checking extended ANSI C file msg.c with rules from ansi.cc, posix.cc:
+
+msg.c(55): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+msg.c(99): Warning W8023: Function msgsnd has no prototype.
+msg.c(113): Warning W8023: Function msgrcv has no prototype.
+msg.c(132): Warning W8023: Function msgrcv has no prototype.
+File msg.c check complete.
+
+Checking extended ANSI C file safe.c with rules from ansi.cc, posix.cc:
+
+safe.c(1): Warning W1005: This definition of _POSIX_SOURCE hides a prior definition.
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+safe.c(350): Warning W8006: ANSI C does not expand macros inside strings.
+safe.c(378): Warning W8006: ANSI C does not expand macros inside strings.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File safe.c check complete.
+
+Checking extended ANSI C file semops.c with rules from ansi.cc, posix.cc:
+
+semops.c(103): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+File semops.c check complete.
+
+Checking extended ANSI C file share_rtn.c with rules from ansi.cc, posix.cc:
+
+share_rtn.c(73): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+share_rtn.c(194): Warning W8006: ANSI C does not expand macros inside strings.
+File share_rtn.c check complete.
+
+Checking extended ANSI C file some_utils.c with rules from ansi.cc, posix.cc:
+
+some_utils.c(86): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+some_utils.c(236): Warning W8025: non-ANSI unsigned type.
+some_utils.c(239): Warning W8025: non-ANSI unsigned type.
+some_utils.c(240): Warning W8025: non-ANSI unsigned type.
+File some_utils.c check complete.
+
+Checking extended ANSI C file token.c with rules from ansi.cc, posix.cc:
+
+token.c(56): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+File token.c check complete.
+
+Checking extended ANSI C file wid1.c with rules from ansi.cc, posix.cc:
+
+wid1.c(361): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+wid1.h(183): Warning W8016: Only 31 chars are significant.
+wid1.h(185): Warning W8016: Only 31 chars are significant.
+wid1.h(186): Warning W8016: Only 31 chars are significant.
+wid1.h(205): Warning W8016: Only 31 chars are significant.
+wid1.c(481): Warning W8016: Only 31 chars are significant.
+wid1.c(496): Warning W8016: Only 31 chars are significant.
+wid1.c(502): Warning W8016: Only 31 chars are significant.
+wid1.c(1039): Warning W8016: Only 31 chars are significant.
+wid1.c(1392): Warning W8016: Only 31 chars are significant.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File wid1.c check complete.
+
+Project main.c completed.
+16696 source lines, 264476 header lines.

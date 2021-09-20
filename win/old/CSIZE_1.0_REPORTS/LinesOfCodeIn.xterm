@@ -1,0 +1,27 @@
+   total    blank lines w/   nb, nc    semi- preproc. file
+   lines    lines comments    lines   colons  direct.
+--------+--------+--------+--------+--------+--------+----
+    2627       12      545     2078        8        6 TekPrsTbl.c
+      76        5       37       34        0       34 Tekparse.h
+    1593      183      192     1293      660       85 Tekproc.c
+    2956       13      614     2337        9        6 VTPrsTbl.c
+     109        4       37       68        0       68 VTparse.h
+    1461      167      215     1145      688       25 button.c
+    3231      309      483     2612     1351      135 charproc.c
+     244       28       71      146       85        1 cursor.c
+     104        8       29       71       36        5 data.c
+      69        6       25       38       36        2 data.h
+     101        8       34       59        0       59 error.h
+     291       21       33      239      163        8 input.c
+    2925      264      463     2280      988      578 main.c
+      31        2       25        4        0        4 main.h
+    1228      184      155      964      486       25 menu.c
+     301       51       39      211       37       88 menu.h
+     956      110      104      759      375       57 misc.c
+     532       65      220      394      227      126 ptyx.h
+     536       48       66      439      179      130 resize.c
+     688       85      161      457      272       33 screen.c
+     519       73      106      351      193       19 scrollbar.c
+     106       15       47       44       29        1 tabs.c
+     995       81      119      804      376        5 util.c
+   21679     1742     3820    16827     6198     1500 total

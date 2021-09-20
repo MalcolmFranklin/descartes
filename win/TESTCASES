@@ -1,0 +1,14 @@
+Save the .des .input .output and .log for each (4 files)
+
+Testcase		Language Features Demonstrated
+----------------------+---------------------------------------------------------
+union_seq_dp_sharp.des	Discriminated Union, Sequence, Direct Product, Sharp (#)
+			DIGIT module call.
+----------------------+---------------------------------------------------------
+arith_primitives.des	All arithmetic primitives: _PLUS_, _MINUS_, _TIMES_, 
+			and _DIVIDED_BY_
+----------------------+---------------------------------------------------------
+logic_primitives.des	All logic primitives: _EQUAL_, _NOT_EQUAL_,
+			_GREATER_THAN_, and _LESS_THAN_
+----------------------+---------------------------------------------------------
+

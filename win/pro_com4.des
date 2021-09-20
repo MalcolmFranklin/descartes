@@ -1,0 +1,66 @@
+(MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+	MESSAGE_ONE
+		input_one
+			INTEGER
+		NL
+
+	MESSAGE_TWO
+		input_two
+			INTEGER
+		NL
+
+	return
+		NL
+		(PRODUCER_(INPUT_ONE))_PARALLEL_(COMSUMER_(INPUT_TWO))
+
+
+PRODUCER_(MESSAGE_ONE)
+	MESSAGE_ONE
+		input_one
+			INTEGER
+		NL
+	message_queue
+		'3'
+	minium
+		'5'
+	return
+		time_sets
+			TIMER_(MINIUM)
+		'update'
+		update_message
+			(INPUT_ONE)_PLUS_('2')
+		checks
+			GET_TIME_(TIME_SETS)
+		select+
+			(CHECKS)_EQUAL_('TIMEOUT')
+				'sucess'
+				(UPDATE_MESSAGE)_ASEND_TO_(MESSAGE_QUEUE)
+			'violate time constraint1'
+
+
+
+COMSUMER_(MESSAGE_TWO)
+	MESSAGE_TWO
+		input_two
+			INTEGER
+		NL
+
+	message_queue
+		'3'
+	latency
+		'2'
+	return
+		time_set
+			TIMER_(LATENCY)
+		DELAY_('3')
+		receive_message
+			ARECEIVE_FROM_(MESSAGE_QUEUE)
+		check
+			GET_TIME_(TIME_SET)
+		select+
+			(CHECK)_EQUAL_('TIMEOUT')
+				'violate time constraint2'
+			'sucess'
+				NL
+				update_message
+				(INPUT_TWO)_PLUS_(RECEIVE_MESSAGE)

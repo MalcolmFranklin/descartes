@@ -1,0 +1,46 @@
+Descartes' Trace Log  Ver 1.0   Time: Fri Aug 12 18:39:01 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/union_seq_sharp.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/union_seq_sharp.log.
+
+Contents of the Descartes specification file:
+A
+B
+
+
+
+Module Title STRING_OF_(AB)
+$reference direct product - AB
+__(aDP_first) Direct Product AB
+ >> Go to Node input_string*
+$match sequence - input_string*
+__(AS_first) Sequence Node input_string*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node AB
+$reference direct product - AB
+__(aDP_succeed) Direct Product AB
+__(aDP_succeed) Direct Product AB
+ >> Succeed; Go to Node extra_newlines*
+$match sequence - extra_newlines*
+__(AS_first) Sequence Node extra_newlines*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node AB
+$reference direct product - AB
+__(aDP_succeed) Direct Product AB
+__(aDP_succeed) Direct Product AB
+ << Succeed; Back to Node STRING_OF_(AB)
+Failed 0 bytes from the beginning of the input stream.
+Contents of the rest of the input buffer:
+	"A
+B
+
+"
+The analysis procedure failed.
+No output is produced at this execution.
+#####   THE  END   #####

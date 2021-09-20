@@ -1,0 +1,236 @@
+Descartes' Trace Log  Ver 1.0   Time: Tue Apr  5 11:49:01 1994
+--------------------------------------------------------------
+
+  #####   THE  BEGINNING   #####
+
+
+The name of the Descartes specification is [module.des].
+The name of the log file is [module.log].
+
+The contents of input file is shown below:
+digitdigit.digit
+
+
+Module Title THE_INTEGER_PORTION_OF_A_(FIXED_POINT_NUMBER)
+$reference direct product - FIXED_POINT_NUMBER
+__(aDP_first) Direct Product FIXED_POINT_NUMBER
+ >> Go to Node before_decimal(1.. )
+__(AS_first) Sequence Node before_decimal(1.. )
+ >>(Suc_1) Go to node digit
+$match direct product - digit
+__(Abstract_M_first) Node digit
+ => Successful matching at node digit with input string
+ -> Forward input buffer pointer to location 5
+ << Back to Node before_decimal(1.. )
+__(AS_succeed) Sequence Node before_decimal(1.. )
+B sequecne pointer0 5
+A sequecne pointer5 5
+Input_File 0 5
+ <<(Suc_2) Succeed; Back to node FIXED_POINT_NUMBER
+A sequecne pointer0 5
+$reference direct product - FIXED_POINT_NUMBER
+__(aDP_succeed) Direct Product FIXED_POINT_NUMBER
+__(aDP_succeed) Direct Product FIXED_POINT_NUMBER
+ >> Succeed; Go to Node '.'
+$literal - '.'
+__(AL_first) Literal '.'
+ => Unsuccessful matching at node '.' with input string
+ << Back to Node FIXED_POINT_NUMBER
+$reference direct product - FIXED_POINT_NUMBER
+__(aDP_fail) Direct Product FIXED_POINT_NUMBER
+ ?? Try to check node before_decimal(1.. )
+__(AS_next) Sequence Node before_decimal(1.. )
+ >> (No. < upper) Go to node digit
+$match direct product - digit
+__(Abstract_M_first) Node digit
+ => Successful matching at node digit with input string
+ -> Forward input buffer pointer to location 10
+
+ !!!assign value to prev_stack_element
+ << Back to Node before_decimal(1.. )
+__(AS_succeed) Sequence Node before_decimal(1.. )
+B sequecne pointer5 10
+A sequecne pointer10 10
+Input_File 0 10
+Input_File 0 10
+ <<(Suc_4) Succeed; Back to node FIXED_POINT_NUMBER
+A sequecne pointer5 10
+$reference direct product - FIXED_POINT_NUMBER
+__(aDP_succeed) Direct Product FIXED_POINT_NUMBER
+__(aDP_succeed) Direct Product FIXED_POINT_NUMBER
+ >> Succeed; Go to Node '.'
+$literal - '.'
+__(AL_first) Literal '.'
+ => Successful matching at node '.' with input string
+ -> Forward input buffer pointer to location 11
+ << Back to Node FIXED_POINT_NUMBER
+$reference direct product - FIXED_POINT_NUMBER
+__(aDP_succeed) Direct Product FIXED_POINT_NUMBER
+__(aDP_succeed) Direct Product FIXED_POINT_NUMBER
+ >> Succeed; Go to Node after_decimal(1.. )
+__(AS_first) Sequence Node after_decimal(1.. )
+ >>(Suc_1) Go to node digit
+$match direct product - digit
+__(Abstract_M_first) Node digit
+ => Successful matching at node digit with input string
+ -> Forward input buffer pointer to location 16
+ << Back to Node after_decimal(1.. )
+__(AS_succeed) Sequence Node after_decimal(1.. )
+B sequecne pointer11 16
+A sequecne pointer16 16
+Input_File 11 16
+ <<(Suc_2) Succeed; Back to node FIXED_POINT_NUMBER
+A sequecne pointer11 16
+$reference direct product - FIXED_POINT_NUMBER
+__(aDP_succeed) Direct Product FIXED_POINT_NUMBER
+__(aDP_succeed) Direct Product FIXED_POINT_NUMBER
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 17
+ << Back to Node FIXED_POINT_NUMBER
+$reference direct product - FIXED_POINT_NUMBER
+__(aDP_succeed) Direct Product FIXED_POINT_NUMBER
+__(aDP_succeed) Direct Product FIXED_POINT_NUMBER
+ << Succeed; Back to Node THE_INTEGER_PORTION_OF_A_(FIXED_POINT_NUMBER)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node (BEFORE_DECIMAL)_JOIN_(AFTER_DECIMAL)
+$reference direct product - (BEFORE_DECIMAL)_JOIN_(AFTER_DECIMAL)
+(SDP)_Node (BEFORE_DECIMAL)_JOIN_(AFTER_DECIMAL)
+__(SDP_first)Node (BEFORE_DECIMAL)_JOIN_(AFTER_DECIMAL)
+__(SM_first) module (BEFORE_DECIMAL)_JOIN_(AFTER_DECIMAL)
+__(SDP1_first)Node BEFORE_DECIMAL
+digitdigit => Found a corresponding match node
+__(SDP1_first)Node AFTER_DECIMAL
+digit => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [module.des].
+
+Module Title (A)_JOIN_(B)
+$reference direct product - A
+__(aDP_first) Direct Product A
+ >> Go to Node c
+$match direct product - c
+__(aDP_first) Direct Product c
+ >> Go to Node digit
+$match direct product - digit
+__(Abstract_M_first) Node digit
+ => Successful matching at node digit with input string
+ -> Forward input buffer pointer to location 5
+ << Back to Node c
+__(aDP_succeed) Direct Product c
+__(aDP_succeed) Direct Product c
+ << Succeed; Back to Node A
+$reference direct product - A
+__(aDP_succeed) Direct Product A
+__(aDP_succeed) Direct Product A
+ << Succeed; Back to Node (A)_JOIN_(B)
+$reference direct product - B
+__(aDP_first) Direct Product B
+ >> Go to Node d(1.. )
+__(AS_first) Sequence Node d(1.. )
+ >>(Suc_1) Go to node digit
+$match direct product - digit
+__(Abstract_M_first) Node digit
+ => Successful matching at node digit with input string
+ -> Forward input buffer pointer to location 10
+ << Back to Node d(1.. )
+__(AS_succeed) Sequence Node d(1.. )
+B sequecne pointer5 10
+A sequecne pointer10 10
+Input_File 5 10
+ <<(Suc_2) Succeed; Back to node B
+A sequecne pointer0 10
+$reference direct product - B
+__(aDP_succeed) Direct Product B
+__(aDP_succeed) Direct Product B
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node B
+$reference direct product - B
+__(aDP_fail) Direct Product B
+ ?? Try to check node d(1.. )
+__(AS_next) Sequence Node d(1.. )
+ >> (No. < upper) Go to node digit
+$match direct product - digit
+__(Abstract_M_first) Node digit
+ => Successful matching at node digit with input string
+ -> Forward input buffer pointer to location 15
+
+ !!!assign value to prev_stack_element
+ << Back to Node d(1.. )
+__(AS_succeed) Sequence Node d(1.. )
+B sequecne pointer10 15
+A sequecne pointer15 15
+Input_File 5 15
+Input_File 5 15
+ <<(Suc_4) Succeed; Back to node B
+A sequecne pointer10 15
+$reference direct product - B
+__(aDP_succeed) Direct Product B
+__(aDP_succeed) Direct Product B
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 16
+ << Back to Node B
+$reference direct product - B
+__(aDP_succeed) Direct Product B
+__(aDP_succeed) Direct Product B
+ << Succeed; Back to Node (A)_JOIN_(B)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node C
+$reference direct product - C
+(SDP)_Node C
+__(SDP_first)Node C
+match node->c C
+match node->c->
+digitInput_File 0 5
+ => Found a corresponding match node
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node D
+$reference direct product - D
+(SDP)_Node D
+__(SDP_first)Node D
+match node->d(1.. ) D
+match node->d(1.. )->
+digitdigitInput_File 5 15
+ => Found a corresponding match node
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ << Succeed; Back to Node (A)_JOIN_(B)
+The output data will be as follows:
+
+
+
+  #####   THE  END OF SUB MODULE  #####
+
+
+  #####   THE  END OF SUB MODULE  #####
+ SUCCEED11<< Back to Node (BEFORE_DECIMAL)_JOIN_(AFTER_DECIMAL)
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ << Succeed; Back to Node THE_INTEGER_PORTION_OF_A_(FIXED_POINT_NUMBER)
+The output data will be as follows:
+#####   THE  END   #####

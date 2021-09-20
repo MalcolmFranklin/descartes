@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rm -f *.[hcly]
+rm -f Package.config
+rm -f .pkgf*
+rm -f co_recorded

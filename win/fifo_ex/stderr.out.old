@@ -1,0 +1,45 @@
+
+Checking extended ANSI C file fifotst.c with rules from ansi.cc, posix.cc:
+
+fifotst.c(1): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+File fifotst.c check complete.
+
+Checking extended ANSI C file fifo.c with rules from ansi.cc, posix.cc:
+
+fifo.c(292): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+File fifo.c check complete.
+
+Checking extended ANSI C file hash.c with rules from ansi.cc, posix.cc:
+
+hash.c(78): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+File hash.c check complete.
+
+Checking extended ANSI C file safe.c with rules from ansi.cc, posix.cc:
+
+safe.c(1): Warning W1005: This definition of _POSIX_SOURCE hides a prior definition.
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+safe.c(350): Warning W8006: ANSI C does not expand macros inside strings.
+safe.c(378): Warning W8006: ANSI C does not expand macros inside strings.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File safe.c check complete.
+
+Checking extended ANSI C file semops.c with rules from ansi.cc, posix.cc:
+
+semops.c(103): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+File semops.c check complete.
+
+Checking extended ANSI C file some_utils.c with rules from ansi.cc, posix.cc:
+
+some_utils.c(86): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(105): Warning W8025: non-ANSI unsigned type.
+some_utils.c(236): Warning W8025: non-ANSI unsigned type.
+some_utils.c(239): Warning W8025: non-ANSI unsigned type.
+some_utils.c(240): Warning W8025: non-ANSI unsigned type.
+File some_utils.c check complete.
+
+Project fifotst.c completed.
+3172 source lines, 35102 header lines.

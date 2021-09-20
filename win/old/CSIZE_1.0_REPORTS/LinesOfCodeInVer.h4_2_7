@@ -1,0 +1,32 @@
+   total    blank lines w/   nb, nc    semi- preproc. file
+   lines    lines comments    lines   colons  direct.
+--------+--------+--------+--------+--------+--------+----
+    6823     1031      973     4993     2756       39 analysis1.c
+      77        6       61       12        5        7 analysis1.h
+     660       98      210      369      208       26 build_hoare_tree.c
+     118       16       83       21       16        5 build_hoare_tree.h
+     439       54      194      203      100       24 build_rtn.c
+      70        7       52       11        6        5 build_rtn.h
+     362       19      240      109       15       19 command_line.c
+      44        5       27       12        7        5 command_line.h
+     365       68      173      147       58       66 desc_struct.h
+     101        7       81       46        3        5 desc_table.h
+    2077      295      439     1381      708       36 exec_rtn1.c
+     155       23       85       54       34       12 exec_rtn1.h
+     864       64      255      567      269       39 main.c
+      49        6       34        9        4        5 main.h
+      63        8       36       19        8        9 mesg.h
+     128       12       64       52       17       14 msg.c
+      54        4       35       15        6        7 need_before_ytab.h
+     320       24      204      107       49       17 semops.c
+      54        3       41       10        5        5 semops.h
+     199       25      107       73       16       14 share_rtn.c
+     107       10       73       24        5        5 share_rtn.h
+      10        0       10        0        0        0 share_var.c
+     476       40      266      172       67       14 some_utils.c
+      92       13       43       36       25        5 some_utils.h
+      58        7       41       10        3        7 sunos4_missing.h
+     147       14       69       64       11       18 token.c
+    1032      119      411      539      288       62 wid1.c
+     143       11      100       39       30        7 wid1.h
+   15087     1989     4407     9094     4719      477 total

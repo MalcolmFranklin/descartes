@@ -1,0 +1,35 @@
+THE_INTEGER_PORTION_OF_A_(FIXED_POINT_NUMBER)
+	FIXED_POINT_NUMBER
+		before_decimal(1.. )
+			DIGIT
+		'.'
+		after_decimal(1.. )
+			DIGIT
+		NL
+	return
+		(BEFORE_DECIMAL)_JOIN_(AFTER_DECIMAL)
+
+(A)_JOIN_(B)
+	A
+		c
+			DIGIT
+	B
+		d(1.. )
+			DIGIT
+		NL
+	return
+		C
+		D
+
+DIGIT
+	return+
+		'0'
+		'1'
+		'2'
+		'3'
+		'4'
+		'5'
+		'6'
+		'7'
+		'8'
+		'9'

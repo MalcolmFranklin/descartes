@@ -1,0 +1,11 @@
+#/bin/csh
+
+foreach ff ( `/bin/ls` )
+	set num = `echo $ff | wc -c`
+	sleep $num
+	rm -rf `platform`
+	echo =============================================================
+	echo 				$ff
+	echo =============================================================
+	make
+end

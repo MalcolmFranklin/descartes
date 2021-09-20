@@ -1,0 +1,24 @@
+#!/bin/csh -f
+
+set OUTF = TOTALS.h4v
+set OUTF2 = TOTALS.ana
+
+set INTERESTING_LIST = "1.1 h4_2_0 h4_2_2 h4_2_1 h4_2_3 h4_2_4 h4_2_5 h4_2_6 h4_2_7 h4_3_0 h4_3_1"
+
+echo Totals for all versions of h4 >! $OUTF
+echo Totals for all versions of analysis1.c >! $OUTF2
+
+CLEANME
+foreach VERSION ( $INTERESTING_LIST )
+        echo -n $VERSION >> $OUTF
+	BUILDME $VERSION
+	COUNTME $VERSION
+	set INFILE = LinesOfCodeInVer.${VERSION}
+        tail -1 $INFILE | \
+        	awk '{print "	" $1 "	" $2 "	" $3 "	" $4 "	" $5 "	" $6}' >> $OUTF
+
+        grep analysis1.c $INFILE | \
+		awk '{print $1 "	" $2 "	" $3 "	" $4 "	" $5 "	" $6}' >> $OUTF2
+	CLEANME
+end
+

@@ -1,0 +1,49 @@
+#!/bin/csh -f
+
+if ( $#argv < 1 ) then
+	echo $0 error: Incorrect number of parameters.
+	echo "	" $0 rcs_tag
+	exit ( -1 )
+endif
+
+echo Running $0 script for RCS version $1
+
+rm -f .pkgfreezethread
+co -r${1} .pkgfreezethread
+# Abort if RCS reports an error
+if ( $status  != 0 ) exit ( -1 )
+
+# Generate a list of all C source files used to build this version.
+set FILE_LIST = ( `awk '{ print $1 }' .pkgfreezethread | sed -e 's:,v::' | grep '.[h,c,l,y]$' | sort -d` )
+
+# Checkout the correct version of each file used in this verson.
+foreach FILE ( $FILE_LIST )
+	if ( -e $FILE ) rm -f $FILE
+	co -r${1} $FILE
+	# Abort if RCS reports an error
+	if ( $status  != 0 ) exit ( -1 )
+end
+
+
+# Workaround corrupted RCS file RCS/wid1.h,v
+if ( -e wid1.h ) then
+	chmod a+w wid1.h
+	strip_nonprintables < wid1.h >! out
+	mv out wid1.h
+endif
+
+# Workaround missing newline at end of main.c
+if ( -e main.c ) then
+	echo ":w\!" >! cmd
+	echo ":wq" >> cmd
+	chmod a+rw main.c
+	vi main.c < cmd
+endif
+
+co -r${1} makefile
+make
+# rm -f $FILE_LIST
+
+echo " "
+
+exit ( 0 )

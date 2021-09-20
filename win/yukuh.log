@@ -1,0 +1,314 @@
+Descartes' Trace Log  Ver 1.0   Time: Sun Aug  7 19:44:03 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/yukuh.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/yukuh.log.
+
+Contents of the Descartes specification file:
+123
+
+
+Module Title REVERSAL_OF_(STRING)
+$reference direct product - STRING
+__(aDP_first) Direct Product STRING
+ >> Go to Node first
+$match direct product - first
+__(aDP_first) Direct Product first
+ >> Go to Node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node first
+$match direct product - first
+__(aDP_succeed) Direct Product first
+__(aDP_succeed) Direct Product first
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node rest
+$match direct product - rest
+__(aDP_first) Direct Product rest
+ >> Go to Node some(1.. )
+__(AS_first) Sequence Node some(1.. )
+ >>(Suc_1) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node some(1.. )
+__(AS_succeed) Sequence Node some(1.. )
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 1 2
+ <<(Suc_2) Succeed; Back to node rest
+A sequecne pointer0 2
+$match direct product - rest
+__(aDP_succeed) Direct Product rest
+__(aDP_succeed) Direct Product rest
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node STRING
+$reference direct product - STRING
+__(aDP_fail) Direct Product STRING
+ ?? Try to check node rest
+$match direct product - rest
+__(aDP_next) Direct Product rest
+ >> Go to the last processed some(1.. ) under node rest
+__(AS_next) Sequence Node some(1.. )
+ >> (No. < upper) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+
+ !!!assign value to prev_stack_element
+ << Back to Node some(1.. )
+__(AS_succeed) Sequence Node some(1.. )
+B sequecne pointer2 3
+A sequecne pointer3 3
+Input_File 1 3
+ <<(Suc_4) Succeed; Back to node rest
+A sequecne pointer2 3
+$match direct product - rest
+__(aDP_succeed) Direct Product rest
+__(aDP_succeed) Direct Product rest
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 4
+ << Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ << Succeed; Back to Node REVERSAL_OF_(STRING)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node SOME
+$reference direct product - SOME
+__(sDP_first) Direct Product SOME
+match node->some(1.. ) SOME
+ >> Go to Node REVERSAL_OF_(REST)
+$reference direct product - REVERSAL_OF_(REST)
+(SDP)_Node REVERSAL_OF_(REST)
+__(SDP_first)Node REVERSAL_OF_(REST)
+__(SM_first) module REVERSAL_OF_(REST)
+__(SDP1_first)Node REST
+23 => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/yukuh.des].
+
+Module Title REVERSAL_OF_(STRING)
+$reference direct product - STRING
+__(aDP_first) Direct Product STRING
+ >> Go to Node first
+$match direct product - first
+__(aDP_first) Direct Product first
+ >> Go to Node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node first
+$match direct product - first
+__(aDP_succeed) Direct Product first
+__(aDP_succeed) Direct Product first
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node rest
+$match direct product - rest
+__(aDP_first) Direct Product rest
+ >> Go to Node some(1.. )
+__(AS_first) Sequence Node some(1.. )
+ >>(Suc_1) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node some(1.. )
+__(AS_succeed) Sequence Node some(1.. )
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 1 2
+ <<(Suc_2) Succeed; Back to node rest
+A sequecne pointer0 2
+$match direct product - rest
+__(aDP_succeed) Direct Product rest
+__(aDP_succeed) Direct Product rest
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ << Succeed; Back to Node REVERSAL_OF_(STRING)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node SOME
+$reference direct product - SOME
+__(sDP_first) Direct Product SOME
+match node->some(1.. ) SOME
+ >> Go to Node REVERSAL_OF_(REST)
+$reference direct product - REVERSAL_OF_(REST)
+(SDP)_Node REVERSAL_OF_(REST)
+__(SDP_first)Node REVERSAL_OF_(REST)
+__(SM_first) module REVERSAL_OF_(REST)
+__(SDP1_first)Node REST
+3 => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/yukuh.des].
+
+Module Title REVERSAL_OF_(STRING)
+$reference direct product - STRING
+__(aDP_first) Direct Product STRING
+ >> Go to Node first
+$match direct product - first
+__(aDP_first) Direct Product first
+ >> Go to Node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node first
+$match direct product - first
+__(aDP_succeed) Direct Product first
+__(aDP_succeed) Direct Product first
+ << Succeed; Back to Node STRING
+$reference direct product - STRING
+__(aDP_succeed) Direct Product STRING
+__(aDP_succeed) Direct Product STRING
+ >> Succeed; Go to Node rest
+$match direct product - rest
+__(aDP_first) Direct Product rest
+ >> Go to Node some(1.. )
+__(AS_first) Sequence Node some(1.. )
+ >>(Suc_1) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Unsuccessful matching with module call
+ << Back to Node some(1.. )
+__(AS_fail) Sequence Node some(1.. )
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node some(1.. ); adjust stack & input pointers.
+ <<(Fail_2) Back to Node rest
+$match direct product - rest
+__(aDP_fail) Direct Product rest
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node rest; adjust stack & input pointers.
+ << Back to Node STRING
+$reference direct product - STRING
+__(aDP_fail) Direct Product STRING
+ ?? Try to check node first
+$match direct product - first
+__(aDP_next) Direct Product first
+ >> Go to the last processed DIGIT under node first
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_next)Node DIGIT
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node DIGIT; adjust stack & input pointers.
+ << Fail; Back to Node first
+$match direct product - first
+__(aDP_fail) Direct Product first
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node first; adjust stack & input pointers.
+ << Back to Node STRING
+$reference direct product - STRING
+__(aDP_fail) Direct Product STRING
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node STRING; adjust stack & input pointers.
+ << Back to Node REVERSAL_OF_(STRING)
+3
+"
+The analysis procedure failed.
+No output is produced at this execution.
+
+
+  #####   THE  END OF SUB MODULE  #####
+ FAIL<< Back to Node REVERSAL_OF_(REST)
+ => It is non-defined reference node
+ << Back to Node SOME
+$reference direct product - SOME
+__(sDP_fail) Direct Product SOME
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node SOME; adjust stack & output pointers.
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node return; adjust stack & output pointers.
+ << Back to Node REVERSAL_OF_(STRING)
+The synthesis procedure failed.
+No output is produced at this execution.
+
+
+  #####   THE  END OF SUB MODULE  #####
+ FAIL<< Back to Node REVERSAL_OF_(REST)
+ => It is non-defined reference node
+ << Back to Node SOME
+$reference direct product - SOME
+__(sDP_fail) Direct Product SOME
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node SOME; adjust stack & output pointers.
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node return; adjust stack & output pointers.
+ << Back to Node REVERSAL_OF_(STRING)
+The synthesis procedure failed.
+No output is produced at this execution.
+#####   THE  END   #####

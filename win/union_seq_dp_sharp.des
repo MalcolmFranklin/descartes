@@ -1,0 +1,24 @@
+TWO_OF_(A)
+	A
+		numerics*
+			DIGIT
+		abcees*
+			a_or_b_or_c+
+				'A'
+				'B'
+				'C'
+		NL
+	return
+		'NUMERICS matched '
+		NUMERICS
+		NL
+		'Num chars matched with NUMERICS = '
+		NUMERICS#
+		NL
+		'ABCEES matched '
+		ABCEES
+		NL
+		'Num chars matched with ABCEES = '
+		ABCEES#
+		NL
+

@@ -1,0 +1,27 @@
+TEST_EQUAL(VALUES)
+	VALUES
+		first
+			DIGIT
+			morefirst*
+				DIGIT
+		delimiter
+			' '
+			moreblanks*
+				' '
+		second
+			DIGIT
+			moresecond*
+				DIGIT
+		NL
+	return+
+		(FIRST)_EQUAL_(SECOND)
+			ok
+				FIRST
+				' equals '
+				SECOND
+				NL
+		bad
+			FIRST
+			' does not equal '
+			SECOND
+			NL

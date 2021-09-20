@@ -1,0 +1,33 @@
+TWO_OF_(OPERANDS)
+	OPERANDS
+		x*
+			t1+
+				'0'
+				'1'
+		NL
+		y*
+			t2+
+				'0'
+				'1'
+		NL
+	return
+		'X = '
+		X
+		NL
+		'Y = '
+		Y
+		NL
+		decide_and+
+			(X)_AND_(Y)
+				'(X)_AND_(Y) is TRUE'
+			'(X)_AND_(Y) is FALSE'
+		NL
+		decide_or+
+			(Y)_OR_(Y)
+				'(Y)_OR_(Y) is TRUE'
+			'(Y)_OR_(Y) is FALSE'
+
+BDIGIT
+	return+
+		'0'
+		'1'

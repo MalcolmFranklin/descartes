@@ -1,0 +1,17 @@
+REVERSAL_OF_(STRING)
+	STRING
+		first
+			DIGIT
+		rest+
+			none
+				NULL
+			some(1.. )
+				DIGIT
+		NL
+	return+
+		NONE
+			FIRST
+		SOME
+			REVERSAL_OF_(REST)
+			FIRST
+

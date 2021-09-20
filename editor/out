@@ -1,0 +1,17 @@
+test -f editor.h || co  RCS/editor.h,v editor.h
+/all/CenterLine/bin/clcc -c -I. -I/home/tools1/pure/purify2.1 -I/home/local/X11R5/include -I/home/tools1/B+W_UIMX_2.5/motif12/usr/include  -Dsun  -D_POSIX_SOURCE -ansi -Xa -g     xdesc2.c -o Sun413/xdesc2.o
+"xdesc2.c", line 261: warning: Variable "select" is possibly referenced before set.
+"xdesc2.c", line 309: warning: Variable "select" is possibly referenced before set.
+"xdesc2.c", line 681: warning: Variable "new_node" is possibly referenced before set.
+"xdesc2.c", line 710: warning: Variable "edge_origin_y" is possibly referenced before set.
+"xdesc2.c", line 709: warning: Variable "edge_origin_x" is possibly referenced before set.
+"xdesc2.c", line 1498: warning: Variable "cbs" is possibly referenced before set.
+"xdesc2.c", line 1497: warning: Variable "client_data" is possibly referenced before set.
+"xdesc2.c", line 2152: warning: Variable "p_length" is possibly referenced before set.
+"xdesc2.c", line 2536: warning: Variable "append_tail" is possibly referenced before set.
+"xdesc2.c", line 2642: warning: Variable "append_tail" is possibly referenced before set.
+"xdesc2.c", line 2728: warning: Variable "append_tail" is possibly referenced before set.
+"xdesc2.c", line 2882: warning: Variable "append_tail" is possibly referenced before set.
+"xdesc2.c", line 3041: warning: Variable "append_tail" is possibly referenced before set.
+"xdesc2.c", line 3196: warning: Variable "append_tail" is possibly referenced before set.
+No errors   14 warnings   

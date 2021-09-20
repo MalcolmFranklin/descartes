@@ -1,0 +1,176 @@
+  1 #include <stdlib.h>
+  2 #include <stdarg.h>
+  3 #include <ctype.h>
+  4 #include <string.h>
+  5 #include <stdio.h>
+  6 #include <errno.h>      /* perror() */
+  7 #include <unistd.h>
+  8 #include <fcntl.h>      /* O_RDONLY - file open mode */
+  9 #include <sys/wait.h>   /* wait(), waitpid() */
+ 10 #include "semops.h"     /* Semaphore operations */
+ 11 #include "some_utils.h" /* util_abort() */
+ 12 #include "hash.h"       /* Needed by fifo.h */
+ 13 #include "fifo.h"
+ 14 
+ 15 void            flprintf (char *printf_fmt_str,...)
+ 16 {
+ 17     va_list         arguments;
+ 18 
+ 19     va_start (arguments, printf_fmt_str);
+ 20     vfprintf (stdout, printf_fmt_str, arguments);
+ 21     fflush (stderr);
+ 22     va_end (arguments);
+ 23 }
+ 24 static void     sub_client (shared_fifodata_tt *parent2child,
+ 25                                             int mutex)
+ 26 {
+ 27     char            child_pidstr[INTLEN];
+ 28     char            message[1024];
+ 29     reply_fifodata_tt *child2parent = NULL;
+ 30     const char     *reply_ptr;
+ 31     size_t          reply_len;
+ 32     server_command_tt command;
+ 33     int             shared;
+ 34 
+ 35     sprintf (child_pidstr, "%d", getpid ());
+ 36     flprintf ("Sub-Child created.  PID = %s\n", child_pidstr);
+ 37     connect_to_parent (parent2child, child_pidstr, &child2parent);
+ 38     message[0] = '\0';
+ 39 /* Begin critical section. */
+ 40     sem_wait (mutex);
+ 41     send2parent (parent2child, SRV_GET_VAL, message);
+ 42     command = receive_fm_parent (child2parent, &reply_len);
+ 43     reply_ptr = reply_fifo_data (child2parent);
+ 44     shared = atoi (reply_ptr);
+ 45     ++shared;
+ 46     sprintf (message, "%d", shared);
+ 47     send2parent (parent2child, SRV_SET_VAL, message);
+ 48     sem_signal (mutex);
+ 49 /* End critical section. */
+ 50     flprintf ("shared = %d in sub-child %d.\n",
+ 51               shared, getpid ());
+ 52     destroy_child2parent (child2parent);
+ 53     free (child2parent);
+ 54     exit (0);
+ 55 }
+ 56 
+ 57 #define NUM_SUBCHILD    3
+ 58 void            client (shared_fifodata_tt *parent2child, int mutex)
+ 59 {
+ 60     char            child_pidstr[INTLEN], message[1024] = {'\0'};
+ 61     reply_fifodata_tt *child2parent = NULL;
+ 62     const char     *reply_ptr;
+ 63     size_t          reply_len;
+ 64     server_command_tt command;
+ 65     int             subchild_cnt = 0;
+ 66     int             shared;
+ 67 
+ 68     sprintf (child_pidstr, "%d", getpid ());
+ 69     flprintf ("Child created.  PID = %s\n", child_pidstr);
+ 70     connect_to_parent (parent2child, child_pidstr, &child2parent);
+ 71 /* Begin critical section. */
+ 72     sem_wait (mutex);
+ 73     send2parent (parent2child, SRV_GET_VAL, message);
+ 74     command = receive_fm_parent (child2parent, &reply_len);
+ 75     reply_ptr = reply_fifo_data (child2parent);
+ 76     shared = atoi (reply_ptr);
+ 77     ++shared;
+ 78     sprintf (message, "%d", shared);
+ 79     send2parent (parent2child, SRV_SET_VAL, message);
+ 80     sem_signal (mutex);
+ 81 /* End critical section. */
+ 82     while (subchild_cnt < NUM_SUBCHILD) {
+ 83         if (fork () == 0)
+ 84             sub_client (parent2child, mutex);
+ 85         else
+ 86             subchild_cnt++;
+ 87     }
+ 88 /* Wait for sub-processes to finish. */
+ 89     while (subchild_cnt > 0) {
+ 90         flprintf ("Sub-client %d completed\n", wait (0));
+ 91         --subchild_cnt;
+ 92     }
+ 93     message[0] = '\0';
+ 94     send2parent (parent2child, SRV_SHUTDOWN, message);
+ 95     destroy_child2parent (child2parent);
+ 96     free (child2parent);
+ 97     exit (0);
+ 98 }
+ 99 void            server (shared_fifodata_tt *parent2child,
+100                         int shared)
+101 {
+102     char            child_pidstr[INTLEN];
+103     server_command_tt command;
+104     const char     *dataptr;
+105     char           *buf;
+106     size_t          datalen;
+107     int             old_val;
+108 
+109     flprintf ("Executing parent code.\n");
+110 
+111 /* All children write to the parent2child FIFO. */
+112     open_parent2child_fifo (parent2child, O_RDONLY);
+113     if ((buf = malloc (shared_fifo_bufsiz (parent2child))) == NULL)
+114         util_abort (__LINE__, __FILE__, "malloc() failed.\n");
+115 
+116     do {
+117         command = receive_fm_child (parent2child, child_pidstr,
+118                                     &datalen);
+119         dataptr = shared_fifo_data (parent2child);
+120 
+121         switch (command) {
+122             case SRV_CONNECT:
+123                 flprintf ("SRV_CONNECT: Parent received a connect "
+124                    "message from %s.\n", child_pidstr);
+125                 parent_open_reply_fifo (parent2child, child_pidstr);
+126                 break;
+127 
+128             case SRV_GET_VAL:
+129                 sprintf (buf, "%d", shared);
+130                 send2child (parent2child, child_pidstr,
+131                             command, buf);
+132                 break;
+133 
+134             case SRV_SET_VAL:
+135                 old_val = shared;
+136                 shared = atoi (dataptr);
+137                 flprintf ("Process %s changed shared from %d "
+138                           "to %d.\n",child_pidstr, old_val, shared);
+139                 break;
+140 
+141             case SRV_SHUTDOWN:
+142                 flprintf ("SRV_SHUTDOWN: Received from %s.\n",
+143                           child_pidstr);
+144                 break;
+145         }
+146     } while (command != SRV_SHUTDOWN);
+147     destroy_fifos (parent2child);
+148     free (buf);
+149 }
+150 
+151 shared_fifodata_tt *parent2child;
+152 int             main (void)
+153 {
+154     char            parent_pidstr[INTLEN];/* String representation
+155                                            * of the parent process
+156                                            * ID. */
+157     pid_t           pid;    /* Process ID returned from fork() */
+158     int             shared = 0;     /* A value to be shared
+159                                          * by all sub-processes. */
+160     int             mutex = sem_create (); /* Semaphore protecting
+161                                             * shared. */
+162 
+163     sprintf (parent_pidstr, "%d", (int) getpid ());
+164     parent2child = init_parent2child_fifo (parent_pidstr);
+165 
+166     if ((pid = fork ()) == -1) {
+167         perror ("Erron in fork()");
+168         exit (-1);
+169     }
+170     else if (pid == 0)
+171         client (parent2child, mutex);   /* Child */
+172     else
+173         server (parent2child, shared);      /* Parent */
+174 
+175     return (0);
+176 }

@@ -1,0 +1,131 @@
+From franklin@chdasic.sps.mot.com (Malcolm Franklin)
+Newsgroups: comp.unix.programmer,comp.unix.internals
+Subject: Implementing queues with pipes or FIFOs
+Date: Tue, 7 Jun 1994 01:39:23 GMT
+
+I am trying to make a language processor POSIX.1-1990 compliant as part of
+my M.S. C.S. thesis project, and have hit a sticky spot.
+
+I have a parent process that needs to pass messages of arbitrary length to 
+and from multiple child processes.  The current implementation is using
+SysV message queues.
+
+The only POSIX.1 mechanisms that are available to me are pipes, and FIFOs;
+I have written an implementation of binary semaphores based on POSIX.1
+advisory locks (thanks to a suggestion in W. Richard Stevens' book!).
+
+The type and length of each message is known before the writer has to write
+the message.
+
+The hard part seems to be making sure that the reader gets a complete message,
+and NO MORE than a single complete message.  If I could solve this, I could 
+create a linked-list of received messages, and provide a function call to 
+either fetch a message from the list, or block until another process writes
+a message.
+
+Any thoughts on how I should approach this?
+
+Thanks,
+--Malcolm
+
+---
+--------------------------------------------------------------------------------
+Malcolm L. Franklin                email:   Malcolm_Franklin@chdasic.sps.mot.com
+Motorola ASIC, Design Automation   Phone:   (602) 491-7182
+OACS Tools and Architecture
+
+
+From les@MCS.COM (Leslie Mikesell)
+Newsgroups: comp.unix.programmer,comp.unix.internals
+Subject: Re: Implementing queues with pipes or FIFOs
+Date: 7 Jun 1994 00:48:19 -0500
+
+In article <1994Jun7.013923.17488@newsgate.sps.mot.com>,
+Malcolm Franklin <franklin@chdasic.sps.mot.com> wrote:
+
+>I have a parent process that needs to pass messages of arbitrary length to 
+>and from multiple child processes.  The current implementation is using
+>SysV message queues.
+
+>The only POSIX.1 mechanisms that are available to me are pipes, and FIFOs;
+[...]
+
+Make the parent process arrange for a pipe connection to each child.  Handle
+the communication back to the parent through a single FIFO.
+
+>The type and length of each message is known before the writer has to write
+>the message.
+>The hard part seems to be making sure that the reader gets a complete message,
+>and NO MORE than a single complete message.
+
+There are at least 3 strategies that might be best in different situations:
+(1) use fixed length read()s and writes()s, passing structs that are
+padded as necessary. (2) use some delimiter known not to be in the
+data. (3) write the size ahead of the data.  In all cases when writing
+to the FIFO the entire message must be passed in a single write()
+and must be less than PIPE_MAX.  If you expect these things to be
+flying around fairly fast you might want to do the read()s into a
+large buffer to reduce the system call overhead since your chosen
+strategy will let you sort it out in user space.
+
+Les Mikesell
+  les@mcs.com
+
+From markd@bushwire.apana.org.au (Mark Delany)
+Newsgroups: comp.unix.programmer,comp.unix.internals
+Subject: Re: Implementing queues with pipes or FIFOs
+Date: 7 Jun 1994 19:40:42 +1000
+
+les@MCS.COM (Leslie Mikesell) writes:
+
+
+>>I have a parent process that needs to pass messages of arbitrary length to 
+>>and from multiple child processes.  The current implementation is using
+>>SysV message queues.
+
+>>The only POSIX.1 mechanisms that are available to me are pipes, and FIFOs;
+...
+>Make the parent process arrange for a pipe connection to each child.  Handle
+>the communication back to the parent through a single FIFO.
+...
+>all cases when writing to the FIFO the entire message must be passed
+>in a single write() and must be less than PIPE_MAX.
+
+No disagreement, but maybe a clarification. What if there is
+outstanding data written to the pipe but not yet read. Does the
+PIPE_MAX limit still apply? In other words, does the write block until
+it can do a PIPE_MAX write atomically? Commonsense says yes, but...
+
+
+M.
+
+From les@MCS.COM (Leslie Mikesell)
+Newsgroups: comp.unix.programmer,comp.unix.internals
+Subject: Re: Implementing queues with pipes or FIFOs
+Date: 7 Jun 1994 10:25:13 -0500
+
+In article <2t1faq$gk4@bushwire.apana.org.au>,
+Mark Delany <markd@bushwire.apana.org.au> wrote:
+
+>>all cases when writing to the FIFO the entire message must be passed
+>>in a single write() and must be less than PIPE_MAX.
+
+>No disagreement, but maybe a clarification. What if there is
+>outstanding data written to the pipe but not yet read. Does the
+>PIPE_MAX limit still apply? In other words, does the write block until
+>it can do a PIPE_MAX write atomically? Commonsense says yes, but...
+
+That's what PIPE_MAX always meant under unix.  I don't know what
+the posix spec actually says, but FIFOs would be pretty useless
+if you can't count on this behaviour.  Also, you will probably
+want to have the process reading the FIFO also open it for
+write access so you don't see 0-length read()s if it has been
+opened for writing and then closed by all the writers.  On some
+versions opening for r/w access will also prevent the usual
+blocking when you open a FIFO, but on others you may still have to
+twiddle O_NDELAY for the open and clear it with fcntl() if you
+want the reads to block.
+
+Les Mikesell
+  les@mcs.com
+

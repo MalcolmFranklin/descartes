@@ -1,0 +1,1291 @@
+Descartes' Trace Log  Ver 1.0   Time: Tue Oct 25 20:55:34 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/sung16.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/sung16.log.
+
+Contents of the Descartes specification file:
+20
+ON
+
+
+Module Title HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$reference direct product - PRESET_TEMP
+__(aDP_first) Direct Product PRESET_TEMP
+ >> Go to Node temp_setting
+$match direct product - temp_setting
+__(aDP_first) Direct Product temp_setting
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node temp_setting
+$match direct product - temp_setting
+__(aDP_succeed) Direct Product temp_setting
+__(aDP_succeed) Direct Product temp_setting
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node temp_setting
+$match direct product - temp_setting
+__(aDP_succeed) Direct Product temp_setting
+__(aDP_succeed) Direct Product temp_setting
+ << Succeed; Back to Node PRESET_TEMP
+$reference direct product - PRESET_TEMP
+__(aDP_succeed) Direct Product PRESET_TEMP
+__(aDP_succeed) Direct Product PRESET_TEMP
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$reference direct product - SWITCH_SETTING
+__(aDP_first) Direct Product SWITCH_SETTING
+ >> Go to Node switch_position+
+$match discriminated union - switch_position+
+__(ADU_first) Discriminated Union switch_position+
+ >> Go to Node switch_off
+$match direct product - switch_off
+__(aDP_first) Direct Product switch_off
+ >> Go to Node 'OFF'
+$literal - 'OFF'
+__(AL_first) Literal 'OFF'
+ => Unsuccessful matching at node 'OFF' with input string
+ << Back to Node switch_off
+$match direct product - switch_off
+__(aDP_fail) Direct Product switch_off
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 3
+ ** Free a stack element at Node switch_off; adjust stack & input pointers.
+ << Back to Node switch_position+
+$match discriminated union - switch_position+
+__(ADU_fail) Discriminated Union switch_position+
+ ?? Try to check node switch_on
+$match direct product - switch_on
+__(aDP_first) Direct Product switch_on
+ >> Go to Node 'ON'
+$literal - 'ON'
+__(AL_first) Literal 'ON'
+ => Successful matching at node 'ON' with input string
+ -> Forward input buffer pointer to location 5
+ << Back to Node switch_on
+$match direct product - switch_on
+__(aDP_succeed) Direct Product switch_on
+__(aDP_succeed) Direct Product switch_on
+ << Succeed; Back to Node switch_position+
+$match discriminated union - switch_position+
+__(ADU_succeed) Discriminated Union switch_position+
+__(ADU_succeed) Discriminated Union switch_position+
+ << Succeed; Back to Node SWITCH_SETTING
+$reference direct product - SWITCH_SETTING
+__(aDP_succeed) Direct Product SWITCH_SETTING
+__(aDP_succeed) Direct Product SWITCH_SETTING
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 6
+ << Back to Node SWITCH_SETTING
+$reference direct product - SWITCH_SETTING
+__(aDP_succeed) Direct Product SWITCH_SETTING
+__(aDP_succeed) Direct Product SWITCH_SETTING
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - no_pump_failure
+__(sDP_first) Direct Product no_pump_failure
+ >> Go to Node 'NORMAL'
+$literal - 'NORMAL'
+__(SL_first) Literal 'NORMAL'
+ => Output a string with Literal
+ << Back to Node no_pump_failure
+$match direct product - no_pump_failure
+__(sDP_succeed) Direct Product no_pump_failure
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - pump_failure
+__(sDP_first) Direct Product pump_failure
+ >> Go to Node 'FAIL'
+$literal - 'FAIL'
+__(SL_first) Literal 'FAIL'
+ => Output a string with Literal
+ << Back to Node pump_failure
+$match direct product - pump_failure
+__(sDP_succeed) Direct Product pump_failure
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - no_burner_failure
+__(sDP_first) Direct Product no_burner_failure
+ >> Go to Node 'NORMAL'
+$literal - 'NORMAL'
+__(SL_first) Literal 'NORMAL'
+ => Output a string with Literal
+ << Back to Node no_burner_failure
+$match direct product - no_burner_failure
+__(sDP_succeed) Direct Product no_burner_failure
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - burner_failure
+__(sDP_first) Direct Product burner_failure
+ >> Go to Node 'FAIL'
+$literal - 'FAIL'
+__(SL_first) Literal 'FAIL'
+ => Output a string with Literal
+ << Back to Node burner_failure
+$match direct product - burner_failure
+__(sDP_succeed) Direct Product burner_failure
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - normal_pressure
+__(sDP_first) Direct Product normal_pressure
+ >> Go to Node 'NORMAL'
+$literal - 'NORMAL'
+__(SL_first) Literal 'NORMAL'
+ => Output a string with Literal
+ << Back to Node normal_pressure
+$match direct product - normal_pressure
+__(sDP_succeed) Direct Product normal_pressure
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - too_high
+__(sDP_first) Direct Product too_high
+ >> Go to Node 'FAIL'
+$literal - 'FAIL'
+__(SL_first) Literal 'FAIL'
+ => Output a string with Literal
+ << Back to Node too_high
+$match direct product - too_high
+__(sDP_succeed) Direct Product too_high
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - preset_water_temp
+__(sDP_first) Direct Product preset_water_temp
+ >> Go to Node '90'
+$literal - '90'
+__(SL_first) Literal '90'
+ => Output a string with Literal
+ << Back to Node preset_water_temp
+$match direct product - preset_water_temp
+__(sDP_succeed) Direct Product preset_water_temp
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - pressure_limit
+__(sDP_first) Direct Product pressure_limit
+ >> Go to Node '300'
+$literal - '300'
+__(SL_first) Literal '300'
+ => Output a string with Literal
+ << Back to Node pressure_limit
+$match direct product - pressure_limit
+__(sDP_succeed) Direct Product pressure_limit
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - burner_channel
+__(sDP_first) Direct Product burner_channel
+ >> Go to Node '5'
+$literal - '5'
+__(SL_first) Literal '5'
+ => Output a string with Literal
+ << Back to Node burner_channel
+$match direct product - burner_channel
+__(sDP_succeed) Direct Product burner_channel
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - pump_channel
+__(sDP_first) Direct Product pump_channel
+ >> Go to Node '6'
+$literal - '6'
+__(SL_first) Literal '6'
+ => Output a string with Literal
+ << Back to Node pump_channel
+$match direct product - pump_channel
+__(sDP_succeed) Direct Product pump_channel
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - pressure_channel
+__(sDP_first) Direct Product pressure_channel
+ >> Go to Node '7'
+$literal - '7'
+__(SL_first) Literal '7'
+ => Output a string with Literal
+ << Back to Node pressure_channel
+$match direct product - pressure_channel
+__(sDP_succeed) Direct Product pressure_channel
+ << Succeed; Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node SWITCH_POSITION+
+$reference discriminated union - SWITCH_POSITION+
+__(SDU_first) Discriminated Union SWITCH_POSITION+
+match node->switch_position+ SWITCH_POSITION+
+ >> Go to Node SWITCH_ON
+$reference direct product - SWITCH_ON
+__(sDP_first) Direct Product SWITCH_ON
+match node->switch_on SWITCH_ON
+ >> Go to Node home_temp
+$match direct product - home_temp
+__(sDP_first) Direct Product home_temp
+ >> Go to Node '25'
+$literal - '25'
+__(SL_first) Literal '25'
+ => Output a string with Literal
+ << Back to Node home_temp
+$match direct product - home_temp
+__(sDP_succeed) Direct Product home_temp
+ << Succeed; Back to Node SWITCH_ON
+$reference direct product - SWITCH_ON
+__(sDP_succeed) Direct Product SWITCH_ON
+ >> Succeed; Go to Node PARALLEL
+__(SPa_first) parallel PARALLEL
+__ parallel--Process id= 26901
+__(SDP1_first)Node TEMP_SETTING
+20
+ => Found a corresponding match node
+__(SDP1_first)Node HOME_TEMP
+25 => Found a corresponding match node
+__ parallel--Process id= 26901
+__(SDP1_first)Node PRESET_WATER_TEMP
+90 => Found a corresponding match node
+__ parallel--Process id= 26901
+__(SDP1_first)Node PRESSURE_LIMIT
+300 => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/sung16.des].
+
+Module Title BURNER_BASED_ON_(TEMP_SETTING)_AND_(HOME_TEMP)
+$reference direct product - TEMP_SETTING
+__(aDP_first) Direct Product TEMP_SETTING
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/sung16.des].
+
+Module Title WATER_PUMP_CONTROL_(PRESET_WATER_TEMP)
+$reference direct product - PRESET_WATER_TEMP
+__(aDP_first) Direct Product PRESET_WATER_TEMP
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/sung16.des].
+
+Module Title PRESSURE_DISCHARGE_BASED_ON_(PRESSURE_LIMIT)
+$reference direct product - PRESSURE_LIMIT
+__(aDP_first) Direct Product PRESSURE_LIMIT
+ >> Go to Node preset_value
+$match direct product - preset_value
+__(aDP_first) Direct Product preset_value
+ >> Go to Node hot_temp
+$match direct product - hot_temp
+__(aDP_first) Direct Product hot_temp
+ >> Go to Node maximum_pressure
+$match direct product - maximum_pressure
+__(aDP_first) Direct Product maximum_pressure
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node preset_value
+$match direct product - preset_value
+__(aDP_succeed) Direct Product preset_value
+__(aDP_succeed) Direct Product preset_value
+ << Back to Node hot_temp
+$match direct product - hot_temp
+__(aDP_succeed) Direct Product hot_temp
+__(aDP_succeed) Direct Product hot_temp
+ << Back to Node maximum_pressure
+$match direct product - maximum_pressure
+__(aDP_succeed) Direct Product maximum_pressure
+__(aDP_succeed) Direct Product maximum_pressure
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+ << Succeed; Back to Node PRESET_WATER_TEMP
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Succeed; Back to Node PRESSURE_LIMIT
+$reference direct product - PRESET_WATER_TEMP
+__(aDP_succeed) Direct Product PRESET_WATER_TEMP
+__(aDP_succeed) Direct Product PRESET_WATER_TEMP
+$reference direct product - PRESSURE_LIMIT
+__(aDP_succeed) Direct Product PRESSURE_LIMIT
+__(aDP_succeed) Direct Product PRESSURE_LIMIT
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+ << Back to Node preset_value
+$match direct product - preset_value
+__(aDP_succeed) Direct Product preset_value
+__(aDP_succeed) Direct Product preset_value
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 4
+ << Succeed; Back to Node TEMP_SETTING
+$reference direct product - TEMP_SETTING
+__(aDP_succeed) Direct Product TEMP_SETTING
+__(aDP_succeed) Direct Product TEMP_SETTING
+ << Back to Node PRESET_WATER_TEMP
+$reference direct product - PRESET_WATER_TEMP
+__(aDP_succeed) Direct Product PRESET_WATER_TEMP
+__(aDP_succeed) Direct Product PRESET_WATER_TEMP
+ << Succeed; Back to Node BURNER_BASED_ON_(TEMP_SETTING)_AND_(HOME_TEMP)
+ << Back to Node PRESSURE_LIMIT
+$reference direct product - PRESSURE_LIMIT
+__(aDP_succeed) Direct Product PRESSURE_LIMIT
+__(aDP_succeed) Direct Product PRESSURE_LIMIT
+ << Succeed; Back to Node WATER_PUMP_CONTROL_(PRESET_WATER_TEMP)
+ << Succeed; Back to Node PRESSURE_DISCHARGE_BASED_ON_(PRESSURE_LIMIT)
+$reference direct product - HOME_TEMP
+__(aDP_first) Direct Product HOME_TEMP
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - pump_failure_status
+__(sDP_first) Direct Product pump_failure_status
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - pressure_status
+__(sDP_first) Direct Product pressure_status
+ >> Go to Node current_home_temp
+$match direct product - current_home_temp
+__(aDP_first) Direct Product current_home_temp
+ >> Go to Node no_pump_failure
+$match direct product - no_pump_failure
+__(sDP_first) Direct Product no_pump_failure
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+ >> Go to Node normal_pressure
+$match direct product - normal_pressure
+__(sDP_first) Direct Product normal_pressure
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 5
+ >> Go to Node 'NORMAL'
+$literal - 'NORMAL'
+ >> Go to Node 'NORMAL'
+$literal - 'NORMAL'
+__(SL_first) Literal 'NORMAL'
+ => Output a string with Literal
+ << Back to Node current_home_temp
+$match direct product - current_home_temp
+__(aDP_succeed) Direct Product current_home_temp
+__(aDP_succeed) Direct Product current_home_temp
+__(SL_first) Literal 'NORMAL'
+ => Output a string with Literal
+ << Succeed; Back to Node HOME_TEMP
+ << Back to Node no_pump_failure
+$match direct product - no_pump_failure
+__(sDP_succeed) Direct Product no_pump_failure
+$reference direct product - HOME_TEMP
+__(aDP_succeed) Direct Product HOME_TEMP
+__(aDP_succeed) Direct Product HOME_TEMP
+ << Back to Node normal_pressure
+$match direct product - normal_pressure
+__(sDP_succeed) Direct Product normal_pressure
+ << Succeed; Back to Node pump_failure_status
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+ << Succeed; Back to Node pressure_status
+$match direct product - pump_failure_status
+__(sDP_succeed) Direct Product pump_failure_status
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 6
+$match direct product - pressure_status
+__(sDP_succeed) Direct Product pressure_status
+ >> Succeed; Go to Node pump_failure
+$match direct product - pump_failure
+__(sDP_first) Direct Product pump_failure
+ >> Succeed; Go to Node too_high
+$match direct product - too_high
+__(sDP_first) Direct Product too_high
+ << Back to Node HOME_TEMP
+$reference direct product - HOME_TEMP
+__(aDP_succeed) Direct Product HOME_TEMP
+__(aDP_succeed) Direct Product HOME_TEMP
+ >> Go to Node 'FAIL'
+$literal - 'FAIL'
+__(SL_first) Literal 'FAIL'
+ => Output a string with Literal
+ >> Go to Node 'FAIL'
+$literal - 'FAIL'
+ << Succeed; Back to Node BURNER_BASED_ON_(TEMP_SETTING)_AND_(HOME_TEMP)
+__(SL_first) Literal 'FAIL'
+ => Output a string with Literal
+ << Back to Node pump_failure
+$match direct product - pump_failure
+__(sDP_succeed) Direct Product pump_failure
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - interval_before_testing
+__(sDP_first) Direct Product interval_before_testing
+ << Back to Node too_high
+$match direct product - too_high
+__(sDP_succeed) Direct Product too_high
+ << Succeed; Back to Node pump_failure_status
+ << Succeed; Back to Node pressure_status
+$match direct product - pump_failure_status
+__(sDP_succeed) Direct Product pump_failure_status
+$match direct product - pressure_status
+__(sDP_succeed) Direct Product pressure_status
+ << Succeed; Back to Node WATER_PUMP_CONTROL_(PRESET_WATER_TEMP)
+ >> Go to Node '1'
+$literal - '1'
+ << Succeed; Back to Node PRESSURE_DISCHARGE_BASED_ON_(PRESSURE_LIMIT)
+__(SL_first) Literal '1'
+ => Output a string with Literal
+$match direct product - timeup_to_start
+__(sDP_first) Direct Product timeup_to_start
+$match direct product - channel
+__(sDP_first) Direct Product channel
+ << Back to Node interval_before_testing
+$match direct product - interval_before_testing
+__(sDP_succeed) Direct Product interval_before_testing
+ >> Go to Node '1'
+$literal - '1'
+ >> Go to Node '7'
+ << Succeed; Back to Node BURNER_BASED_ON_(TEMP_SETTING)_AND_(HOME_TEMP)
+$literal - '7'
+__(SL_first) Literal '1'
+ => Output a string with Literal
+__(SL_first) Literal '7'
+ => Output a string with Literal
+$match direct product - burner_or_valve_failure
+__(sDP_first) Direct Product burner_or_valve_failure
+ << Back to Node timeup_to_start
+$match direct product - timeup_to_start
+__(sDP_succeed) Direct Product timeup_to_start
+ << Back to Node channel
+$match direct product - channel
+__(sDP_succeed) Direct Product channel
+ << Succeed; Back to Node WATER_PUMP_CONTROL_(PRESET_WATER_TEMP)
+ << Succeed; Back to Node PRESSURE_DISCHARGE_BASED_ON_(PRESSURE_LIMIT)
+ >> Go to Node no_burner_failure
+$match direct product - no_burner_failure
+__(sDP_first) Direct Product no_burner_failure
+$match direct product - timeup_to_stop
+__(sDP_first) Direct Product timeup_to_stop
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node 'NORMAL'
+$literal - 'NORMAL'
+__(SL_first) Literal 'NORMAL'
+ => Output a string with Literal
+ >> Go to Node '1'
+$literal - '1'
+ >> Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SL_first) Literal '1'
+ => Output a string with Literal
+ << Back to Node no_burner_failure
+$match direct product - no_burner_failure
+__(sDP_succeed) Direct Product no_burner_failure
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Succeed; Back to Node burner_or_valve_failure
+ << Back to Node timeup_to_stop
+$match direct product - timeup_to_stop
+__(sDP_succeed) Direct Product timeup_to_stop
+$match direct product - burner_or_valve_failure
+__(sDP_succeed) Direct Product burner_or_valve_failure
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node burner_failure
+$match direct product - burner_failure
+__(sDP_first) Direct Product burner_failure
+ >> Succeed; Go to Node pressure
+$match direct product - pressure
+__(sDP_first) Direct Product pressure
+ << Succeed; Back to Node WATER_PUMP_CONTROL_(PRESET_WATER_TEMP)
+$match direct product - normal_speed
+__(sDP_first) Direct Product normal_speed
+ >> Go to Node 'FAIL'
+$literal - 'FAIL'
+ >> Go to Node '250'
+$literal - '250'
+__(SL_first) Literal 'FAIL'
+ => Output a string with Literal
+__(SL_first) Literal '250'
+ => Output a string with Literal
+ << Back to Node burner_failure
+$match direct product - burner_failure
+__(sDP_succeed) Direct Product burner_failure
+ << Back to Node pressure
+$match direct product - pressure
+__(sDP_succeed) Direct Product pressure
+ >> Go to Node '300'
+$literal - '300'
+ << Succeed; Back to Node burner_or_valve_failure
+ << Succeed; Back to Node return
+$match direct product - burner_or_valve_failure
+__(sDP_succeed) Direct Product burner_or_valve_failure
+__(SL_first) Literal '300'
+ => Output a string with Literal
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node check_pressure_value+
+$match discriminated union - check_pressure_value+
+__(SDU_first) Discriminated Union check_pressure_value+
+ << Back to Node normal_speed
+$match direct product - normal_speed
+__(sDP_succeed) Direct Product normal_speed
+ << Succeed; Back to Node BURNER_BASED_ON_(TEMP_SETTING)_AND_(HOME_TEMP)
+ << Succeed; Back to Node WATER_PUMP_CONTROL_(PRESET_WATER_TEMP)
+ >> Go to Node (PRESSURE)_GREATER_THAN_(MAXIMUM_PRESSURE)
+__(SP_first) primitive  (PRESSURE)_GREATER_THAN_(MAXIMUM_PRESSURE)
+$match direct product - channel
+__(sDP_first) Direct Product channel
+$match direct product - hot_temp
+__(sDP_first) Direct Product hot_temp
+__(SDP1_first)Node PRESSURE
+NORMALNORMAL => Found a corresponding match node
+__(SDP1_first)Node MAXIMUM_PRESSURE
+300 => Found a corresponding match node
+ >> Go to Node '5'
+$literal - '5'
+ => Found a corresponding match node
+ SUCCEED<< Go to Node (TOO_HIGH)_ASEND_TO_(CHANNEL)
+ >> Go to Node '100'
+$literal - '100'
+__(SL_first) Literal '5'
+ => Output a string with Literal
+__(SS_first) send  (TOO_HIGH)_ASEND_TO_(CHANNEL)
+__(SDP1_first)Node TOO_HIGH
+FAIL => Found a corresponding match node
+__(SDP1_first)Node CHANNEL
+__(SL_first) Literal '100'
+ => Output a string with Literal
+7 => Found a corresponding match node
+FAILFAIL << Back to Node channel
+$match direct product - channel
+__(sDP_succeed) Direct Product channel
+ << Back to Node hot_temp
+$match direct product - hot_temp
+__(sDP_succeed) Direct Product hot_temp
+ SUCCEED<< Back to Node (PRESSURE)_GREATER_THAN_(MAXIMUM_PRESSURE)
+__(SP1_succeed) Primitive1 (PRESSURE)_GREATER_THAN_(MAXIMUM_PRESSURE)
+ << Succeed; Back to Node BURNER_BASED_ON_(TEMP_SETTING)_AND_(HOME_TEMP)
+ >> Succeed; Go to Node 'DISCHARGE_PRESSURE'
+$literal - 'DISCHARGE_PRESSURE'
+ << Succeed; Back to Node WATER_PUMP_CONTROL_(PRESET_WATER_TEMP)
+__(SL_first) Literal 'DISCHARGE_PRESSURE'
+ => Output a string with Literal
+$match direct product - return
+__(sDP_first) Direct Product return
+$match direct product - channel
+__(sDP_first) Direct Product channel
+ >> Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+ << Back to Node (PRESSURE)_GREATER_THAN_(MAXIMUM_PRESSURE)
+__(SP1_succeed) Primitive1 (PRESSURE)_GREATER_THAN_(MAXIMUM_PRESSURE)
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Succeed; Back to Node check_pressure_value+
+ >> Go to Node '6'
+$literal - '6'
+$match discriminated union - check_pressure_value+
+__(SDU_succeed) Discriminated Union check_pressure_value+
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+__(SL_first) Literal '6'
+ => Output a string with Literal
+ >> Succeed; Go to Node lower_bound_temp
+$match direct product - lower_bound_temp
+__(sDP_first) Direct Product lower_bound_temp
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ << Back to Node channel
+$match direct product - channel
+__(sDP_succeed) Direct Product channel
+ >> Go to Node (PRESET_VALUE)_MINUS_('2')
+ << Succeed; Back to Node PRESSURE_DISCHARGE_BASED_ON_(PRESSURE_LIMIT)
+__(SP_first) primitive  (PRESET_VALUE)_MINUS_('2')
+__(SDP1_first)Node PRESET_VALUE
+20
+ => Found a corresponding match node
+18 << Succeed; Back to Node WATER_PUMP_CONTROL_(PRESET_WATER_TEMP)
+Your specificaton ran successfully.
+Output file length = 3.  Contents:
+
+25
+
+
+  #####   THE  END OF SUB MODULE  #####
+ SUCCEED<< Back to Node lower_bound_temp
+$match direct product - lower_bound_temp
+__(sDP_succeed) Direct Product lower_bound_temp
+$match direct product - return
+__(sDP_first) Direct Product return
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node upper_bound_temp
+$match direct product - upper_bound_temp
+__(sDP_first) Direct Product upper_bound_temp
+ >> Go to Node (PRESET_VALUE)_PLUS_('2')
+ >> Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SP_first) primitive  (PRESET_VALUE)_PLUS_('2')
+__(SDP_first)Node NL
+ => Successfully matched at module call
+__(SDP1_first)Node PRESET_VALUE
+20
+ => Found a corresponding match node
+22 << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node current_temp
+$match direct product - current_temp
+__(sDP_first) Direct Product current_temp
+ SUCCEED<< Back to Node upper_bound_temp
+$match direct product - upper_bound_temp
+__(sDP_succeed) Direct Product upper_bound_temp
+ >> Go to Node '90'
+$literal - '90'
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+__(SL_first) Literal '90'
+ => Output a string with Literal
+ >> Succeed; Go to Node compare_temp_with_preset+
+$match discriminated union - compare_temp_with_preset+
+__(SDU_first) Discriminated Union compare_temp_with_preset+
+ << Back to Node current_temp
+$match direct product - current_temp
+__(sDP_succeed) Direct Product current_temp
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Go to Node (CURRENT_HOME_TEMP)_LESS_THAN_(LOWER_BOUND_TEMP)
+__(SP_first) primitive  (CURRENT_HOME_TEMP)_LESS_THAN_(LOWER_BOUND_TEMP)
+ >> Succeed; Go to Node start_pump_if_temp_is_high+
+$match discriminated union - start_pump_if_temp_is_high+
+__(SDU_first) Discriminated Union start_pump_if_temp_is_high+
+__(SDP1_first)Node CURRENT_HOME_TEMP
+25 => Found a corresponding match node
+__(SDP1_first)Node LOWER_BOUND_TEMP
+18 => Found a corresponding match node
+ >> Go to Node (CURRENT_TEMP)_GREATER_THAN_OR_EQUAL_(HOT_TEMP)
+__(SP_first) primitive  (CURRENT_TEMP)_GREATER_THAN_OR_EQUAL_(HOT_TEMP)
+ => Found a corresponding match node
+ FAIL<< Back to Node compare_temp_with_preset+
+$match discriminated union - compare_temp_with_preset+
+__(SDU_fail) Discriminated Union compare_temp_with_preset+
+ ?? Try to check node (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+__(SP_first) primitive  (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+__(SDP1_first)Node CURRENT_TEMP
+90 => Found a corresponding match node
+__(SDP1_first)Node HOT_TEMP
+90 => Found a corresponding match node
+ => Found a corresponding match node
+ SUCCEED<< Go to Node 'START_MOTOR'
+$literal - 'START_MOTOR'
+__(SL_first) Literal 'START_MOTOR'
+ => Output a string with Literal
+__(SDP1_first)Node CURRENT_HOME_TEMP
+25 => Found a corresponding match node
+__(SDP1_first)Node UPPER_BOUND_TEMP
+22 => Found a corresponding match node
+ => Found a corresponding match node
+ SUCCEED<< Go to Node 'CLOSE_OIL_VALVE'
+$literal - 'CLOSE_OIL_VALVE'
+ << Back to Node (CURRENT_TEMP)_GREATER_THAN_OR_EQUAL_(HOT_TEMP)
+__(SP1_succeed) Primitive1 (CURRENT_TEMP)_GREATER_THAN_OR_EQUAL_(HOT_TEMP)
+__(SL_first) Literal 'CLOSE_OIL_VALVE'
+ => Output a string with Literal
+ >> Succeed; Go to Node DURATION_(TIMEUP_TO_START)
+$reference direct product - DURATION_(TIMEUP_TO_START)
+(SDP)_Node DURATION_(TIMEUP_TO_START)
+__(SDP_first)Node DURATION_(TIMEUP_TO_START)
+__(SM_first) module DURATION_(TIMEUP_TO_START)
+ << Back to Node (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+__(SP1_succeed) Primitive1 (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+__(SDP1_first)Node TIMEUP_TO_START
+1 => Found a corresponding match node
+ >> Succeed; Go to Node 'STOP_BURNER'
+$literal - 'STOP_BURNER'
+__(SL_first) Literal 'STOP_BURNER'
+ => Output a string with Literal
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/sung16.des].
+
+Module Title DURATION_(TIME_SPAN)
+$reference direct product - TIME_SPAN
+__(aDP_first) Direct Product TIME_SPAN
+ >> Go to Node set_time
+$match direct product - set_time
+__(aDP_first) Direct Product set_time
+ << Back to Node (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+__(SP1_succeed) Primitive1 (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+ >> Succeed; Go to Node INTERVAL_TIMER_(INTERVAL_BEFORE_TESTING)
+$reference direct product - INTERVAL_TIMER_(INTERVAL_BEFORE_TESTING)
+(SDP)_Node INTERVAL_TIMER_(INTERVAL_BEFORE_TESTING)
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(SDP_first)Node INTERVAL_TIMER_(INTERVAL_BEFORE_TESTING)
+__(SM_first) module INTERVAL_TIMER_(INTERVAL_BEFORE_TESTING)
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+__(SDP1_first)Node INTERVAL_BEFORE_TESTING
+1 => Found a corresponding match node
+ << Back to Node set_time
+$match direct product - set_time
+__(aDP_succeed) Direct Product set_time
+__(aDP_succeed) Direct Product set_time
+ << Succeed; Back to Node TIME_SPAN
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/sung16.des].
+
+Module Title INTERVAL_TIMER_(TIME_SPAN)
+$reference direct product - TIME_SPAN
+__(aDP_first) Direct Product TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+ >> Go to Node set_time
+$match direct product - set_time
+__(aDP_first) Direct Product set_time
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+ << Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Succeed; Back to Node DURATION_(TIME_SPAN)
+ << Back to Node set_time
+$match direct product - set_time
+__(aDP_succeed) Direct Product set_time
+__(aDP_succeed) Direct Product set_time
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ << Succeed; Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+ >> Go to Node (SET_TIME)_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_EQUAL_('0')
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(SDP1_first)Node SET_TIME
+1 => Found a corresponding match node
+equal compare 1,0
+equal compare 1,0
+ FAIL<< Back to Node return+
+ << Succeed; Back to Node INTERVAL_TIMER_(TIME_SPAN)
+$match discriminated union - return+
+__(SDU_fail) Discriminated Union return+
+ ?? Try to check node (SET_TIME)_NOT_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_NOT_EQUAL_('0')
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ >> Go to Node (SET_TIME)_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_EQUAL_('0')
+__(SDP1_first)Node SET_TIME
+1 => Found a corresponding match node
+ => Found a corresponding match node
+ SUCCEED<< Go to Node decrement
+$match direct product - decrement
+__(sDP_first) Direct Product decrement
+ >> Go to Node (SET_TIME)_MINUS_('1')
+__(SDP1_first)Node SET_TIME
+1 => Found a corresponding match node
+equal compare 1,0
+equal compare 1,0
+ FAIL<< Back to Node return+
+__(SP_first) primitive  (SET_TIME)_MINUS_('1')
+$match discriminated union - return+
+__(SDU_fail) Discriminated Union return+
+__(SDP1_first)Node SET_TIME
+1 => Found a corresponding match node
+ ?? Try to check node (SET_TIME)_NOT_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_NOT_EQUAL_('0')
+0 SUCCEED<< Back to Node decrement
+$match direct product - decrement
+__(sDP_succeed) Direct Product decrement
+__(SDP1_first)Node SET_TIME
+1 => Found a corresponding match node
+ << Succeed; Back to Node (SET_TIME)_NOT_EQUAL_('0')
+ => Found a corresponding match node
+ SUCCEED<< Go to Node decrement
+$match direct product - decrement
+__(sDP_first) Direct Product decrement
+__(SP1_succeed) Primitive1 (SET_TIME)_NOT_EQUAL_('0')
+ >> Succeed; Go to Node DURATION_(DECREMENT)
+$reference direct product - DURATION_(DECREMENT)
+(SDP)_Node DURATION_(DECREMENT)
+ >> Go to Node (SET_TIME)_MINUS_('1')
+__(SDP_first)Node DURATION_(DECREMENT)
+__(SM_first) module DURATION_(DECREMENT)
+__(SP_first) primitive  (SET_TIME)_MINUS_('1')
+__(SDP1_first)Node SET_TIME
+1 => Found a corresponding match node
+0__(SDP1_first)Node DECREMENT
+0 => Found a corresponding match node
+ SUCCEED<< Back to Node decrement
+$match direct product - decrement
+__(sDP_succeed) Direct Product decrement
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/sung16.des].
+
+Module Title DURATION_(TIME_SPAN)
+$reference direct product - TIME_SPAN
+__(aDP_first) Direct Product TIME_SPAN
+ << Succeed; Back to Node (SET_TIME)_NOT_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_NOT_EQUAL_('0')
+ >> Go to Node set_time
+$match direct product - set_time
+__(aDP_first) Direct Product set_time
+ >> Succeed; Go to Node INTERVAL_TIMER_(DECREMENT)
+$reference direct product - INTERVAL_TIMER_(DECREMENT)
+(SDP)_Node INTERVAL_TIMER_(DECREMENT)
+__(SDP_first)Node INTERVAL_TIMER_(DECREMENT)
+__(SM_first) module INTERVAL_TIMER_(DECREMENT)
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+__(SDP1_first)Node DECREMENT
+0 => Found a corresponding match node
+ << Back to Node set_time
+$match direct product - set_time
+__(aDP_succeed) Direct Product set_time
+__(aDP_succeed) Direct Product set_time
+ << Succeed; Back to Node TIME_SPAN
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/sung16.des].
+
+Module Title INTERVAL_TIMER_(TIME_SPAN)
+$reference direct product - TIME_SPAN
+__(aDP_first) Direct Product TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+ >> Go to Node set_time
+$match direct product - set_time
+__(aDP_first) Direct Product set_time
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+ << Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Succeed; Back to Node DURATION_(TIME_SPAN)
+ << Back to Node set_time
+$match direct product - set_time
+__(aDP_succeed) Direct Product set_time
+__(aDP_succeed) Direct Product set_time
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ << Succeed; Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+ >> Go to Node (SET_TIME)_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_EQUAL_('0')
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(SDP1_first)Node SET_TIME
+0 => Found a corresponding match node
+equal compare 0,0
+equal compare 0,0
+ SUCCEED<< Go to Node 'DURATION OVER'
+$literal - 'DURATION OVER'
+ << Succeed; Back to Node INTERVAL_TIMER_(TIME_SPAN)
+__(SL_first) Literal 'DURATION OVER'
+ => Output a string with Literal
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ << Back to Node (SET_TIME)_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_EQUAL_('0')
+ >> Go to Node (SET_TIME)_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_EQUAL_('0')
+ << Succeed; Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+__(SDP1_first)Node SET_TIME
+0 => Found a corresponding match node
+equal compare 0,0
+equal compare 0,0
+ SUCCEED<< Go to Node 'INTERVAL OVER'
+$literal - 'INTERVAL OVER'
+ << Succeed; Back to Node DURATION_(TIME_SPAN)
+__(SL_first) Literal 'INTERVAL OVER'
+ => Output a string with Literal
+Your specificaton ran successfully.
+Output file length = 29.  Contents:
+
+25
+250FAILDISCHARGE_PRESSURE
+
+
+  #####   THE  END OF SUB MODULE  #####
+
+
+  #####   THE  END OF SUB MODULE  #####
+ SUCCEED11<< Back to Node DURATION_(DECREMENT)
+ << Back to Node (SET_TIME)_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_EQUAL_('0')
+ << Succeed; Back to Node return+
+ << Back to Node (SET_TIME)_NOT_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_NOT_EQUAL_('0')
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node INTERVAL_TIMER_(TIME_SPAN)
+ << Succeed; Back to Node DURATION_(TIME_SPAN)
+Your specificaton ran successfully.
+Output file length = 29.  Contents:
+
+25
+250FAILDISCHARGE_PRESSURE
+
+
+  #####   THE  END OF SUB MODULE  #####
+
+
+  #####   THE  END OF SUB MODULE  #####
+Your specificaton ran successfully.
+Output file length = 29.  Contents:
+
+25
+250FAILDISCHARGE_PRESSURE
+
+
+  #####   THE  END OF SUB MODULE  #####
+
+
+  #####   THE  END OF SUB MODULE  #####
+ SUCCEED11<< Back to Node INTERVAL_TIMER_(DECREMENT)
+ SUCCEED11<< Back to Node DURATION_(TIMEUP_TO_START)
+ << Back to Node (SET_TIME)_NOT_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_NOT_EQUAL_('0')
+ << Back to Node (CURRENT_TEMP)_GREATER_THAN_OR_EQUAL_(HOT_TEMP)
+__(SP1_succeed) Primitive1 (CURRENT_TEMP)_GREATER_THAN_OR_EQUAL_(HOT_TEMP)
+ << Succeed; Back to Node return+
+ >> Succeed; Go to Node motor_speed
+$match direct product - motor_speed
+__(sDP_first) Direct Product motor_speed
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node INTERVAL_TIMER_(TIME_SPAN)
+ >> Go to Node '250'
+$literal - '250'
+__(SL_first) Literal '250'
+ => Output a string with Literal
+Your specificaton ran successfully.
+Output file length = 29.  Contents:
+
+25
+250FAILDISCHARGE_PRESSURE
+
+
+  #####   THE  END OF SUB MODULE  #####
+
+
+  #####   THE  END OF SUB MODULE  #####
+ SUCCEED11<< Back to Node INTERVAL_TIMER_(INTERVAL_BEFORE_TESTING)
+ << Back to Node motor_speed
+$match direct product - motor_speed
+__(sDP_succeed) Direct Product motor_speed
+ << Succeed; Back to Node (CURRENT_TEMP)_GREATER_THAN_OR_EQUAL_(HOT_TEMP)
+ << Back to Node (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+__(SP1_succeed) Primitive1 (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+__(SP1_succeed) Primitive1 (CURRENT_TEMP)_GREATER_THAN_OR_EQUAL_(HOT_TEMP)
+ >> Succeed; Go to Node water_temp
+$match direct product - water_temp
+__(sDP_first) Direct Product water_temp
+ >> Succeed; Go to Node check_speed+
+$match discriminated union - check_speed+
+__(SDU_first) Discriminated Union check_speed+
+ >> Go to Node '85'
+$literal - '85'
+__(SL_first) Literal '85'
+ => Output a string with Literal
+ >> Go to Node (MOTOR_SPEED)_LESS_THAN_(NORMAL_SPEED)
+__(SP_first) primitive  (MOTOR_SPEED)_LESS_THAN_(NORMAL_SPEED)
+ << Back to Node water_temp
+$match direct product - water_temp
+__(sDP_succeed) Direct Product water_temp
+__(SDP1_first)Node MOTOR_SPEED
+250 => Found a corresponding match node
+__(SDP1_first)Node NORMAL_SPEED
+300 => Found a corresponding match node
+ << Succeed; Back to Node (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+ => Found a corresponding match node
+ SUCCEED<< Go to Node (PUMP_FAILURE)_ASEND_TO_(CHANNEL)
+__(SP1_succeed) Primitive1 (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+__(SS_first) send  (PUMP_FAILURE)_ASEND_TO_(CHANNEL)
+__(SDP1_first)Node PUMP_FAILURE
+NORMALNORMAL => Found a corresponding match node
+__(SDP1_first)Node CHANNEL
+6 => Found a corresponding match node
+NORMALNORMAL6 >> Succeed; Go to Node water_temp_after_preset+
+$match discriminated union - water_temp_after_preset+
+__(SDU_first) Discriminated Union water_temp_after_preset+
+ >> Go to Node (WATER_TEMP)_GREATER_THAN_OR_EQUAL_('90')
+__(SP_first) primitive  (WATER_TEMP)_GREATER_THAN_OR_EQUAL_('90')
+__(SDP1_first)Node WATER_TEMP
+85 => Found a corresponding match node
+ => Found a corresponding match node
+ FAIL<< Back to Node water_temp_after_preset+
+$match discriminated union - water_temp_after_preset+
+__(SDU_fail) Discriminated Union water_temp_after_preset+
+ ?? Try to check node (WATER_TEMP)_LESS_THAN_('90')
+__(SP_first) primitive  (WATER_TEMP)_LESS_THAN_('90')
+__(SDP1_first)Node WATER_TEMP
+85 => Found a corresponding match node
+ => Found a corresponding match node
+ SUCCEED<< Go to Node (NO_BURNER_FAILURE)_ASEND_TO_(CHANNEL)
+__(SS_first) send  (NO_BURNER_FAILURE)_ASEND_TO_(CHANNEL)
+__(SDP1_first)Node NO_BURNER_FAILURE
+NORMAL => Found a corresponding match node
+__(SDP1_first)Node CHANNEL
+5 => Found a corresponding match node
+NORMALNORMAL SUCCEED<< Back to Node (WATER_TEMP)_LESS_THAN_('90')
+__(SP1_succeed) Primitive1 (WATER_TEMP)_LESS_THAN_('90')
+ << Succeed; Back to Node water_temp_after_preset+
+$match discriminated union - water_temp_after_preset+
+__(SDU_succeed) Discriminated Union water_temp_after_preset+
+ << Succeed; Back to Node (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+__(SP1_succeed) Primitive1 (CURRENT_HOME_TEMP)_GREATER_THAN_(UPPER_BOUND_TEMP)
+ << Succeed; Back to Node compare_temp_with_preset+
+$match discriminated union - compare_temp_with_preset+
+__(SDU_succeed) Discriminated Union compare_temp_with_preset+
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ << Succeed; Back to Node BURNER_BASED_ON_(TEMP_SETTING)_AND_(HOME_TEMP)
+Your specificaton ran successfully.
+Output file length = 60.  Contents:
+
+25
+250FAILDISCHARGE_PRESSURE
+90START_MOTOR0DURATION OVER250
+
+
+  #####   THE  END OF SUB MODULE  #####
+ => Found a corresponding match node
+ SUCCEED<< Back to Node SWITCH_ON
+$reference direct product - SWITCH_ON
+__(sDP_succeed) Direct Product SWITCH_ON
+ >> Succeed; Go to Node pump_status
+$match direct product - pump_status
+__(sDP_first) Direct Product pump_status
+ >> Go to Node ARECEIVE_FROM_(PUMP_CHANNEL)
+__(SR_first) Receive  ARECEIVE_FROM_(PUMP_CHANNEL)
+__(SDP1_first)Node PUMP_CHANNEL
+6 => Found a corresponding match node
+ SUCCEED<< Back to Node pump_status
+$match direct product - pump_status
+__(sDP_succeed) Direct Product pump_status
+ << Succeed; Back to Node SWITCH_ON
+$reference direct product - SWITCH_ON
+__(sDP_succeed) Direct Product SWITCH_ON
+ >> Succeed; Go to Node check+
+$match discriminated union - check+
+__(SDU_first) Discriminated Union check+
+ >> Go to Node (PUMP_STATUS)_EQUAL_(NO_PUMP_FAILURE)
+__(SP_first) primitive  (PUMP_STATUS)_EQUAL_(NO_PUMP_FAILURE)
+__(SDP1_first)Node PUMP_STATUS
+ => Found a corresponding match node
+__(SDP1_first)Node NO_PUMP_FAILURE
+NORMAL => Found a corresponding match node
+equal compare ,NORMAL
+equal compare ,NORMAL
+ FAIL<< Back to Node check+
+$match discriminated union - check+
+__(SDU_fail) Discriminated Union check+
+ ?? Try to check node (PUMP_STATUS)_EQUAL_(PUMP_FAILURE)
+__(SP_first) primitive  (PUMP_STATUS)_EQUAL_(PUMP_FAILURE)
+__(SDP1_first)Node PUMP_STATUS
+ => Found a corresponding match node
+__(SDP1_first)Node PUMP_FAILURE
+FAIL => Found a corresponding match node
+equal compare ,FAIL
+equal compare ,FAIL
+ FAIL<< Back to Node check+
+$match discriminated union - check+
+__(SDU_fail) Discriminated Union check+
+ // All subnodes are tried; none of them found
+ <- Backward output buffer pointer at location 3
+ ** Free a stack element at Node check+; adjust stack & output pointers.
+ << Back to Node SWITCH_ON
+$reference direct product - SWITCH_ON
+__(sDP_fail) Direct Product SWITCH_ON
+ ?? Try to check node pump_status
+$match direct product - pump_status
+__(sDP_next) Direct Product pump_status
+ >> Go to the last sibling ARECEIVE_FROM_(PUMP_CHANNEL) under node pump_status
+__(SR_next) Receive  ARECEIVE_FROM_(PUMP_CHANNEL)
+ <- Backward output buffer pointer at location 3
+ ** Free a stack element at Node ARECEIVE_FROM_(PUMP_CHANNEL); adjust stack & output pointers.
+ << Fail; Back to Node pump_status
+$match direct product - pump_status
+__(sDP_fail) Direct Product pump_status
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 3
+ ** Free a stack element at Node pump_status; adjust stack & output pointers.
+ << Back to Node SWITCH_ON
+$reference direct product - SWITCH_ON
+__(sDP_fail) Direct Product SWITCH_ON
+ ?? Try to check node PARALLEL
+__(SM_next) Module PARALLEL
+ <- Backward output buffer pointer at location 3
+ ** Free a stack element at Node PARALLEL; adjust stack & output pointers.
+ << Fail; Back to Node SWITCH_ON
+$reference direct product - SWITCH_ON
+__(sDP_fail) Direct Product SWITCH_ON
+ ?? Try to check node home_temp
+$match direct product - home_temp
+__(sDP_next) Direct Product home_temp
+ >> Go to the last sibling '25' under node home_temp
+$literal - '25'
+__(SL_next) Literal '25'
+ <- Backward output buffer pointer at location 1
+ ** Free a stack element at Node '25'; adjust stack & output pointers.
+ << Fail; Back to Node home_temp
+$match direct product - home_temp
+__(sDP_fail) Direct Product home_temp
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 1
+ ** Free a stack element at Node home_temp; adjust stack & output pointers.
+ << Back to Node SWITCH_ON
+$reference direct product - SWITCH_ON
+__(sDP_fail) Direct Product SWITCH_ON
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 1
+ ** Free a stack element at Node SWITCH_ON; adjust stack & output pointers.
+ << Back to Node SWITCH_POSITION+
+$reference discriminated union - SWITCH_POSITION+
+__(SDU_fail) Discriminated Union SWITCH_POSITION+
+ ?? Try to check node SWITCH_OFF
+$reference direct product - SWITCH_OFF
+__(sDP_first) Direct Product SWITCH_OFF
+$reference discriminated union - SWITCH_POSITION+
+__(SDU_fail) Discriminated Union SWITCH_POSITION+
+ // All subnodes are tried; none of them found
+ <- Backward output buffer pointer at location 1
+ ** Free a stack element at Node SWITCH_POSITION+; adjust stack & output pointers.
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_next)Node NL
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node NL; adjust stack & output pointers.
+ << Fail; Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node return; adjust stack & output pointers.
+ << Back to Node HOME_HEATING_OF_HOUSE_TEMPERATURE_ON_(PRESET_TEMP)_WHEN_(SWITCH_SETTING)
+The synthesis procedure failed.
+No output is produced at this execution.
+#####   THE  END   #####

@@ -1,0 +1,8 @@
+#!/bin/csh -f
+
+foreach ff ( `/bin/ls *.[hcly] makefile` )
+	echo -----------
+	echo $ff
+	echo -----------
+	diff $ff ../$ff
+end

@@ -1,0 +1,315 @@
+========================================================================
+Warnings: 74  Errors:  0  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/analysis1.c
+------------------------------------------------------------------------
+
+Line: 1967 W#762   Automatic variable 'Prev_output' was not used. 
+Line: 1968 W#762   Automatic variable 'Prev_wk' was not used. 
+Line: 2094 W#762   Automatic variable 'Prev_output' was not used. 
+Line: 2095 W#762   Automatic variable 'Prev_wk' was not used. 
+Line: 2300 W#766   Automatic variable 'P_activity' may be used before set. 
+Line: 2300 W#568   The result of operation '==' was not used. 
+Line: 2262 W#762   Automatic variable 'sub_module1' was not used. 
+Line: 2262 W#762   Automatic variable 'sub_module2' was not used. 
+Line: 2265 W#765   Automatic variable 'sub_module' was set but not used. 
+Line: 2271 W#762   Automatic variable 'addr2' was not used. 
+Line: 2276 W#762   Automatic variable 'status' was not used. 
+Line: 2279 W#762   Automatic variable 'file_buffer' was not used. 
+Line: 3315 W#764   Label 'defaults' was not used. 
+Line: 3324 W#762   Automatic variable 'Prev_output' was not used. 
+Line: 3325 W#762   Automatic variable 'Prev_wk' was not used. 
+Line: 3365 W#762   Automatic variable 'para_data1' was not used. 
+Line: 3367 W#762   Automatic variable 'i' was not used. 
+Line: 3369 W#762   Automatic variable 'time_start' was not used. 
+Line: 3370 W#762   Automatic variable 'time_stop' was not used. 
+Line: 3671 W#762   Automatic variable 'separter' was not used. 
+Line: 3672 W#762   Automatic variable 'para_data1' was not used. 
+Line: 3673 W#762   Automatic variable 'para_data2' was not used. 
+Line: 3675 W#762   Automatic variable 'para_datai2' was not used. 
+Line: 3676 W#762   Automatic variable 'i' was not used. 
+Line: 3678 W#762   Automatic variable 'time_start' was not used. 
+Line: 3679 W#762   Automatic variable 'time_stop' was not used. 
+Line: 3969 W#762   Automatic variable 'separter' was not used. 
+Line: 3970 W#762   Automatic variable 'para_data1' was not used. 
+Line: 3971 W#762   Automatic variable 'para_data2' was not used. 
+Line: 3973 W#762   Automatic variable 'para_datai2' was not used. 
+Line: 3974 W#762   Automatic variable 'i' was not used. 
+Line: 3975 W#762   Automatic variable 'time_start' was not used. 
+Line: 3976 W#762   Automatic variable 'time_stop' was not used. 
+Line: 3977 W#762   Automatic variable 'Prev_output' was not used. 
+Line: 3978 W#762   Automatic variable 'Prev_wk' was not used. 
+Line: 4227 W#762   Automatic variable 'separter' was not used. 
+Line: 4230 W#762   Automatic variable 'i' was not used. 
+Line: 4564 W#762   Automatic variable 'msg_type' was not used. 
+Line: 5244 W#764   Label 'defaults' was not used. 
+Line: 5460 W#765   Automatic variable 'q' was set but not used. 
+Line: 5461 W#762   Automatic variable 's_adr' was not used. 
+Line: 5972 W#765   Automatic variable 'TOS' was set but not used. 
+Line: 5972 W#762   Automatic variable 't1' was not used. 
+Line: 5974 W#762   Automatic variable 'Prev_output' was not used. 
+Line: 5975 W#762   Automatic variable 'Prev_wk' was not used. 
+Line: 6048 W#762   Automatic variable 'Prev_output' was not used. 
+Line: 6049 W#762   Automatic variable 'Prev_wk' was not used. 
+Line: 6600 W#762   Automatic variable 'Prev_output' was not used. 
+Line: 6601 W#762   Automatic variable 'Prev_wk' was not used. 
+Line: 6857 W#762   Automatic variable 'Prev_output' was not used. 
+Line: 6858 W#762   Automatic variable 'Prev_wk' was not used. 
+Line: 7015 W#762   Automatic variable 'Prev_output' was not used. 
+Line: 7016 W#762   Automatic variable 'Prev_wk' was not used. 
+Line: 7061 W#762   Automatic variable 'Prev_output' was not used. 
+Line: 7062 W#762   Automatic variable 'Prev_wk' was not used. 
+Line: 7562 W#765   Automatic variable 'module' was set but not used. 
+Line: 7663 W#762   Automatic variable 'k' was not used. 
+Line: 7666 W#762   Automatic variable 'ch2' was not used. 
+Line: 7741 W#762   Automatic variable 'k' was not used. 
+Line: 7744 W#762   Automatic variable 'ch2' was not used. 
+Line: 7747 W#762   Automatic variable 'pre_para' was not used. 
+Line: 7748 W#762   Automatic variable 'tmp_para' was not used. 
+Line: 88   W#763   Static variable 'rcsid' was not used. 
+Line: 54   W#763   (in FILE: ./desc_struct.h)  Static variable 'desc_struct_h_rcsid' was not used. 
+Line: 29   W#763   (in FILE: ./alert_dcl.h)  Static variable 'alert_dcl_rcsid' was not used. 
+Line: 53   W#763   (in FILE: ./alert_dcl.h)  Static variable 'Alert_Msg' was not used. 
+Line: 42   W#763   (in FILE: ./share_rtn.h)  Static variable 'share_rtn_h_rcsid' was not used. 
+Line: 47   W#763   (in FILE: ./analysis1.h)  Static variable 'analysis1_h_rcsid' was not used. 
+Line: 20   W#763   (in FILE: ./mesg.h)  Static variable 'mesg_h_rcsid' was not used. 
+Line: 51   W#763   (in FILE: ./wid1.h)  Static variable 'wid1_h_rcsid' was not used. 
+Line: 55   W#763   (in FILE: ./exec_rtn1.h)  Static variable 'exec_rtn1_h_rcsid' was not used. 
+Line: 32   W#763   (in FILE: ./some_utils.h)  Static variable 'some_utils_h_rcsid' was not used. 
+Line: 1823 W#763   Static function 'cleanup' was not used. 
+Line: 7792 W#763   Static function 'Search_Sub_Module' was not used. 
+========================================================================
+Warnings: 0  Errors:  1  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/build_hoare_tree.c
+------------------------------------------------------------------------
+
+Illegal declaration syntax near 'static'.
+
+========================================================================
+Warnings: 20  Errors:  0  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/build_rtn.c
+------------------------------------------------------------------------
+
+Automatic variable 'counter' was not used.
+
+Automatic variable 'percentage' was set but not used.
+
+Formal parameter 'dummywidget' was not used.
+
+Formal parameter 'dummyptr1' was not used.
+
+Formal parameter 'dummyptr2' was not used.
+
+Formal parameter 'dummywidget' was not used.
+
+Formal parameter 'dummyptr1' was not used.
+
+Formal parameter 'dummyptr2' was not used.
+
+Formal parameter 'dummywidget' was not used.
+
+Formal parameter 'dummyptr1' was not used.
+
+Formal parameter 'dummyptr2' was not used.
+
+Static variable 'rcsid' was not used.
+
+Static variable 'desc_struct_h_rcsid' was not used.
+
+Static variable 'alert_dcl_rcsid' was not used.
+
+Static variable 'Alert_Msg' was not used.
+
+Static variable 'mesg_h_rcsid' was not used.
+
+Static variable 'wid1_h_rcsid' was not used.
+
+Static variable 'share_rtn_h_rcsid' was not used.
+
+Static variable 'build_hoare_tree_h_rcsid' was not used.
+
+Static variable 'build_rtn_h_rcsid' was not used.
+
+========================================================================
+Warnings: 56  Errors:  0  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/exec_rtn1.c
+------------------------------------------------------------------------
+
+'/*' occurred inside a comment.
+
+Function 'calloc' was previously declared as:
+    extern char *calloc();
+
+Formal parameter 'canvas' was not used.
+
+Formal parameter 'cur_node' was not used.
+
+Automatic variable 'j' was not used.
+
+Empty body for 'for' statement.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+Formal parameter 'dummywidget' was not used.
+
+Formal parameter 'dummyptr1' was not used.
+
+Formal parameter 'dummyptr2' was not used.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+Formal parameter 'canvas' was not used.
+
+Automatic variable 'max' was set but not used.
+
+Automatic variable 'ssize' was set but not used.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+Automatic variable 'i' was not used.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+The conditional expression for 'if' is always true.
+
+The statement cannot be reached.
+
+Automatic variable 'i' was not used.
+
+Empty body for 'if' statement.
+
+Formal parameter 'dummywidget' was not used.
+
+Formal parameter 'dummyptr1' was not used.
+
+Formal parameter 'dummyptr2' was not used.
+
+Static variable 'rcsid' was not used.
+
+Static variable 'desc_struct_h_rcsid' was not used.
+
+Static variable 'alert_dcl_rcsid' was not used.
+
+Static variable 'Alert_Msg' was not used.
+
+Static variable 'share_rtn_h_rcsid' was not used.
+
+Static variable 'analysis1_h_rcsid' was not used.
+
+Static variable 'mesg_h_rcsid' was not used.
+
+Static variable 'wid1_h_rcsid' was not used.
+
+Static variable 'exec_rtn1_h_rcsid' was not used.
+
+Static function 'Exec_Print_Log' was not used.
+
+========================================================================
+Warnings: 0  Errors:  1  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/lex.yy.c
+------------------------------------------------------------------------
+
+'indentation' is undefined.
+
+========================================================================
+Warnings: 0  Errors:  1  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/msg.c
+------------------------------------------------------------------------
+
+The function parameter list has an illegal format.
+
+========================================================================
+Warnings: 4  Errors:  0  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/sem.c
+------------------------------------------------------------------------
+
+Function 'sem_close' was previously declared as:
+    extern int sem_close();
+
+Function 'sem_wait' was previously declared as:
+    extern int sem_wait();
+
+Function 'sem_signal' was previously declared as:
+    extern int sem_signal();
+
+Static variable 'sem_c_rcsid' was not used.
+
+========================================================================
+Warnings: 4  Errors:  0  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/share_rtn.c
+------------------------------------------------------------------------
+
+Formal parameter 'msg_no' was not used.
+
+Static variable 'rcsid' was not used.
+
+Static variable 'desc_struct_h_rcsid' was not used.
+
+Static variable 'share_rtn_h_rcsid' was not used.
+
+========================================================================
+Warnings: 3  Errors:  0  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/some_utils.c
+------------------------------------------------------------------------
+
+Function 'malloc' was previously declared as:
+    extern char *malloc();
+
+Static variable 'rcsid' was not used.
+
+Static variable 'some_utils_h_rcsid' was not used.
+
+========================================================================
+Warnings: 2  Errors:  0  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/token.c
+------------------------------------------------------------------------
+
+Static variable 'rcsid' was not used.
+
+Static variable 'desc_struct_h_rcsid' was not used.
+
+========================================================================
+Warnings: 0  Errors:  1  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/wid1.c
+------------------------------------------------------------------------
+
+Function 'sem_create' has already been defined ("sem.c":63).
+
+========================================================================
+Warnings: 0  Errors:  1  /tmp_mnt/home/borg3/franklin/thesis/descartes/win/y.tab.c
+------------------------------------------------------------------------
+
+Illegal declaration syntax near 'static'.
+

@@ -1,0 +1,425 @@
+case `uname` in
+   "HP-UX" ) hackecho=1
+       NAWK=gawk;;
+    *) hackecho=0
+       NAWK=nawk;;
+esac
+export hackecho
+
+echon(){
+   if [ $hackecho -eq 1 ]
+   then
+      /bin/echo $* \\c
+   else
+      /bin/echo -n $*
+   fi
+}
+
+s="$SymbolList:  sal_1_8_6 $"
+[ "$s" = ':  $' ] && s=": ALPHA - under development"
+[ "$SHOWSALVERSION" = "" ] && echo "$0: SAL(tm) version$s"
+SHOWSALVERSION="no"
+export SHOWSALVERSION
+
+
+
+# Determines the RCS path using the directory
+# of links created by cvtdirrcs.
+# If no arg, then look for RCS/.SALINFO and extract
+# RCS id from it.
+# If arg is a number then assume it is an RCS id.
+# If arg is not a number than assume it is a package name.
+# In any case, if error exit immediately, otherwise
+# set the variable 'RCSPATH'
+setrcspath(){
+  name=$1
+  if [ "$name" = "" ]
+  then
+     if [ ! -f RCS/.SALINFO ]
+     then
+        echo "$0: Error - getting RCS path: no RCS/.SALINFO file." 1>&2
+	exit 1
+     fi
+     name=`awk '/^new:/{ print $2 }' RCS/.SALINFO`
+     RC=$?
+     if [ ! $RC -eq 0 ]
+     then
+        echo "$0: Error - getting RCS path: extracting id from RCS/.SALINFO file." 1>&2
+	exit 1
+     fi
+  fi
+  number=`expr "$name" : '[0-9]*'`
+  if [ $number -gt 0 ]
+  then 				# its a number, use it as id
+     rcspath="${SALRCSDIRS}/${name}"
+     if [ ! -d ${rcspath}/. ]	# Support old links, which were hidden files
+     then
+        name=".${name}"
+        rcspath="${SALRCSDIRS}/${name}"
+     fi
+  else
+     full=`echo ${name} | grep '^/'`
+     if [ "$full" = "" ]
+     then
+	# must be a package name
+	rcspath="${SALRCSDIRS}/${name}"
+        if [ ! -d ${rcspath}/. ]	# Support old links, which were hidden files
+        then
+	   echo "$0: Error - getting RCS path: no RCS link for a package named '${name}'."
+	   exit 1
+        fi
+     else
+        # if it starts withe a slash, must be a full path
+        rcspath="${name}"
+     fi
+
+
+                               # if not a number, it must be a full path 
+  fi
+  if [ ! -d "${rcspath}/." ]
+  then
+     errmsg=`ls -l ${rcspath} 2>&1 | sed 's/ls://' `
+     echo "$0: Error - getting RCS path '$rcspath'." 1>&2
+     echo "$0         $errmsg"
+     return 1
+  fi
+  RCSPATH=$rcspath
+  return 0
+}
+
+#
+# A replacement for RCS 'co' command.  It saves the
+# output to all checkouts so that the filenames
+# and versions can be parsed later to see what
+# files were checked out by SAL scripts.
+#
+COSAVEFILE=./co_recorded
+CO(){
+   output=`eval co $* 2>&1`
+   RC=$?
+   echo "$output"
+
+   echo "$0: recorded 'co' command: $*" >> $COSAVEFILE
+   echo "$output" >> $COSAVEFILE
+   echo >> $COSAVEFILE
+
+   return $RC
+}
+
+#
+# Check return code of command after executing it.
+# If error.... exit immediately.
+#
+checkrtnfatal()
+{
+   output=`eval $1 2>&1`
+   RC=$?
+   if [ ! $RC -eq 0 ]
+   then
+      echo "$0: Error - bad return from command '$1' " 1>&2
+      echo "$output" 1>&2
+      exit $RC
+   fi
+   if [ ! "$output" = "" ]
+   then
+      echo "$output"
+   fi 
+}
+
+#
+# Removes comments, empty lines, and the deliverables section
+# from a Release.Config file.  Returns the lines that remain.
+#
+# Set the environment var 'ALLOW' to ignore releasename & packagename
+# syntax errors.  (to support old packages)
+#
+parse_shell_vars()
+{
+   output=` $NAWK ' #
+      BEGIN { start=1 }
+      /BEGIN DELIVERABLES/{ start=0 }
+      /END DELIVERABLES/{ start=1 }
+      { gsub( /#.*/, "", $0 ) }
+      { gsub( /[ 	]*$/, "", $0 ) }
+      ( NF == 0 ) { next }
+      /^[ 	]*#/ { next }
+      ( start == 1 ){ 
+	 split( $0, a, "=" )
+	 var = a[1] 
+	 value = a[2]
+	 if ( var == "KITNAME" || var == "PACKAGENAME" ){
+	    if (value ~ /[A-Z0-9][A-Z_0-9]*$/ )
+	       print $0 
+	    else{
+		if ( ALLOW == "" ){
+printf( "%s value \"%s\" on line %d of %s is illegal.\n" , var, value, NR, FILENAME ) | "cat 1>&2"
+printf( "Syntax of value should be: \"NAME\"\n" ) | "cat 1>&2"
+printf( "Where: NAME is a word of any length consisting of \n" ) | "cat 1>&2"
+printf( "       letters \"A-Z\", digits \"0-9\", or underscores \"_\". \n" ) | "cat 1>&2"
+printf( "       NAME must be all UPPER case!\n" ) | "cat 1>&2"
+	       exit( 1 )
+	       }else
+                 print $0
+	    }
+	 }else if ( var == "RELEASENAME" ){
+	    if (value ~ /[a-z0-9][a-z_0-9]*_[0-9][0-9]*_[0-9][0-9]*$/ )
+	       print $0 
+            else if (value ~ /[a-z0-9][a-z_0-9]*_[0-9][0-9]*_[0-9][0-9]*_[0-9][0-9]*$/ ) 
+	       print $0 
+	    else{
+		if ( ALLOW == "" ){
+printf( "RELEASENAME value \"%s\" on line %d of %s is illegal.\n" , value, NR, FILENAME ) | "cat 1>&2"
+printf( "Syntax of value should be: \"TAG_M_m[_p]\"\n" ) | "cat 1>&2"
+printf( "Where: TAG is a word of any length consisting of \n" ) | "cat 1>&2"
+printf( "       letters \"a-z\", digits \"0-9\", or underscores \"_\". \n" ) | "cat 1>&2"
+printf( "       TAG must be all lower case!\n" ) | "cat 1>&2"
+printf( "       M is the major revision number.\n" ) | "cat 1>&2"
+printf( "       m is the minor revision number.\n" ) | "cat 1>&2"
+printf( "       p is an optional patch number. (Should only be used on patch releases.)\n" ) | "cat 1>&2"
+exit( 1 )
+		}else
+                  print $0
+	    }
+	 }else
+            print $0
+      }' ALLOW=$ALLOW $1 `
+
+   RC=$?
+   if [ ! $RC -eq 0 ]
+   then
+      echo "$0: Error - could not parse shell variables from $1" 1>&2
+   else
+      echo "$output"
+   fi
+   
+}
+
+#
+# return 0 if variable is not defined, 1 if is defined.
+# (Yeah, I know its backward logic, see man page on sh 
+# see 'if' statement for why I do it this way.
+required_variable(){
+      v=`eval echo $"$1"`
+      if [ "$v" = "" ]
+      then
+	 echo "$0: Error - Required variable '$1' not defined in Package.config file." 1>&2
+	 echo "Should be defined as '$2'" 1>&2
+         numnotfound=`expr $numnotfound + 1`
+	 return 0
+      else
+	 return 1
+      fi
+}
+
+#
+# Get thread file
+#
+get_threadfile() {
+   file=$1
+   vers=$2
+   if [ "$vers" = "" -a "$file" = "" ]
+   then
+      return 0
+   fi
+   
+   if [ "$vers" = "" ]
+   then
+      cocmd="CO "
+   else
+      cocmd="CO -r${vers} "
+   fi
+
+   if [ "$file" = "" ]
+   then
+      cocmd="$cocmd .rcsthread"
+   else
+      cocmd="$cocmd ${file}"
+   fi
+   cocmd="$cocmd 2>&1"
+   output=`eval $cocmd `
+   RC=$?
+   if [ ! $RC -eq 0 ]
+   then
+      echo "$0: Error - could not extract thread file '$file'." 1>&2
+      echo "$output" 1>&2
+      exit 1
+   fi
+   echo "$output"
+}
+
+#
+# Get make file
+#
+get_makefile() {
+   file=$1
+   vers=$2
+   if [ "$vers" = "" -a "$file" = "" ]
+   then
+      return 0
+   fi
+   
+   if [ "$vers" = "" ]
+   then
+      cocmd="CO "
+   else
+      cocmd="CO -r${vers} "
+   fi
+
+   if [ "$file" = "" ]
+   then
+      cocmd="$cocmd Makefile"
+   else
+      cocmd="$cocmd ${file}"
+   fi
+   cocmd="$cocmd 2>&1"
+   output=`eval $cocmd `
+   RC=$?
+   if [ ! $RC -eq 0 ]
+   then
+      echo "$0: Error - could not extract make file '$file'." 1>&2
+      echo "$output" 1>&2
+      exit 1
+   fi
+   echo "$output"
+}
+
+#
+# Link to RCS directory, if ./RCS does not exist
+#
+link_rcs(){
+   rcspath=$1
+   if [ -d "./RCS" ]
+   then
+      echo "$0: Using RCS directory './RCS' "
+      return 0
+   fi
+
+   if [ ! -d "$rcspath" ]
+   then
+      echo "$0: Error -  RCS path '$rcspath' is not a directory."
+      exit 1
+   fi
+
+   if [ ! -f ${rcspath}/.SALINFO ]
+   then
+      echo "$0: Error -  RCS path '$rcspath' is not a registered RCS directory."
+      echo "Do you want to continue anyway? "
+      getyesorno
+      RC=$?
+      [ $RC -eq 1 ] || exit 1
+   fi
+
+   ln -s $rcspath ./RCS
+   RC=$?
+   if [ ! $RC -eq 0 ]
+   then
+      echo "$0: Error - could not link ./RCS to '$rcspath'." 1>&2
+      exit 1
+   fi
+
+}
+
+getyesorno(){
+   read yn
+   case $yn in
+	y|Y) return 1;;
+	n|N) return 0;;
+	*) echo "Please enter 'y' or 'n'."
+	   getyesorno;;
+   esac
+}
+
+parse_for_co_output(){
+   inputfile=$1		# File containing 'co' command output.
+   tagname=$2		# If given, format will be an 'rcs' command.
+                        # If not given, format will be a thread file
+
+   awk '/ --> /{ CO=1;  RCSfile = $1; file = $3 }
+        /revision / && ( CO == 1 ){ rev = $2 }
+        /^done$/ && ( CO == 1 ) { if ( RCSfile == "" || file == "" ){
+                     exit NR
+                  }else{
+                     if ( revname == "" )
+                        printf("%-30s %s\n", RCSfile " : ", rev )
+                     else
+                        printf("rcs -N%s:%-10s %s\n", revname, rev, RCSfile )
+                  }
+           CO=0
+        }' revname=$tagname $inputfile
+
+    RC=$?
+    if [ ! $RC -eq 0 ]
+    then
+       echo "$0: Error - parsing make.output.$name file for RCS filenames. At or near line $RC."
+       return 1
+    fi
+ 
+}
+
+#
+# Extract variables and source them
+#
+source_config()
+{
+   if [ ! "$RC_SOURCED" = "" ]
+   then
+      # file already sourced.
+      return 0
+   fi
+   # Not sourced yet.
+   parse_shell_vars $1 > ./.source_me
+   RC=$?
+   if [ ! $RC -eq 0 ]
+   then
+      rm -f ./.source_me
+      exit $RC
+   fi
+   . ./.source_me
+   rm -f ./.source_me
+   
+   numnotfound=0
+   required_variable RELEASENAME   "symbolic tag applied when release is accepted by CM."
+   if [ ! $numnotfound -eq 0 ]
+   then
+      exit $numnotfound
+   fi
+
+   RC_SOURCED="true"
+   export RC_SOURCED
+   [ "$MAKEFILE" = "" ] || export MAKEFILE
+   [ "$PACKAGENAME" = "" ] || export PACKAGENAME
+   [ "$RELEASENAME" = "" ] || export RELEASENAME
+   [ "$RELEASEREASON" = "" ] || export RELEASEREASON
+   [ "$NOTIFY" = "" ] || export NOTIFY
+   [ "$THREADFILE" = "" ] || export THREADFILE
+   [ "$THREADFILEVERSION" = "" ] || export THREADFILEVERSION
+   [ "$SRSDOCNUM" = "" ] || export SRSDOCNUM
+   [ "$SRADOCNUM" = "" ] || export SRADOCNUM
+   [ "$PIRSFIXED" = "" ] || export PIRSFIXED
+}
+
+#
+# Make a uniq directory, if you can.
+#
+mkuniqdir(){
+   returnvar=$1
+
+   if [ "$TMPHOME" = "" ]
+   then
+      echo "$0: Error - Sal environment variable TMPHOME is not defined.  See Sal admininstrator"
+      echo "to get required environment added to your login."
+      exit 1
+   fi
+
+   n=`basename $0`
+   newdir=$TMPHOME/$n.$$
+   mkdir $newdir
+   RC=$?
+   if [ ! $RC -eq 0 ]
+   then
+      echo "$0: Error - creating unique directory: $newdir " 1>&2
+      exit $RC
+   fi
+
+   eval ${returnvar}=$newdir
+}

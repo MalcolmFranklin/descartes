@@ -1,0 +1,7 @@
+Some of the Descartes source code reads suntools/sunview.h panel.h and
+rect.h (and possibly others).
+
+The stuff runs under Motif, so I hope theyre not really needed.  I copied a
+set of the files over here just in case.  Most machines around here
+to not have the suntools headers anymore.
+--Malcolm 3/25/94

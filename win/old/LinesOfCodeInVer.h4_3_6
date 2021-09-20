@@ -1,0 +1,41 @@
+   total    blank lines w/   nb, nc    semi- preproc. file
+   lines    lines comments    lines   colons  direct.
+--------+--------+--------+--------+--------+--------+----
+    6878     1027     1010     5015     2746       77 analysis1.c
+      88        7       70       13        5        8 analysis1.h
+     700      102      242      373      206       29 build_hoare_tree.c
+     125       16       90       21       16        5 build_hoare_tree.h
+     385       37      222      131       60       26 build_rtn.c
+      76        6       61        9        4        5 build_rtn.h
+      41        7       25        9        2        7 cchk_missing_signal.h
+      47        7       25       15        3       10 cchk_missing_stdarg.h
+      44        7       28        9        2        7 cchk_missing_stdlib.h
+      43        7       26       10        3        7 cchk_missing_unistd.h
+     411       25      264      130       17       19 command_line.c
+      51        5       33       13        8        5 command_line.h
+      95       13       57       27       13        6 desc_struct.c
+     372       57      184      155       56       67 desc_struct.h
+     105        7       85       46        3        5 desc_table.h
+    1755      199      597      995      510       42 exec_rtn1.c
+     194       17      128       56       38       11 exec_rtn1.h
+     913       75      452      404      195       24 fifo.c
+     147       15       92       59       34        6 fifo.h
+     552       72      188      297      131       11 hash.c
+     116       10       68       40       29        5 hash.h
+    1197       98      410      725      359       50 main.c
+      56        6       40       10        5        5 main.h
+      63        8       36       19        8        9 mesg.h
+     142       16       71       55       19       14 msg.c
+      74        7       51       16        7        7 need_before_ytab.h
+     907        7       37      863        3        6 rene_descartes.h
+     331       25      220      101       38       22 semops.c
+      54        3       41       10        5        5 semops.h
+     212       28      117       73       16       14 share_rtn.c
+     117       10       83       24        5        5 share_rtn.h
+     620       50      345      229       90       18 some_utils.c
+     115       13       64       38       27        5 some_utils.h
+      58        7       41       10        3        7 sunos4_missing.h
+     165       17       82       66       11       20 token.c
+    1534      160      650      777      452       85 wid1.c
+     209       14      144       59       39       17 wid1.h
+   18992     2187     6379    10902     5168      671 total

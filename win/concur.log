@@ -1,0 +1,208 @@
+Descartes' Trace Log  Ver 1.0   Time: Tue Sep 27 16:24:50 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/concur.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/concur.log.
+
+Contents of the Descartes specification file:
+12
+24
+
+
+Module Title (MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+$reference direct product - MESSAGE_ONE
+__(aDP_first) Direct Product MESSAGE_ONE
+ >> Go to Node input_one
+$match direct product - input_one
+__(aDP_first) Direct Product input_one
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node input_one
+$match direct product - input_one
+__(aDP_succeed) Direct Product input_one
+__(aDP_succeed) Direct Product input_one
+ << Succeed; Back to Node MESSAGE_ONE
+$reference direct product - MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node MESSAGE_ONE
+$reference direct product - MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+ << Succeed; Back to Node (MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+$reference direct product - MESSAGE_TWO
+__(aDP_first) Direct Product MESSAGE_TWO
+ >> Go to Node input_two
+$match direct product - input_two
+__(aDP_first) Direct Product input_two
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 5
+ << Back to Node input_two
+$match direct product - input_two
+__(aDP_succeed) Direct Product input_two
+__(aDP_succeed) Direct Product input_two
+ << Succeed; Back to Node MESSAGE_TWO
+$reference direct product - MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 6
+ << Back to Node MESSAGE_TWO
+$reference direct product - MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+ << Succeed; Back to Node (MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node PARALLEL
+__(SPa_first) parallel PARALLEL
+__ parallel--Process id= 26793
+__(SDP1_first)Node INPUT_ONE
+12 => Found a corresponding match node
+__ parallel--Process id= 26793
+__(SDP1_first)Node INPUT_TWO
+24 => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/concur.des].
+
+Module Title PRODUCER_(MESSAGE_ONE)
+$reference direct product - MESSAGE_ONE
+__(aDP_first) Direct Product MESSAGE_ONE
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/concur.des].
+
+Module Title COMSUMER_(MESSAGE_TWO)
+$reference direct product - MESSAGE_TWO
+__(aDP_first) Direct Product MESSAGE_TWO
+ >> Go to Node input_one
+$match direct product - input_one
+__(aDP_first) Direct Product input_one
+ >> Go to Node input_two
+$match direct product - input_two
+__(aDP_first) Direct Product input_two
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node input_one
+$match direct product - input_one
+__(aDP_succeed) Direct Product input_one
+__(aDP_succeed) Direct Product input_one
+ << Back to Node input_two
+$match direct product - input_two
+__(aDP_succeed) Direct Product input_two
+__(aDP_succeed) Direct Product input_two
+ << Succeed; Back to Node MESSAGE_ONE
+ << Succeed; Back to Node MESSAGE_TWO
+$reference direct product - MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+$reference direct product - MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node MESSAGE_ONE
+$reference direct product - MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+__(aDP_succeed) Direct Product MESSAGE_ONE
+ << Back to Node MESSAGE_TWO
+$reference direct product - MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+__(aDP_succeed) Direct Product MESSAGE_TWO
+ << Succeed; Back to Node PRODUCER_(MESSAGE_ONE)
+ << Succeed; Back to Node COMSUMER_(MESSAGE_TWO)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node (INPUT_ONE)_PLUS_('2')
+__(SP_first) primitive  (INPUT_ONE)_PLUS_('2')
+__(SDP1_first)Node INPUT_ONE
+12 => Found a corresponding match node
+14 >> Go to Node (INPUT_TWO)_TIMES_('5')
+__(SP_first) primitive  (INPUT_TWO)_TIMES_('5')
+__(SDP1_first)Node INPUT_TWO
+24 => Found a corresponding match node
+120 SUCCEED<< Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ SUCCEED<< Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ << Succeed; Back to Node PRODUCER_(MESSAGE_ONE)
+ << Succeed; Back to Node COMSUMER_(MESSAGE_TWO)
+Your specificaton ran successfully.
+Output file length = 0.  Contents:
+
+
+
+  #####   THE  END OF SUB MODULE  #####
+Your specificaton ran successfully.
+Output file length = 2.  Contents:
+14
+
+
+  #####   THE  END OF SUB MODULE  #####
+ => Found a corresponding match node
+ SUCCEED<< Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ << Succeed; Back to Node (MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+Your specificaton ran successfully.
+Output file length = 5.  Contents:
+14120
+#####   THE  END   #####

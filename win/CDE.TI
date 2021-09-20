@@ -1,0 +1,1037 @@
+% Malcolm added the lines between here and "CDE ToolInfo variables".
+projdir=/all/franklin/thesis/descartes/win/cde_proj
+system=/all/franklin/thesis/descartes/win/cde_proj/Descartes
+srcdir=/all/franklin/thesis/descartes/win:/all/franklin/thesis/descartes/win/Sun413
+CDE_working_directory=/all/franklin/thesis/descartes/win
+CDE_output_directory=/all/franklin/thesis/descartes/win/cde_out
+
+
+%---------------------------------------------------------------------
+%	CDE ToolInfo variables
+%---------------------------------------------------------------------
+% Source code directory -- usually ${projdir}/code
+srcdir=~/thesis/descartes/win
+%
+% new toolInfo variables to augment srcdir.
+%CDE_working_directory=~/Examples/cde_examples/elevator/code
+%CDE_working_directory=/tmp
+%CDE_output_directory=/tmp
+%
+% Indicates CDE is being used.  This changes parts of ISE to conform with CDE
+CDE_active=1
+% Special Annotation template set 
+CDE_annot_path=/home/tools1/IDE/templates/cde_ann_tmpl
+% CDE specific help files
+CDE_help_path=/home/tools1/IDE/templates/help
+% The following are all diagram names created in the code generation phase
+CDE_roadmap_diagram=ROADMAP
+CDE_library_diagram=LIBRARY
+CDE_base_type_diagram=BASE_TYPES
+CDE_parameter_diagram=PARAMS
+CDE_global_diagram=GLOBALS
+CDE_array_diagram=ARRAYS
+% CDE code generation variables.  These point to templates used in CDE
+CDE_codegen_path=/home/tools1/IDE/templates/cde_code_tmpl
+CDE_function_tmpl=/home/tools1/IDE/templates/cde_code_tmpl/C_STANDARD
+CDE_src_header_tmpl=/home/tools1/IDE/templates/cde_code_tmpl/src.code
+CDE_inc_header_tmpl=/home/tools1/IDE/templates/cde_code_tmpl/inc.code
+% The following control the CDE graphical layout 
+% Proportion of vertical distance from parent to child that is above the vertex
+CDE_param_vert_spacing=40
+% Vertical spacing from bottom of one parameter to top of the next parameter
+CDE_sce_vertex_proportion=0.40
+CDE_x_increment=215
+CDE_y_increment=385
+CDE_x_sce_box_proportion=1.00
+CDE_y_sce_box_proportion=1.20
+CDE_x_dse_box_proportion=1.00
+CDE_y_dse_box_proportion=1.00
+% for BASE_TYPES, PARAMS, LIBRARY, GLOBALS diag layout: 1.294 = landscape, 0.773 = portrait
+CDE_x_y_proportion=1.294
+% for number of chilren on a 2-level diag to start splitting
+CDE_diag_split_threshold=7
+% To control code browsing:
+CDE_edit_on_code_browse=false
+% Design generation and consistancy checking will create and analyze separate 
+% DSE diagram for each type defined (false or true)
+CDE_explode_types=false
+% Include library include files if CDE_explode_types is set (false or true)
+CDE_include_libraries=false
+% defaults for pushing through cnav 
+%
+% CDE_module_push_op=stpem -e cnav $p $s browse-code $l @
+% CDE_data_push_op=stpem -e dse $p $s lfind $% "^$L$$" @
+%
+% To make browse from sce to dse come up automagically
+CDE_data_push_op=cde_browse_dse -e dse $p $s lfind $% "^$L$$" @
+%
+% Var to control whether or not CDE generates arbitrary-level view-only .sce diags.
+% If var does not exist, use proj/sys/pdb/views; if var has absolute value, use it;
+% if var has relative value, use proj/sys/<value>.
+% CDE_view_only_diags=
+% Program to invoke the program structure diagram editor
+stpem_create_sce=sce $p $s
+% Program to invoke the data structure editor
+stpem_create_dse=dse $p $s
+% Program to invoke the StP main menu 
+stpem_create_stp=stp $p $s
+% Program to invoke cde user interface
+stpem_create_cnav=cnav -project ${projdir} -system ${system}
+% Program to invoke the document tool
+stpem_create_docclient=DOC_INVOKE
+% Program to invoke the programming environment (only choose one)
+% for users of codecenter
+stpem_create_progtool=cde_clined
+% for users of smart.  
+%stpem_create_progtool=cdeprogd
+% in order to see cdeprogd monitor everything that is going on.
+%stpem_create_progtool=xterm -iconic -sb -sl 1024 -name cdeprogd -e cdeprogd -#
+
+
+% Program to get Smart running.
+%stpem_create_smart=objectcenter
+
+% DPS templates
+CDE_code_review_tmpl=/home/tools1/IDE/templates/doc_tmpl/CDE/reviews
+CDE_design_review_tmpl=/home/tools1/IDE/templates/doc_tmpl/CDE/reviews
+%
+%
+% Program used by "reviews" DPS template to print source listings.
+% System V version of "pr" is found in /usr/5bin on Sun, but /bin on
+% other platforms.  The options (which work only on the System V version)
+% print line numbers and prevent headers/footers.  Choose one of the
+% following, or customize your own value for CDE_pr_prog:
+CDE_pr_prog=/usr/5bin/pr -n -t
+%CDE_pr_prog=/bin/pr -n -t
+% This variable interprets values for type related queries as patterns and
+% resolves typedefs to base types. It then executes the type query on all
+% base-types.
+% This means that things are slower, since each pattern needs to be 
+% used as a value in the query.
+% If the variable is no it just will try to resolve a typedef if it is not
+% a pattern, patterns will just be evaluated against the underlying base type.
+CDE_resolve_typedefs=yes
+%
+% This variable lets users control whether they like to see the scope
+% in every results line, or just if two consecutive items look the same.
+% default for this variable is no, since getting the scope for each item
+% is definitely slower (especially for param queries).
+CDE_query_show_scope=no
+%
+%
+%
+% other misc ti variables
+%
+CDE_query_dir=~/.queries
+CDE_use_regex=0
+%
+
+% The next few are only appropriate if using a CenterLine product.
+%
+% This one is the codecenter/objectcenter command to execute every 
+% time it is accessed.  
+% Another good candidate would be make saber.  
+%
+CDE_centerline_build_cmd=make centerline
+start_centerline=objectcenter
+%
+% this is for very slow or overloaded machines/networks.
+%
+CDE_centerline_timeout=8
+%
+% end CenterLine specific toolinfos
+
+% this one makes documents look nice
+%
+CDE_trim_suffix=true
+%
+% this one makes array type labels findable
+%
+CDE_quote_brackets=true
+%
+% this one is for systems where LOGNAME is not available
+%
+% CDE_user_name=CdeUser
+%
+% note that $p and $s do not work for the following:
+%
+% CDE_activity_log=CDE.log
+% CDE_doc_dir=doc_files
+%
+% the following two are no longer supported, so turning them on will do
+% nothing
+%
+% CDE_return_keyword=return
+% CDE_unique_name_delimiter=.
+%
+% the following are for the RPC mechanism
+%
+% CDE_rpc_server_host=hostname
+
+% User properties
+%
+%CDE_reserved_prop1=
+%CDE_reserved_prop2=
+%CDE_reserved_prop3=
+%CDE_reserved_prop4=
+%
+% and their labels
+%
+%CDE_reserved_prop_label1=
+%CDE_reserved_prop_label2=
+%CDE_reserved_prop_label3=
+%CDE_reserved_prop_label4=
+%
+% for programming environments
+%
+CDE_use_idf=true
+%CDE_create_idf=1
+
+%
+% Ide ToolInfo file stolen from Chris Smith
+%
+stp_product=/home/tools1/IDE/templates/ide_stp_product.dat
+
+%---------------------------------------------------------------------
+% Project/System environment
+%---------------------------------------------------------------------
+pdb_enabled=1
+system=Descartes
+%---------------------------------------------------------------------
+% User environment
+%---------------------------------------------------------------------
+% File search path. Search templates in those directories
+stp_file_path=:/home/becks2/smithc/ide_setup/doc_tmpl:/home/becks2/smithc/ide_setup/ann_tmpl:/home/tools1/IDE/libsun4:/home/tools1/IDE/templates:/home/tools1/IDE/templates/help:/usr/local/lib:/usr/stp/lib:/usr/ide/lib:.
+% Message file location
+msg_file=/home/tools1/IDE/libsun4/msg_file
+% The specification file for the StP main menu
+STPMenuSpec=/home/tools1/IDE/libsun4/STPmenu.spec
+% license manager data file location
+nlm_license_dat=/home/tools1/IDE/templates/FLEXlm/license.dat
+% Help files for general graphical editors
+help_path=/home/tools1/IDE/templates/help
+% Update a similar history record with new time and date information for
+% each data dictionary operation when possible (0=update; 1=create 
+% new record)
+add_history=0
+% Should the help messages be loaded in memory or
+% read from the spec file at run-time
+% CAUTION: Uses one file-descriptor
+%stp_help_from_file=1
+% Users home directory
+HOME=~
+% StP-binaries -> PATH
+PATH=.:/home/tools1/IDE/binsun4:/bin:/usr/bin:/usr/ucb:/all/CenterLine/bin:/all/CenterLine/sparc-sunos4/bin:/all/CenterLine/API/sparc-sunos4/bin
+% File name handling 
+% file_name_len: Maximum length of a digram name without suffix.
+% The default is 70 characters .... (OS dependent)
+% StP uses 4 character suffixes. If a file-system allows names with 14
+% characters the maximal length is actually 10 characters.
+% file_dot_char: Character used to replace all but last dot in file-names
+% sys_in_dfe_name: Is the system name part of a Data Flow Filename
+% If file-length is crucial or if the operating system doesn't
+% understand a # character in a filename set it to 0
+%file_name_len=70
+%file_dot_char=.
+%sys_in_dfe_name=0
+% Formats used to print date/time
+dateformat=%D %N %Y
+timeformat=%h:%.2m:%.2s
+weekdays= Sunday Monday Tuesday Wednesday Thursday Friday Saturday
+monthnames = January February March April May June July August September October November December
+% The paint area size; these are the defaults
+%canvas_w=800
+%canvas_h=520
+%---------------------------------------------------------------------
+% TROLL/USE support for all programs
+%---------------------------------------------------------------------
+% Troll/USE itself
+% this points to the version of troll (heterogeneous or native) that
+% you are using.  troll is a link to the version selected at installation time
+troll=/home/tools1/IDE/binsun4/troll
+% must point to the version of troll no longer used at your site to convert 
+% native troll databases to heterogeneous or heterogeneous databases to native
+old_troll=/home/tools1/IDE/binsun4/otroll
+% The TROLL/USE error program
+trl_error=/home/tools1/IDE/libsun4/trl_error
+% Indicates if NFS locking is used in troll or internal troll locking method.
+% Note that the internal method is susceptible to NFS timeout errors.
+troll_lock_mode=nfs
+%---------------------------------------------------------------------
+% Text editors
+%---------------------------------------------------------------------
+% The editor to call from the different tools
+% If you use an editor that starts its own window, put an @-character at
+% the end of the line.
+%editor=textedit -okay_to_overwrite on $% @
+editor = lemacs -title $l $% @
+% The pager program to call 
+pager=/usr/ucb/more
+% A text editor is never placed in the background
+% since the graphical editor needs to be able to collect the edited message
+% when the subprocess completes.  When specifying a hidden message editor 
+% the tmp file variable $% contains the name of the temporary file holding 
+% the message.  The $l variable contains the name of the label of the 
+% current node/arc being edited.  If an entry for a hidden message editor 
+% is redefined without specifying either $% or $l, $% is appended at the 
+% end of the command as a default.  The Tool Information System chapter of 
+% the Reference Manual explains more of the features of using customized entries 
+% for hidden message editors.
+%---------------------------------------------------------------------
+% Explanation of internal variables
+%---------------------------------------------------------------------
+% The following entries are used to call different programs from within
+% the graphical editors. All these are parsed and variables are
+% substituted before calling the subprogram. 
+%
+% If a line contains any of the shell redirection symbols (>,<,|)
+% the whole command line is passed to sh(1).
+% If a line ends with a &-symbol, the command is put in the background;
+% that means the editor doesn't wait for it to complete before the
+% user can continue with editing.
+%
+% The following variables in a cmd line are recognized:
+% 	$p	-p projdir	
+%	$s	-s system
+%	$d	diagram name
+%	$R	-R revision
+%	$n	-n flag
+%	$f	-f filesdir
+%	$A	short for $f $n $p $s $R $d
+%	$N	full diagram name
+%		The entries above contain the actual value of the corresponding
+%		variable at the time the subprogram is called as opposed to
+%		a value that might have been set in the ToolInfo file.
+%	${ti}	contents of ToolInfo variable ti
+%	$$	$ itself
+%	$%	internal temporary variable to hold the name of a
+%		temporary file when calling an editor for a hidden message
+%		or to hold the name of the item to be displayed when
+%		calling dispdef.
+%	$l	The label of the current segment in the graphical editors.
+%		The current segment is the node/arc that the cursor pointed
+%		to when the left mouse button was clicked for the last time.
+%	$T	Type number of current segment or 0 for background and -1
+%		if cursor is in background
+%	$Y	Current table type in Control Spec Editor, which may be one of
+%		detab, pat, pam, stt, sem, event, or action.
+%	$h	Valued with most recent history string.  Usefule since action
+%		commands are always executed right after an operation that
+%		updates the history relation.
+%	$e	Valued with string specifying current editor.  Useful when an
+%		action command is called when a diagram is stored.  Allows
+%		passage of type of diagram being stored to action command prog.
+%---------------------------------------------------------------------
+% Graphical Environments
+%---------------------------------------------------------------------
+% These attributes are used to define the environment for the
+% Software through Pictures (R) graphical editors
+%--    FONTS   -------------------------------------------------------
+% The fonts to use; the ones listed below are the default fonts
+small_font=*courier-medium-r-*-8-*
+medium_font=*courier-medium-r-*-10-*
+large_font=*courier-medium-r-*-12-*
+% bold message font makes error messages more readable
+msg_font=*courier-bold-r-*-12-*
+% Font used in the copyright notification window
+StP_copyright_font=*courier-medium-o-*-14-*
+% Table editor fonts:
+% used for section header titles (.e.g., "Control In")
+cse_bold_font=*courier-bold-r-*-12-*
+% used for normal cell labels
+cse_large_font=*courier-medium-r-*-12-*
+% used wherever a smaller font is needed in drawing area
+cse_medium_font=*courier-medium-r-*-10-*
+% used in message subwindow
+cse_msg_font=*courier-bold-r-*-12-*
+% If you are using a display with X11R3+ style fonts, the
+% following are recommended:
+%small_font=-adobe-courier-medium-r-normal--10-100-75-75-m-60-iso8859-1
+%medium_font=-adobe-courier-medium-r-normal--12-120-75-75-m-70-iso8859-1
+%large_font=-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1
+%msg_font=-adobe-courier-medium-r-normal--14-140-75-75-m-90-iso8859-1
+%--   WINDOW ARGUMENTS   ---------------------------------------------
+% Win_argv allows use of the -fg, -bg, -display, -geometry arguments.
+% Arguments passed on the command line supersede the ToolInfo settings
+% Editor specific variables. The values given below are
+% just examples and not the actual values used per default.
+%dfe_win_argv=-fg White -bg Blue -geometry 250x200
+%ste_win_argv=-fg White -bg Blue -geometry 250x200
+%tde_win_argv=-fg White -bg Blue -geometry 250x200
+%dse_win_argv=
+%ere_win_argv=
+%sce_win_argv=
+%picture_win_argv=
+%cfe_win_argv=
+%cse_win_argv=
+%ted_win_argv=
+%stp_win_argv=
+% The generic ones, used if the editor specific one is not there
+%win_argv=
+% whether or not cursor changes when it goes over row, col borders and corners
+% if 0, instead of changing the cursor, marks are actually drawn on the canvas
+cse_update_cursor=0
+% Used to display read-only text (through "view" or "help") in DPS
+dps_read_only_editor=textedit -read_only -Wl "Document: ${dps_output}" ${dps_output} @
+% Used to display screen-oriented DPS target output
+%dps_screen_print=textedit -read_only -number_of_lines 30 $% &
+lemacs $% &
+% Text editor used in DPS
+%dps_editor=vi ${dps_output}
+% Program used to edit an annotation.  an_template is set to the full 
+% path name of the template to be used with the values in file $%
+% If a ToolInfo variable annot_write_ti is set the a copy of the current 
+% ToolInfo variables is written to a temporary file named ${annot_edit_ti}; 
+% The annotation editor should take care of removing this file.
+% The arguments to the object annotation editor that are associated with
+% the pipes arguments are contained in the variable annot_edit_to_oae_pipe.
+annot_write_ti=y
+%annot_edit_prog=desc_edit ${an_template} $% ${annot_edit_ti} @
+%---------------------------------------------------------------------
+% X Window System specific variables
+%---------------------------------------------------------------------
+% Xterm to use for the Execute Window
+%xterm=cmdtool
+% MIT format:
+xterm=xterm
+% OpenWindows format:
+%xterm=cmdtool
+% Arguments for the xterm to use, default values
+%xterm_args=-Wp 0 555 -Ws 565 300
+% MIT 11.3 format:
+%xterm_args=-geometry 80x24+0-0
+% MIT 11.4 format:
+xterm_args=-geometry 80x24+0-0 +sb -sl 3000
+% OpenWindows format:
+%xterm_args=
+% Indicates how to call the stp_xterm program from within the terminal window
+%xterm_args_sleep_proc=stp_xterm
+% MIT format:
+xterm_args_sleep_proc=-e stp_xterm
+% OpenWindows format:
+%xterm_args_sleep_proc=stp_xterm
+% show_msg_cmd is used to display the annotation text in a separate window.
+% show_lines and show_cols are set to the number of lines/cols to display. 
+% The values show_lim_lines and show_lim_cols can be set to restrict the 
+% maximum number of lines/cols to display at once.
+%show_msg_cmd=textedit -read_only $% &
+% MIT format:
+show_msg_cmd=xterm -e view $% &
+% OpenWindows format:
+%show_msg_cmd=textedit -read_only $% &
+show_msg_pad=0 
+% NOTE:  The following variables are defined elsewhere in this file, but
+% are included here to allow the user access to the variations in settings
+% these variables can take on.
+% Used to display read-only text (through "view" or "help") in DPS
+% MIT format:
+%dps_read_only_editor=vi -R ${dps_output}
+% OpenWindows format:
+%dps_read_only_editor=textedit -read_only -Wl "Document: ${dps_output}" ${dps_output} @
+% Display screen output from DPS
+% MIT format:
+%dps_screen_print=xterm -e vi -R $% &
+% OpenWindows format:
+%dps_screen_print=textedit -read_only -number_of_lines 30 $% &
+% Text editor used throughout system
+% MIT format:
+%editor=vi $%
+% OpenWindows format:
+%editor=textedit -okay_to_overwrite on $% @
+% Text editor used with user inputs in docedit
+% MIT format:
+%dps_editor=vi ${dps_output}
+% OpenWindows format:
+%dps_editor=textedit -number_of_lines 30 -okay_to_overwrite on ${dps_output} &
+%---------------------------------------------------------------------
+% All Editors
+%---------------------------------------------------------------------
+% Saving of scale, panning and alignment information for all of the graphical
+% editors: If the value for this variable is 1, then any time a diagram which
+% has already been edited is loaded again, either through the "Load", "Push",
+% or "Pop" commands, the editor will display the diagram at the same scale and
+% in the same location that was previously used. In addition, the alignment
+% factor is also restored. If the save_scale_info variable is set to 0 or is
+% commented out, then whenever a diagram is loaded, it is automatically
+% centered, and the scale factor is set to the largest one which permits
+% the entire diagram to be seen in the drawing area
+% Default value is 0
+save_scale_info=1
+% Editor "find" command will flash the object found the number of times indicated
+% with this variable
+flash_find_howmany=3
+%---------------------------------------------------------------------
+% Execute Window output subwindow
+%---------------------------------------------------------------------
+% The pipe shell, started by pipetool
+pipesh=/home/tools1/IDE/binsun4/IDEpipesh
+%---------------------------------------------------------------------
+% Dataflow Diagram Editor
+%---------------------------------------------------------------------
+% What symbols should be used in dfe? Only first character is important.
+% DeMarco/Yourdon or GaneSarson are supported
+dfe_symbols=DeMarco/Yourdon
+% the following variables affect how the StPmenu.spec file is
+% set for DFE symbol support--0=Gane; 1=DeMarco
+dfe_symbols_stpmenu=0
+% Move dfe decomposition.  Dfe sets the ToolInfo vars ${_fd} and ${_td} at 
+% run time to the from and to trees of the decomposition
+dfe_mv_decomp=ideutil $p $s -C 'e dfe' -C 'm ${_fd} ${_td}' -C q
+% The pspec contains usually all flows, even if duplicate names are found.
+% If set to 1, then all flow names are unique per flow type.
+unique_flows=1
+% If dfe_push_env is set to any non-zero value, any externals in a diagram 
+% are replaced by anchor pts when a decomposition is created. If dfe_push_env 
+% is not set, or is set to 0, externals remain in the decomposition diagram.
+dfe_push_env=1
+% Allow unlabelled DataFlows to/from stores.  Consided as passing complete 
+% store structure. (1 = ok, 0 = error)
+unl_store_flow=1
+% Marking of process nodes in DFE which are decomposed or have pspecs. Notice 
+% there is a '\' character preceding the ' *'. This leading backslash must be 
+% included in order to retain the leading blank in the value of the variable.
+% Either, or both, of the variables may be commented out, or set to the
+% null string, if the user does not want a visual marking on the process node.
+dfe_decomp_mark=\ *
+dfe_pspec_mark=\ p
+%---------------------------------------------------------------------
+% Data Structure Editor/Entity Relationship Editor
+%---------------------------------------------------------------------
+% If ere_old_struct is set then the `old type' of structure
+% definitions is generated, ie without key definitions
+%ere_old_struct=0
+% struct_dd generates comments consisting of annotation information inside
+% the generated code if the following is non-zero
+%struct_dd_incl_comments=1
+% Establishes default printing style for StP Main Menu dse and ere printing
+% (Since "No Diagram" makes no sence in without messages availability)
+% 0 or 1 is PostScript, 2 is Pic/Ditroff
+default_dse_diag_print_style=1
+% Default type to be entered into the data dictionary for elements with an
+% annotation, but no "Type" item. 
+default_data_type=unknown
+%---------------------------------------------------------------------
+% "Push" in DFE and SCE
+%---------------------------------------------------------------------
+% There are the commands that are executed when dse or ere is forked off by
+% pushing on a data item. Notice that no $f is included in the default 
+% definition. This is because the $f variable refers to the filestore for 
+% the currently executing editor, which in general will be 
+% different than the filestore directory for dse or ere.  The $% variable 
+% is replaced by the name(s) of the diagrams the data items are found in.
+% Note that per default the editors are executed in the background
+% (type version of these applies to OOSD products only)
+%data_push_dse=dse $n $p $s $% &
+%data_push_ere=ere $n $p $s $% &
+%type_push_dse=dse $n $p $s $% &
+%type_push_ere=ere $n $p $s $% &
+% These variables control what happens when no definition for the data item 
+% that has been pushed on is found in the data dictionary.  If both variables 
+% are set to 1, which is the default, then the user will always be given the 
+% choice between dse and ere.  On the other hand, if data_push_use_ere is set 
+% to 0 and data_push_use_dse is set to 1, then the dse will always be forked
+% off when no definition is found. If both are set to 0, then the push is 
+% cancelled if no definition is found.
+% (type version of these applies to OOSD products only)
+data_push_use_dse=1
+data_push_use_ere=0
+type_push_use_dse=1
+type_push_use_ere=1
+%---------------------------------------------------------------------
+% DataDictionary
+%---------------------------------------------------------------------
+%Location of the StP/data dictionary scripts
+dd_scripts=/home/tools1/IDE/templates/scripts
+%--   DispDef Command   ----------------------------------------------
+% Standalone program to show the definition in the StP/DD of
+% the given name, called by the editors for complicated names.
+%dispdef=dispdef $p $s $%
+% (applies to OOSD only)
+%dispdef=dispdef $p $s -o $%
+% The program used to show the file generated by the display definition
+% command.  The $% variable MUST be specified if you redefine this entry;
+% it will be replaced by the name of the tmp file created.
+%show_def=${pager} $%
+% StP/DD interface entries
+%---------------------------------------------------------------------
+% Generate names from labels 
+%---------------------------------------------------------------------
+% The character that should replace spaces in names
+% This is normally the underscore (_)
+%name_sep_char=_
+% If you specify
+%name_sep_char=
+% then spaces are just eliminated
+% Do NOT use a space or the Data Dictionary generating programs
+% will get confused
+%---------------------------------------------------------------------
+% StP main menu
+%---------------------------------------------------------------------
+% If this is non-zero, then the same project directory will be used by all
+% the editors in StP. So if a change in project directory is made for
+% one editor, then that change will carry over to other editors.
+stp_global_project=1
+% If this is non-zero, then the same system directory will be used by all
+% the editors in StP. So if a change in system directory is made for
+% one editor, then that change will carry over to other editors.
+stp_global_system=1
+%---------------------------------------------------------------------
+% Locking
+%---------------------------------------------------------------------
+% Send mail to user if an expired lock is deleted.  The two variables 
+% xuser/xhost are replaced by the user/host-names of the owner of the lock
+lock_expired_mail=mail -s LockExpired ${xuser}@${xhost}
+% Timeout to keep an automatic lock in minutes
+% 0 == forever
+lock_auto_timeout=0
+%---------------------------------------------------------------------
+% Version and Configuration Control
+%---------------------------------------------------------------------
+% vcc_cmds is the default VCC system to use.  You may use different VCC 
+% implementations by specifying vcc_XXXXX_cmds= other VCC system where 
+% XXXXX is the unique name of a VCC system passed to the stputil vcc 
+% command as the -sy XXXXX argument
+% Version and configuration control with SCCS
+% sccs scripts for abstract operations
+vcc_sccs_cmds=/home/tools1/IDE/templates/stp_vcc/stp_vcc_sccs/Vcc_sccs_commands
+% Version and configuration control with RCS 
+% rcs scripts for abstract operations
+vcc_rcs_cmds=/home/tools1/IDE/templates/stp_vcc/stp_vcc_rcs/Vcc_rcs_commands
+vcc_active=1
+%---------------------------------------------------------------------
+% PRINT - general variables
+%---------------------------------------------------------------------
+% If the program is in your path and doesn't have arguments, you can 
+% leave it out of the ToolInfo file
+% The location of the second part of tdroff
+tdroff1=tdroff1
+tdroff=tdroff
+% The location of the second part of scroff
+scroff1=scroff1
+scroff=scroff
+% The location of the second part of dfroff
+dfroff1=dfroff1
+dfroff=dfroff
+% The location of the second part of dsroff
+dsroff1=dsroff1
+dsroff=dsroff
+% The location of the second part of erroff
+erroff1=erroff1
+erroff=erroff
+% The program used in erroff1 to extract all domain/type definitions
+% out of the .ere file.  The default for erprt is schema.
+%erprt=schema
+% erstr prints the Jackson definition too, schema doesn't
+%erprt=erstr
+% The program that generates rapid out of the .tde file
+tduse=tduse
+% Sctbl makes parameter table out of the .sce file
+sctbl=sctbl
+% Scpic: make pic out of .sce file
+scpic=scpic
+% Tdpic: make pic out of .tde file
+tdpic=tdpic
+% Dfpic: make pic out of .dfe file, called out of dfroff1
+dfpic=dfpic -h -m 
+% Erpic: make pic out of .ere file
+erpic=erpic
+% Dspic: make pic out of .dse file
+dspic=dspic
+% picture to pic program
+pctpic=pctpic
+%---------------------------------------------------------------------
+% General for printing, should generated output be formatted or not. 
+% Formatted output means use troff commands when printing text. 
+% Default is yes.
+format_print=0
+% For non formatted printing, gives an idea on the size of the page
+cols_per_line=80
+% StPdd uses this to know when to generate a page break
+% in unformatted output. Set it to 1 if you don't want to fill pages
+lines_per_page=66
+% If it is ok for StPdd to use the form feed character to start a new page
+% Default is off
+%print_ff=1
+%---------------------------------------------------------------------
+% POSTSCRIPT 
+%---------------------------------------------------------------------
+% Font size used in diagram production.  Note that if this variable has
+% a specified value, the automatic scaling feature for PostScript is
+% over-ridden.
+dps_post_diag_font_size=12
+% The default font to be used for diagram text. 
+dps_post_diag_font_fam=Times-Roman
+% Table font
+dps_post_table_font_size=12
+% The default font to be used for diagram text. 
+dps_post_table_font_fam=Times-Roman
+% Width and height of the actual page of the device used for printing
+% postscript files.
+%dps_post_diag_page_width=8.5
+%dps_post_diag_page_ht=11.0
+% Printer resolution, needed for filling in a solid object in pic.  Figures # of
+% lines per inch need to be drawn to fill in an area.
+%dps_troff_print_res=300
+% Specifies # of pixels per inch are used when diagrams and tables are displayed
+% on the screen.  Used to convert between coordinate system of screen (the 
+% diagram files) and the coordinate system of the publishing system.
+%dps_screen_resolution=72
+% Width and height of paper in inches, make it unreasonably large
+% if you never want the XXpic programs to do any scaling
+%dps_pic_diag_width=6.0
+%dps_pic_diag_height=9.0
+% The tbl program to use for tdroff and sctbl
+%tbl=tbl
+troff=TROFF_SPOOL
+spool=lpr -Plw5
+lpr=lpr -Plw5
+%---------------------------------------------------------------------
+% Print with PostScript %
+%---------------------------------------------------------------------
+% Printing defaults are with PostScript and formatted output by using the 
+% ptroff program (normal troff, spool) Value for SUN with PostScript software.
+%troff=TROFF_SPOOL
+% Used from StP to put a PostScript file into the printer queue
+post_spool=lpr -Plw5
+%---------------------------------------------------------------------
+% PRINT a diagram
+%---------------------------------------------------------------------
+% Programs called by PostScript options in editors.
+%cfe_post=cfpost -y ${prt_flags} $A &
+%g_cfe_post=cfpost -g ${prt_flags} $A &
+%cse_post=cspost $A &
+%dfe_post=dfpost -y ${prt_flags} $A &
+%g_dfe_post=dfpost -g ${prt_flags} $A &
+%dse_post=dspost $A &
+%ere_post=erpost $A &
+%pct_post=pctpost $A &
+%ste_post=stpost $A &
+%sce_post=scpost ${prt_flags} $A &
+%ted_post=tedpost $A &
+%tde_post=tdpost $A &
+%---------------------------------------------------------------------
+% PIC
+%---------------------------------------------------------------------
+% Programs called by pic options in editors.
+%cse_pic=cspic $A  &
+%cfe_pic=cfpic -d ${prt_flags} $A &
+%g_cfe_pic=cfpic -g ${prt_flags} $A &
+%dfe_pic=dfpic -d ${prt_flags} $A &
+%g_dfe_pic=dfpic -g ${prt_flags} $A &
+%dse_pic=dspic $A &
+%ere_pic=erpic $A &
+%pct_pic=pctpic $A &
+%sce_pic=scpic ${prt_flags} $A &
+%ste_pic=stpic $A &
+%ted_pic=tedpic $A &
+%tde_pic=tdpic $A &
+% Default is: Print diagram using PostScript and messages formatted dittroff
+% CFE (DeMarco symbols)
+cfe_print=cfpost - -d -h -m0 ${prt_flags} $A | ${post_spool} ; cfpic -h -M - -l0 $A | ${troff} &
+%cfe_print=dfroff ${prt_flags} -y $A &
+% CFE (Gane/Sarson symbols)
+g_cfe_print=cfpost - -g -h -m0 ${prt_flags} $A | ${post_spool} ; cfpic -h -M - -l0 $A | ${troff} &
+%g_cfe_print=dfroff ${prt_flags} -g $A &
+cse_print=cspost - -h $A | ${post_spool} ; cspic -h -M - -l0 $A | ${troff} &
+%cse_print=csroff $A &
+% DFE (DeMarco symbols)
+dfe_print=dfpost - -d -h -m0 ${prt_flags} $A | ${post_spool} ; dfpic -h -M - -l0 $A | ${troff} &
+%dfe_print=dfroff ${prt_flags} -y $A &
+% DFE (Gane/Sarson symbols)
+g_dfe_print=dfpost - -g -h -m0 ${prt_flags} $A | ${post_spool} ; dfpic -h -M - -l0 $A | ${troff} &
+%g_dfe_print=dfroff ${prt_flags} -g $A &
+ere_print=erpost - -h $A | ${post_spool} ; schema -a - -l0 $A | ${troff} &
+%ere_print=erroff $A &
+dse_print=dspost -h - $A | ${post_spool}  &
+%dse_print=dsroff $A &
+pct_print=pctpost -h -m0 - $A | ${post_spool} ; pctpic -h -M -l0 - $A  | ${troff} &
+%pct_print=pctroff $A &
+sce_print=scpost - -h ${prt_flags} $A | ${post_spool} ; sctbl ${prt_flags} - -l0 $A | tbl | ${troff} &
+%sce_print=scroff ${prt_flags} $A &
+ste_print=stpost -h - $A | ${post_spool} ; stpic -h -M - -l0 $A | ${troff} &
+%ste_print=stroff $A &
+ted_print=tedpost - -h $A | ${post_spool} ; tedpic -h -M - -l0 $A | ${troff} &
+%ted_print=tedroff $A &
+tde_print=tdpost - -a -h $A | ${post_spool} ; tduse -a -l0 - $A | tbl | ${troff} &
+%tde_print=tdroff $A &
+% Default message/diagram printing style -- default in StP
+default_diag_print_style=1
+default_msg_print_style=1
+%---------------------------------------------------------------------
+% Annotation information
+%---------------------------------------------------------------------
+% Annotation file path: appended to stp_file_path
+%annot_path=/home/tools1/IDE/templates/ann_tmpl
+%
+% My annotations path
+annot_path=/home/becks2/smithc/ide_setup/ann_tmpl
+%
+% Tell diagram editor what to pass to the pipe for the annotation editor 
+% every time an object is annotated.
+%annot_edit_to_oae_pipe=${an_template} $% ${annot_edit_ti} $d
+% OAE height and width control
+%annot_height=400
+%annot_width=650
+% allows user control over the location of OAE 
+% (1 allows location; 0 uses default location)
+%annot_locator=0
+% OAE edit button behavior (0=menu; 1=note item edit; 2=note desc edit)
+annot_left_button=0
+% OAE continuous display (0=remain displayed; 1=disappears but active)
+%annot_hide=0
+%show_lim_cols=80
+%show_lim_lines=34
+% Set to # of lines/cols of text to show, both vars are limited
+% by the ti vars: show_lim_cols and show_lim_lines
+%show_cols=
+%show_lines=
+% Text editor used in OAE -- Use the internal version of text editor for X11
+annot_editor=internal
+% Sample of how to use vi for annotation editor
+%annot_editor=vi $%
+%---------------------------------------------------------------------
+% Document Preparation System 
+%---------------------------------------------------------------------
+% Width and height allocated for all diagrams and tables in inches (overridden
+% by format specific equivilant variables)
+%dps_diag_width=6.0
+%dps_diag_height=7.5
+%dps_table_width=6.0
+%dps_table_height=7.5
+% Minimum scaling factor needed to use _ls font set
+%dps_large_scale_threshold=0.75
+% Maximum scaling factor needed to use _ms font set
+%dps_small_scale_threshold=0.50
+% What page number to start numbering Table of Contents pages with
+% if set to 1, i is the first page; for 2, ii is the first and so on
+% NOTE: only for ASCII, PostScript and ditroff output formats
+%dps_first_toc_page_number=1
+% ASCII inital declarations file location (none supplied; user convenience)
+dps_ascii_template_preamble=
+% FrameMaker 2.0 inital declarations file location
+dps_mif_template_preamble=/home/tools1/IDE/templates/FrameMaker/cde_mif_preamble.doc
+% FrameMaker preamble file location for tables & diagrams 
+dps_mif_diag_preamble=/home/tools1/IDE/templates/FrameMaker/ide_mif.doc
+dps_mif_table_preamble=/home/tools1/IDE/templates/FrameMaker/ide_mif.doc
+% PostScript preamble files -- both a generic and an editor specific preamble
+% is employed for PostScript.  
+dps_post_template_preamble=/home/tools1/IDE/templates/PostScript/dps_post_preamble
+dps_post_diag_preamble=/home/tools1/IDE/templates/PostScript/ide_post.pro
+dps_post_table_preamble=/home/tools1/IDE/templates/PostScript/cse_ide_post.pro
+% FrameMaker translation rules
+dps_mif_rules=/home/tools1/IDE/templates/FrameMaker/dps_mif_rules
+% PostScript translation rules
+dps_post_rules=/home/tools1/IDE/templates/PostScript/dps_postscript_rules
+% Controls landscape diagrams/tables in DPS documents (defaults to 0, portrait)
+%dps_diag_landscape=0
+%dps_table_landscape=0
+% Scaling factor for a table being generated through DPS
+%dps_table_scale=1.0
+% Indicates if text should be truncated (0) or wrapped (1) in ASCII or
+% PostScript if line exceeds line length limit
+%dps_no_truncate=0
+% Text editor to use from within the DPS
+dps_editor=textedit -number_of_lines 30 -okay_to_overwrite on ${dps_output} &
+% Program to run to check DPS template in use
+%dps_doccheck=doccheck $A
+% Program to run to generate the current DPS document
+%dps_docgen=docgen ${dps_docgen_target} -o $% $A
+% Program to run to edit user input fields for a DPS document
+%dps_docedit=docedit $A @
+% Command sequence used to print DPS ditroff output when print-also selected
+dps_troff_print=${pic} $% | ${ditroff} -ms
+% Command sequence used to print DPS PostScript output when print-also selected
+dps_post_print=${post_spool} $%
+% Command sequence used to print DPS ascii output when print-also selected
+dps_ascii_print=${spool} $%
+% Width in points of an ascii character on your printer, units are points
+% 72 points per inch
+%dps_ascii_char_wid=7.2
+% Height in points of one line
+%dps_ascii_line_ht=14.0
+% Columns per page for ASCII
+%dps_ascii_cols=80
+% Set extra wide to allow for proper files.db operation
+dps_ascii_cols=200
+% Lines per page for ASCII
+%dps_ascii_lines=60
+%dps_ascii_lines=60
+% Point size of the DPS PostScript font's width
+%dps_post_char_wid=7.2
+% Indicates the number of points (72 points per inch) between lines of text 
+% for the non-graphical text representation in PostScript files (default=1)
+%dps_post_line_sp=1.0
+% Indicates the maximum length of a printed line for the non-graphical text 
+% representation in DPS PostScript files.  Note that this is NOT the physical
+% width of the paper.  Units are in points (72 per inch). (default=468)
+% Indicates the height in inches of page in PostScript files (default=11)
+%dps_post_line_length=468.0
+% Indicates the height of the area of the page used for printing in a DPS
+% PostScript document.  Units are in points (72 per inch). (default=828)
+%dps_post_page_ht=828.0
+% Program used to scroll DPS help messages when a non-editor window is used
+dps_show_help=${pager} $%
+dps_template_dir=/home/tools1/IDE/templates/doc_tmpl
+% Default choice for output when generating a DPS document. Valid choices:
+% ascii, postscript, ditroff, interleaf, frame, screen
+dps_default_target=ascii
+%---------------------------------------------------------------------
+% PostScript specific variables
+%---------------------------------------------------------------------
+% Font family for normal text in body of PostScript DPS document
+%dps_post_body_font_fam=Courier
+% Font size for normal text in body of PostScript DPS document
+%dps_post_body_font_size=8
+% Font family for text inside bold format statement in PostScript DPS document
+%dps_post_bold_font_fam=Courier-Bold
+% Font family for text inside italic format statement in PostScript DPS document
+%dps_post_obl_font_fam=Courier-Oblique
+% Font family for text inside bold and italic format statement in PostScript 
+% DPS document
+%dps_post_bold_obl_font_fam=Courier-BoldOblique
+% The name of the font family for large text in diagrams in DPS PostScript
+%dps_post_diag_l_font_fam=Times-Roman
+% Size of the large, medium and small scale fonts in large text in diagrams 
+% in DPS PostScript
+%dps_post_diag_l_font_size_ls=10
+%dps_post_diag_l_font_size_ms=8
+%dps_post_diag_l_font_size_ss=6
+% The name of the font family for small text in diagrams in DPS PostScript
+%dps_post_diag_s_font_fam=Times-Roman
+% Size of the large, medium and small scale fonts in small text in diagrams 
+% in DPS PostScript
+%dps_post_diag_s_font_size_ls=8
+%dps_post_diag_s_font_size_ms=6
+%dps_post_diag_s_font_size_ss=6
+% The name of the font family for header text in tables in DPS PostScript
+%dps_post_table_l_font_fam=Times-Bold
+% Size of the large, medium and small scale fonts in header text in tables 
+% in DPS PostScript
+%dps_post_table_l_font_size_ls=10
+%dps_post_table_l_font_size_ms=8
+%dps_post_table_l_font_size_ss=6
+% The name of the font family for body text in tables in DPS PostScript
+%dps_post_table_s_font_fam=Times-Roman
+% Size of the large, medium and small scale fonts in body text in tables 
+% in DPS PostScript
+%dps_post_table_s_font_size_ls=10
+%dps_post_table_s_font_size_ms=8
+%dps_post_table_s_font_size_ss=6
+% Width and height allocated for PostScript diagrams and tables in inches
+dps_post_diag_width=10.5
+dps_post_diag_height=7.5
+%dps_post_table_width=6.0
+%dps_post_table_height=7.5
+% Scale factors to apply to tables and diagrams as a whole (over-ridden by
+% constraints imposed by width and height factors)
+dps_post_diag_scale=1.0
+%dps_post_table_scale=1.0
+% If this equals 1, then the default case is to print on multiple pages.
+% If set, dps_post_diag_{width,height} figure space for printing on each page,
+% and dps_post_diag_scale sets actual size of printed diagram.
+dps_post_diag_big=0
+% PostScript allows fonts to be scaled arbitrarily.  Beyond  the _ls, _ms, _ss
+% mechanism, the chosen font size can be scaled by the same scale factor as the
+% diagram.  This additional scaling only occurs if this variable is set to 1.
+% The standard _ls, _ms, _ss is used if set to 0.
+%dps_post_diag_scale_fonts=1
+% Automatically scale cell labels to fit inside cell boundaries when generating
+% tables.  The _ls, _ms, _ss mechanism is overridden when necessary.  Caution:
+% May result in strange looking tables due to arbitrary font sizes betwn tables.
+%dps_post_table_scale_fonts=1
+% Produce landscape diagrams and tables (default is 0, non-landscape)
+% Again, "big" takes precedence over "landscape".
+dps_post_diag_landscape=1
+dps_post_table_landscape=0
+%---------------------------------------------------------------------
+% FrameMaker specific variables
+%---------------------------------------------------------------------
+% The name of the font family for large text in diagrams in DPS FrameMaker
+%dps_mif_diag_l_font_fam=Times
+% Size of the large, medium and small scale fonts in large text in diagrams 
+% in DPS FrameMaker
+%dps_mif_diag_l_font_size_ls=10
+%dps_mif_diag_l_font_size_ms=8
+%dps_mif_diag_l_font_size_ss=6
+% The name of the font family for small text in diagrams in DPS FrameMaker
+%dps_mif_diag_s_font_fam=Times
+% Size of the large, medium and small scale fonts in small text in diagrams 
+% in DPS FrameMaker
+%dps_mif_diag_s_font_size_ls=8
+%dps_mif_diag_s_font_size_ms=6
+%dps_mif_diag_s_font_size_ss=6
+% The name of the font family for header text in tables in DPS FrameMaker (note
+% that boldness is controlled by boolean attribute, not font name)
+%dps_mif_table_l_font_fam=Times
+% Size of the large, medium and small scale fonts in header text in tables 
+% in DPS FrameMaker
+%dps_mif_table_l_font_size_ls=10
+%dps_mif_table_l_font_size_ms=8
+%dps_mif_table_l_font_size_ss=6
+% The name of the font family for body text in tables in DPS FrameMaker
+%dps_mif_table_s_font_fam=Times
+% Size of the large, medium and small scale fonts in body text in tables 
+% in DPS FrameMaker
+%dps_mif_table_s_font_size_ls=10
+%dps_mif_table_s_font_size_ms=8
+%dps_mif_table_s_font_size_ss=6
+% Large sized font large, medium, small scaling spacing between lines 
+%dps_mif_diag_l_font_sp_ls=2
+%dps_mif_diag_l_font_sp_ms=1
+%dps_mif_diag_l_font_sp_ss=1
+% Small sized font large, medium, small scaling spacing between lines
+%dps_mif_diag_s_font_sp_ls=2
+%dps_mif_diag_s_font_sp_ms=1
+%dps_mif_diag_s_font_sp_ss=0
+% Width and height allocated for FrameMaker diagrams and tables in inches
+%dps_mif_diag_width=6.0
+%dps_mif_diag_height=7.5
+%dps_mif_table_width=6.0
+%dps_mif_table_height=7.5
+% Scale factors to apply to tables and diagrams as a whole (over-ridden by
+% constraints imposed by width and height factors)
+%dps_mif_diag_scale=1.0
+%dps_mif_table_scale=1.0
+% Controls size of the margin around the diagram/table--x, y axis 
+%dps_mif_x_margin=0.25
+%dps_mif_y_margin=0.25
+% Offset, in pixels, of the labels that appear in the corner of some
+% symbols (e.g. iterations, selections in DSE, Gane/Sarson externals in DFE)
+%dps_mif_x_offset=3
+%dps_mif_y_offset=3
+% The following variables indicate whether the corresponding font size/scale 
+% output should be bold-faced.  All accept either 0 (not bold) or 1 (bold) 
+%dps_mif_diag_l_font_fam_bold=0
+%dps_mif_diag_s_font_fam_bold=0
+%dps_mif_table_l_font_fam_bold=1
+%dps_mif_table_s_font_fam_bold=0
+% The following variables indicate whether the corresponding font size/scale 
+% output should be italicized.  All accept either 0 (not italic) or 1 (italic) 
+%dps_mif_diag_l_font_fam_italic=0
+%dps_mif_diag_s_font_fam_italic=0
+%dps_mif_table_l_font_fam_italic=0
+%dps_mif_table_s_font_fam_italic=0
+% Controls whether a border is placed around a diagram 
+%dps_mif_diag_border=0
+% Controls whether a border is placed around a table 
+%dps_mif_table_border=0
+% Minimum and maximum scaling factor needed to use large and small font sets
+%dps_mif_large_scale_threshold=0.75
+%dps_mif_small_scale_threshold=0.50
+
+%--   used for the non graphical part of the report   ----------------
+% Font family used for the non-graphical text representation in mif files 
+%dps_mif_body_font_fam=Times
+% Size of the font used for the non-graphical text representation in mif files 
+%dps_mif_body_font_size=12
+% Line spacing used for the non-graphical text representation in mif files 
+%dps_mif_body_font_sp=2
+% Name of font used in non-graphical text after DPS left statement in mif files 
+%dps_mif_list_font_fam=Courier
+% Size of font used in non-graphical text after DPS left statement in mif files 
+%dps_mif_list_font_size=10
+% Font line spacing in non-graphical text after DPS left statement in mif files 
+%dps_mif_list_font_sp=1
+% Produce landscape diagrams and tables (default is 0, non-landscape)
+dps_mif_diag_landscape=0
+dps_mif_table_landscape=0

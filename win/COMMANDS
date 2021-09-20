@@ -1,0 +1,87 @@
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      some_utils.c -o HP901/some_utils.o
+#unload some_utils.c
+#unload some_utils.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      some_utils.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      token.c -o HP901/token.o
+#unload token.c
+#unload token.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      token.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      share_rtn.c -o HP901/share_rtn.o
+#unload share_rtn.c
+#unload share_rtn.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      share_rtn.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      build_rtn.c -o HP901/build_rtn.o
+#unload build_rtn.c
+#unload build_rtn.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      build_rtn.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      build_hoare_tree.c -o HP901/build_hoare_tree.o
+#unload build_hoare_tree.c
+#unload build_hoare_tree.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      build_hoare_tree.c
+[ -w exec_rtn1.c ] || ( echo "Getting 'exec_rtn1.c' from RCS." ; co  RCS/exec_rtn1.c,v exec_rtn1.c )
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      exec_rtn1.c -o HP901/exec_rtn1.o
+#unload exec_rtn1.c
+#unload exec_rtn1.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      exec_rtn1.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      analysis1.c -o HP901/analysis1.o
+#unload analysis1.c
+#unload analysis1.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      analysis1.c
+c89  -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      -O y.tab.c -o HP901/y.tab.o
+#unload HP901/y.tab.c
+#unload HP901/y.tab.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      -O HP901/y.tab.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      wid1.c -o HP901/wid1.o
+#unload wid1.c
+#unload wid1.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      wid1.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      semops.c -o HP901/semops.o
+#unload semops.c
+#unload semops.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      semops.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      msg.c -o HP901/msg.o
+#unload msg.c
+#unload msg.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      msg.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      command_line.c -o HP901/command_line.o
+#unload command_line.c
+#unload command_line.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      command_line.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      main.c -o HP901/main.o
+#unload main.c
+#unload main.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      main.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      desc_struct.c -o HP901/desc_struct.o
+#unload desc_struct.c
+#unload desc_struct.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      desc_struct.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      fifo.c -o HP901/fifo.o
+#unload fifo.c
+#unload fifo.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      fifo.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      hash.c -o HP901/hash.o
+#unload hash.c
+#unload hash.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      hash.c
+[ -d HP901 ] || mkdir -p HP901
+c89 -c -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      safe.c -o HP901/safe.o
+#unload safe.c
+#unload safe.o
+#load -C -I. -I/all/pure/purify2.1_hp -I/usr/include/Motif1.2 -I/usr/include/X11R5    -D_POSIX_SOURCE   -Ae -g      safe.c
+c89 HP901/some_utils.o HP901/token.o HP901/share_rtn.o HP901/build_rtn.o HP901/build_hoare_tree.o HP901/exec_rtn1.o HP901/analysis1.o HP901/y.tab.o HP901/wid1.o HP901/semops.o HP901/msg.o HP901/command_line.o HP901/main.o HP901/desc_struct.o HP901/fifo.o HP901/hash.o HP901/safe.o  -o h4.HP901 -L. -L/usr/lib/X11R5 -L/usr/lib/Motif1.2 -lXm -lXt -lX11  -lm -ll -ly /usr/lib/end.o
+chmod a+r h4.HP901

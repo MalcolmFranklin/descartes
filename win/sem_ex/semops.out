@@ -1,0 +1,5 @@
+tempfile_name = /usr/tmp/aaaa06575
+Child got semaphore
+Child releasing semaphore
+Parent got semaphore
+Parent releasing semaphore

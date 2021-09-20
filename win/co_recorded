@@ -1,0 +1,13 @@
+/home/cae7/SAL/bin/pkg_make: recorded 'co' command: Makefile
+co error: RCS/Makefile,v: No such file or directory
+
+/home/cae7/SAL/bin/pkg_make: recorded 'co' command: -r -oPackage.config /all/RCSdirs/764530761/Package.config,v
+/all/RCSdirs/764530761/Package.config,v  -->  ./Package.config
+revision 1.13
+done
+
+/home/cae7/SAL/bin/pkg_make: recorded 'co' command: -r -oPackage.config /all/franklin/thesis/descartes/win/RCS/Package.config,v
+/all/franklin/thesis/descartes/win/RCS/Package.config,v  -->  ./Package.config
+revision 1.23
+done
+

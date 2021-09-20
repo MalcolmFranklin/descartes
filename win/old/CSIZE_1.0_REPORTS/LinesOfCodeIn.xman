@@ -1,0 +1,26 @@
+   total    blank lines w/   nb, nc    semi- preproc. file
+   lines    lines comments    lines   colons  direct.
+--------+--------+--------+--------+--------+--------+----
+    1228      213      410      685      366       25 ScrollByL.c
+      64       10       30       24        3       21 ScrollByL.h
+      87       14       50       38       25        5 ScrollByLP.h
+     740      127      157      472      314        6 buttons.c
+     113       24       33       56        0       52 defs.h
+      43        9       33        9        8        1 globals.c
+      47       10       33       12       11        1 globals.h
+     631       83      176      384      214        7 handler.c
+      98       18       37       45       25        1 help.c
+      34        1       20       13        1        2 icon_help.h
+      34        1       20       13        1        2 icon_open.h
+      32        1       20       11        1        2 iconclosed.h
+     243       37       53      154       42       10 main.c
+     898      133      162      622      352       43 man.c
+     248       61      111      120       72       27 man.h
+     681      104      211      378      222        7 misc.c
+       1        0        1        0        0        0 pages.c
+     372       66       96      218      123       10 search.c
+      90       11       49       30        8        6 tkfuncs.c
+     200       25       24      151       50       21 vendor.c
+     139       23       40       78        7       69 vendor.h
+      23        2       20        1        0        1 version.h
+    6046      973     1786     3514     1845      319 total

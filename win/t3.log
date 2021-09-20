@@ -1,0 +1,43 @@
+Descartes' Trace Log  Ver 1.0   Time: Sat Aug 13 11:02:38 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/t3.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/t3.log.
+
+Contents of the Descartes specification file:
+00
+11
+
+
+Module Title TWO_OF_(OPERANDS)
+$reference direct product - OPERANDS
+__(aDP_first) Direct Product OPERANDS
+ >> Go to Node before_decimal(1.. )
+__(AS_first) Sequence Node before_decimal(1.. )
+ >>(Suc_1) Go to node BDIGIT
+$reference direct product - BDIGIT
+(ADP)_Node BDIGIT
+__(ADP_first)Node BDIGIT
+ => Unsuccessful matching with module call
+ << Back to Node before_decimal(1.. )
+__(AS_fail) Sequence Node before_decimal(1.. )
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node before_decimal(1.. ); adjust stack & input pointers.
+ <<(Fail_2) Back to Node OPERANDS
+$reference direct product - OPERANDS
+__(aDP_fail) Direct Product OPERANDS
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node OPERANDS; adjust stack & input pointers.
+ << Back to Node TWO_OF_(OPERANDS)
+Failed 0 bytes from the beginning of the input stream.
+Contents of the rest of the input buffer:
+	"00
+11
+"
+The analysis procedure failed.
+No output is produced at this execution.
+#####   THE  END   #####

@@ -1,0 +1,1865 @@
+Descartes' Trace Log  Ver 1.0   Time: Tue Oct 25 20:49:12 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/amir.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/amir.log.
+
+Contents of the Descartes specification file:
+T_(A) A x return X
+
+
+Module Title CHECKSEMANTICS_(SPECIFICATION)
+$reference direct product - SPECIFICATION
+__(aDP_first) Direct Product SPECIFICATION
+ >> Go to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_first) Sequence Node descartes_spec*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer0 1
+A sequecne pointer1 1
+Input_File 0 1
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer0 1
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 0 2
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer1 2
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer2 3
+A sequecne pointer3 3
+Input_File 0 3
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer2 3
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 4
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer3 4
+A sequecne pointer4 4
+Input_File 0 4
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer3 4
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 5
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer4 5
+A sequecne pointer5 5
+Input_File 0 5
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer4 5
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 6
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer5 6
+A sequecne pointer6 6
+Input_File 0 6
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer5 6
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 7
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer6 7
+A sequecne pointer7 7
+Input_File 0 7
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer6 7
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 8
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer7 8
+A sequecne pointer8 8
+Input_File 0 8
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer7 8
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 9
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer8 9
+A sequecne pointer9 9
+Input_File 0 9
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer8 9
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 10
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer9 10
+A sequecne pointer10 10
+Input_File 0 10
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer9 10
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 11
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer10 11
+A sequecne pointer11 11
+Input_File 0 11
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer10 11
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 12
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer11 12
+A sequecne pointer12 12
+Input_File 0 12
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer11 12
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 13
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer12 13
+A sequecne pointer13 13
+Input_File 0 13
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer12 13
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 14
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer13 14
+A sequecne pointer14 14
+Input_File 0 14
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer13 14
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 15
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer14 15
+A sequecne pointer15 15
+Input_File 0 15
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer14 15
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 16
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer15 16
+A sequecne pointer16 16
+Input_File 0 16
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer15 16
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 17
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer16 17
+A sequecne pointer17 17
+Input_File 0 17
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer16 17
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_fail) Direct Product SPECIFICATION
+ ?? Try to check node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_next) Sequence Node descartes_spec*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 18
+
+ !!!assign value to prev_stack_element
+ << Back to Node descartes_spec*
+$match sequence - descartes_spec*
+__(AS_succeed) Sequence Node descartes_spec*
+B sequecne pointer17 18
+A sequecne pointer18 18
+Input_File 0 18
+ <<(Suc_4) Succeed; Back to node SPECIFICATION
+A sequecne pointer17 18
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 19
+ << Back to Node SPECIFICATION
+$reference direct product - SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+__(aDP_succeed) Direct Product SPECIFICATION
+ << Succeed; Back to Node CHECKSEMANTICS_(SPECIFICATION)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - descartes_semantics
+__(sDP_first) Direct Product descartes_semantics
+ >> Go to Node ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES_SPEC)
+$reference direct product - ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES_SPEC)
+(SDP)_Node ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES_SPEC)
+__(SDP_first)Node ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES_SPEC)
+__(SM_first) module ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES_SPEC)
+__(SDP1_first)Node DESCARTES_SPEC
+T_(A) A x return X => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/amir.des].
+
+Module Title ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES)
+$reference direct product - DESCARTES
+__(aDP_first) Direct Product DESCARTES
+ >> Go to Node title(1.. )
+__(AS_first) Sequence Node title(1.. )
+ >>(Suc_1) Go to node arguments_or_non+
+$match discriminated union - arguments_or_non+
+__(ADU_first) Discriminated Union arguments_or_non+
+ >> Go to Node with_arguments
+$match direct product - with_arguments
+__(aDP_first) Direct Product with_arguments
+ >> Go to Node before_argument*
+$match sequence - before_argument*
+__(AS_first) Sequence Node before_argument*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node with_arguments
+$match direct product - with_arguments
+__(aDP_succeed) Direct Product with_arguments
+__(aDP_succeed) Direct Product with_arguments
+ >> Succeed; Go to Node argument
+$match direct product - argument
+__(aDP_first) Direct Product argument
+ >> Go to Node '('
+$literal - '('
+__(AL_first) Literal '('
+ => Unsuccessful matching at node '(' with input string
+ << Back to Node argument
+$match direct product - argument
+__(aDP_fail) Direct Product argument
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node argument; adjust stack & input pointers.
+ << Back to Node with_arguments
+$match direct product - with_arguments
+__(aDP_fail) Direct Product with_arguments
+ ?? Try to check node before_argument*
+$match sequence - before_argument*
+__(AS_next) Sequence Node before_argument*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node before_argument*
+$match sequence - before_argument*
+__(AS_succeed) Sequence Node before_argument*
+B sequecne pointer0 1
+A sequecne pointer1 1
+Input_File 0 1
+ <<(Suc_4) Succeed; Back to node with_arguments
+A sequecne pointer0 1
+$match direct product - with_arguments
+__(aDP_succeed) Direct Product with_arguments
+__(aDP_succeed) Direct Product with_arguments
+ >> Succeed; Go to Node argument
+$match direct product - argument
+__(aDP_first) Direct Product argument
+ >> Go to Node '('
+$literal - '('
+__(AL_first) Literal '('
+ => Unsuccessful matching at node '(' with input string
+ << Back to Node argument
+$match direct product - argument
+__(aDP_fail) Direct Product argument
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node argument; adjust stack & input pointers.
+ << Back to Node with_arguments
+$match direct product - with_arguments
+__(aDP_fail) Direct Product with_arguments
+ ?? Try to check node before_argument*
+$match sequence - before_argument*
+__(AS_next) Sequence Node before_argument*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+
+ !!!assign value to prev_stack_element
+ << Back to Node before_argument*
+$match sequence - before_argument*
+__(AS_succeed) Sequence Node before_argument*
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 0 2
+ <<(Suc_4) Succeed; Back to node with_arguments
+A sequecne pointer1 2
+$match direct product - with_arguments
+__(aDP_succeed) Direct Product with_arguments
+__(aDP_succeed) Direct Product with_arguments
+ >> Succeed; Go to Node argument
+$match direct product - argument
+__(aDP_first) Direct Product argument
+ >> Go to Node '('
+$literal - '('
+__(AL_first) Literal '('
+ => Successful matching at node '(' with input string
+ -> Forward input buffer pointer to location 3
+ << Back to Node argument
+$match direct product - argument
+__(aDP_succeed) Direct Product argument
+__(aDP_succeed) Direct Product argument
+ >> Succeed; Go to Node argument_name(1.. )
+__(AS_first) Sequence Node argument_name(1.. )
+ >>(Suc_1) Go to node name_ascii+
+$match discriminated union - name_ascii+
+__(ADU_first) Discriminated Union name_ascii+
+ >> Go to Node LETTER
+$reference direct product - LETTER
+(ADP)_Node LETTER
+__(ADP_first)Node LETTER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 4
+ << Back to Node name_ascii+
+$match discriminated union - name_ascii+
+__(ADU_succeed) Discriminated Union name_ascii+
+__(ADU_succeed) Discriminated Union name_ascii+
+ << Succeed; Back to Node argument_name(1.. )
+__(AS_succeed) Sequence Node argument_name(1.. )
+B sequecne pointer3 4
+A sequecne pointer4 4
+Input_File 3 4
+ <<(Suc_2) Succeed; Back to node argument
+A sequecne pointer3 4
+$match direct product - argument
+__(aDP_succeed) Direct Product argument
+__(aDP_succeed) Direct Product argument
+ >> Succeed; Go to Node ')'
+$literal - ')'
+__(AL_first) Literal ')'
+ => Successful matching at node ')' with input string
+ -> Forward input buffer pointer to location 5
+ << Back to Node argument
+$match direct product - argument
+__(aDP_succeed) Direct Product argument
+__(aDP_succeed) Direct Product argument
+ << Succeed; Back to Node with_arguments
+$match direct product - with_arguments
+__(aDP_succeed) Direct Product with_arguments
+__(aDP_succeed) Direct Product with_arguments
+ << Succeed; Back to Node arguments_or_non+
+$match discriminated union - arguments_or_non+
+__(ADU_succeed) Discriminated Union arguments_or_non+
+__(ADU_succeed) Discriminated Union arguments_or_non+
+ << Succeed; Back to Node title(1.. )
+__(AS_succeed) Sequence Node title(1.. )
+B sequecne pointer0 5
+A sequecne pointer5 5
+Input_File 0 5
+ <<(Suc_2) Succeed; Back to node DESCARTES
+A sequecne pointer0 5
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node rest*
+$match sequence - rest*
+__(AS_first) Sequence Node rest*
+A sequecne pointer5 5
+Input_File 5 5
+ <<(Suc_2) Succeed; Back to node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 6
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer5 6
+A sequecne pointer6 6
+Input_File 5 6
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer5 6
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 7
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer6 7
+A sequecne pointer7 7
+Input_File 5 7
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer6 7
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 8
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer7 8
+A sequecne pointer8 8
+Input_File 5 8
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer7 8
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 9
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer8 9
+A sequecne pointer9 9
+Input_File 5 9
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer8 9
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 10
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer9 10
+A sequecne pointer10 10
+Input_File 5 10
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer9 10
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 11
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer10 11
+A sequecne pointer11 11
+Input_File 5 11
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer10 11
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 12
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer11 12
+A sequecne pointer12 12
+Input_File 5 12
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer11 12
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 13
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer12 13
+A sequecne pointer13 13
+Input_File 5 13
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer12 13
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 14
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer13 14
+A sequecne pointer14 14
+Input_File 5 14
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer13 14
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 15
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer14 15
+A sequecne pointer15 15
+Input_File 5 15
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer14 15
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 16
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer15 16
+A sequecne pointer16 16
+Input_File 5 16
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer15 16
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 17
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer16 17
+A sequecne pointer17 17
+Input_File 5 17
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer16 17
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_fail) Direct Product DESCARTES
+ ?? Try to check node rest*
+$match sequence - rest*
+__(AS_next) Sequence Node rest*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 18
+
+ !!!assign value to prev_stack_element
+ << Back to Node rest*
+$match sequence - rest*
+__(AS_succeed) Sequence Node rest*
+B sequecne pointer17 18
+A sequecne pointer18 18
+Input_File 5 18
+ <<(Suc_4) Succeed; Back to node DESCARTES
+A sequecne pointer17 18
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 19
+ << Back to Node DESCARTES
+$reference direct product - DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+__(aDP_succeed) Direct Product DESCARTES
+ << Succeed; Back to Node ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node ARGUMENTS_OR_NON+
+$reference discriminated union - ARGUMENTS_OR_NON+
+__(SDU_first) Discriminated Union ARGUMENTS_OR_NON+
+match node->arguments_or_non+ ARGUMENTS_OR_NON+
+ >> Go to Node WITH_ARGUMENTS
+$reference direct product - WITH_ARGUMENTS
+__(sDP_first) Direct Product WITH_ARGUMENTS
+match node->with_arguments WITH_ARGUMENTS
+ >> Go to Node (ARGUMENT_NAME)_MATCH_WITH_(REST)
+$reference direct product - (ARGUMENT_NAME)_MATCH_WITH_(REST)
+(SDP)_Node (ARGUMENT_NAME)_MATCH_WITH_(REST)
+__(SDP_first)Node (ARGUMENT_NAME)_MATCH_WITH_(REST)
+__(SM_first) module (ARGUMENT_NAME)_MATCH_WITH_(REST)
+__(SDP1_first)Node ARGUMENT_NAME
+A => Found a corresponding match node
+__(SDP1_first)Node REST
+ A x return X => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/amir.des].
+
+Module Title (NAME)_MATCH_WITH_(REST_OF_TREE)
+$reference direct product - NAME
+__(aDP_first) Direct Product NAME
+ >> Go to Node node_name*
+$match sequence - node_name*
+__(AS_first) Sequence Node node_name*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node NAME
+$reference direct product - NAME
+__(aDP_succeed) Direct Product NAME
+__(aDP_succeed) Direct Product NAME
+ << Succeed; Back to Node (NAME)_MATCH_WITH_(REST_OF_TREE)
+$reference direct product - REST_OF_TREE
+__(aDP_first) Direct Product REST_OF_TREE
+ >> Go to Node tree
+$match direct product - tree
+__(aDP_first) Direct Product tree
+ >> Go to Node node_before*
+$match sequence - node_before*
+__(AS_first) Sequence Node node_before*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node tree
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer0 1
+A sequecne pointer1 1
+Input_File 0 1
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer0 1
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 0 2
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer1 2
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer2 3
+A sequecne pointer3 3
+Input_File 0 3
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer2 3
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 4
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer3 4
+A sequecne pointer4 4
+Input_File 0 4
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer3 4
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 5
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer4 5
+A sequecne pointer5 5
+Input_File 0 5
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer4 5
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 6
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer5 6
+A sequecne pointer6 6
+Input_File 0 6
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer5 6
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 7
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer6 7
+A sequecne pointer7 7
+Input_File 0 7
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer6 7
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 8
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer7 8
+A sequecne pointer8 8
+Input_File 0 8
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer7 8
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 9
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer8 9
+A sequecne pointer9 9
+Input_File 0 9
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer8 9
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 10
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer9 10
+A sequecne pointer10 10
+Input_File 0 10
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer9 10
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 11
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer10 11
+A sequecne pointer11 11
+Input_File 0 11
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer10 11
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 12
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer11 12
+A sequecne pointer12 12
+Input_File 0 12
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer11 12
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 13
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer12 13
+A sequecne pointer13 13
+Input_File 0 13
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer12 13
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 14
+
+ !!!assign value to prev_stack_element
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_succeed) Sequence Node node_before*
+B sequecne pointer13 14
+A sequecne pointer14 14
+Input_File 0 14
+ <<(Suc_4) Succeed; Back to node tree
+A sequecne pointer13 14
+$match direct product - tree
+__(aDP_succeed) Direct Product tree
+__(aDP_succeed) Direct Product tree
+ >> Succeed; Go to Node NODE_NAME
+$reference direct product - NODE_NAME
+(ADP)_Node NODE_NAME
+__(ADP_first)Node NODE_NAME
+ => Unsuccessful matching with module call
+ << Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ ?? Try to check node node_before*
+$match sequence - node_before*
+__(AS_next) Sequence Node node_before*
+ >> (No. < upper) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_first)Node WORD
+ => Unsuccessful matching with module call
+ << Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 13
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 12
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 11
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 10
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 9
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 8
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 7
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 6
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 5
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 4
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 3
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 2
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ >>(Fail_1) Go to node WORD
+$reference direct product - WORD
+(ADP)_Node WORD
+__(ADP_next)Node WORD
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node WORD; adjust stack & input pointers.
+ << Fail; Back to Node node_before*
+$match sequence - node_before*
+__(AS_fail) Sequence Node node_before*
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node node_before*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node tree
+$match direct product - tree
+__(aDP_fail) Direct Product tree
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node tree; adjust stack & input pointers.
+ << Back to Node REST_OF_TREE
+$reference direct product - REST_OF_TREE
+__(aDP_fail) Direct Product REST_OF_TREE
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node REST_OF_TREE; adjust stack & input pointers.
+ << Back to Node (NAME)_MATCH_WITH_(REST_OF_TREE)
+A A x return X
+"
+The analysis procedure failed.
+No output is produced at this execution.
+
+
+  #####   THE  END OF SUB MODULE  #####
+ FAIL<< Back to Node (ARGUMENT_NAME)_MATCH_WITH_(REST)
+ => It is non-defined reference node
+ << Back to Node WITH_ARGUMENTS
+$reference direct product - WITH_ARGUMENTS
+__(sDP_fail) Direct Product WITH_ARGUMENTS
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node WITH_ARGUMENTS; adjust stack & output pointers.
+ << Back to Node ARGUMENTS_OR_NON+
+$reference discriminated union - ARGUMENTS_OR_NON+
+__(SDU_fail) Discriminated Union ARGUMENTS_OR_NON+
+ ?? Try to check node WITHOUT_ARGUMENTS
+$reference direct product - WITHOUT_ARGUMENTS
+(SDP)_Node WITHOUT_ARGUMENTS
+__(SDP_first)Node WITHOUT_ARGUMENTS
+__(SM_first) module WITHOUT_ARGUMENTS
+ => It is non-defined reference node
+ << Back to Node ARGUMENTS_OR_NON+
+$reference discriminated union - ARGUMENTS_OR_NON+
+__(SDU_fail) Discriminated Union ARGUMENTS_OR_NON+
+ // All subnodes are tried; none of them found
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node ARGUMENTS_OR_NON+; adjust stack & output pointers.
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node return; adjust stack & output pointers.
+ << Back to Node ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES)
+The synthesis procedure failed.
+No output is produced at this execution.
+
+
+  #####   THE  END OF SUB MODULE  #####
+ FAIL<< Back to Node ANALYSIS_TREES_CORESPONDING_TO_ARGUMENTS_IN_(DESCARTES_SPEC)
+ => It is non-defined reference node
+ << Back to Node descartes_semantics
+$match direct product - descartes_semantics
+__(sDP_fail) Direct Product descartes_semantics
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node descartes_semantics; adjust stack & output pointers.
+ << Back to Node CHECKSEMANTICS_(SPECIFICATION)
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ >> Go to Node DESCARTES_SEMANTICS
+$reference direct product - DESCARTES_SEMANTICS
+(SDP)_Node DESCARTES_SEMANTICS
+__(SDP_first)Node DESCARTES_SEMANTICS
+__(SM_first) module DESCARTES_SEMANTICS
+ => It is non-defined reference node
+ << Back to Node return+
+$match discriminated union - return+
+__(SDU_fail) Discriminated Union return+
+ ?? Try to check node 'Semantic Error!'
+$literal - 'Semantic Error!'
+__(SL_first) Literal 'Semantic Error!'
+ => Output a string with Literal
+ << Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node CHECKSEMANTICS_(SPECIFICATION)
+Your specificaton ran successfully.
+Output file length = 15.  Contents:
+Semantic Error!
+#####   THE  END   #####

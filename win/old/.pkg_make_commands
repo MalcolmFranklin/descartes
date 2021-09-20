@@ -1,0 +1,2 @@
+make  -f makefile  h4.Sun413 
+echo "Skipping deliverable h4.HP901 because it can not be built on this machine." 

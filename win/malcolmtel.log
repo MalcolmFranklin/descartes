@@ -1,0 +1,1040 @@
+Descartes' Trace Log  Ver 1.0   Time: Fri Aug 12 21:35:40 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/malcolmtel.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/malcolmtel.log.
+
+Contents of the Descartes specification file:
+a zzzz zzzz
+
+
+Module Title TELEGRAM_REPORT(TELEGRAM_STREAM)
+$reference direct product - TELEGRAM_STREAM
+__(aDP_first) Direct Product TELEGRAM_STREAM
+ >> Go to Node telegram*
+$match sequence - telegram*
+__(AS_first) Sequence Node telegram*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node blank*
+$match sequence - blank*
+__(AS_first) Sequence Node blank*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node 'zzzz'
+$literal - 'zzzz'
+__(AL_first) Literal 'zzzz'
+ => Unsuccessful matching at node 'zzzz' with input string
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node blank*
+$match sequence - blank*
+__(AS_next) Sequence Node blank*
+ >> (No. < upper) Go to node ' '
+$literal - ' '
+__(AL_first) Literal ' '
+ => Unsuccessful matching at node ' ' with input string
+ << Back to Node blank*
+$match sequence - blank*
+__(AS_fail) Sequence Node blank*
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node blank*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node telegram*
+$match sequence - telegram*
+__(AS_next) Sequence Node telegram*
+ >> (No. < upper) Go to node word_sequence*
+$match sequence - word_sequence*
+__(AS_first) Sequence Node word_sequence*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node telegram*
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer0 0
+ >>(Suc_3) Go to node word_sequence*
+A sequecne pointer0 0
+$match sequence - word_sequence*
+__(AS_next) Sequence Node word_sequence*
+ >> (No. < upper) Go to node anyword
+$match direct product - anyword
+__(aDP_first) Direct Product anyword
+ >> Go to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_first) Discriminated Union generic_word+
+ >> Go to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_first) Direct Product non_special_non_chargeable_word
+ >> Go to Node 's'
+$literal - 's'
+__(AL_first) Literal 's'
+ => Unsuccessful matching at node 's' with input string
+ << Back to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_fail) Direct Product non_special_non_chargeable_word
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 0
+ ** Free a stack element at Node non_special_non_chargeable_word; adjust stack & input pointers.
+ << Back to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_fail) Discriminated Union generic_word+
+ ?? Try to check node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_first) Sequence Node chargeable_word*
+A sequecne pointer0 0
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node generic_word+
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer0 0
+ >>(Suc_3) Go to node anyword
+A sequecne pointer0 0
+$match direct product - anyword
+__(aDP_next) Direct Product anyword
+ >> Go to the last processed generic_word+ under node anyword
+$match discriminated union - generic_word+
+__(ADU_next) Discriminated Union generic_word+
+ >> Go to the last processed chargeable_word* under node generic_word+
+$match sequence - chargeable_word*
+__(AS_next) Sequence Node chargeable_word*
+ >> (No. < upper) Go to node WORDCHAR
+$reference direct product - WORDCHAR
+(ADP)_Node WORDCHAR
+__(ADP_first)Node WORDCHAR
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_succeed) Sequence Node chargeable_word*
+B sequecne pointer0 1
+A sequecne pointer1 1
+Input_File 0 1
+ <<(Suc_4) Succeed; Back to node generic_word+
+A sequecne pointer0 1
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer0 1
+A sequecne pointer1 1
+Input_File 0 1
+ <<(Suc_4) Succeed; Back to node telegram*
+A sequecne pointer0 1
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer0 1
+A sequecne pointer1 1
+Input_File 0 1
+ <<(Suc_4) Succeed; Back to node TELEGRAM_STREAM
+A sequecne pointer0 1
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node blank*
+$match sequence - blank*
+__(AS_first) Sequence Node blank*
+A sequecne pointer1 1
+Input_File 1 1
+ <<(Suc_2) Succeed; Back to node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node 'zzzz'
+$literal - 'zzzz'
+__(AL_first) Literal 'zzzz'
+ => Unsuccessful matching at node 'zzzz' with input string
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node blank*
+$match sequence - blank*
+__(AS_next) Sequence Node blank*
+ >> (No. < upper) Go to node ' '
+$literal - ' '
+__(AL_first) Literal ' '
+ => Successful matching at node ' ' with input string
+ -> Forward input buffer pointer to location 2
+ << Back to Node blank*
+$match sequence - blank*
+__(AS_succeed) Sequence Node blank*
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 1 2
+ <<(Suc_4) Succeed; Back to node TELEGRAM_STREAM
+A sequecne pointer1 2
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node 'zzzz'
+$literal - 'zzzz'
+__(AL_first) Literal 'zzzz'
+ => Successful matching at node 'zzzz' with input string
+ -> Forward input buffer pointer to location 6
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node 'zzzz'
+$literal - 'zzzz'
+__(AL_next) Literal 'zzzz'
+ <- Backward input buffer pointer at location 2
+ ** Free a stack element at Node 'zzzz'; adjust stack & input pointers.
+ << Fail; Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node blank*
+$match sequence - blank*
+__(AS_next) Sequence Node blank*
+ >> (No. < upper) Go to node ' '
+$literal - ' '
+__(AL_first) Literal ' '
+ => Unsuccessful matching at node ' ' with input string
+ << Back to Node blank*
+$match sequence - blank*
+__(AS_fail) Sequence Node blank*
+ >>(Fail_1) Go to node ' '
+$literal - ' '
+__(AL_next) Literal ' '
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node ' '; adjust stack & input pointers.
+ << Fail; Back to Node blank*
+$match sequence - blank*
+__(AS_fail) Sequence Node blank*
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node blank*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node telegram*
+$match sequence - telegram*
+__(AS_next) Sequence Node telegram*
+ >> (No. < upper) Go to node word_sequence*
+$match sequence - word_sequence*
+__(AS_first) Sequence Node word_sequence*
+
+ !!!assign value to prev_stack_element
+A sequecne pointer1 1
+Input_File 1 1
+ <<(Suc_2) Succeed; Back to node telegram*
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer1 1
+ >>(Suc_3) Go to node word_sequence*
+A sequecne pointer1 1
+$match sequence - word_sequence*
+__(AS_next) Sequence Node word_sequence*
+ >> (No. < upper) Go to node anyword
+$match direct product - anyword
+__(aDP_first) Direct Product anyword
+
+ !!!assign value to prev_stack_element
+ >> Go to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_first) Discriminated Union generic_word+
+
+ !!!assign value to prev_stack_element
+ >> Go to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_first) Direct Product non_special_non_chargeable_word
+ >> Go to Node 's'
+$literal - 's'
+__(AL_first) Literal 's'
+ => Unsuccessful matching at node 's' with input string
+ << Back to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_fail) Direct Product non_special_non_chargeable_word
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node non_special_non_chargeable_word; adjust stack & input pointers.
+ << Back to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_fail) Discriminated Union generic_word+
+ ?? Try to check node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_first) Sequence Node chargeable_word*
+
+ !!!assign value to prev_stack_element
+A sequecne pointer1 1
+Input_File 1 1
+ <<(Suc_2) Succeed; Back to node generic_word+
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer1 1
+ >>(Suc_3) Go to node anyword
+A sequecne pointer1 1
+$match direct product - anyword
+__(aDP_next) Direct Product anyword
+ >> Go to the last processed generic_word+ under node anyword
+$match discriminated union - generic_word+
+__(ADU_next) Discriminated Union generic_word+
+ >> Go to the last processed chargeable_word* under node generic_word+
+$match sequence - chargeable_word*
+__(AS_next) Sequence Node chargeable_word*
+ >> (No. < upper) Go to node WORDCHAR
+$reference direct product - WORDCHAR
+(ADP)_Node WORDCHAR
+__(ADP_first)Node WORDCHAR
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+
+ !!!assign value to prev_stack_element
+ << Back to Node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_succeed) Sequence Node chargeable_word*
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 1 2
+ <<(Suc_4) Succeed; Back to node generic_word+
+A sequecne pointer1 2
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 1 2
+ <<(Suc_4) Succeed; Back to node telegram*
+A sequecne pointer1 2
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 0 2
+ <<(Suc_4) Succeed; Back to node TELEGRAM_STREAM
+A sequecne pointer6 2
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node blank*
+$match sequence - blank*
+__(AS_first) Sequence Node blank*
+A sequecne pointer2 2
+Input_File 2 2
+ <<(Suc_2) Succeed; Back to node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node 'zzzz'
+$literal - 'zzzz'
+__(AL_first) Literal 'zzzz'
+ => Successful matching at node 'zzzz' with input string
+ -> Forward input buffer pointer to location 6
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node 'zzzz'
+$literal - 'zzzz'
+__(AL_next) Literal 'zzzz'
+ <- Backward input buffer pointer at location 2
+ ** Free a stack element at Node 'zzzz'; adjust stack & input pointers.
+ << Fail; Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node blank*
+$match sequence - blank*
+__(AS_next) Sequence Node blank*
+ >> (No. < upper) Go to node ' '
+$literal - ' '
+__(AL_first) Literal ' '
+ => Unsuccessful matching at node ' ' with input string
+ << Back to Node blank*
+$match sequence - blank*
+__(AS_fail) Sequence Node blank*
+ <- Backward input buffer pointer at location 2
+ ** Free a stack element at Node blank*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node telegram*
+$match sequence - telegram*
+__(AS_next) Sequence Node telegram*
+ >> (No. < upper) Go to node word_sequence*
+$match sequence - word_sequence*
+__(AS_first) Sequence Node word_sequence*
+
+ !!!assign value to prev_stack_element
+A sequecne pointer2 2
+Input_File 2 2
+ <<(Suc_2) Succeed; Back to node telegram*
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer2 2
+ >>(Suc_3) Go to node word_sequence*
+A sequecne pointer2 2
+$match sequence - word_sequence*
+__(AS_next) Sequence Node word_sequence*
+ >> (No. < upper) Go to node anyword
+$match direct product - anyword
+__(aDP_first) Direct Product anyword
+
+ !!!assign value to prev_stack_element
+ >> Go to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_first) Discriminated Union generic_word+
+
+ !!!assign value to prev_stack_element
+ >> Go to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_first) Direct Product non_special_non_chargeable_word
+ >> Go to Node 's'
+$literal - 's'
+__(AL_first) Literal 's'
+ => Unsuccessful matching at node 's' with input string
+ << Back to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_fail) Direct Product non_special_non_chargeable_word
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 2
+ ** Free a stack element at Node non_special_non_chargeable_word; adjust stack & input pointers.
+ << Back to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_fail) Discriminated Union generic_word+
+ ?? Try to check node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_first) Sequence Node chargeable_word*
+
+ !!!assign value to prev_stack_element
+A sequecne pointer2 2
+Input_File 2 2
+ <<(Suc_2) Succeed; Back to node generic_word+
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer2 2
+ >>(Suc_3) Go to node anyword
+A sequecne pointer2 2
+$match direct product - anyword
+__(aDP_next) Direct Product anyword
+ >> Go to the last processed generic_word+ under node anyword
+$match discriminated union - generic_word+
+__(ADU_next) Discriminated Union generic_word+
+ >> Go to the last processed chargeable_word* under node generic_word+
+$match sequence - chargeable_word*
+__(AS_next) Sequence Node chargeable_word*
+ >> (No. < upper) Go to node WORDCHAR
+$reference direct product - WORDCHAR
+(ADP)_Node WORDCHAR
+__(ADP_first)Node WORDCHAR
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+
+ !!!assign value to prev_stack_element
+ << Back to Node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_succeed) Sequence Node chargeable_word*
+B sequecne pointer2 3
+A sequecne pointer3 3
+Input_File 2 3
+ <<(Suc_4) Succeed; Back to node generic_word+
+A sequecne pointer2 3
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer2 3
+A sequecne pointer3 3
+Input_File 2 3
+ <<(Suc_4) Succeed; Back to node telegram*
+A sequecne pointer2 3
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer2 3
+A sequecne pointer3 3
+Input_File 0 3
+ <<(Suc_4) Succeed; Back to node TELEGRAM_STREAM
+A sequecne pointer6 3
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node blank*
+$match sequence - blank*
+__(AS_first) Sequence Node blank*
+A sequecne pointer3 3
+Input_File 3 3
+ <<(Suc_2) Succeed; Back to node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node 'zzzz'
+$literal - 'zzzz'
+__(AL_first) Literal 'zzzz'
+ => Unsuccessful matching at node 'zzzz' with input string
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node blank*
+$match sequence - blank*
+__(AS_next) Sequence Node blank*
+ >> (No. < upper) Go to node ' '
+$literal - ' '
+__(AL_first) Literal ' '
+ => Unsuccessful matching at node ' ' with input string
+ << Back to Node blank*
+$match sequence - blank*
+__(AS_fail) Sequence Node blank*
+ <- Backward input buffer pointer at location 3
+ ** Free a stack element at Node blank*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node telegram*
+$match sequence - telegram*
+__(AS_next) Sequence Node telegram*
+ >> (No. < upper) Go to node word_sequence*
+$match sequence - word_sequence*
+__(AS_first) Sequence Node word_sequence*
+
+ !!!assign value to prev_stack_element
+A sequecne pointer3 3
+Input_File 3 3
+ <<(Suc_2) Succeed; Back to node telegram*
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer3 3
+ >>(Suc_3) Go to node word_sequence*
+A sequecne pointer3 3
+$match sequence - word_sequence*
+__(AS_next) Sequence Node word_sequence*
+ >> (No. < upper) Go to node anyword
+$match direct product - anyword
+__(aDP_first) Direct Product anyword
+
+ !!!assign value to prev_stack_element
+ >> Go to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_first) Discriminated Union generic_word+
+
+ !!!assign value to prev_stack_element
+ >> Go to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_first) Direct Product non_special_non_chargeable_word
+ >> Go to Node 's'
+$literal - 's'
+__(AL_first) Literal 's'
+ => Unsuccessful matching at node 's' with input string
+ << Back to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_fail) Direct Product non_special_non_chargeable_word
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 3
+ ** Free a stack element at Node non_special_non_chargeable_word; adjust stack & input pointers.
+ << Back to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_fail) Discriminated Union generic_word+
+ ?? Try to check node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_first) Sequence Node chargeable_word*
+
+ !!!assign value to prev_stack_element
+A sequecne pointer3 3
+Input_File 3 3
+ <<(Suc_2) Succeed; Back to node generic_word+
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer3 3
+ >>(Suc_3) Go to node anyword
+A sequecne pointer3 3
+$match direct product - anyword
+__(aDP_next) Direct Product anyword
+ >> Go to the last processed generic_word+ under node anyword
+$match discriminated union - generic_word+
+__(ADU_next) Discriminated Union generic_word+
+ >> Go to the last processed chargeable_word* under node generic_word+
+$match sequence - chargeable_word*
+__(AS_next) Sequence Node chargeable_word*
+ >> (No. < upper) Go to node WORDCHAR
+$reference direct product - WORDCHAR
+(ADP)_Node WORDCHAR
+__(ADP_first)Node WORDCHAR
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 4
+
+ !!!assign value to prev_stack_element
+ << Back to Node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_succeed) Sequence Node chargeable_word*
+B sequecne pointer3 4
+A sequecne pointer4 4
+Input_File 3 4
+ <<(Suc_4) Succeed; Back to node generic_word+
+A sequecne pointer3 4
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer3 4
+A sequecne pointer4 4
+Input_File 3 4
+ <<(Suc_4) Succeed; Back to node telegram*
+A sequecne pointer3 4
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer3 4
+A sequecne pointer4 4
+Input_File 0 4
+ <<(Suc_4) Succeed; Back to node TELEGRAM_STREAM
+A sequecne pointer3 4
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node blank*
+$match sequence - blank*
+__(AS_first) Sequence Node blank*
+A sequecne pointer4 4
+Input_File 4 4
+ <<(Suc_2) Succeed; Back to node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node 'zzzz'
+$literal - 'zzzz'
+__(AL_first) Literal 'zzzz'
+ => Unsuccessful matching at node 'zzzz' with input string
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node blank*
+$match sequence - blank*
+__(AS_next) Sequence Node blank*
+ >> (No. < upper) Go to node ' '
+$literal - ' '
+__(AL_first) Literal ' '
+ => Unsuccessful matching at node ' ' with input string
+ << Back to Node blank*
+$match sequence - blank*
+__(AS_fail) Sequence Node blank*
+ <- Backward input buffer pointer at location 4
+ ** Free a stack element at Node blank*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node telegram*
+$match sequence - telegram*
+__(AS_next) Sequence Node telegram*
+ >> (No. < upper) Go to node word_sequence*
+$match sequence - word_sequence*
+__(AS_first) Sequence Node word_sequence*
+
+ !!!assign value to prev_stack_element
+A sequecne pointer4 4
+Input_File 4 4
+ <<(Suc_2) Succeed; Back to node telegram*
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer4 4
+ >>(Suc_3) Go to node word_sequence*
+A sequecne pointer4 4
+$match sequence - word_sequence*
+__(AS_next) Sequence Node word_sequence*
+ >> (No. < upper) Go to node anyword
+$match direct product - anyword
+__(aDP_first) Direct Product anyword
+
+ !!!assign value to prev_stack_element
+ >> Go to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_first) Discriminated Union generic_word+
+
+ !!!assign value to prev_stack_element
+ >> Go to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_first) Direct Product non_special_non_chargeable_word
+ >> Go to Node 's'
+$literal - 's'
+__(AL_first) Literal 's'
+ => Unsuccessful matching at node 's' with input string
+ << Back to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_fail) Direct Product non_special_non_chargeable_word
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 4
+ ** Free a stack element at Node non_special_non_chargeable_word; adjust stack & input pointers.
+ << Back to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_fail) Discriminated Union generic_word+
+ ?? Try to check node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_first) Sequence Node chargeable_word*
+
+ !!!assign value to prev_stack_element
+A sequecne pointer4 4
+Input_File 4 4
+ <<(Suc_2) Succeed; Back to node generic_word+
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer4 4
+ >>(Suc_3) Go to node anyword
+A sequecne pointer4 4
+$match direct product - anyword
+__(aDP_next) Direct Product anyword
+ >> Go to the last processed generic_word+ under node anyword
+$match discriminated union - generic_word+
+__(ADU_next) Discriminated Union generic_word+
+ >> Go to the last processed chargeable_word* under node generic_word+
+$match sequence - chargeable_word*
+__(AS_next) Sequence Node chargeable_word*
+ >> (No. < upper) Go to node WORDCHAR
+$reference direct product - WORDCHAR
+(ADP)_Node WORDCHAR
+__(ADP_first)Node WORDCHAR
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 5
+
+ !!!assign value to prev_stack_element
+ << Back to Node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_succeed) Sequence Node chargeable_word*
+B sequecne pointer4 5
+A sequecne pointer5 5
+Input_File 4 5
+ <<(Suc_4) Succeed; Back to node generic_word+
+A sequecne pointer4 5
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer4 5
+A sequecne pointer5 5
+Input_File 4 5
+ <<(Suc_4) Succeed; Back to node telegram*
+A sequecne pointer4 5
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer4 5
+A sequecne pointer5 5
+Input_File 0 5
+ <<(Suc_4) Succeed; Back to node TELEGRAM_STREAM
+A sequecne pointer4 5
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node blank*
+$match sequence - blank*
+__(AS_first) Sequence Node blank*
+A sequecne pointer5 5
+Input_File 5 5
+ <<(Suc_2) Succeed; Back to node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node 'zzzz'
+$literal - 'zzzz'
+__(AL_first) Literal 'zzzz'
+ => Unsuccessful matching at node 'zzzz' with input string
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node blank*
+$match sequence - blank*
+__(AS_next) Sequence Node blank*
+ >> (No. < upper) Go to node ' '
+$literal - ' '
+__(AL_first) Literal ' '
+ => Unsuccessful matching at node ' ' with input string
+ << Back to Node blank*
+$match sequence - blank*
+__(AS_fail) Sequence Node blank*
+ <- Backward input buffer pointer at location 5
+ ** Free a stack element at Node blank*; adjust stack & input pointers.
+ <<(Fail_2) Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node telegram*
+$match sequence - telegram*
+__(AS_next) Sequence Node telegram*
+ >> (No. < upper) Go to node word_sequence*
+$match sequence - word_sequence*
+__(AS_first) Sequence Node word_sequence*
+
+ !!!assign value to prev_stack_element
+A sequecne pointer5 5
+Input_File 5 5
+ <<(Suc_2) Succeed; Back to node telegram*
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer5 5
+ >>(Suc_3) Go to node word_sequence*
+A sequecne pointer5 5
+$match sequence - word_sequence*
+__(AS_next) Sequence Node word_sequence*
+ >> (No. < upper) Go to node anyword
+$match direct product - anyword
+__(aDP_first) Direct Product anyword
+
+ !!!assign value to prev_stack_element
+ >> Go to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_first) Discriminated Union generic_word+
+
+ !!!assign value to prev_stack_element
+ >> Go to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_first) Direct Product non_special_non_chargeable_word
+ >> Go to Node 's'
+$literal - 's'
+__(AL_first) Literal 's'
+ => Unsuccessful matching at node 's' with input string
+ << Back to Node non_special_non_chargeable_word
+$match direct product - non_special_non_chargeable_word
+__(aDP_fail) Direct Product non_special_non_chargeable_word
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 5
+ ** Free a stack element at Node non_special_non_chargeable_word; adjust stack & input pointers.
+ << Back to Node generic_word+
+$match discriminated union - generic_word+
+__(ADU_fail) Discriminated Union generic_word+
+ ?? Try to check node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_first) Sequence Node chargeable_word*
+
+ !!!assign value to prev_stack_element
+A sequecne pointer5 5
+Input_File 5 5
+ <<(Suc_2) Succeed; Back to node generic_word+
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer5 5
+ >>(Suc_3) Go to node anyword
+A sequecne pointer5 5
+$match direct product - anyword
+__(aDP_next) Direct Product anyword
+ >> Go to the last processed generic_word+ under node anyword
+$match discriminated union - generic_word+
+__(ADU_next) Discriminated Union generic_word+
+ >> Go to the last processed chargeable_word* under node generic_word+
+$match sequence - chargeable_word*
+__(AS_next) Sequence Node chargeable_word*
+ >> (No. < upper) Go to node WORDCHAR
+$reference direct product - WORDCHAR
+(ADP)_Node WORDCHAR
+__(ADP_first)Node WORDCHAR
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 6
+
+ !!!assign value to prev_stack_element
+ << Back to Node chargeable_word*
+$match sequence - chargeable_word*
+__(AS_succeed) Sequence Node chargeable_word*
+B sequecne pointer5 6
+A sequecne pointer6 6
+Input_File 5 6
+ <<(Suc_4) Succeed; Back to node generic_word+
+A sequecne pointer5 6
+$match discriminated union - generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+__(ADU_succeed) Discriminated Union generic_word+
+ << Succeed; Back to Node anyword
+$match direct product - anyword
+__(aDP_succeed) Direct Product anyword
+__(aDP_succeed) Direct Product anyword
+ << Succeed; Back to Node word_sequence*
+$match sequence - word_sequence*
+__(AS_succeed) Sequence Node word_sequence*
+B sequecne pointer5 6
+A sequecne pointer6 6
+Input_File 5 6
+ <<(Suc_4) Succeed; Back to node telegram*
+A sequecne pointer5 6
+$match sequence - telegram*
+__(AS_succeed) Sequence Node telegram*
+B sequecne pointer5 6
+A sequecne pointer6 6
+Input_File 0 6
+ <<(Suc_4) Succeed; Back to node TELEGRAM_STREAM
+A sequecne pointer5 6
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node blank*
+$match sequence - blank*
+__(AS_first) Sequence Node blank*
+A sequecne pointer6 6
+Input_File 6 6
+ <<(Suc_2) Succeed; Back to node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node 'zzzz'
+$literal - 'zzzz'
+__(AL_first) Literal 'zzzz'
+ => Unsuccessful matching at node 'zzzz' with input string
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_fail) Direct Product TELEGRAM_STREAM
+ ?? Try to check node blank*
+$match sequence - blank*
+__(AS_next) Sequence Node blank*
+ >> (No. < upper) Go to node ' '
+$literal - ' '
+__(AL_first) Literal ' '
+ => Successful matching at node ' ' with input string
+ -> Forward input buffer pointer to location 7
+ << Back to Node blank*
+$match sequence - blank*
+__(AS_succeed) Sequence Node blank*
+B sequecne pointer6 7
+A sequecne pointer7 7
+Input_File 6 7
+ <<(Suc_4) Succeed; Back to node TELEGRAM_STREAM
+A sequecne pointer6 7
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node 'zzzz'
+$literal - 'zzzz'
+__(AL_first) Literal 'zzzz'
+ => Successful matching at node 'zzzz' with input string
+ -> Forward input buffer pointer to location 11
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 12
+ << Back to Node TELEGRAM_STREAM
+$reference direct product - TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+__(aDP_succeed) Direct Product TELEGRAM_STREAM
+ << Succeed; Back to Node TELEGRAM_REPORT(TELEGRAM_STREAM)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node TELEGRAM*
+$reference sequence - TELEGRAM*
+__(SS_first) Sequence Node TELEGRAM*
+match node->telegram* TELEGRAM*
+A sequecne pointer0 12
+Input_File 0 0
+ <<(Suc_2) Succeed; Back to node 'Number of chargeable words: '
+$literal - 'Number of chargeable words: '
+__(SL_first) Literal 'Number of chargeable words: '
+ => Output a string with Literal
+ << Back to Node TELEGRAM*
+$reference sequence - TELEGRAM*
+__(SS_succeed) Sequence Node TELEGRAM*
+B sequecne pointer0 28
+A sequecne pointer28 28
+Input_File 0 28
+Input_File 0 28
+ <<(Suc_4) Succeed; Back to node return
+A sequecne pointer0 28
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ << Succeed; Back to Node TELEGRAM_REPORT(TELEGRAM_STREAM)
+Your specificaton ran successfully.
+Output file length = 28.  Contents:
+Number of chargeable words: 
+#####   THE  END   #####

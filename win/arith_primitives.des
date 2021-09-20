@@ -1,0 +1,30 @@
+TWO_OF_(OPERANDS)
+	OPERANDS
+		x*
+			DIGIT
+		NL
+		y*
+			DIGIT
+		NL
+	return
+		'X = '
+		X
+		NL
+		'Y = '
+		Y
+		NL
+		'(X)_PLUS_(Y) = '
+		(X)_PLUS_(Y)
+		NL
+		'(X)_MINUS_(Y) = '
+		(X)_MINUS_(Y)
+		NL
+		'(X)_TIMES_(Y) = '
+		(X)_TIMES_(Y)
+		NL
+		'(X)_DIVIDED_BY_(Y) = '
+		(X)_DIVIDED_BY_(Y)
+		NL
+		'(Y)_DIVIDED_BY_(X) = '
+		(Y)_DIVIDED_BY_(X)
+		NL

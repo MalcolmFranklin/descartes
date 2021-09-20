@@ -1,0 +1,4 @@
+ImageMagick 3.1 uses V5 Alpha of the Independent JPEG Group's library.
+This code is ALPHA, use at your own risk.  A beta version is due
+sometime in July or August of 1994.  If you have any problems, get
+ImageMagick 3.0 which utilizes the bug-free V4.0 of JPEG.

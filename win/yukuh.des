@@ -1,0 +1,13 @@
+REVERSAL_OF_(STRING)
+	STRING
+		first
+			DIGIT
+		rest
+			some(1.. )
+				DIGIT
+		NL
+	return
+		SOME
+			REVERSAL_OF_(REST)
+		FIRST
+			error_node*

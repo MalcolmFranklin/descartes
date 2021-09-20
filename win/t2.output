@@ -1,0 +1,4 @@
+X = 00
+Y = 11
+(X)_AND_(Y) is FALSE
+(Y)_OR_(Y) is FALSE

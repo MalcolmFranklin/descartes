@@ -1,0 +1,28 @@
+   total    blank lines w/   nb, nc    semi- preproc. file
+   lines    lines comments    lines   colons  direct.
+--------+--------+--------+--------+--------+--------+----
+    7779     1265     1668     5018     2787       30 analysis1.c
+      88       11       61       19       10        7 analysis1.h
+     613       97      171      361      206       20 build_hoare_tree.c
+     118       16       83       21       16        5 build_hoare_tree.h
+     386       52      147      200      102       18 build_rtn.c
+      65        7       47       11        6        5 build_rtn.h
+     365       68      173      147       58       66 desc_struct.h
+     569       69      204      394       10        7 desc_table.h
+    2030      301      396     1370      698       35 exec_rtn1.c
+     133       21       70       49       37        5 exec_rtn1.h
+      59        8       27       24        8       14 mesg.h
+      71        9       29       33       14        3 msg.c
+      54        4       35       15        6        7 need_before_ytab.h
+     282       23      174      100       49       11 semops.c
+      54        3       41       10        5        5 semops.h
+     165       25       77       69       16        8 share_rtn.c
+     103       10       68       25        5        5 share_rtn.h
+      10        0       10        0        0        0 share_var.c
+     211       23       87      101       48        7 some_utils.c
+      74        9       39       26       17        5 some_utils.h
+      50        6       35        9        2        7 sunos4_missing.h
+     116       13       45       58       11       12 token.c
+    1162      178      305      693      384       46 wid1.c
+      84        7       56       23       18        5 wid1.h
+   14641     2225     4048     8776     4513      333 total

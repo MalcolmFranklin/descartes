@@ -1,0 +1,908 @@
+This is a list of all the files in enws94:~hcheng as of 3/24/94.  I only
+fetched the following sub-directories:
+
+	win (The one that contained source to build a working processor)
+	test
+	backup
+	lee
+	lex
+	scr
+	uty
+
+total 1038
+-rwxr-xr-x  1 hcheng       3164 Dec 29  1992 .cshrc*
+-rwxr-xr-x  1 hcheng        531 Apr 20  1992 .defaults*
+-rwxr-xr-x  1 hcheng        248 Jan 24  1992 .history*
+-rwxr-xr-x  1 hcheng        650 Nov 13  1991 .log*
+-rwxr-xr-x  1 hcheng        866 Nov 13  1991 .logbak*
+-rwxr-xr-x  1 hcheng        746 Nov 12  1992 .login*
+-rwxr-xr-x  1 hcheng         87 Nov 13  1991 .logout*
+-rwxr-xr-x  1 hcheng        130 Nov 13  1991 .mailrc*
+-rwxr-xr-x  1 hcheng       2088 Nov 12  1992 .mwmrc*
+-rwxr-xr-x  1 hcheng        389 Feb  9  1992 .mytools_menu*
+-rwxr-xr-x  1 hcheng       1948 Feb  9  1992 .rootmenu*
+-rwxr-xr-x  1 hcheng        412 Apr 18  1992 .sunview*
+-rwxr-xr-x  1 hcheng          0 Oct 15  1992 Begin:*
+drwxr-xr-x 16 hcheng        512 Sep 16  1992 C++Motif/
+-rwxr-xr-x  1 hcheng       1879 Nov  1  1992 Imakefile*
+-rwxr-xr-x  1 hcheng     642590 Dec 29  1992 WWL-1.2.tar.Z*
+-rwxr-xr-x  1 hcheng      24576 Apr 28  1993 a.out*
+drwxr-xr-x  2 hcheng       2048 Nov  4  1992 backup/
+-rwxr-xr-x  1 hcheng        362 Aug 19  1992 compil*
+drwxr-xr-x  2 hcheng        512 Feb 18  1993 cplus/
+-rwxr-xr-x  1 hcheng       4217 Oct 23  1992 cshrc*
+-rwxr-xr-x  1 hcheng      22485 Oct 22  1992 doc71.doc.Z*
+-rwxr-xr-x  1 hcheng         26 Apr 16  1992 forward*
+drwxr-xr-x  3 hcheng       4096 Mar 13 10:17 lee/
+-rwxr-xr-x  1 hcheng        243 Nov 25  1992 letter*
+drwxr-xr-x  2 hcheng       1024 Mar 22  1993 lex/
+-rwxr-xr-x  1 hcheng       6382 Dec 29  1992 lib.c*
+-rwxr-xr-x  1 hcheng       2416 Dec 29  1992 lib.h*
+-rwxr-xr-x  1 hcheng        167 Sep 13  1992 makefile*
+-rwxr-xr-x  1 hcheng       4873 Nov  1  1992 makefile.doc.Z*
+-rwxr-xr-x  1 hcheng        175 Sep 13  1992 makefile1*
+-rwxr-xr-x  1 hcheng        154 Dec 29  1992 makefile3*
+drwxr-xr-x  2 hcheng        512 Apr 18  1992 misc/
+-rwxr-xr-x  1 hcheng       4802 Aug 12  1992 mktime.c*
+-rwxr-xr-x  1 hcheng       1055 Aug 31  1992 motif.c*
+-rwxr-xr-x  1 hcheng       3162 Aug 31  1992 motif1.c*
+drwxr-xr-x  2 hcheng       1024 Mar 22  1993 proc/
+-rwxr-xr-x  1 hcheng       1433 Aug 25  1992 push.c*
+-rwxr-xr-x  1 hcheng         56 Apr 28  1993 query.dat*
+-rwxr-xr-x  1 hcheng        516 Apr 28  1993 query.h*
+-rwxr-xr-x  1 hcheng       1065 Nov 20  1992 readme*
+-rwxr-xr-x  1 hcheng      17984 May 16  1993 resume.prn*
+-rwxr-xr-x  1 hcheng       9536 Apr 28  1993 scan.c*
+drwxr-xr-x  2 hcheng        512 Mar 22  1993 scr/
+-rwxr-xr-x  1 hcheng        658 Aug 26  1992 socket1.c*
+-rwxr-xr-x  1 hcheng        900 Aug 26  1992 socket2.c*
+drwxr-xr-x  2 hcheng        512 May 20  1992 test/
+-rwxr-xr-x  1 hcheng        703 Aug 25  1992 toggle.c*
+-rwxr-xr-x  1 hcheng       1170 Aug 26  1992 unix.h*
+drwxr-xr-x  2 hcheng       1024 Mar 13 10:10 user/
+drwxr-xr-x  2 hcheng        512 Mar 22  1993 uty/
+-rwxr-xr-x  1 hcheng      33104 Nov  3  1992 wid.c*
+-rwxr-xr-x  1 hcheng      16672 Sep  9  1992 wid.doc.Z*
+-rwxr-xr-x  1 hcheng       4986 Sep 17  1992 wid1.c*
+-rwxr-xr-x  1 hcheng       8756 Oct 16  1992 wid124.doc.Z*
+-rwxr-xr-x  1 hcheng      19280 Oct  1  1992 wid2.c*
+-rwxr-xr-x  1 hcheng      10897 Oct 19  1992 wid200.doc.Z*
+-rwxr-xr-x  1 hcheng      13245 Oct 19  1992 wid201.doc.Z*
+-rwxr-xr-x  1 hcheng      11203 Oct 19  1992 wid202.doc.Z*
+-rwxr-xr-x  1 hcheng      10496 Oct 21  1992 wid400.doc.Z*
+-rwxr-xr-x  1 hcheng       4955 Sep  9  1992 wid55.doc.Z*
+-rwxr-xr-x  1 hcheng       8247 Oct 25  1992 wid601.doc.Z*
+-rwxr-xr-x  1 hcheng       4759 Oct 25  1992 wid603.doc.Z*
+-rwxr-xr-x  1 hcheng       8821 Sep  9  1992 wid65.doc.Z*
+-rwxr-xr-x  1 hcheng       5636 Sep  9  1992 wid66.doc.Z*
+-rwxr-xr-x  1 hcheng       9396 Nov  3  1992 wid700.doc.Z*
+-rwxr-xr-x  1 hcheng      20480 Sep  9  1992 wid74.doc.Z*
+-rwxr-xr-x  1 hcheng      13691 Sep 15  1992 wid91.doc.Z*
+-rwxr-xr-x  1 hcheng      13385 Sep 15  1992 wid92.doc.Z*
+-rwxr-xr-x  1 hcheng       7179 Sep 15  1992 wid93.doc.Z*
+drwxr-xr-x  2 hcheng       3072 Mar 22 11:59 win/
+-rwxr-xr-x  1 hcheng       1444 Nov  1  1992 xremdisplay.c*
+-rwxr-xr-x  1 hcheng       3782 Nov  1  1992 xrlogin.c*
+-rwxr-xr-x  1 hcheng        376 Nov  1  1992 xrlogin.doc.Z*
+-rwxr-xr-x  1 hcheng       1733 Nov  1  1992 xrlogind.c*
+
+C++Motif:
+total 27
+drwxr-xr-x  2 hcheng        512 Sep 16  1992 ComponentLib/
+drwxr-xr-x  5 hcheng        512 Sep 16  1992 Extras/
+-rwxr-xr-x  1 hcheng        237 Feb 19  1992 Makefile*
+drwxr-xr-x  2 hcheng       2048 Sep 16  1992 MotifApp/
+-rwxr-xr-x  1 hcheng        791 Sep 16  1992 README*
+-rwxr-xr-x  1 hcheng      10161 Sep 16  1992 RELEASENOTES*
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 ch1/
+drwxr-xr-x  2 hcheng        512 Sep 10  1992 ch10/
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 ch11/
+drwxr-xr-x  2 hcheng       1024 Jul 15  1992 ch12/
+drwxr-xr-x  5 hcheng        512 Jul 15  1992 ch2/
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 ch3A/
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 ch3B/
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 ch5/
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 ch6/
+drwxr-xr-x  2 hcheng        512 Jul 16  1992 ch7/
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 ch9/
+
+C++Motif/ComponentLib:
+total 12
+-rwxr-xr-x  1 hcheng       1588 Jul 15  1992 BasicComponent.C*
+-rwxr-xr-x  1 hcheng       1544 Jul 15  1992 BasicComponent.h*
+-rwxr-xr-x  1 hcheng        410 Sep 16  1992 Makefile*
+-rwxr-xr-x  1 hcheng       3550 Sep 16  1992 UIComponent.C*
+-rwxr-xr-x  1 hcheng       2251 Jul 15  1992 UIComponent.h*
+
+C++Motif/Extras:
+total 166
+-rwxr-xr-x  1 hcheng      24429 Feb 24  1992 Callbacks.ps.Z*
+-rwxr-xr-x  1 hcheng      20667 Feb 24  1992 Callbacks.txt*
+-rwxr-xr-x  1 hcheng       1006 Sep 16  1992 README*
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 SubMenus/
+drwxr-xr-x  2 hcheng        512 Sep 16  1992 TicTacToe/
+drwxr-xr-x  2 hcheng       1024 Sep 16  1992 bounce/
+-rwxr-xr-x  1 hcheng      57335 Jan  6  1992 ch0.ps.Z*
+-rwxr-xr-x  1 hcheng      62358 Jan  6  1992 ch0.txt*
+
+C++Motif/Extras/SubMenus:
+total 16
+-rwxr-xr-x  1 hcheng       2536 Jul 15  1992 CmdList.C*
+-rwxr-xr-x  1 hcheng       1906 Jul 15  1992 CmdList.h*
+-rwxr-xr-x  1 hcheng       2567 Jun 10  1992 MenuBar.C*
+-rwxr-xr-x  1 hcheng       1659 Jul 15  1992 MenuBar.h*
+-rwxr-xr-x  1 hcheng       3966 Jul 15  1992 MenuDemoWindow.C*
+-rwxr-xr-x  1 hcheng       1485 Jun 10  1992 README*
+
+C++Motif/Extras/TicTacToe:
+total 49
+-rwxr-xr-x  1 hcheng       4113 Jul 15  1992 Board.C*
+-rwxr-xr-x  1 hcheng       2208 May  6  1992 Board.h*
+-rwxr-xr-x  1 hcheng       2858 Jul 15  1992 Command.C*
+-rwxr-xr-x  1 hcheng       1541 Jul 15  1992 Command.h*
+-rwxr-xr-x  1 hcheng       4011 Jul 15  1992 Engine.C*
+-rwxr-xr-x  1 hcheng       2056 Jul 15  1992 Engine.h*
+-rwxr-xr-x  1 hcheng       7818 Jul 15  1992 GameBoard.C*
+-rwxr-xr-x  1 hcheng       2761 Jul 15  1992 GameBoard.h*
+-rwxr-xr-x  1 hcheng        481 Sep 16  1992 Makefile*
+-rwxr-xr-x  1 hcheng       1961 Jul 15  1992 Message.C*
+-rwxr-xr-x  1 hcheng       1335 Jul 15  1992 Message.h*
+-rwxr-xr-x  1 hcheng       2241 May  6  1992 MoveGenerator.C*
+-rwxr-xr-x  1 hcheng       1278 Jul 15  1992 MoveGenerator.h*
+-rwxr-xr-x  1 hcheng       3816 Jul 15  1992 TicTacToe.C*
+-rwxr-xr-x  1 hcheng       1910 Jul 15  1992 TicTacToe.h*
+-rwxr-xr-x  1 hcheng       1679 Jul 15  1992 tictactoe.C*
+
+C++Motif/Extras/bounce:
+total 53
+-rwxr-xr-x  1 hcheng       1287 Feb  7  1992 Actor.C*
+-rwxr-xr-x  1 hcheng       1435 Feb  7  1992 Actor.h*
+-rwxr-xr-x  1 hcheng       1369 Feb  7  1992 AddBallCmd.C*
+-rwxr-xr-x  1 hcheng       1340 Feb  7  1992 AddBallCmd.h*
+-rwxr-xr-x  1 hcheng       1020 Jan  4  1992 Bounce.appdefaults*
+-rwxr-xr-x  1 hcheng       1140 Feb  7  1992 BounceApp.C*
+-rwxr-xr-x  1 hcheng       1271 Feb  7  1992 BounceClock.C*
+-rwxr-xr-x  1 hcheng       1413 Feb  7  1992 BounceClock.h*
+-rwxr-xr-x  1 hcheng       4467 Feb  7  1992 BounceWindow.C*
+-rwxr-xr-x  1 hcheng       1422 Feb  7  1992 BounceWindow.h*
+-rwxr-xr-x  1 hcheng       4880 Feb  7  1992 BouncingBall.C*
+-rwxr-xr-x  1 hcheng       1930 Feb  7  1992 BouncingBall.h*
+-rwxr-xr-x  1 hcheng       2976 Feb  7  1992 ControlPanel.C*
+-rwxr-xr-x  1 hcheng        446 Jan  4  1992 ControlPanel.h*
+-rwxr-xr-x  1 hcheng        433 Apr 27  1992 Makefile*
+-rwxr-xr-x  1 hcheng       1331 Feb  7  1992 RunCmd.C*
+-rwxr-xr-x  1 hcheng       1314 Feb  7  1992 RunCmd.h*
+-rwxr-xr-x  1 hcheng       5065 Feb  7  1992 Stage.C*
+-rwxr-xr-x  1 hcheng       2005 Feb  7  1992 Stage.h*
+-rwxr-xr-x  1 hcheng       1241 Feb  7  1992 StepCmd.C*
+-rwxr-xr-x  1 hcheng       1218 Feb  7  1992 StepCmd.h*
+-rwxr-xr-x  1 hcheng       1290 Feb  7  1992 StopCmd.C*
+-rwxr-xr-x  1 hcheng       1181 Feb  7  1992 StopCmd.h*
+
+C++Motif/MotifApp:
+total 184
+-rwxr-xr-x  1 hcheng       4690 Jul 15  1992 Application.C*
+-rwxr-xr-x  1 hcheng       2751 Jul 15  1992 Application.h*
+-rwxr-xr-x  1 hcheng       1749 Jul 15  1992 AskFirstCmd.C*
+-rwxr-xr-x  1 hcheng       1817 Jul 15  1992 AskFirstCmd.h*
+-rwxr-xr-x  1 hcheng       1588 Jul 15  1992 BasicComponent.C*
+-rwxr-xr-x  1 hcheng       1544 Jul 15  1992 BasicComponent.h*
+-rwxr-xr-x  1 hcheng       3550 Jul 15  1992 BusyPixmap.C*
+-rwxr-xr-x  1 hcheng       1342 Jul 15  1992 BusyPixmap.h*
+-rwxr-xr-x  1 hcheng       2040 Sep 16  1992 ButtonInterface.C*
+-rwxr-xr-x  1 hcheng       1225 Jul 15  1992 ButtonInterface.h*
+-rwxr-xr-x  1 hcheng       3545 Feb  7  1992 Clock.C*
+-rwxr-xr-x  1 hcheng       2017 Feb  7  1992 Clock.h*
+-rwxr-xr-x  1 hcheng       4788 Jul 15  1992 Cmd.C*
+-rwxr-xr-x  1 hcheng       2792 Jul 15  1992 Cmd.h*
+-rwxr-xr-x  1 hcheng       1572 Jul 15  1992 CmdInterface.C*
+-rwxr-xr-x  1 hcheng       1382 Feb  7  1992 CmdInterface.h*
+-rwxr-xr-x  1 hcheng       1930 Jul 15  1992 CmdList.C*
+-rwxr-xr-x  1 hcheng       1563 Feb  7  1992 CmdList.h*
+-rwxr-xr-x  1 hcheng       5609 Jul 15  1992 ColorChooser.C*
+-rwxr-xr-x  1 hcheng       2013 Jul 15  1992 ColorChooser.h*
+-rwxr-xr-x  1 hcheng       2090 Jul 15  1992 ColorModel.C*
+-rwxr-xr-x  1 hcheng       2069 Jul 15  1992 ColorModel.h*
+-rwxr-xr-x  1 hcheng       1430 Jul 15  1992 ColorView.h*
+-rwxr-xr-x  1 hcheng       1933 Jul 15  1992 DialogCallbackData.h*
+-rwxr-xr-x  1 hcheng       5848 Jul 15  1992 DialogManager.C*
+-rwxr-xr-x  1 hcheng       1959 Jul 15  1992 DialogManager.h*
+-rwxr-xr-x  1 hcheng       3219 Jul 15  1992 HSVView.C*
+-rwxr-xr-x  1 hcheng       1433 Jul 15  1992 HSVView.h*
+-rwxr-xr-x  1 hcheng       1300 Jul 15  1992 IconifyCmd.C*
+-rwxr-xr-x  1 hcheng       1350 Jul 15  1992 IconifyCmd.h*
+-rwxr-xr-x  1 hcheng       1445 Jul 15  1992 InfoDialogManager.C*
+-rwxr-xr-x  1 hcheng       1294 Jul 15  1992 InfoDialogManager.h*
+-rwxr-xr-x  1 hcheng       4353 Jul 15  1992 InterruptibleCmd.C*
+-rwxr-xr-x  1 hcheng       2223 Jul 15  1992 InterruptibleCmd.h*
+-rwxr-xr-x  1 hcheng       1641 Jul 15  1992 Main.C*
+-rwxr-xr-x  1 hcheng       3169 Jul 15  1992 MainWindow.C*
+-rwxr-xr-x  1 hcheng       1843 Jul 15  1992 MainWindow.h*
+-rwxr-xr-x  1 hcheng       1173 Sep 16  1992 Makefile*
+-rwxr-xr-x  1 hcheng       1290 Jul 15  1992 ManageCmd.C*
+-rwxr-xr-x  1 hcheng       1337 Jul 15  1992 ManageCmd.h*
+-rwxr-xr-x  1 hcheng       2140 Jul 15  1992 MenuBar.C*
+-rwxr-xr-x  1 hcheng       1430 Jul 15  1992 MenuBar.h*
+-rwxr-xr-x  1 hcheng       1685 Feb  7  1992 MenuWindow.C*
+-rwxr-xr-x  1 hcheng       1641 Jul 15  1992 MenuWindow.h*
+-rwxr-xr-x  1 hcheng       1253 Jul 15  1992 NoUndoCmd.C*
+-rwxr-xr-x  1 hcheng       1323 Jul 15  1992 NoUndoCmd.h*
+-rwxr-xr-x  1 hcheng       1982 Jul 15  1992 PixmapCycler.C*
+-rwxr-xr-x  1 hcheng       1792 Jul 15  1992 PixmapCycler.h*
+-rwxr-xr-x  1 hcheng       1641 Jul 15  1992 QuestionDialogManager.C*
+-rwxr-xr-x  1 hcheng       1322 Jul 15  1992 QuestionDialogManager.h*
+-rwxr-xr-x  1 hcheng       1329 Jul 15  1992 QuitCmd.C*
+-rwxr-xr-x  1 hcheng       1321 Jul 15  1992 QuitCmd.h*
+-rwxr-xr-x  1 hcheng       4610 Jul 15  1992 RGBController.C*
+-rwxr-xr-x  1 hcheng       2082 Jul 15  1992 RGBController.h*
+-rwxr-xr-x  1 hcheng       1649 Jul 15  1992 RGBView.C*
+-rwxr-xr-x  1 hcheng       1324 Jul 15  1992 RGBView.h*
+-rwxr-xr-x  1 hcheng       2787 Jul 15  1992 SelectFileCmd.C*
+-rwxr-xr-x  1 hcheng       1753 Jul 15  1992 SelectFileCmd.h*
+-rwxr-xr-x  1 hcheng       3313 Jul 15  1992 SwatchView.C*
+-rwxr-xr-x  1 hcheng       1467 Jul 15  1992 SwatchView.h*
+-rwxr-xr-x  1 hcheng       2768 Feb  7  1992 TextView.C*
+-rwxr-xr-x  1 hcheng       1600 Jul 15  1992 TextView.h*
+-rwxr-xr-x  1 hcheng       3552 Sep  8  1992 UIComponent.C*
+-rwxr-xr-x  1 hcheng       2251 Jul 15  1992 UIComponent.h*
+-rwxr-xr-x  1 hcheng       1440 Jul 15  1992 UndoCmd.C*
+-rwxr-xr-x  1 hcheng       1243 Feb 19  1992 UndoCmd.h*
+-rwxr-xr-x  1 hcheng       1379 Jul 15  1992 WarnNoUndoCmd.C*
+-rwxr-xr-x  1 hcheng       1326 Jul 15  1992 WarnNoUndoCmd.h*
+-rwxr-xr-x  1 hcheng       4002 Jul 15  1992 WorkingDialogManager.C*
+-rwxr-xr-x  1 hcheng       1944 Jul 15  1992 WorkingDialogManager.h*
+
+C++Motif/ch1:
+total 15
+-rwxr-xr-x  1 hcheng        407 Jul 10  1992 Makefile*
+-rwxr-xr-x  1 hcheng        584 Nov 25  1991 Widgettree.appdefaults*
+-rwxr-xr-x  1 hcheng       3768 Feb  7  1992 form.C*
+-rwxr-xr-x  1 hcheng       2009 Jul 15  1992 hello.C*
+-rwxr-xr-x  1 hcheng       2401 Jul 15  1992 pushme.C*
+-rwxr-xr-x  1 hcheng       3125 Jul 15  1992 widgettree.C*
+
+C++Motif/ch10:
+total 20
+-rwxr-xr-x  1 hcheng       4472 Jul 15  1992 CountWordsCmd.C*
+-rwxr-xr-x  1 hcheng       2722 Jul 15  1992 CountWordsCmd.h*
+-rwxr-xr-x  1 hcheng        417 Feb 21  1992 Makefile*
+-rwxr-xr-x  1 hcheng       1263 Feb  7  1992 WordCountApp.C*
+-rwxr-xr-x  1 hcheng       5691 Jul 15  1992 WordCountWindow.C*
+-rwxr-xr-x  1 hcheng       2056 Jul 15  1992 WordCountWindow.h*
+
+C++Motif/ch11:
+total 8
+-rwxr-xr-x  1 hcheng       1174 Feb  7  1992 ColorTestApp.C*
+-rwxr-xr-x  1 hcheng       2082 Jul 15  1992 ColorTestWindow.C*
+-rwxr-xr-x  1 hcheng       1471 Jul 15  1992 ColorTestWindow.h*
+-rwxr-xr-x  1 hcheng        380 Feb 21  1992 Makefile*
+
+C++Motif/ch12:
+total 64
+-rwxr-xr-x  1 hcheng       1288 Jul 15  1992 Actor.C*
+-rwxr-xr-x  1 hcheng       1394 Jul 15  1992 Actor.h*
+-rwxr-xr-x  1 hcheng       1371 Jul 15  1992 AddBallCmd.C*
+-rwxr-xr-x  1 hcheng       1344 Jul 15  1992 AddBallCmd.h*
+-rwxr-xr-x  1 hcheng       1020 Dec 26  1991 Bounce.appdefaults*
+-rwxr-xr-x  1 hcheng       1235 Feb  7  1992 Bounce2App.C*
+-rwxr-xr-x  1 hcheng       1140 Feb  7  1992 BounceApp.C*
+-rwxr-xr-x  1 hcheng       1272 Jul 15  1992 BounceClock.C*
+-rwxr-xr-x  1 hcheng       1419 Jul 15  1992 BounceClock.h*
+-rwxr-xr-x  1 hcheng       4470 Jul 15  1992 BounceWindow.C*
+-rwxr-xr-x  1 hcheng       1428 Jul 15  1992 BounceWindow.h*
+-rwxr-xr-x  1 hcheng       4816 Jul 15  1992 BouncingBall.C*
+-rwxr-xr-x  1 hcheng       1862 Jul 15  1992 BouncingBall.h*
+-rwxr-xr-x  1 hcheng       2976 Feb  7  1992 ControlPanel.C*
+-rwxr-xr-x  1 hcheng       1296 Jul 15  1992 ControlPanel.h*
+-rwxr-xr-x  1 hcheng        681 Mar 18  1992 Makefile*
+-rwxr-xr-x  1 hcheng        415 Feb 10  1992 README*
+-rwxr-xr-x  1 hcheng       1334 Jul 15  1992 RunCmd.C*
+-rwxr-xr-x  1 hcheng       1318 Jul 15  1992 RunCmd.h*
+-rwxr-xr-x  1 hcheng       5890 Jul 15  1992 Stage.C*
+-rwxr-xr-x  1 hcheng       1997 Jul 15  1992 Stage.h*
+-rwxr-xr-x  1 hcheng       1241 Feb  7  1992 StepCmd.C*
+-rwxr-xr-x  1 hcheng       1222 Jul 15  1992 StepCmd.h*
+-rwxr-xr-x  1 hcheng       1304 Jul 15  1992 StopCmd.C*
+-rwxr-xr-x  1 hcheng       1185 Jul 15  1992 StopCmd.h*
+-rwxr-xr-x  1 hcheng        272 Jan 13  1992 run*
+-rwxr-xr-x  1 hcheng        275 Jan 13  1992 runI*
+-rwxr-xr-x  1 hcheng        275 Jan 13  1992 step*
+-rwxr-xr-x  1 hcheng        278 Jan 13  1992 stepI*
+-rwxr-xr-x  1 hcheng        275 Jan 13  1992 stop*
+-rwxr-xr-x  1 hcheng        278 Jan 13  1992 stopI*
+
+C++Motif/ch2:
+total 40
+-rwxr-xr-x  1 hcheng       2550 Jul 15  1992 Control.C*
+-rwxr-xr-x  1 hcheng       1921 Jul 15  1992 Control.h*
+-rwxr-xr-x  1 hcheng       2075 Jul 15  1992 Face.C*
+-rwxr-xr-x  1 hcheng       1416 Jul 15  1992 Face.h*
+-rwxr-xr-x  1 hcheng       1593 Feb  7  1992 LabeledText.C*
+-rwxr-xr-x  1 hcheng       1350 Jul 15  1992 LabeledText.h*
+-rwxr-xr-x  1 hcheng        538 Mar 10  1992 Makefile*
+-rwxr-xr-x  1 hcheng       2339 Mar 10  1992 Password.C*
+-rwxr-xr-x  1 hcheng       1369 Jul 15  1992 Password.h*
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 Password2/
+-rwxr-xr-x  1 hcheng       1933 Jul 15  1992 Stopwatch.C*
+-rwxr-xr-x  1 hcheng       1840 Jul 15  1992 Stopwatch.h*
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 Stopwatch2/
+drwxr-xr-x  2 hcheng        512 Jul 15  1992 Stopwatch3/
+-rwxr-xr-x  1 hcheng       2394 Jul 15  1992 Timer.C*
+-rwxr-xr-x  1 hcheng       1857 Jul 15  1992 Timer.h*
+-rwxr-xr-x  1 hcheng       1989 Jul 15  1992 labeltest.C*
+-rwxr-xr-x  1 hcheng       1594 Jul 15  1992 main.C*
+-rwxr-xr-x  1 hcheng       1978 Jul 15  1992 pwtest1.C*
+-rwxr-xr-x  1 hcheng       1979 Jul 15  1992 pwtest2.C*
+
+C++Motif/ch2/Password2:
+total 8
+-rwxr-xr-x  1 hcheng        276 Nov 25  1991 Makefile*
+-rwxr-xr-x  1 hcheng       2205 Jul 15  1992 Password.C*
+-rwxr-xr-x  1 hcheng       1521 Jul 15  1992 Password.h*
+-rwxr-xr-x  1 hcheng       1978 Jul 15  1992 pwtest2.C*
+
+C++Motif/ch2/Stopwatch2:
+total 23
+-rwxr-xr-x  1 hcheng       2550 Jul 15  1992 Control.C*
+-rwxr-xr-x  1 hcheng       1921 Jul 15  1992 Control.h*
+-rwxr-xr-x  1 hcheng       2075 Jul 15  1992 Face.C*
+-rwxr-xr-x  1 hcheng       1416 Jul 15  1992 Face.h*
+-rwxr-xr-x  1 hcheng        332 Mar 10  1992 Makefile*
+-rwxr-xr-x  1 hcheng       2487 Jul 15  1992 Stopwatch.C*
+-rwxr-xr-x  1 hcheng       2039 Jul 15  1992 Stopwatch.h*
+-rwxr-xr-x  1 hcheng       2393 Jul 15  1992 Timer.C*
+-rwxr-xr-x  1 hcheng       1857 Jul 15  1992 Timer.h*
+-rwxr-xr-x  1 hcheng       1594 Jul 15  1992 main.C*
+
+C++Motif/ch2/Stopwatch3:
+total 24
+-rwxr-xr-x  1 hcheng       2550 Jul 15  1992 Control.C*
+-rwxr-xr-x  1 hcheng       1921 Jul 15  1992 Control.h*
+-rwxr-xr-x  1 hcheng       2075 Jul 15  1992 Face.C*
+-rwxr-xr-x  1 hcheng       1416 Jul 15  1992 Face.h*
+-rwxr-xr-x  1 hcheng        332 Mar 10  1992 Makefile*
+-rwxr-xr-x  1 hcheng       2912 Jul 15  1992 Stopwatch.C*
+-rwxr-xr-x  1 hcheng       2070 Jul 15  1992 Stopwatch.h*
+-rwxr-xr-x  1 hcheng       2393 Jul 15  1992 Timer.C*
+-rwxr-xr-x  1 hcheng       1857 Jul 15  1992 Timer.h*
+-rwxr-xr-x  1 hcheng       1594 Jul 15  1992 main.C*
+
+C++Motif/ch3A:
+total 30
+-rwxr-xr-x  1 hcheng       2550 Jul 15  1992 Control.C*
+-rwxr-xr-x  1 hcheng       1922 Jul 15  1992 Control.h*
+-rwxr-xr-x  1 hcheng       2075 Jul 15  1992 Face.C*
+-rwxr-xr-x  1 hcheng       1416 Jul 15  1992 Face.h*
+-rwxr-xr-x  1 hcheng       1593 Feb  7  1992 LabeledText.C*
+-rwxr-xr-x  1 hcheng       1350 Jul 15  1992 LabeledText.h*
+-rwxr-xr-x  1 hcheng        373 Feb 21  1992 Makefile*
+-rwxr-xr-x  1 hcheng       1952 Jul 15  1992 Stopwatch.C*
+-rwxr-xr-x  1 hcheng       1840 Jul 15  1992 Stopwatch.h*
+-rwxr-xr-x  1 hcheng       1290 Feb  7  1992 StopwatchTimer.C*
+-rwxr-xr-x  1 hcheng       1311 Jul 15  1992 StopwatchTimer.h*
+-rwxr-xr-x  1 hcheng       2460 Jul 15  1992 Timer.C*
+-rwxr-xr-x  1 hcheng       1920 Jul 15  1992 Timer.h*
+-rwxr-xr-x  1 hcheng       1594 Jul 15  1992 main.C*
+
+C++Motif/ch3B:
+total 31
+-rwxr-xr-x  1 hcheng       2550 Jul 15  1992 Control.C*
+-rwxr-xr-x  1 hcheng       1921 Jul 15  1992 Control.h*
+-rwxr-xr-x  1 hcheng       2075 Jul 15  1992 Face.C*
+-rwxr-xr-x  1 hcheng       1416 Jul 15  1992 Face.h*
+-rwxr-xr-x  1 hcheng       1593 Feb  7  1992 LabeledText.C*
+-rwxr-xr-x  1 hcheng       1350 Jul 15  1992 LabeledText.h*
+-rwxr-xr-x  1 hcheng        341 Feb 21  1992 Makefile*
+-rwxr-xr-x  1 hcheng       2219 Jul 15  1992 Stopwatch.C*
+-rwxr-xr-x  1 hcheng       1840 Jul 15  1992 Stopwatch.h*
+-rwxr-xr-x  1 hcheng       1290 Feb  7  1992 StopwatchTimer.C*
+-rwxr-xr-x  1 hcheng       1311 Jul 15  1992 StopwatchTimer.h*
+-rwxr-xr-x  1 hcheng       2483 Jul 15  1992 Timer.C*
+-rwxr-xr-x  1 hcheng       1880 Jul 15  1992 Timer.h*
+-rwxr-xr-x  1 hcheng       1594 Jul 15  1992 main.C*
+
+C++Motif/ch5:
+total 47
+-rwxr-xr-x  1 hcheng       3224 Jul 15  1992 Board.C*
+-rwxr-xr-x  1 hcheng       2260 May 12  1992 Board.h*
+-rwxr-xr-x  1 hcheng       2858 Jul 15  1992 Command.C*
+-rwxr-xr-x  1 hcheng       1541 Jul 15  1992 Command.h*
+-rwxr-xr-x  1 hcheng       4086 Jul 15  1992 Engine.C*
+-rwxr-xr-x  1 hcheng       2056 Jul 15  1992 Engine.h*
+-rwxr-xr-x  1 hcheng       7818 Jul 15  1992 GameBoard.C*
+-rwxr-xr-x  1 hcheng       2761 Jul 15  1992 GameBoard.h*
+-rwxr-xr-x  1 hcheng        470 Feb 21  1992 Makefile*
+-rwxr-xr-x  1 hcheng       1956 Jul 15  1992 Message.C*
+-rwxr-xr-x  1 hcheng       1333 Jul 15  1992 Message.h*
+-rwxr-xr-x  1 hcheng       1539 Jul 15  1992 MoveGenerator.C*
+-rwxr-xr-x  1 hcheng       1278 Jul 15  1992 MoveGenerator.h*
+-rwxr-xr-x  1 hcheng       3816 Jul 15  1992 TicTacToe.C*
+-rwxr-xr-x  1 hcheng       1910 Jul 15  1992 TicTacToe.h*
+-rwxr-xr-x  1 hcheng       1679 Jul 15  1992 main.C*
+
+C++Motif/ch6:
+total 9
+-rwxr-xr-x  1 hcheng       1269 Mar 11  1992 HelloApp.C*
+-rwxr-xr-x  1 hcheng       1321 Feb  7  1992 HelloApp2.C*
+-rwxr-xr-x  1 hcheng       1575 Feb  7  1992 HelloWindow.C*
+-rwxr-xr-x  1 hcheng       1354 Jul 15  1992 HelloWindow.h*
+-rwxr-xr-x  1 hcheng        380 Jul 15  1992 Makefile*
+
+C++Motif/ch7:
+total 13
+-rwxr-xr-x  1 hcheng       1199 Feb  7  1992 DialogTestApp.C*
+-rwxr-xr-x  1 hcheng       1800 Jul 15  1992 DialogTestWindow.C*
+-rwxr-xr-x  1 hcheng       1308 Jul 15  1992 DialogTestWindow.h*
+-rwxr-xr-x  1 hcheng        522 Feb 21  1992 Makefile*
+-rwxr-xr-x  1 hcheng       1170 Feb  7  1992 QuestionTestApp.C*
+-rwxr-xr-x  1 hcheng       1899 Jul 15  1992 QuestionTestWindow.C*
+-rwxr-xr-x  1 hcheng       1360 Jul 15  1992 QuestionTestWindow.h*
+
+C++Motif/ch9:
+total 16
+-rwxr-xr-x  1 hcheng        377 Dec  1  1991 Makefile*
+-rwxr-xr-x  1 hcheng       2597 Jul 15  1992 MenuDemoApp.C*
+-rwxr-xr-x  1 hcheng       1994 Jul 15  1992 MenuDemoApp.h*
+-rwxr-xr-x  1 hcheng       3313 Jul 15  1992 MenuDemoWindow.C*
+-rwxr-xr-x  1 hcheng       1450 Jul 15  1992 MenuDemoWindow.h*
+-rwxr-xr-x  1 hcheng       1468 Jul 15  1992 NoOpCmd.C*
+-rwxr-xr-x  1 hcheng       1296 Jul 15  1992 NoOpCmd.h*
+
+backup:
+total 156
+-rwxr-xr-x  1 hcheng        121 Feb 20  1992 a.des*
+-rwxr-xr-x  1 hcheng          3 Mar 18  1992 a.input*
+-rwxr-xr-x  1 hcheng       2630 Feb 20  1992 a.log*
+-rwxr-xr-x  1 hcheng        193 Feb 20  1992 a1.des*
+-rwxr-xr-x  1 hcheng          3 Mar 18  1992 a1.input*
+-rwxr-xr-x  1 hcheng        361 Feb 20  1992 abc_string.des*
+-rwxr-xr-x  1 hcheng          7 Mar 18  1992 abc_string.input*
+-rwxr-xr-x  1 hcheng       8748 Mar 18  1992 abc_string.log*
+-rwxr-xr-x  1 hcheng         64 Mar 18  1992 abc_string.output*
+-rwxr-xr-x  1 hcheng       2275 Feb 20  1992 alert_dcl.h*
+-rwxr-xr-x  1 hcheng      19244 Feb 20  1992 analysis.c.Z*
+-rwxr-xr-x  1 hcheng          3 Mar 18  1992 b.input*
+-rwxr-xr-x  1 hcheng       8346 Feb 20  1992 build_hoare_tree.c.Z*
+-rwxr-xr-x  1 hcheng       8231 Feb 20  1992 build_rtn.c.Z*
+-rwxr-xr-x  1 hcheng        621 Feb 20  1992 button_names.h*
+-rwxr-xr-x  1 hcheng        286 Feb 20  1992 c_string.des*
+-rwxr-xr-x  1 hcheng          4 Mar 18  1992 c_string.input*
+-rwxr-xr-x  1 hcheng        205 Feb 20  1992 demo_error_one.des*
+-rwxr-xr-x  1 hcheng        110 Feb 20  1992 demo_error_two.des*
+-rwxr-xr-x  1 hcheng       2170 Feb 20  1992 desc_icon.c.Z*
+-rwxr-xr-x  1 hcheng       6126 Feb 20  1992 desc_struct.h*
+-rwxr-xr-x  1 hcheng      18590 Feb 20  1992 desc_table.h*
+-rwxr-xr-x  1 hcheng        318 Feb 20  1992 digit_string.des*
+-rwxr-xr-x  1 hcheng          4 Mar 18  1992 digit_string.input*
+-rwxr-xr-x  1 hcheng       2067 Feb 20  1992 edit_rtn.c.Z*
+-rwxr-xr-x  1 hcheng      14514 Feb 20  1992 exec_rtn.c.Z*
+-rwxr-xr-x  1 hcheng       5668 Feb 20  1992 file_rtn.c.Z*
+-rwxr-xr-x  1 hcheng        719 Feb 20  1992 fixed_point_number_one.des*
+-rwxr-xr-x  1 hcheng          6 Mar 18  1992 fixed_point_number_one.input*
+-rwxr-xr-x  1 hcheng        234 Feb 20  1992 fixed_point_number_two.des*
+-rwxr-xr-x  1 hcheng          6 Mar 18  1992 fixed_point_number_two.input*
+-rwxr-xr-x  1 hcheng        941 Feb 20  1992 grad_course.des*
+-rwxr-xr-x  1 hcheng          7 Mar 18  1992 grad_course.input*
+-rwxr-xr-x  1 hcheng       2392 Feb 20  1992 h3.c.Z*
+-rwxr-xr-x  1 hcheng       1304 Feb 20  1992 help_rtn.c.Z*
+-rwxr-xr-x  1 hcheng        950 Mar 18  1992 makefile*
+-rwxr-xr-x  1 hcheng         17 Mar 18  1992 module.input*
+-rwxr-xr-x  1 hcheng       2747 Feb 20  1992 panel_buttons.c.Z*
+-rwxr-xr-x  1 hcheng        295 Feb 20  1992 recursion.des*
+-rwxr-xr-x  1 hcheng          3 Mar 18  1992 recursion.input*
+-rwxr-xr-x  1 hcheng       2849 Feb 20  1992 recursion.log*
+-rwxr-xr-x  1 hcheng       2890 Feb 20  1992 share_rtn.c.Z*
+-rwxr-xr-x  1 hcheng        948 Feb 20  1992 share_var.c.Z*
+-rwxr-xr-x  1 hcheng        401 Feb 20  1992 south_asia.des*
+-rwxr-xr-x  1 hcheng        429 Feb 20  1992 string.des*
+-rwxr-xr-x  1 hcheng         31 Mar 18  1992 string.input*
+-rwxr-xr-x  1 hcheng        382 Feb 20  1992 telegram_stream.des*
+-rwxr-xr-x  1 hcheng         55 Mar 18  1992 telegram_stream.input*
+-rwxr-xr-x  1 hcheng         90 Feb 20  1992 test.des*
+-rwxr-xr-x  1 hcheng          4 Mar 18  1992 test.input*
+-rwxr-xr-x  1 hcheng       1501 Feb 20  1992 test_rtn.c.Z*
+-rwxr-xr-x  1 hcheng       1089 Feb 20  1992 undergrad_course.des*
+-rwxr-xr-x  1 hcheng          8 Mar 18  1992 undergrad_course.input*
+
+cplus:
+total 16
+-rwxr-xr-x  1 hcheng       1291 Feb 18  1993 initial.cpp*
+-rwxr-xr-x  1 hcheng        603 Feb 18  1993 main.cpp*
+-rwxr-xr-x  1 hcheng       6406 Feb 18  1993 person.cpp*
+-rwxr-xr-x  1 hcheng       4327 Feb 18  1993 person.hpp*
+-rwxr-xr-x  1 hcheng        168 Feb 18  1993 string.cpp*
+
+lee:
+total 360
+drwxr-xr-x  2 hcheng        512 Feb  9  1992 Icons/
+-rwxr-xr-x  1 hcheng         54 Jun 16  1992 a.des*
+-rwxr-xr-x  1 hcheng          3 Feb 21  1992 a.input*
+-rwxr-xr-x  1 hcheng        236 Mar 10  1992 a1.des*
+-rwxr-xr-x  1 hcheng          3 Feb 21  1992 a1.input*
+-rwxr-xr-x  1 hcheng        192 Mar  9  1992 a2.des*
+-rwxr-xr-x  1 hcheng        191 Mar 16  1992 abc_string.des*
+-rwxr-xr-x  1 hcheng          7 Feb 21  1992 abc_string.input*
+-rwxr-xr-x  1 hcheng       2275 Feb  9  1992 alert_dcl.h*
+-rwxr-xr-x  1 hcheng        811 Nov 20  1992 amir.des*
+-rwxr-xr-x  1 hcheng      52408 Oct 20  1992 analysis.c.Z*
+-rwxr-xr-x  1 hcheng        192 Feb 21  1992 b.des*
+-rwxr-xr-x  1 hcheng          3 Feb 21  1992 b.input*
+-rwxr-xr-x  1 hcheng       1642 Jun  3  1992 buffer.des*
+-rwxr-xr-x  1 hcheng       1173 Jul 13  1992 buffer1.des*
+-rwxr-xr-x  1 hcheng       6313 Apr 18  1992 build_hoare_tree.c.Z*
+-rwxr-xr-x  1 hcheng      17939 Mar  9  1992 build_rtn.bak*
+-rwxr-xr-x  1 hcheng       8192 Sep  9  1992 build_rtn.c.Z*
+-rwxr-xr-x  1 hcheng        621 Feb  9  1992 button_names.h*
+-rwxr-xr-x  1 hcheng        166 Mar 16  1992 c_string.des*
+-rwxr-xr-x  1 hcheng          4 Feb 21  1992 c_string.input*
+-rwxr-xr-x  1 hcheng        205 Feb  9  1992 demo_error_one.des*
+-rwxr-xr-x  1 hcheng        110 Feb  9  1992 demo_error_two.des*
+-rwxr-xr-x  1 hcheng       5151 Sep  9  1992 des.l*
+-rwxr-xr-x  1 hcheng      15449 Sep  9  1992 des.y*
+-rwxr-xr-x  1 hcheng      15631 Sep  8  1992 des.y.bak*
+-rwxr-xr-x  1 hcheng       5465 Jun 16  1992 des1.l*
+-rwxr-xr-x  1 hcheng      17602 Jun 15  1992 des1.y*
+-rwxr-xr-x  1 hcheng       5435 Jun 14  1992 des2.l*
+-rwxr-xr-x  1 hcheng      16907 Jun 16  1992 des2.y*
+-rwxr-xr-x  1 hcheng       2170 Feb  9  1992 desc_icon.c.Z*
+-rwxr-xr-x  1 hcheng       8212 Jun 15  1992 desc_struct.h*
+-rwxr-xr-x  1 hcheng      18590 Feb  9  1992 desc_table.h*
+-rwxr-xr-x  1 hcheng        318 Mar 11  1992 digit_string.bak*
+-rwxr-xr-x  1 hcheng          4 Feb 21  1992 digit_string.input*
+-rwxr-xr-x  1 hcheng       2067 Feb  9  1992 edit_rtn.c.Z*
+-rwxr-xr-x  1 hcheng      21384 Oct 20  1992 exec_rtn.c.Z*
+-rwxr-xr-x  1 hcheng       5668 Feb  9  1992 file_rtn.c.Z*
+-rwxr-xr-x  1 hcheng        958 May 13  1992 finite_m.des*
+-rwxr-xr-x  1 hcheng          7 May 10  1992 finite_m.input*
+-rwxr-xr-x  1 hcheng       1121 Jul  1  1992 finite_m1.des*
+-rwxr-xr-x  1 hcheng         18 Jun  1  1992 finite_m1.input*
+-rwxr-xr-x  1 hcheng        719 Feb  9  1992 fixed_point_number_one.des*
+-rwxr-xr-x  1 hcheng          6 Feb  9  1992 fixed_point_number_one.input*
+-rwxr-xr-x  1 hcheng        234 Feb  9  1992 fixed_point_number_two.des*
+-rwxr-xr-x  1 hcheng          6 Feb  9  1992 fixed_point_number_two.input*
+-rwxr-xr-x  1 hcheng          7 Feb  9  1992 grad_course.input*
+-rwxr-xr-x  1 hcheng       2392 Feb  9  1992 h3.c.Z*
+-rwxr-xr-x  1 hcheng       2685 Jun 14  1992 heating.des*
+-rwxr-xr-x  1 hcheng       1304 Feb  9  1992 help_rtn.c.Z*
+-rwxr-xr-x  1 hcheng      20405 Nov 10  1992 lex.yy.c*
+-rwxr-xr-x  1 hcheng       8143 Sep  9  1992 lex.yy.c.Z*
+-rwxr-xr-x  1 hcheng        500 Apr  8  1992 main.c*
+-rwxr-xr-x  1 hcheng        941 Apr 18  1992 makefile*
+-rwxr-xr-x  1 hcheng       1028 Mar 24  1992 makefile.bak*
+-rwxr-xr-x  1 hcheng        255 Apr  4  1992 module.bak*
+-rwxr-xr-x  1 hcheng        261 May 11  1992 module.des*
+-rwxr-xr-x  1 hcheng         17 Apr  5  1992 module.input*
+-rwxr-xr-x  1 hcheng        503 May 19  1992 msg.c.Z*
+-rwxr-xr-x  1 hcheng        548 May 17  1992 msg1.c.Z*
+-rwxr-xr-x  1 hcheng        242 May  5  1992 odd.des*
+-rwxr-xr-x  1 hcheng          4 May  7  1992 odd.input*
+-rwxr-xr-x  1 hcheng       2747 Feb  9  1992 panel_buttons.c.Z*
+-rwxr-xr-x  1 hcheng        368 Apr 17  1992 parallel.bak*
+-rwxr-xr-x  1 hcheng        351 Jun 19  1992 parallel.des*
+-rwxr-xr-x  1 hcheng          7 Apr 14  1992 parallel.input*
+-rwxr-xr-x  1 hcheng        117 Apr 13  1992 primitive.des*
+-rwxr-xr-x  1 hcheng          3 Apr  9  1992 primitive.input*
+-rwxr-xr-x  1 hcheng        758 Apr 30  1992 pro_com.des*
+-rwxr-xr-x  1 hcheng        589 Sep  8  1992 pro_com1.des*
+-rwxr-xr-x  1 hcheng          6 May 17  1992 pro_com1.input*
+-rwxr-xr-x  1 hcheng        532 May 23  1992 pro_com2.des*
+-rwxr-xr-x  1 hcheng        933 May 31  1992 pro_com3.des*
+-rwxr-xr-x  1 hcheng          6 May 25  1992 pro_com3.input*
+-rwxr-xr-x  1 hcheng        940 Jul  1  1992 pro_com4.des*
+-rwxr-xr-x  1 hcheng          6 May 31  1992 pro_com4.input*
+-rwxr-xr-x  1 hcheng        633 Apr 23  1992 pv.c.Z*
+-rwxr-xr-x  1 hcheng        130 May 12  1992 recursion.des*
+-rwxr-xr-x  1 hcheng          3 Jun  2  1992 recursion.input*
+-rwxr-xr-x  1 hcheng        167 May 12  1992 recursion1.des*
+-rwxr-xr-x  1 hcheng          4 May 12  1992 recursion1.input*
+-rwxr-xr-x  1 hcheng       1294 May 20  1992 sem.c.Z*
+-rwxr-xr-x  1 hcheng       3305 May 29  1992 sema.c.Z*
+-rwxr-xr-x  1 hcheng       2890 Feb  9  1992 share_rtn.c.Z*
+-rwxr-xr-x  1 hcheng        948 Feb  9  1992 share_var.c.Z*
+-rwxr-xr-x  1 hcheng        355 May  4  1992 stack.c.Z*
+-rwxr-xr-x  1 hcheng        369 May  7  1992 stack1.c.Z*
+-rwxr-xr-x  1 hcheng        429 Feb  9  1992 string.des*
+-rwxr-xr-x  1 hcheng         31 Feb  9  1992 string.input*
+-rwxr-xr-x  1 hcheng        382 Mar 10  1992 telegram_stream.bak*
+-rwxr-xr-x  1 hcheng        233 Mar 11  1992 telegram_stream.des*
+-rwxr-xr-x  1 hcheng         55 Feb  9  1992 telegram_stream.input*
+-rwxr-xr-x  1 hcheng         90 Feb  9  1992 test.des*
+-rwxr-xr-x  1 hcheng          4 Feb  9  1992 test.input*
+-rwxr-xr-x  1 hcheng        203 May 29  1992 test.out*
+-rwxr-xr-x  1 hcheng       1501 Feb  9  1992 test_rtn.c.Z*
+-rwxr-xr-x  1 hcheng        232 May 26  1992 timing.des*
+-rwxr-xr-x  1 hcheng          3 May  3  1992 timing.input*
+-rwxr-xr-x  1 hcheng          8 Feb  9  1992 undergrad_course.input*
+-rwxr-xr-x  1 hcheng        625 Sep  9  1992 y.tab.h*
+
+lee/Icons:
+total 2
+-rwxr-xr-x  1 hcheng       1933 Feb  9  1992 descartes.icon*
+
+lex:
+total 113
+-rwxr-xr-x  1 hcheng         57 Apr 29  1992 a.des*
+-rwxr-xr-x  1 hcheng        236 Apr 29  1992 a1.des*
+-rwxr-xr-x  1 hcheng        192 Apr 29  1992 a2.des*
+-rwxr-xr-x  1 hcheng        191 Apr 29  1992 abc_string.des*
+-rwxr-xr-x  1 hcheng       2275 Mar 24  1992 alert_dcl.h*
+-rwxr-xr-x  1 hcheng        192 Apr 29  1992 b.des*
+-rwxr-xr-x  1 hcheng        621 Mar 24  1992 button_names.h*
+-rwxr-xr-x  1 hcheng        166 Apr 29  1992 c_string.des*
+-rwxr-xr-x  1 hcheng        205 Apr 29  1992 demo_error_one.des*
+-rwxr-xr-x  1 hcheng        110 Apr 29  1992 demo_error_two.des*
+-rwxr-xr-x  1 hcheng       3658 Apr 29  1992 des.l*
+-rwxr-xr-x  1 hcheng      13597 Apr 29  1992 des.y*
+-rwxr-xr-x  1 hcheng      12097 Apr 29  1992 des1.y*
+-rwxr-xr-x  1 hcheng       6126 Mar 24  1992 desc_struct.h*
+-rwxr-xr-x  1 hcheng      18590 Mar 24  1992 desc_table.h*
+-rwxr-xr-x  1 hcheng        166 Apr 29  1992 digit_string.des*
+-rwxr-xr-x  1 hcheng        719 Apr 29  1992 fixed_point_number_one.des*
+-rwxr-xr-x  1 hcheng        234 Apr 29  1992 fixed_point_number_two.des*
+-rwxr-xr-x  1 hcheng         62 Mar 24  1992 global.h*
+-rwxr-xr-x  1 hcheng        941 Apr 29  1992 grad_course.des*
+-rwxr-xr-x  1 hcheng      10271 Mar 24  1992 lex.yy.c*
+-rwxr-xr-x  1 hcheng        390 Mar 24  1992 main.c*
+-rwxr-xr-x  1 hcheng         78 Mar 24  1992 main1.bak*
+-rwxr-xr-x  1 hcheng         78 Mar 24  1992 main1.c*
+-rwxr-xr-x  1 hcheng         41 Mar 24  1992 main2.c*
+-rwxr-xr-x  1 hcheng        196 Mar 26  1992 makefile*
+-rwxr-xr-x  1 hcheng        167 Mar 24  1992 makefile.bak*
+-rwxr-xr-x  1 hcheng        262 Apr 29  1992 module.des*
+-rwxr-xr-x  1 hcheng        368 Apr 29  1992 parallel.des*
+-rwxr-xr-x  1 hcheng        117 Apr 29  1992 primitive.des*
+-rwxr-xr-x  1 hcheng       1001 Mar 24  1992 real_des.l*
+-rwxr-xr-x  1 hcheng       2048 Mar 24  1992 real_des.y*
+-rwxr-xr-x  1 hcheng        270 Apr 29  1992 recursion.des*
+-rwxr-xr-x  1 hcheng        401 Apr 29  1992 south_asia.des*
+-rwxr-xr-x  1 hcheng        429 Apr 29  1992 string.des*
+-rwxr-xr-x  1 hcheng        233 Apr 29  1992 telegram_stream.des*
+-rwxr-xr-x  1 hcheng         90 Apr 29  1992 test.des*
+-rwxr-xr-x  1 hcheng        108 Mar 24  1992 test1.des*
+-rwxr-xr-x  1 hcheng        260 Mar 24  1992 tmpmake*
+-rwxr-xr-x  1 hcheng       1089 Apr 29  1992 undergrad_course.des*
+-rwxr-xr-x  1 hcheng       7928 Mar 24  1992 y.tab.c*
+-rwxr-xr-x  1 hcheng        299 Mar 24  1992 y.tab.h*
+
+misc:
+total 17
+-rwxr-xr-x  1 hcheng        396 Feb  9  1992 .mytools_menu*
+-rwxr-xr-x  1 hcheng        412 Apr 18  1992 .sunview*
+-rwxr-xr-x  1 hcheng       2819 Feb  6  1992 cshfile*
+-rwxr-xr-x  1 hcheng        132 Feb  6  1992 cshrc*
+-rwxr-xr-x  1 hcheng       2650 Feb  6  1992 cshrc.bak*
+-rwxr-xr-x  1 hcheng       2819 Feb  6  1992 cshrc2*
+-rwxr-xr-x  1 hcheng        660 Feb  6  1992 login.bak*
+-rwxr-xr-x  1 hcheng        255 Feb  6  1992 login2*
+-rwxr-xr-x  1 hcheng       1894 Feb  6  1992 rootmenu.bak*
+-rwxr-xr-x  1 hcheng        412 Feb  6  1992 sunview*
+
+proc:
+total 42
+-rwxr-xr-x  1 hcheng        344 Jul  1  1992 alarm1.c.Z*
+-rwxr-xr-x  1 hcheng       1259 Jul  1  1992 buf.c.Z*
+-rwxr-xr-x  1 hcheng        895 Jul  1  1992 buffer.c.Z*
+-rwxr-xr-x  1 hcheng        254 Jul  1  1992 chiang.c.Z*
+-rwxr-xr-x  1 hcheng        580 Jul  1  1992 comsu.c.Z*
+-rwxr-xr-x  1 hcheng        381 Jul  1  1992 comsumer.c.Z*
+-rwxr-xr-x  1 hcheng        299 Jul  1  1992 day.c.Z*
+-rwxr-xr-x  1 hcheng       1135 Jul  1  1992 fifo.c.Z*
+-rwxr-xr-x  1 hcheng        539 Jul  1  1992 fifos.c.Z*
+-rwxr-xr-x  1 hcheng        234 Jul  1  1992 forking.c.Z*
+-rwxr-xr-x  1 hcheng        131 Jul  1  1992 lib.c.Z*
+-rwxr-xr-x  1 hcheng        503 Jul  1  1992 msg.c.Z*
+-rwxr-xr-x  1 hcheng        548 Jul  1  1992 msg1.c.Z*
+-rwxr-xr-x  1 hcheng        921 Jul  1  1992 para.c.Z*
+-rwxr-xr-x  1 hcheng        615 Jul  1  1992 produ.c.Z*
+-rwxr-xr-x  1 hcheng        375 Jul  1  1992 producer.c.Z*
+-rwxr-xr-x  1 hcheng        633 Jul  1  1992 pv.c.Z*
+-rwxr-xr-x  1 hcheng        838 Jul  1  1992 queue.c.Z*
+-rwxr-xr-x  1 hcheng        127 Jul  1  1992 ran.c.Z*
+-rwxr-xr-x  1 hcheng       1260 Jul  1  1992 sem.c.Z*
+-rwxr-xr-x  1 hcheng        489 Jul  1  1992 shared_m.c.Z*
+-rwxr-xr-x  1 hcheng        819 Jul  1  1992 stream.c.Z*
+-rwxr-xr-x  1 hcheng       2462 Jul  1  1992 test.bak*
+-rwxr-xr-x  1 hcheng       2914 Jul  1  1992 test.c.Z*
+-rwxr-xr-x  1 hcheng       2921 Jul  1  1992 test1.c.Z*
+-rwxr-xr-x  1 hcheng       2312 Jul  1  1992 test2.c.Z*
+-rwxr-xr-x  1 hcheng       2950 Jul  1  1992 test4.c.Z*
+-rwxr-xr-x  1 hcheng        536 Jul  1  1992 tsem.bak*
+-rwxr-xr-x  1 hcheng        334 Jul  1  1992 tsem.c.Z*
+
+scr:
+total 21
+-rwxr-xr-x  1 hcheng      17792 Feb  9  1992 descartes.c.Z*
+-rwxr-xr-x  1 hcheng       2554 Feb  9  1992 interpreter.c.Z*
+
+test:
+total 98
+-rwxr-xr-x  1 hcheng        480 Feb  9  1992 a.c*
+-rwxr-xr-x  1 hcheng      15369 Feb 11  1992 b1.c*
+-rwxr-xr-x  1 hcheng          0 Feb 20  1992 b1.out*
+-rwxr-xr-x  1 hcheng       6975 Feb 11  1992 decl.c*
+-rwxr-xr-x  1 hcheng       3115 Feb  9  1992 desc_struct.h*
+-rwxr-xr-x  1 hcheng      12901 Feb  9  1992 desc_table.h*
+-rwxr-xr-x  1 hcheng      49251 Feb 11  1992 descartes.c*
+-rwxr-xr-x  1 hcheng        420 Feb  9  1992 ex1.des*
+-rwxr-xr-x  1 hcheng        171 Feb  9  1992 ex2.des*
+-rwxr-xr-x  1 hcheng        638 Feb  9  1992 fmt.c*
+-rwxr-xr-x  1 hcheng        105 Feb 11  1992 makefile*
+-rwxr-xr-x  1 hcheng        658 Feb  9  1992 o.c*
+-rwxr-xr-x  1 hcheng        108 Feb  9  1992 test1.des*
+-rwxr-xr-x  1 hcheng        699 Feb  9  1992 test2.des*
+-rwxr-xr-x  1 hcheng        830 Feb  9  1992 z1.c*
+
+user:
+total 102
+-rwxr-xr-x  1 hcheng      24576 May 21  1993 a.out*
+-rwxr-xr-x  1 hcheng        415 May 21  1992 alarm1.c.Z*
+-rwxr-xr-x  1 hcheng      24576 May 21  1993 b.out*
+-rwxr-xr-x  1 hcheng        912 Feb  8  1992 boardc.c*
+-rwxr-xr-x  1 hcheng        704 Feb  8  1992 boardc1.c.Z*
+-rwxr-xr-x  1 hcheng       1518 Feb 10  1992 boards.c*
+-rwxr-xr-x  1 hcheng       1024 Feb 10  1992 boards1.c.Z*
+-rwxr-xr-x  1 hcheng         15 Feb  7  1992 bulletin.brd*
+srwxrwxrwx  1 hcheng          0 May 21  1993 ckname=
+-rwxr-xr-x  1 hcheng        271 Feb  6  1992 clint.c*
+-rwxr-xr-x  1 hcheng        194 Jul  1  1992 code.dat.Z*
+-rwxr-xr-x  1 hcheng        119 Jul  1  1992 code1.dat.Z*
+-rwxr-xr-x  1 hcheng        434 Feb  6  1992 cput.c.Z*
+-rwxr-xr-x  1 hcheng        656 Feb  6  1992 cput1.c.Z*
+-rwxr-xr-x  1 hcheng        162 Feb  6  1992 curr.c.Z*
+-rwxr-xr-x  1 hcheng        375 Feb  6  1992 current.c.Z*
+-rwxr-xr-x  1 hcheng       1025 Feb  6  1992 dining_p.c.Z*
+-rwxr-xr-x  1 hcheng        483 Feb  6  1992 except.c.Z*
+-rwxr-xr-x  1 hcheng        183 Feb  6  1992 inet.h.Z*
+-rwxr-xr-x  1 hcheng       4334 Feb  6  1992 inter.bak.Z*
+-rwxr-xr-x  1 hcheng       4331 Feb  6  1992 inter.c.Z*
+-rwxr-xr-x  1 hcheng       4229 Feb  6  1992 interpre.c.Z*
+-rwxr-xr-x  1 hcheng        541 Feb  6  1992 kernel.asm.Z*
+-rwxr-xr-x  1 hcheng        131 Feb  6  1992 lib.c.Z*
+-rwxr-xr-x  1 hcheng        298 Feb  6  1992 over_p.c.Z*
+-rwxr-xr-x  1 hcheng        144 Feb  6  1992 pgm1.c.Z*
+-rwxr-xr-x  1 hcheng        213 Feb  6  1992 pgm2.c.Z*
+-rwxr-xr-x  1 hcheng        514 Feb  6  1992 process.c.Z*
+-rwxr-xr-x  1 hcheng        484 Feb  6  1992 sched.c.Z*
+-rwxr-xr-x  1 hcheng       5207 Feb  6  1992 schedule.c.Z*
+-rwxr-xr-x  1 hcheng        451 Feb  6  1992 sever.c*
+-rwxr-xr-x  1 hcheng        973 Feb  7  1992 stream.c.Z*
+-rwxr-xr-x  1 hcheng        880 Jun  2  1992 t_time.c.Z*
+-rwxr-xr-x  1 hcheng        668 Feb  7  1992 tcp.c.Z*
+-rwxr-xr-x  1 hcheng        483 Feb  7  1992 tcpc.c.Z*
+-rwxr-xr-x  1 hcheng        315 Feb  6  1992 timer.asm.Z*
+-rwxr-xr-x  1 hcheng        744 May 20  1992 timer1.c.Z*
+-rwxr-xr-x  1 hcheng        546 Feb  6  1992 timer2.c.Z*
+
+uty:
+total 6
+-rwxr-xr-x  1 hcheng        384 May 20  1992 alarm1.c.Z*
+-rwxr-xr-x  1 hcheng        318 May 20  1992 alarm2.c.Z*
+-rwxr-xr-x  1 hcheng        385 May 20  1992 alarm3.c.Z*
+-rwxr-xr-x  1 hcheng        486 Mar 18  1992 shared_m.c.Z*
+-rwxr-xr-x  1 hcheng        254 Mar 18  1992 shared_s.c.Z*
+-rwxr-xr-x  1 hcheng        573 May 20  1992 talarm.c.Z*
+
+win:
+total 3445
+-rwxr-xr-x  1 hcheng          0 Oct 21  1992 *
+-rwxr-xr-x  1 hcheng         54 Oct  4  1992 a.des*
+-rwxr-xr-x  1 hcheng          3 Oct  4  1992 a.input*
+-rwxr-xr-x  1 hcheng          2 Nov 26  1992 a.output*
+-rwxr-xr-x  1 hcheng       2275 Oct  3  1992 alert_dcl.h*
+-rwxr-xr-x  1 hcheng         53 Nov 19  1992 amir.bak*
+-rwxr-xr-x  1 hcheng        811 Nov 20  1992 amir.des*
+-rwxr-xr-x  1 hcheng         19 Nov 20  1992 amir.input*
+-rwxr-xr-x  1 hcheng         15 Nov 22  1992 amir.output*
+-rwxr-xr-x  1 hcheng     198087 Nov 24  1992 analysis.c*
+-rwxr-xr-x  1 hcheng     122301 Nov 24  1992 analysis.o*
+-rwxr-xr-x  1 hcheng     193985 Jan 14  1993 analysis1.c*
+-rwxr-xr-x  1 hcheng     119780 Nov 27  1992 analysis1.o*
+-rwxr-xr-x  1 hcheng      13814 Oct 19  1992 build_hoare_tree.c*
+-rwxr-xr-x  1 hcheng      15815 Nov 10  1992 build_hoare_tree.o*
+-rwxr-xr-x  1 hcheng      10104 Nov 23  1992 build_rtn.c*
+-rwxr-xr-x  1 hcheng      38918 Nov 23  1992 build_rtn.o*
+-rwxr-xr-x  1 hcheng        621 Oct  3  1992 button_names.h*
+-rwxr-xr-x  1 hcheng        394 Dec  1  1992 concur.des*
+-rwxr-xr-x  1 hcheng          6 Oct 11  1992 concur.input*
+-rw-------  1 hcheng       5991 Mar 13 11:59 concur.log
+-rwxr-xr-x  1 hcheng          0 Mar 13 11:59 concur.output*
+-rwxr-xr-x  1 hcheng       7272 Dec  9  1992 concur.table*
+-rwxr-xr-x  1 hcheng          3 Mar 13 11:59 concur.tmp*
+-rwxr-xr-x  1 hcheng          0 Mar 13 11:59 concur.wk*
+-rwxr-xr-x  1 hcheng       3478 Nov 23  1992 des.l*
+-rwxr-xr-x  1 hcheng       6750 Nov 21  1992 des.l.bak*
+-rwxr-xr-x  1 hcheng      17334 Nov 10  1992 des.y*
+-rwxr-xr-x  1 hcheng      19948 Nov 21  1992 des.y.bak*
+-rwxr-xr-x  1 hcheng      12684 Nov 21  1992 des1.y*
+-rwxr-xr-x  1 hcheng       6564 Nov 21  1992 des2.l*
+-rwxr-xr-x  1 hcheng      14827 Nov 23  1992 des2.y*
+-rwxr-xr-x  1 hcheng      19948 Nov 21  1992 des3.y*
+-rwxr-xr-x  1 hcheng       3696 Oct  3  1992 desc_icon.c*
+-rwxr-xr-x  1 hcheng       8609 Jan 14  1993 desc_struct.h*
+-rwxr-xr-x  1 hcheng      18590 Oct  3  1992 desc_table.h*
+-rwxr-xr-x  1 hcheng         71 Nov  8  1992 dummy.c*
+-rwxr-xr-x  1 hcheng       3574 Oct  3  1992 edit_rtn.c*
+-rwxr-xr-x  1 hcheng      50626 Nov 10  1992 exec_rtn.c*
+-rwxr-xr-x  1 hcheng      40388 Nov 10  1992 exec_rtn.o*
+-rwxr-xr-x  1 hcheng      52248 Nov 27  1992 exec_rtn1.c*
+-rwxr-xr-x  1 hcheng      41573 Nov 27  1992 exec_rtn1.o*
+-rwxr-xr-x  1 hcheng      50401 Nov  9  1992 exec_rtn2.c*
+-rwxr-xr-x  1 hcheng       4970 Oct  3  1992 file_rtn.c*
+-rwxr-xr-x  1 hcheng     991232 Mar 22  1993 h3*
+-rwxr-xr-x  1 hcheng       4183 Oct  3  1992 h3.c*
+-rwxr-xr-x  1 hcheng     991232 Dec  1  1992 h4*
+-rwxr-xr-x  1 hcheng       2135 Oct  3  1992 help_rtn.c*
+-rwxr-xr-x  1 hcheng      12490 Nov 23  1992 lex.yy.c*
+-rwxr-xr-x  1 hcheng        264 Nov 21  1992 ma*
+-rwxr-xr-x  1 hcheng        500 Nov 21  1992 main.c*
+-rwxr-xr-x  1 hcheng        951 Nov 21  1992 makefile*
+-rwxr-xr-x  1 hcheng        936 Mar 22  1993 maketmp*
+-rwxr-xr-x  1 hcheng        358 Oct 26  1992 mesg.h*
+-rwxr-xr-x  1 hcheng        255 Oct  8  1992 module.bak*
+-rwxr-xr-x  1 hcheng        261 Oct  8  1992 module.des*
+-rwxr-xr-x  1 hcheng         17 Oct  8  1992 module.input*
+-rw-------  1 hcheng       7702 Mar 23 17:20 module.log
+-rwxr-xr-x  1 hcheng         16 Mar 23 17:20 module.output*
+-rw-------  1 hcheng       3028 Mar 23 17:16 module.table
+-rw-------  1 hcheng         16 Mar 23 17:19 module.tmp
+-rw-------  1 hcheng          1 Mar 23 17:20 module.wk
+-rwxr-xr-x  1 hcheng        624 Nov 27  1992 msg.c*
+-rwxr-xr-x  1 hcheng        829 Oct  3  1992 msg1.c*
+-rwxr-xr-x  1 hcheng       5048 Oct  3  1992 panel_buttons.c*
+-rwxr-xr-x  1 hcheng        786 Mar 21  1993 par.doc*
+-rwxr-xr-x  1 hcheng        223 Nov 21  1992 period.des*
+-rwxr-xr-x  1 hcheng          2 Nov 21  1992 period.input*
+-rwxr-xr-x  1 hcheng         23 Nov 22  1992 period.output*
+-rwxr-xr-x  1 hcheng        162 Nov 26  1992 primitive.des*
+-rwxr-xr-x  1 hcheng          3 Oct 13  1992 primitive.input*
+-rwxr-xr-x  1 hcheng         17 Nov 26  1992 primitive.output*
+-rwxr-xr-x  1 hcheng        589 Oct  9  1992 pro_com1.des*
+-rwxr-xr-x  1 hcheng          6 Oct  9  1992 pro_com1.input*
+-rwxr-xr-x  1 hcheng          3 Oct 16  1992 pro_com1.output*
+-rwxr-xr-x  1 hcheng          0 Nov 20  1992 pro_com3.des*
+-rwxr-xr-x  1 hcheng       1019 Oct  3  1992 pv.c*
+-rwxr-xr-x  1 hcheng        118 Nov 25  1992 readme*
+-rwxr-xr-x  1 hcheng        130 Oct  7  1992 recursion.des*
+-rwxr-xr-x  1 hcheng          3 Oct  7  1992 recursion.input*
+-rw-------  1 hcheng       6826 Mar 13 12:11 recursion.log
+-rwxr-xr-x  1 hcheng          3 Mar 13 12:11 recursion.output*
+-rw-------  1 hcheng          1 Mar 13 12:10 recursion.tmp
+-rw-------  1 hcheng          1 Mar 13 12:11 recursion.wk
+-rwxr-xr-x  1 hcheng        163 Nov 22  1992 reverse.des*
+-rwxr-xr-x  1 hcheng          4 Nov 23  1992 reverse.input*
+-rwxr-xr-x  1 hcheng          0 Nov 24  1992 reverse.output*
+-rwxr-xr-x  1 hcheng       2583 Nov  5  1992 sem.c*
+-rwxr-xr-x  1 hcheng       6806 Oct  3  1992 sema.c*
+-rwxr-xr-x  1 hcheng       2900 Oct  6  1992 share_rtn.c*
+-rwxr-xr-x  1 hcheng       3677 Nov 10  1992 share_rtn.o*
+-rwxr-xr-x  1 hcheng       1956 Oct  3  1992 share_var.c*
+-rwxr-xr-x  1 hcheng        624 Nov 10  1992 share_var.o*
+-rwxr-xr-x  1 hcheng        560 Oct  3  1992 stack.c*
+-rwxr-xr-x  1 hcheng        594 Oct  3  1992 stack1.c*
+-rwxr-xr-x  1 hcheng       1457 Nov 21  1992 sung.des*
+-rwxr-xr-x  1 hcheng          2 Nov 20  1992 sung.input*
+-rwxr-xr-x  1 hcheng         93 Nov 22  1992 sung.output*
+-rwxr-xr-x  1 hcheng       1271 Nov 24  1992 sung1.des*
+-rwxr-xr-x  1 hcheng       4409 Nov 27  1992 sung16.des*
+-rwxr-xr-x  1 hcheng          6 Nov 26  1992 sung16.input*
+-rwxr-xr-x  1 hcheng          3 Dec  1  1992 sung16.output*
+-rwxr-xr-x  1 hcheng          4 Dec  1  1992 sung16.tmp*
+-rwxr-xr-x  1 hcheng         38 Dec  1  1992 sung16.wk*
+-rwxr-xr-x  1 hcheng       1075 Nov 24  1992 sung2.des*
+-rwxr-xr-x  1 hcheng          6 Nov 24  1992 sung2.input*
+-rwxr-xr-x  1 hcheng         36 Nov 24  1992 sung2.output*
+-rwxr-xr-x  1 hcheng       1525 Nov 25  1992 sung4.des*
+-rwxr-xr-x  1 hcheng          4 Nov 24  1992 sung4.input*
+-rwxr-xr-x  1 hcheng         38 Nov 25  1992 sung4.output*
+-rwxr-xr-x  1 hcheng       2560 Oct  3  1992 test_rtn.c*
+-rwxr-xr-x  1 hcheng       1093 Mar 22  1993 token.bak*
+-rwxr-xr-x  1 hcheng       1065 Mar 22  1993 token.c*
+-rwxr-xr-x  1 hcheng       1501 Mar 22  1993 token.o*
+-rwxr-xr-x  1 hcheng      34104 Nov 23  1992 wid.c*
+-rwxr-xr-x  1 hcheng      31539 Nov 23  1992 wid.o*
+-rwxr-xr-x  1 hcheng      24946 Mar  3  1993 wid001.doc*
+-rwxr-xr-x  1 hcheng      34225 Dec  1  1992 wid1.c*
+-rwxr-xr-x  1 hcheng      31860 Dec  1  1992 wid1.o*
+-rwxr-xr-x  1 hcheng      21071 Nov 23  1992 y.output*
+-rwxr-xr-x  1 hcheng      36677 Nov 23  1992 y.tab.c*
+-rwxr-xr-x  1 hcheng        796 Nov 23  1992 y.tab.h*

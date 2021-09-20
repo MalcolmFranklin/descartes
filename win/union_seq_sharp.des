@@ -1,0 +1,13 @@
+STRING_OF_(AB)
+	AB
+		input_string*
+			a_or_b+
+				'A'
+				'B'
+			NL
+		extra_newlines*
+			NL
+	return
+		'Detected '
+		INPUT_STRING#
+		' AB strings in the input.'

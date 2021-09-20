@@ -1,0 +1,26 @@
+   total    blank lines w/   nb, nc    semi- preproc. file
+   lines    lines comments    lines   colons  direct.
+--------+--------+--------+--------+--------+--------+----
+      89       16       28       45        2       16 alert_dcl.h
+    8077     1336     1669     5254     2921       29 analysis1.c
+      80       11       53       19       10        7 analysis1.h
+     598      103      135      380      216       16 build_hoare_tree.c
+     104       18       66       22       16        5 build_hoare_tree.h
+     366       51      129      199      101       17 build_rtn.c
+      57        7       39       11        6        5 build_rtn.h
+     350       69      155      149       58       68 desc_struct.h
+     537       67      180      388        8        2 desc_table.h
+    2015      312      368     1373      701       33 exec_rtn1.c
+     125       21       62       49       37        5 exec_rtn1.h
+      37        5       14       18        6       10 mesg.h
+      53        9       14       30       16        2 msg.c
+     206       39       21      146       47        7 sem.c
+      71       10       35       29        6       10 share_rtn.c
+      52        6       37        9        4        5 share_rtn.h
+      10        0       10        0        0        0 share_var.c
+      93       14       28       51       23        4 some_utils.c
+      55        8       23       24       15        5 some_utils.h
+      93       12       29       52       11        7 token.c
+    1237      206      339      707      387       42 wid1.c
+      76        7       48       23       18        5 wid1.h
+   14381     2327     3482     8978     4609      300 total

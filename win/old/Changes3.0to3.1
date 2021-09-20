@@ -1,0 +1,913 @@
+-----------
+analysis1.c
+-----------
+7c7
+<  * $Date: 1994/06/06 23:05:59 $
+---
+>  * $Date: 1994/07/01 17:36:57 $
+10c10
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/analysis1.c,v $
+---
+>  * $Source: /all/franklin/thesis/descartes/win/RCS/analysis1.c,v $
+17a18,22
+>  * Revision 1.43  1994/07/01  17:36:57  franklin
+>  * Flush the output to the log file.  This helps you find out
+>  * what the language processor was doing before it started
+>  * acting strange.
+>  *
+182c187
+< static char    *rcsid = "@(#) $Id: analysis1.c,v 1.42, h4_3_0, h4_2_7, h4_2_6, h4_2_5 1994/06/06 23:05:59 franklin Exp $";
+---
+> static char    *rcsid = "@(#) $Id: analysis1.c,v 1.43 1994/07/01 17:36:57 franklin Exp $";
+216a222
+> 
+217a224
+> 
+220a228
+> 
+318a327
+> 		fflush (Log_File.f_ptr);
+1036a1046
+> 
+4370c4380
+< } /* end S_Send() */
+---
+> }				       /* end S_Send() */
+-----------
+analysis1.h
+-----------
+20c20
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/analysis1.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/analysis1.h,v $
+-----------
+build_hoare_tree.c
+-----------
+7c7
+<  * $Date: 1994/06/15 16:57:32 $
+---
+>  * $Date: 1994/07/01 17:38:44 $
+10c10
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/build_hoare_tree.c,v $
+---
+>  * $Source: /all/franklin/thesis/descartes/win/RCS/build_hoare_tree.c,v $
+17a18,20
+>  * Revision 1.22  1994/07/01  17:38:44  franklin
+>  * Delete the unused global variable "Line_No".
+>  *
+101c104
+< static char    *rcsid = "@(#) $Id: build_hoare_tree.c,v 1.21, h4_3_0 1994/06/15 16:57:32 franklin Exp $";
+---
+> static char    *rcsid = "@(#) $Id: build_hoare_tree.c,v 1.22 1994/07/01 17:38:44 franklin Exp $";
+200d202
+< 	Line_No = 0;
+-----------
+build_hoare_tree.h
+-----------
+18c18
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/build_hoare_tree.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/build_hoare_tree.h,v $
+-----------
+build_rtn.c
+-----------
+12a13,16
+>  * Revision 1.31  1994/06/30  23:24:19  franklin
+>  * Reset yylineno to 1 each time you read a new Descartes specification
+>  * Clarify the wording of some diagnostic messages.
+>  *
+139c143
+< static char    *rcsid = "@(#) $Id: build_rtn.c,v 1.30, h4_3_0 1994/06/15 18:37:10 franklin Exp $";
+---
+> static char    *rcsid = "@(#) $Id: build_rtn.c,v 1.31 1994/06/30 23:24:19 franklin Exp $";
+216c220
+< 	sprintf (User_Msg, "The size for file %s is %d bytes.\n",
+---
+> 	sprintf (User_Msg, "Length of file %s is %d bytes.\n",
+220c224
+< 	sprintf (User_Msg, "File %s is opened\n", DESC_New_File_Name);
+---
+> 	sprintf (User_Msg, "Parsing %s.\n", DESC_New_File_Name);
+226a231
+> 	yylineno = 1; /* Reset to 1 before EACH call to yyparse() so that the correct line numbers are reported in error messages from yyerror(). */
+240c245
+< 		sprintf (User_Msg, "No syntax error(s)\n");
+---
+> 		sprintf (User_Msg, "No syntax error(s).\n");
+243c248
+< 		sprintf (User_Msg, "%d syntax error(s) occurred\n", Error_Counter);
+---
+> 		sprintf (User_Msg, "%d syntax error(s) detected.\n", Error_Counter);
+-----------
+build_rtn.h
+-----------
+16c16
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/build_rtn.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/build_rtn.h,v $
+-----------
+command_line.c
+-----------
+51c51
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/command_line.c,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/command_line.c,v $
+-----------
+command_line.h
+-----------
+16c16
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/command_line.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/command_line.h,v $
+-----------
+des.l
+-----------
+10c10
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/des.l,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/des.l,v $
+-----------
+des2.y
+-----------
+15c15
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/des2.y,v $
+---
+>  * $Source: /all/franklin/thesis/descartes/win/RCS/des2.y,v $
+-----------
+desc_struct.c
+-----------
+13c13
+<  * $Date: 1994/06/15 17:20:26 $
+---
+>  * $Date: 1994/07/01 17:39:59 $
+16c16
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/desc_struct.c,v $
+---
+>  * $Source: /all/franklin/thesis/descartes/win/RCS/desc_struct.c,v $
+22a23,27
+>  * Revision 1.5  1994/07/01  17:39:59  franklin
+>  * Delete the unused global variable "Line_No".
+>  * Move the definition of "Max_Value_of" to this file, and only declare it
+>  * in desc_struct.h
+>  *
+41c46
+< static char    *rcsid = "@(#) $Id: desc_struct.c,v 1.4, h4_3_0 1994/06/15 17:20:26 franklin Exp $";
+---
+> static char    *rcsid = "@(#) $Id: desc_struct.c,v 1.5 1994/07/01 17:39:59 franklin Exp $";
+65c70
+< char            Hoare_Table_Name[MAX_PATH_LEN]; /* File containing the tabular representation of the Hoare tree */
+---
+> char            Hoare_Table_Name[MAX_PATH_LEN];	/* File containing the tabular representation of the Hoare tree */
+79,80c84
+< int             Error_Counter,
+<                 Line_No;
+---
+> int             Error_Counter;
+83a88,89
+> 
+> struct maxval_struct Max_Value_of;
+-----------
+desc_struct.h
+-----------
+19c19
+<  * $Date: 1994/06/15 17:20:01 $
+---
+>  * $Date: 1994/07/01 17:41:14 $
+22c22
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/desc_struct.h,v $
+---
+>  * $Source: /all/franklin/thesis/descartes/win/RCS/desc_struct.h,v $
+29a30,39
+>  * Revision 1.14  1994/07/01  17:41:14  franklin
+>  * 1. Delete the unused global variable "Line_No".
+>  * 2. Move the definition of "Max_Value_of" to desc_struct.c and only declare
+>  *    it in this file.
+>  * 3. Add "extern" qualifier to declaration of DESC_File_Stat.
+>  *
+>  * Revision 1.13  1994/06/30  23:26:37  franklin
+>  * Add "extern" qualifier in front of declarations of the
+>  * globals.  They are now declared in desc_struct.c
+>  *
+79c89
+< static char    *desc_struct_h_rcsid = "@(#) $Id: desc_struct.h,v 1.12, h4_3_0 1994/06/15 17:20:01 franklin Exp $";
+---
+> static char    *desc_struct_h_rcsid = "@(#) $Id: desc_struct.h,v 1.14 1994/07/01 17:41:14 franklin Exp $";
+82c92
+< struct stat     DESC_File_Stat;
+---
+> extern struct stat DESC_File_Stat;
+102a113,117
+> /*
+>  * Unique shared memory keys.  Note that these must be unique 
+>  * across the ENIRE SYSTEM, not just your process.  These
+>  * values were pulled out of the air.
+>  */
+114,117c129,132
+< extern char            DESC_New_File_Name[MAX_PATH_LEN];
+< extern char            DESC_Line_Str[MAX_LINE_SIZE];
+< extern FILE           *DESC_File_Ptr;
+< extern char            Hoare_Table_Name[MAX_PATH_LEN]; /* File containing the tabular representation of the Hoare tree */
+---
+> extern char     DESC_New_File_Name[MAX_PATH_LEN];
+> extern char     DESC_Line_Str[MAX_LINE_SIZE];
+> extern FILE    *DESC_File_Ptr;
+> extern char     Hoare_Table_Name[MAX_PATH_LEN];	/* File containing the tabular representation of the Hoare tree */
+120,124c135
+< extern char            User_Msg[MAX_LINE_SIZE];
+< 
+< /*
+<  * the flag for determining whether the tree building is completed or not
+<  */
+---
+> extern char     User_Msg[MAX_LINE_SIZE];
+126d136
+< short           Build_Flag_4_New_File;
+132,135c142,144
+< int             Error_Counter,
+<                 Line_No;
+< short           return_flag;	       /* distinguish return tree from other synthesis trees */
+< short           concurrent;
+---
+> extern int      Error_Counter;
+> extern short    return_flag;	       /* distinguish return tree from other synthesis trees */
+> extern short    concurrent;
+292c301,307
+< }              *Hoare_Root_Dummy, *Temp_Node, *Current_Node, *Prev_Node, *pre_root, *F_Hoare_Root_Dummy;
+---
+> };
+> extern struct Template_Node *Hoare_Root_Dummy,
+>                *Temp_Node,
+>                *Current_Node,
+>                *Prev_Node,
+>                *pre_root,
+>                *F_Hoare_Root_Dummy;
+320c335,339
+< }              *Root_Stack, *Temp_Stack, *Current_Stack, *Prev_Stack;
+---
+> };
+> extern struct Stack_Node *Root_Stack,
+>                *Temp_Stack,
+>                *Current_Stack,
+>                *Prev_Stack;
+322c341
+< struct
+---
+> struct maxval_struct
+326c345,347
+< }               Max_Value_of;
+---
+> };
+> extern struct maxval_struct Max_Value_of;
+> 
+-----------
+desc_table.h
+-----------
+12c12
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/desc_table.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/desc_table.h,v $
+-----------
+exec_rtn1.c
+-----------
+16c16
+<  * $Date: 1994/06/15 18:39:14 $
+---
+>  * $Date: 1994/07/01 18:00:18 $
+19c19
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/exec_rtn1.c,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/exec_rtn1.c,v $
+26a27,32
+>  * Revision 1.42  1994/07/01  18:00:18  franklin
+>  * If Output_File, S_Output_File, and/or W_Output_File cannot be opened, then
+>  * set them to stdout.
+>  * CRITICAL NOTE: If you set any of these files to stdout then DONT CLOSE
+>  *     THE FILE.  Closing stdout is bad -- if you dont believe me, just try it.
+>  *
+196c202
+< static char    *rcsid = "@(#) $Id: exec_rtn1.c,v 1.41, h4_3_0 1994/06/15 18:39:14 franklin Exp $";
+---
+> static char    *rcsid = "@(#) $Id: exec_rtn1.c,v 1.42 1994/07/01 18:00:18 franklin Exp $";
+725a732,741
+> 		if (Log_File.f_ptr == NULL)
+> 		{
+> 			Log_File.f_ptr = stdout;
+> 			sprintf (User_Msg, "Could not open log file for writing:\n");
+> 			Display_Exec_Msg (User_Msg);
+> 			sprintf (User_Msg, "     %s\n", Log_File.name ? Log_File.name : "(NULL)");
+> 			Display_Exec_Msg (User_Msg);
+> 			sprintf (User_Msg, "Will write log to stdout instead.\n");
+> 			Display_Exec_Msg (User_Msg);
+> 		}
+816a833,842
+> 		if (Output_File.f_ptr == NULL)
+> 		{
+> 			Output_File.f_ptr = stdout;
+> 			sprintf (User_Msg, "Could not open output file for writing:\n");
+> 			Display_Exec_Msg (User_Msg);
+> 			sprintf (User_Msg, "     %s\n", Output_File.name ? Output_File.name : "(NULL)");
+> 			Display_Exec_Msg (User_Msg);
+> 			sprintf (User_Msg, "Will write output to stdout instead.\n");
+> 			Display_Exec_Msg (User_Msg);
+> 		}
+819a846,855
+> 		if (W_Output_File.f_ptr == NULL)
+> 		{
+> 			W_Output_File.f_ptr = stdout;
+> 			sprintf (User_Msg, "Could not open W_Output_File file for writing:\n");
+> 			Display_Exec_Msg (User_Msg);
+> 			sprintf (User_Msg, "     %s\n", W_Output_File.name ? W_Output_File.name : "(NULL)");
+> 			Display_Exec_Msg (User_Msg);
+> 			sprintf (User_Msg, "Will write W_Output_File to stdout instead.\n");
+> 			Display_Exec_Msg (User_Msg);
+> 		}
+835a872
+> 		fflush(Output_File.f_ptr);
+839,840c876,880
+< 		fclose (W_Output_File.f_ptr);
+< 		fclose (Output_File.f_ptr);
+---
+> 		fflush(W_Output_File.f_ptr);
+> 		if (W_Output_File.f_ptr != stdout) /* If you were able to open the W_Output_File */
+> 			fclose (W_Output_File.f_ptr);
+> 		if (Output_File.f_ptr != stdout) /* If you were able to open the Output_File */
+> 			fclose (Output_File.f_ptr);
+908c948,949
+< 		fclose (Log_File.f_ptr);
+---
+> 		if (Log_File.f_ptr != stdout) /* If you were able to open the output file. */
+> 			fclose (Log_File.f_ptr);
+-----------
+exec_rtn1.h
+-----------
+18c18
+<  * $Date: 1994/06/14 15:41:41 $
+---
+>  * $Date: 1994/07/01 17:59:38 $
+21c21
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/exec_rtn1.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/exec_rtn1.h,v $
+28a29,31
+>  * Revision 1.11  1994/07/01  17:59:38  franklin
+>  * Dont declare Output_File, S_Output_File, and W_Output_File twice.
+>  *
+70c73
+< static char    *exec_rtn1_h_rcsid = "@(#) $Id: exec_rtn1.h,v 1.10, h4_3_0, h4_2_7 1994/06/14 15:41:41 franklin Exp $";
+---
+> static char    *exec_rtn1_h_rcsid = "@(#) $Id: exec_rtn1.h,v 1.11 1994/07/01 17:59:38 franklin Exp $";
+92c95
+< }               Output_File, S_Output_File, W_Output_File;
+---
+> };
+-----------
+lex.yy.c
+-----------
+36c36
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/des.l,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/des.l,v $
+-----------
+main.c
+-----------
+25c25
+<  * $Date: 1994/06/15 20:34:49 $
+---
+>  * $Date: 1994/07/02 19:48:01 $
+28c28
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/main.c,v $
+---
+>  * $Source: /all/franklin/thesis/descartes/win/RCS/main.c,v $
+37a38,48
+>  * Revision 1.23  1994/07/02  19:48:01  franklin
+>  * Add an italic font to the default fontlist.
+>  *
+>  * Revision 1.22  1994/07/02  17:11:35  franklin
+>  * Bring up dialog box with the names of researchers who have
+>  * worked on the definition of the language and/or on this
+>  * language processor.
+>  *
+>  * Revision 1.21  1994/06/29  03:00:17  franklin
+>  * Add support for the X11 "editres" program.
+>  *
+136c147
+< static char    *rcsid = "$Id: main.c,v 1.20, h4_3_0 1994/06/15 20:34:49 franklin Exp $";
+---
+> static char    *rcsid = "$Id: main.c,v 1.23 1994/07/02 19:48:01 franklin Exp $";
+169a181,186
+> #ifdef WORK_WITH_EDITRES
+> #include <X11/Xmu/Editres.h>	       /* Allows a user to modify application resources via the "edires" program included in the
+> 				        * standard MIT X11R4 and X11R5 distribution.  This is a convenience only, if Editres.h
+> 				        * and libXmu are not available, then turn this option off. */
+> #endif
+> 
+175d191
+< #include "exec_rtn1.h"		       /* Animate_Flag */
+176a193
+> #include "exec_rtn1.h"		       /* Animate_Flag */
+256c273,276
+< 	"Descartes*fontList:		*helvetica-bold-r-normal-*-*-140-*=master1,*helvetica-bold-r-normal--14-*=master2",
+---
+> 	"Descartes*fontList:		*helvetica-bold-r-normal-*-*-140-*=master1,"
+> 	"*helvetica-bold-r-normal--14-*=master2,"
+> 	"*helvetica-medium-o-normal-*-*-140-*=small_italic,"
+> 	"*helvetica-medium-r-normal-*-*-140-*=unbold",
+427,428c447,448
+< 		/* Load the spec into internal data structures. */
+< 		Build_Proc();
+---
+> 	/* Load the spec into internal data structures. */
+> 		Build_Proc ();
+724a745,746
+> 	XtAddCallback (options_pbutton[PRODUCT_INFORMATION_IDX], XmNactivateCallback,
+> 		       (XtCallbackProc) rene_descartes, NULL);
+776a799,802
+> #ifdef WORK_WITH_EDITRES
+> 	XtAddEventHandler (toplevel, (EventMask) 0, True, _XEditResCheckMessages, NULL);
+> #endif
+> 
+948,950c974,977
+< 		/* Try to execute the spec immediately. */
+< 		Exec_Proc (NULL, NULL, NULL); /* Usually invoked as a callback from a PushButton. */
+< 		if (fetch_iconic_switch ()) /* If brought up as an icon, then just exit.  Otherwise, let the user have access to the interface. */
+---
+> 	/* Try to execute the spec immediately. */
+> 		Exec_Proc (NULL, NULL, NULL);	/* Usually invoked as a callback from a PushButton. */
+> 		if (fetch_iconic_switch ())	/* If brought up as an icon, then just exit.  Otherwise, let the user have access
+> 						 * to the interface. */
+952c979
+< 			return(0);
+---
+> 			return (0);
+-----------
+main.h
+-----------
+23c23
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/main.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/main.h,v $
+-----------
+makefile
+-----------
+9c9
+< # $Id: makefile,v 1.41, h4_3_0 1994/06/15 15:47:20 franklin Exp $
+---
+> # $Id: makefile,v 1.44 1994/07/02 20:31:35 franklin Exp $
+11c11
+< # $Date: 1994/06/15 15:47:20 $
+---
+> # $Date: 1994/07/02 20:31:35 $
+14c14
+< # $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/old/RCS/makefile,v $
+---
+> # $Source: /all/franklin/thesis/descartes/win/RCS/makefile,v $
+15a16,26
+> # Revision 1.44  1994/07/02  20:31:35  franklin
+> # 1. Move the EDITRES stuff into the Sun-specific block of this file.  I
+> #    could not find the Xmu library or header file on my HP-UX 9.01 machine.
+> # 2. wid1.o now reads rene_descartes.h
+> #
+> # Revision 1.43  1994/07/01  18:03:24  franklin
+> # update dependencies.
+> #
+> # Revision 1.42  1994/06/29  03:01:00  franklin
+> # Add support for the X11 "editres" program.
+> #
+172,173c183,184
+<    #CC	= /home/local/bin/gcc # The C compiler to use.
+<    #ANSI_CFLAGS = -ansi -pedantic # Turn on "anal retentive" mode.
+---
+>    # CC	= /home/local/bin/gcc # The C compiler to use.
+>    # ANSI_CFLAGS = -ansi -pedantic # Turn on "anal retentive" mode.
+187a199,205
+> #Defining the  WORK_WITH_EDITRES preprocessor macro, and linking the executable
+> # with -lXmu is entirely optional.  It simply allows the user to view and modify
+> # application resources with the "editres" program that ships with the standard
+> # MIT distribution of X11.
+> DEFINES         =  -DWORK_WITH_EDITRES#
+> EDITRES_LIB     =  -lXmu
+> 
+213c231
+< DEFINES         =  # -D_NO_PROTO
+---
+> 
+230c248
+< MOTIF_LIBS      = -lXm -lXt -lX11
+---
+> MOTIF_LIBS      = -lXm -lXt -lX11 $(EDITRES_LIB)
+354,355c372,373
+< $(UNAME)/main.o: some_utils.h command_line.h build_rtn.h mesg.h exec_rtn1.h
+< $(UNAME)/main.o: desc_struct.h wid1.h main.h
+---
+> $(UNAME)/main.o: some_utils.h command_line.h build_rtn.h mesg.h desc_struct.h
+> $(UNAME)/main.o: exec_rtn1.h wid1.h main.h
+362,363c380,381
+< $(UNAME)/wid1.o: analysis1.h exec_rtn1.h some_utils.h command_line.h main.h
+< $(UNAME)/wid1.o: wid1.h
+---
+> $(UNAME)/wid1.o: analysis1.h exec_rtn1.h some_utils.h command_line.h
+> $(UNAME)/wid1.o: rene_descartes.h main.h wid1.h
+-----------
+mesg.h
+-----------
+7c7
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/mesg.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/mesg.h,v $
+-----------
+msg.c
+-----------
+3c3
+<  * $Date: 1994/06/02 17:23:46 $
+---
+>  * $Date: 1994/06/30 22:15:24 $
+6c6
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/msg.c,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/msg.c,v $
+13a14,16
+>  * Revision 1.10  1994/06/30  22:15:24  franklin
+>  * Print more information when you get a nonsensical message.
+>  *
+46c49
+< static char    *msg_c_rcsid = "@(#) $Id: msg.c,v 1.9, h4_3_0, h4_2_7, h4_2_6, h4_2_5, h4_2_4 1994/06/02 17:23:46 franklin Exp $";
+---
+> static char    *msg_c_rcsid = "@(#) $Id: msg.c,v 1.10 1994/06/30 22:15:24 franklin Exp $";
+107a111,113
+> 		printf ( "\tmsgrcv() returned = %d; message type = %d\n",
+> 			 n, mesgptr->mesg_type);
+> 
+-----------
+need_before_ytab.h
+-----------
+10a11,15
+>  *		Also, declare "yylineno" so that it can be reset to 1
+>  *		between each call to yyparse().  If you do not reset this
+>  *		counter, yyerror() will not report the correct line number
+>  *		in error messages.
+>  *
+13c18
+<  * $Date: 1994/05/17 00:06:33 $
+---
+>  * $Date: 1994/06/30 23:28:09 $
+16c21
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/need_before_ytab.h,v $
+---
+>  * $Source: /all/franklin/thesis/descartes/win/RCS/need_before_ytab.h,v $
+23a29,35
+>  * Revision 1.3  1994/06/30  23:28:09  franklin
+>  * Declare yylineno in this header, so that you can reset it ot
+>  * 1 between each call to yyparse().  (Reset before you read/reread
+>  * an input specification).
+>  * If you do not reset yylineno, then you wont get the correct line
+>  * number in error messages.
+>  *
+32c44
+< static char    *need_before_ytab_h_rcsid = "@(#) $Id: need_before_ytab.h,v 1.2, h4_3_0, h4_2_7, h4_2_6, h4_2_5, h4_2_4, h4_2_3 1994/05/17 00:06:33 franklin Exp $";
+---
+> static char    *need_before_ytab_h_rcsid = "@(#) $Id: need_before_ytab.h,v 1.3 1994/06/30 23:28:09 franklin Exp $";
+49a62
+> 
+51a65
+> 
+52a67,69
+> 
+> /* Reset this line counter before calling yyparse(). */
+> extern int      yylineno;
+-----------
+semops.c
+-----------
+28c28
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/semops.c,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/semops.c,v $
+-----------
+semops.h
+-----------
+19c19
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/semops.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/semops.h,v $
+-----------
+share_rtn.c
+-----------
+10c10
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/share_rtn.c,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/share_rtn.c,v $
+-----------
+share_rtn.h
+-----------
+19c19
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/share_rtn.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/share_rtn.h,v $
+-----------
+some_utils.c
+-----------
+12c12
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/some_utils.c,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/some_utils.c,v $
+-----------
+some_utils.h
+-----------
+18c18
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/some_utils.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/some_utils.h,v $
+-----------
+sunos4_missing.h
+-----------
+16c16
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/sunos4_missing.h,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/sunos4_missing.h,v $
+-----------
+token.c
+-----------
+7c7
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/token.c,v $
+---
+>  * $Source: /tmp_mnt/home/borg3/franklin/thesis/descartes/win/RCS/token.c,v $
+-----------
+wid1.c
+-----------
+8c8
+<  * $Date: 1994/06/15 18:40:42 $
+---
+>  * $Date: 1994/07/02 19:49:06 $
+11c11
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/wid1.c,v $
+---
+>  * $Source: /all/franklin/thesis/descartes/win/RCS/wid1.c,v $
+18a19,30
+>  * Revision 1.56  1994/07/02  19:49:06  franklin
+>  * Add a frame around the picture of Descartes.  Print heading text
+>  * above the list of researchers.
+>  *
+>  * Revision 1.55  1994/07/02  17:10:01  franklin
+>  * Add dialog box with a picture of Rene Descartes, and the names
+>  * of the researchers who have worked on the language definition
+>  * and implementation.
+>  *
+>  * Revision 1.54  1994/06/29  03:01:08  franklin
+>  * Add support for the X11 "editres" program.
+>  *
+263c275
+< static char    *rcsid = "@(#) $Id: wid1.c,v 1.53, h4_3_0 1994/06/15 18:40:42 franklin Exp $";
+---
+> static char    *rcsid = "@(#) $Id: wid1.c,v 1.56 1994/07/02 19:49:06 franklin Exp $";
+286a299,305
+> 
+> #ifdef WORK_WITH_EDITRES
+> #include <X11/Xmu/Editres.h>	       /* Allows a user to modify application resources via the "edires" program included in the
+> 				        * standard MIT X11R4 and X11R5 distribution.  This is a convenience only, if Editres.h
+> 				        * and libXmu are not available, then turn this option off. */
+> #endif
+> 
+304a324
+> #include <Xm/Form.h>
+321a342
+> #include "rene_descartes.h"	       /* Bitmap image of Franz Hals portrait of Rene Descartes */
+410c431
+< void		clear_drawing_area (void)
+---
+> void            clear_drawing_area (void)
+438d458
+< 			Build_Flag_4_New_File = NOT_YET;
+830a851,854
+> #ifdef WORK_WITH_EDITRES
+> 	XtAddEventHandler (display_text_shell, (EventMask) 0, True, _XEditResCheckMessages, NULL);
+> #endif
+> 
+877a902,1094
+> /*******************************************************************************
+>  * FUNCTION:	rene_descartes_heading
+>  *	Utility function invoked from rene_descartes(), to place a caption under
+>  *	Descartes picture, and to print heading text before the list of
+>  *	contributors
+>  ******************************************************************************/
+> static void     rene_descartes_heading (Widget parent)
+> {
+> 	Widget          captiong;      /* Label gadget to hold the caption for the picture */
+> 	Widget          headingg1_mgr; /* Use to center text in the headingg1 label gadget. */
+> 	Widget          headingg1;
+> 	Widget          headingg2;     /* This text is left-aligned. */
+> 	XmString        captionstr;
+> 	XmString        headingstr1;
+> 	XmString        headingstr2;
+> 	Arg             args[10];
+> 	Cardinal        nargs;
+> 
+> 	captionstr = XmStringCreateLtoR ("\"Descartes\", by Franz Hals.", "small_italic");
+> 	nargs = 0;
+> 	XtSetArg (args[nargs], XmNlabelString, captionstr);
+> 	nargs++;
+> 	captiong = XmCreateLabelGadget (parent, "captiong", args, nargs);
+> 	XtManageChild (captiong);
+> 
+> 	nargs = 0;
+> 	XtSetArg (args[nargs], XmNentryAlignment, XmALIGNMENT_CENTER);
+> 	nargs++;
+> 	headingg1_mgr = XmCreateRowColumn (parent, "headingg1_mgr", args, nargs);
+> 	XtManageChild (headingg1_mgr);
+> 
+> 	headingstr1 = XmStringCreateLtoR ("Descartes Language Processor", "master1");
+> 	nargs = 0;
+> 	XtSetArg (args[nargs], XmNlabelString, headingstr1);
+> 	nargs++;
+> 	headingg1 = XmCreateLabelGadget (headingg1_mgr, "headingg1", args, nargs);
+> 	nargs++;
+> 	XtSetArg (args[nargs], XmNalignment, XmALIGNMENT_CENTER);
+> 	nargs++;
+> 	XtManageChild (headingg1);
+> 
+> 	headingstr2 = XmStringCreateLtoR ("Contributors:", "master1");
+> 	nargs = 0;
+> 	XtSetArg (args[nargs], XmNlabelString, headingstr2);
+> 	nargs++;
+> 	headingg2 = XmCreateLabelGadget (parent, "headingg2", args, nargs);
+> 	nargs++;
+> 	XtManageChild (headingg2);
+> 
+> 	XmStringFree (headingstr1);
+> 	XmStringFree (headingstr2);
+> 	XmStringFree (captionstr);
+> }
+> 
+> /*******************************************************************************
+>  * FUNCTION:	ADD_RESEARCHER
+>  *	Utility function invoked from rene_descartes(), to insert the names
+>  *	of the people who have worked on the language processor.
+>  ******************************************************************************/
+> static void     add_researcher (Widget parent, char *contributor, char *year)
+> {
+> 	Widget          rowmgr;	       /* "Row" of text.  A contributor followed by the year(s) of contribution(s) */
+> 	Widget          contrg;	       /* Label gadget to hold the name of a contributor. */
+> 	Widget          yearg;	       /* Label gadget to hold researchers year. */
+> 	XmString        contrstr;
+> 	XmString        yearstr;
+> 	static int      count = 0;     /* Used to generate instance names for the rowmgr widgets. */
+> 	char            mgrname[128];
+> 	Arg             args[10];
+> 	Cardinal        nargs;
+> 
+> 	++count;
+> 	sprintf (mgrname, "contrib_%d", count);
+> 	rowmgr = XmCreateForm (parent, mgrname, NULL, 0);
+> 	XtManageChild (rowmgr);
+> 
+> 	contrstr = XmStringCreateLtoR (contributor, "unbold");
+> 	yearstr = XmStringCreateLtoR (year, "unbold");
+> 
+> 	nargs = 0;
+> 	XtSetArg (args[nargs], XmNleftAttachment, XmATTACH_FORM);
+> 	nargs++;
+> 	XtSetArg (args[nargs], XmNalignment, XmALIGNMENT_BEGINNING);
+> 	nargs++;
+> 	XtSetArg (args[nargs], XmNlabelString, contrstr);
+> 	nargs++;
+> 	contrg = XmCreateLabelGadget (rowmgr, "contrg", args, nargs);
+> 	XtManageChild (contrg);
+> 
+> 	nargs = 0;
+> 	XtSetArg (args[nargs], XmNrightAttachment, XmATTACH_FORM);
+> 	nargs++;
+> 	XtSetArg (args[nargs], XmNrightAttachment, XmATTACH_FORM);
+> 	nargs++;
+> 	XtSetArg (args[nargs], XmNalignment, XmALIGNMENT_END);
+> 	nargs++;
+> 	XtSetArg (args[nargs], XmNlabelString, yearstr);
+> 	nargs++;
+> 	yearg = XmCreateLabelGadget (rowmgr, "yearg", args, nargs);
+> 	XtManageChild (yearg);
+> 
+> 	XmStringFree (contrstr);
+> 	XmStringFree (yearstr);
+> }
+> 
+> /*******************************************************************************
+>  * FUNCTION:	RENE_DESCARTES
+>  *
+>  *	Popup a bitmap image of Franz Hals portrait of Rene Descartes, along
+>  *	with the names of researchers who have worked on this language
+>  *	processor.
+>  *
+>  *	I hacked "message dialog" a bit, by adding my own manager widget
+>  *	as its child.  That way I did not have to put together my own
+>  *	buttons and separator widgets to get a style-guide compliant
+>  *	dialog box.
+>  ******************************************************************************/
+> void            rene_descartes (Widget dummywidget, void *dummyptr1, XmPushButtonCallbackStruct * dummyptr2)
+> {
+> 	Widget          rene_dialog;
+> 	Widget          manager;
+> 	Widget          draw_frame;
+> 	Widget          draw_area;
+> 	Widget          unwanted;
+> 	Pixmap          rene_pmap;
+> 	Display        *display;
+> 	Screen         *screen;
+> 	Drawable        root;
+> 	Pixel           foreground;
+> 	Pixel           background;
+> 	int             depth;
+> 	Arg             args[10];
+> 	Cardinal        nargs;
+> 
+> 	nargs = 0;
+> 	XtSetArg (args[nargs], XmNtitle, "Descartes");
+> 	nargs++;
+> 	rene_dialog = XmCreateMessageDialog (toplevel, "rene_dialog", args, nargs);
+> 
+> #ifdef WORK_WITH_EDITRES
+> 	XtAddEventHandler (XtParent (rene_dialog), (EventMask) 0, True, _XEditResCheckMessages, NULL);
+> #endif
+> 
+> /* Strip out the parts of the dialog box that you do not want. */
+> 	unwanted = XmMessageBoxGetChild (rene_dialog, XmDIALOG_CANCEL_BUTTON);
+> 	XtUnmanageChild (unwanted);
+> 	unwanted = XmMessageBoxGetChild (rene_dialog, XmDIALOG_HELP_BUTTON);
+> 	XtUnmanageChild (unwanted);
+> 	unwanted = XmMessageBoxGetChild (rene_dialog, XmDIALOG_MESSAGE_LABEL);
+> 	XtUnmanageChild (unwanted);
+> 	unwanted = XmMessageBoxGetChild (rene_dialog, XmDIALOG_SYMBOL_LABEL);
+> 	XtUnmanageChild (unwanted);
+> 
+> /* Insert your own manager widget into the dialog box. */
+> 	manager = XmCreateRowColumn (rene_dialog, "manager", NULL, 0);
+> 	XtManageChild (manager);
+> 
+> 	draw_frame = XtVaCreateManagedWidget ("draw_frame", xmFrameWidgetClass, manager,
+> 					      XmNmarginWidth, 1,
+> 					      XmNmarginHeight, 1,
+> 					      NULL);
+> 
+> 	display = XtDisplay (rene_dialog);
+> 	screen = XtScreen (rene_dialog);
+> 	root = RootWindowOfScreen (screen);
+> 	foreground = WhitePixelOfScreen (screen);
+> 	background = BlackPixelOfScreen (screen);
+> 	depth = DefaultDepthOfScreen (screen);
+> 
+> 	rene_pmap = XCreatePixmapFromBitmapData (display, root,
+> 						 descartes_bits, descartes_width, descartes_height,
+> 						 foreground, background, depth);
+> 
+> 	draw_area = XtVaCreateManagedWidget ("draw_area", xmDrawingAreaWidgetClass, draw_frame,
+> 					     XmNwidth, descartes_width,
+> 					     XmNheight, descartes_height,
+> 					     XmNresizePolicy, XmNONE,
+> 					     XmNunitType, XmPIXELS,
+> 					     XmNbackgroundPixmap, rene_pmap,
+> 					     NULL);
+> 
+> 	rene_descartes_heading (manager);
+> 	add_researcher (manager, "J. E. Urban ", "1977, 1992");
+> 	add_researcher (manager, "K. S. Tang", "1981");
+> 	add_researcher (manager, "Y. C. Yu", "1984");
+> 	add_researcher (manager, "M. S. Sun", "1984");
+> 	add_researcher (manager, "L. Lee", "1991");
+> 	add_researcher (manager, "H-C Cheng", "1992");
+> 	add_researcher (manager, "K-Y  Sung", "1992");
+> 	add_researcher (manager, "M. L.  Franklin", "1994");
+> 
+> 	XtManageChild (rene_dialog);
+> }
+-----------
+wid1.h
+-----------
+15c15
+<  * $Date: 1994/06/14 23:50:15 $
+---
+>  * $Date: 1994/07/02 19:48:20 $
+18c18
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/wid1.h,v $
+---
+>  * $Source: /all/franklin/thesis/descartes/win/RCS/wid1.h,v $
+25a26,29
+>  * Revision 1.18  1994/07/02  19:48:20  franklin
+>  * Add protoytpe for rene_descartes(), a callback to post a dialog box
+>  * when th user presses Help->Product Information.
+>  *
+93c97
+< static char    *wid1_h_rcsid = "@(#) $Id: wid1.h,v 1.17, h4_3_0 1994/06/14 23:50:15 franklin Exp $";
+---
+> static char    *wid1_h_rcsid = "@(#) $Id: wid1.h,v 1.18 1994/07/02 19:48:20 franklin Exp $";
+119c123
+< extern void	clear_drawing_area (void); /* Erase the drawing area before drawing the next tree. */
+---
+> extern void     clear_drawing_area (void);	/* Erase the drawing area before drawing the next tree. */
+144a149
+> extern void     rene_descartes (Widget dummywidget, void *dummyptr1, XmPushButtonCallbackStruct * dummyptr2);
+-----------
+y.tab.c
+-----------
+16c16
+<  * $Source: /all/franklin/thesis/descartes/win/old/RCS/des2.y,v $
+---
+>  * $Source: /all/franklin/thesis/descartes/win/RCS/des2.y,v $
+-----------
+y.tab.h
+-----------

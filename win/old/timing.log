@@ -1,0 +1,214 @@
+Descartes' Trace Log  Ver 1.0   Time: Thu Aug 11 16:03:09 1994
+--------------------------------------------------------------
+
+  #####   THE  BEGINNING   #####
+
+
+The name of the Descartes specification is [timing.des].
+The name of the log file is [timing.log].
+
+The contents of input file is shown below:
+c1
+
+
+Module Title OCCURRENCE_OF_(C_STRING)
+$reference direct product - C_STRING
+__(aDP_first) Direct Product C_STRING
+ >> Go to Node b(1.. )
+__(AS_first) Sequence Node b(1.. )
+ >>(Suc_1) Go to node 'c'
+$literal - 'c'
+__(AL_first) Literal 'c'
+ => Successful matching at node 'c' with input string
+ -> Forward input buffer pointer to location 1
+ << Back to Node b(1.. )
+__(AS_succeed) Sequence Node b(1.. )
+B sequecne pointer0 1
+A sequecne pointer1 1
+Input_File 0 1
+ <<(Suc_2) Succeed; Back to node C_STRING
+A sequecne pointer0 1
+$reference direct product - C_STRING
+__(aDP_succeed) Direct Product C_STRING
+__(aDP_succeed) Direct Product C_STRING
+ >> Succeed; Go to Node d
+$match direct product - d
+__(aDP_first) Direct Product d
+ >> Go to Node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node d
+$match direct product - d
+__(aDP_succeed) Direct Product d
+__(aDP_succeed) Direct Product d
+ << Succeed; Back to Node C_STRING
+$reference direct product - C_STRING
+__(aDP_succeed) Direct Product C_STRING
+__(aDP_succeed) Direct Product C_STRING
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 3
+ << Back to Node C_STRING
+$reference direct product - C_STRING
+__(aDP_succeed) Direct Product C_STRING
+__(aDP_succeed) Direct Product C_STRING
+ << Succeed; Back to Node OCCURRENCE_OF_(C_STRING)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match direct product - return
+__(sDP_first) Direct Product return
+ >> Go to Node time
+$match direct product - time
+__(sDP_first) Direct Product time
+ >> Go to Node TIMER_(D)
+__(ST_first) primitive TIMER_(D)
+__(SDP1_first)Node D
+1 => Found a corresponding match node
+5484 SUCCEED<< Back to Node time
+$match direct product - time
+__(sDP_succeed) Direct Product time
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node var
+$match direct product - var
+__(sDP_first) Direct Product var
+ >> Go to Node '2'
+$literal - '2'
+__(SL_first) Literal '2'
+ => Output a string with Literal
+ << Back to Node var
+$match direct product - var
+__(sDP_succeed) Direct Product var
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node (D)_PLUS_(VAR)
+__(SP_first) primitive  (D)_PLUS_(VAR)
+__(SDP1_first)Node D
+1 => Found a corresponding match node
+__(SDP1_first)Node VAR
+2 => Found a corresponding match node
+3 SUCCEED<< Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node DELAY_('1')
+__(SD_first) Delay DELAY_('1')
+1 SUCCEED<< Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node check
+$match direct product - check
+__(sDP_first) Direct Product check
+ >> Go to Node GTIME_(TIME)
+__(ST_first) primitive GTIME_(TIME)
+__(SDP1_first)Node TIME
+5484 => Found a corresponding match node
+244 142 C_STRING 8 SUCCEED<< Back to Node check
+$match direct product - check
+__(sDP_succeed) Direct Product check
+ << Succeed; Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Back to Node return
+$match direct product - return
+__(sDP_succeed) Direct Product return
+ >> Succeed; Go to Node (CHECK)_EQUAL_('TIMEOUT')
+__(SP_first) primitive  (CHECK)_EQUAL_('TIMEOUT')
+__(SDP1_first)Node CHECK
+244 142 C_STRING 8 => Found a corresponding match node
+equal compare 244 142 C_STRING 8,TIMEOUT
+equal compare 244 142 C_STRING 8,TIMEOUT
+ FAIL<< Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_next)Node NL
+ <- Backward output buffer pointer at location 24
+ ** Free a stack element at Node NL; adjust stack & output pointers.
+ << Fail; Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node check
+$match direct product - check
+__(sDP_next) Direct Product check
+ >> Go to the last sibling GTIME_(TIME) under node check
+__(ST_next) Module GTIME_(TIME)
+ <- Backward output buffer pointer at location 6
+ ** Free a stack element at Node GTIME_(TIME); adjust stack & output pointers.
+ << Fail; Back to Node check
+$match direct product - check
+__(sDP_fail) Direct Product check
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 6
+ ** Free a stack element at Node check; adjust stack & output pointers.
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node DELAY_('1')
+__(SD_next) Delay DELAY_('1')
+ <- Backward output buffer pointer at location 6
+ ** Free a stack element at Node DELAY_('1'); adjust stack & output pointers.
+ << Fail; Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node (D)_PLUS_(VAR)
+__(SM_next) Module (D)_PLUS_(VAR)
+ <- Backward output buffer pointer at location 5
+ ** Free a stack element at Node (D)_PLUS_(VAR); adjust stack & output pointers.
+ << Fail; Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node var
+$match direct product - var
+__(sDP_next) Direct Product var
+ >> Go to the last sibling '2' under node var
+$literal - '2'
+__(SL_next) Literal '2'
+ <- Backward output buffer pointer at location 4
+ ** Free a stack element at Node '2'; adjust stack & output pointers.
+ << Fail; Back to Node var
+$match direct product - var
+__(sDP_fail) Direct Product var
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 4
+ ** Free a stack element at Node var; adjust stack & output pointers.
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ ?? Try to check node time
+$match direct product - time
+__(sDP_next) Direct Product time
+ >> Go to the last sibling TIMER_(D) under node time
+__(ST_next) Module TIMER_(D)
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node TIMER_(D); adjust stack & output pointers.
+ << Fail; Back to Node time
+$match direct product - time
+__(sDP_fail) Direct Product time
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node time; adjust stack & output pointers.
+ << Back to Node return
+$match direct product - return
+__(sDP_fail) Direct Product return
+ // All subnodes are tried; all of them failed
+ <- Backward output buffer pointer at location 0
+ ** Free a stack element at Node return; adjust stack & output pointers.
+ << Back to Node OCCURRENCE_OF_(C_STRING)
+The synthesis procedure is failed.
+No output is produced at this execution.
+#####   THE  END   #####

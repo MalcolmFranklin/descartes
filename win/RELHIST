@@ -1,0 +1,151 @@
+
+RCS file: RCS/Package.config,v
+Working file: Package.config
+head: 1.14
+branch:
+locks: strict
+access list:
+symbolic names:
+	h4_3_1: 1.14
+	h4_3_0: 1.13
+	h4_2_7: 1.12
+	h4_2_6: 1.11
+	h4_2_5: 1.9
+	h4_2_4: 1.8
+	h4_2_3: 1.7
+	h4_2_2: 1.4
+	h4_2_1: 1.3
+	h4_2_0: 1.2
+comment leader: "# "
+keyword substitution: kv
+total revisions: 14;	selected revisions: 14
+description:
+File used by the Motorola SAL CM system to put
+freeze tags on specific source code versions involved
+in a given release.
+----------------------------
+revision 1.14
+date: 1994/07/02 21:00:29;  author: franklin;  state: Exp;  lines: +5 -5
+1.Flush output sent to the Log file to simplify debugging.
+2. Delete unused global Line_No.
+3. Reset yylineno to 1 before reading another Descartes specification.
+4. Improved wording of some diagnostic messages.
+5. Define Max_Value_of in desc_struct.c, make it an extern declaration
+   in desc_struct.h (it used to be defined in desc_struct.h).
+6. Add extern qualifier to the declarations of the following globals in
+   desc_struct.h:
+     DESC_File_Stat  Error_Counter  return_flag  concurrent  Hoare_Root_Dummy
+     Temp_Node  Current_Node  Prev_Node  pre_root  F_Hoare_Root_Dummy
+     Root_Stack  Temp_Stack  Current_Stack  Prev_Stack
+7. Set Output_File, S_Output_File, and/or W_Output_File to stdout if they
+   cannot be opened.
+8. Add italic font to the default fontlist (small_italic).
+9. When the user selects "Help->Product Information" from the main menu,
+   display Franz Hals picture of Rene Descartes, and the names of all
+   researchers who had inputs to the language definition and/or language
+   processor implementation.
+----------------------------
+revision 1.13
+date: 1994/06/15 21:12:05;  author: franklin;  state: Exp;  lines: +4 -4
+1. The command line now works.  The language processor will execute the spec
+   immediately if the user passes "-batch True" on the command line, and will
+   exit immediately after executing the spec if the user passes both
+   "-batch True -iconic True" on the command line.
+2. Removed several globals that either were never used, or that impeded
+   usability of the language processor:
+      Build_Flag_4_New_File  Build_Flag_4_Old_File  File_Modified
+      Current_Dir  Path_Name  Cmd_String
+3. Clears the drawing area whenever it reads a new input spec.
+4. Updates main window titlebar whenever it reads a new input spec (appends
+   the base filenaem to the titlebar text).
+5. Moved definitions of variables once defined in desc_strurct.h to
+   desc_struct.c; you really shouldnt allocate storage for variables in an
+   include file.
+6. Added a check for a NULL pointer being passed to Free_Hoare_Tree().
+----------------------------
+revision 1.12
+date: 1994/06/14 21:31:42;  author: franklin;  state: Exp;  lines: +4 -4
+1. Moved the pushbuttons and slider bar from the parent widget of the
+   drawing area, to a toolbar in the application mainwindow widget.
+2. The selections under "File->Open..." all work now.
+3. "Options->Default X Resource Values" works now.
+----------------------------
+revision 1.11
+date: 1994/06/12 04:58:02;  author: franklin;  state: Exp;  lines: +3 -3
+Moved the execution animation window from wid1.c to main.c.
+----------------------------
+revision 1.10
+date: 1994/06/12 04:51:42;  author: franklin;  state: Exp;  lines: +5 -5
+Moved the execution animation window from wid1.c to main.c.
+----------------------------
+revision 1.9
+date: 1994/06/09 01:55:27;  author: franklin;  state: Exp;  lines: +4 -4
+1. Moved all user interface initialization functionality from wid1.c to
+   main.c -- EXCEPT for the execution animation window.
+2. Use variables named msgid when referencing queue MSKKEY, and msgid1 when
+   referencing MSGKEY1.
+3. Build_Proc() is no longer a callback function; update it parameter list.
+4. Send all message text to a single text widget.
+5. Workaround non-ANSI/ISO-compliance of offsetof() macro in stddef.h for
+   SunOS 4.
+6. Dont escape newline characters in order to form long string constants;
+   use string concatenation feature of ANSI/ISO C instead.
+----------------------------
+revision 1.8
+date: 1994/06/02 17:41:28;  author: franklin;  state: Exp;  lines: +4 -4
+1. Remove alert_dcl.h from the build.
+2. Enable stricter type checking when passing the -Xa switch to the
+   CenterLine compiler.
+3. Remove several references to memory which had already been free()d.
+4. Remove globals that are no longer used.
+5. Add command_line.c to implement custom application resources/command-
+   line switches.
+6. Replace the non-POSIX ftime() function with POSIX time() where possible.
+7. Added growbuf utilities for storing/appending strings of arbitrary
+   length.
+8. Use the default foreground/background colors/pixmaps.  Let the user
+   alter the defaults with X resources.
+9.Set the text on the dialog box that pops up when you press the "Quit"
+  button.
+----------------------------
+revision 1.7
+date: 1994/05/17 02:58:25;  author: franklin;  state: Exp;  lines: +3 -3
+Dont try to build the HP executable on a Sun!
+----------------------------
+revision 1.6
+date: 1994/05/17 01:15:43;  author: franklin;  state: Exp;  lines: +4 -3
+Release both HP and Sun executables.
+----------------------------
+revision 1.5
+date: 1994/05/17 01:08:19;  author: franklin;  state: Exp;  lines: +4 -4
+Ported to HP-UX 9.01 C compiler, as well as SunOS 4.1.3 CenterLine clcc
+compiler.
+Replaced SysV semaphores with a semaphore module implemented with POSIX.1
+compliant advisory locks.
+Capable of using either Bison or YACC to generate the Descartes language
+parser.
+Works with CDE 1.1B
+Can now run on an X terminal with less than 16 megabytes of RAM.
+----------------------------
+revision 1.4
+date: 1994/05/02 16:01:51;  author: franklin;  state: Exp;  lines: +3 -3
+Builds with CenterLines clcc compiler.  Build_Hoare_Tree() is declared
+to have 4 required parameters and two optional parameters.
+sem.c has been split into semops.h and semops.c.  No source code file
+#includes sem.c anymore.  Used ANSI/ISO <stdarg.h> instead of <vararg.h>.
+Started using the POSIX <unistd.h> instead of <sys/types.h>, <sys/stat.h>
+and <sys/file.h>.
+----------------------------
+revision 1.3
+date: 1994/04/12 13:08:59;  author: franklin;  state: Exp;  lines: +4 -4
+Converted all code to ANSI/ISO Standard C.
+Removed most Purify warnings.
+----------------------------
+revision 1.2
+date: 1994/04/08 09:20:38;  author: franklin;  state: Exp;  lines: +6 -4
+Build on a node with X/Motif libraries installed.
+----------------------------
+revision 1.1
+date: 1994/04/08 09:17:45;  author: franklin;  state: Exp;
+Initial revision
+=============================================================================

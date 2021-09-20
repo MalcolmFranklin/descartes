@@ -1,0 +1,36 @@
+   total    blank lines w/   nb, nc    semi- preproc. file
+   lines    lines comments    lines   colons  direct.
+--------+--------+--------+--------+--------+--------+----
+      95       14       30       51       51        0 actions.h
+     373       80       64      233      141        2 bbox.c
+      62       10       49       23       20        3 bbox.h
+      46        5       34       16       11        3 bboxint.h
+     500       45       75      403      211       31 command.c
+     126       18       41       69       47        1 compfuncs.c
+     166       22      134      105      100        5 externs.h
+     975      143      247      642      410       16 folder.c
+     154       17       99      109       92       12 globals.h
+     493       78       47      369      113        9 init.c
+     146       12       33      105       48        9 main.c
+      80       12       25       44       26        2 menu.c
+     170       28       33      111       58       25 miscfuncs.c
+     134       24       34       76       50        1 mlist.c
+      37        3       25        9        6        3 mlist.h
+     975      153      124      710      445        3 msg.c
+      59        3       25       31       28        3 msg.h
+     784       89       81      653      442       19 pick.c
+     503       62       77      385      269        2 popup.c
+     520       74       46      401      220        2 screen.c
+    1234      186      108      955      628        8 toc.c
+      75        8       64       41       38        3 toc.h
+    1066      141      145      804      514        3 tocfuncs.c
+      97        7       77       58       49        5 tocintrnl.h
+     631       64       55      517      340       10 tocutil.c
+      46        3       40       18       15        3 tocutil.h
+     336       32       94      250      120        8 tsource.c
+      51       10       31       10        4        6 tsource.h
+      86       14       49       24       13        7 tsourceP.h
+     531       95       44      393      216        8 util.c
+     271       42       46      186      130        1 viewfuncs.c
+     144       22       51       96       41       38 xmh.h
+   10966     1516     2127     7897     4896      251 total

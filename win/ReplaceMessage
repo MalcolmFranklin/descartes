@@ -1,0 +1,21 @@
+build_rtn.c:		Continue_Msg (OPENING_FILE_FAILED);
+build_rtn.c:		Continue_Msg (ERROR_EXISTED);
+build_rtn.c:		Continue_Msg (ERROR_EXISTED);
+build_rtn.c:		Continue_Msg (HOARE_TABLE_NOT_EXISTED);
+build_rtn.c:		Continue_Msg (FILE_NAME_NEEDED);	/* macro in "alert_dcl.h" */
+build_rtn.c:			Continue_Msg (INVALID_EXTENSION);
+build_rtn.c:		Continue_Msg (FILE_NOT_EXISTED);
+exec_rtn1.c:		Continue_Msg (INPUT_FILE_NOT_EXISTED);
+exec_rtn1.c:		Continue_Msg (INPUT_FILE_NOT_EXISTED);
+exec_rtn1.c:		Continue_Msg (OPENING_FILE_FAILED);
+exec_rtn1.c:		Continue_Msg (LOG_FILE_NOT_EXISTED);
+exec_rtn1.c:		Continue_Msg (FILE_NAME_NEEDED);
+exec_rtn1.c:		Continue_Msg (FILE_NOT_EXISTED);
+exec_rtn1.c:		Continue_Msg (ERROR_EXISTED);
+share_rtn.c: * function Continue_Msg()
+share_rtn.c:void            Continue_Msg (continue_msg_t msg_no)
+share_rtn.h: * into this file, because they are used by Continue_Msg(), and Continue_Msg()
+share_rtn.h: * FUNCTION:	Continue_Msg
+share_rtn.h: *	Pass an element from the type continue_msg_t to Continue_Msg() to 
+share_rtn.h: * Values of type continue_msg_t are passed to Continue_Msg() in order to
+share_rtn.h:void            Continue_Msg (continue_msg_t msg_no);

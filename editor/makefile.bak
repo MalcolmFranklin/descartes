@@ -1,0 +1,106 @@
+UNAME := $(shell platform)
+
+RM     = rm -f
+OPT     = -g    # Tell compiler to save debugging info in the binaries.
+
+################################################################################
+# Tell make NOT to delete stuff automatically when a build fails!
+################################################################################
+.PRECIOUS: %
+
+################################################################################
+# NOTE:
+#	The Descartes editor needs access to the following bitmap files.  They
+#	are not needed in order to build the executable; however, they are
+#	package deliverables.
+################################################################################
+ICONS	= a_tree.icon dp_mat.icon dp_ref.icon du_mat.icon du_ref.icon ret.icon \
+	  s_tree.icon seq1_mat.icon seq1_ref.icon seq2_mat.icon seq2_ref.icon \
+	  seq3_mat.icon seq3_ref.icon
+
+GENERIC_OBJS = xdesc3.o  xdesc2.o xdesc1.o
+
+OBJS  = $(GENERIC_OBJS:%=$(UNAME)/%) $(DEBUG_OBJ)
+
+ifeq "$(UNAME)" "Sun413"
+
+   # Gnu C Compiler
+   #CC  = /home/local/bin/gcc # The C compiler to use.
+   #ANSI_CFLAGS = -ansi -pedantic # Turn on "anal retentive" mode.
+
+   #CenterLine C compiler (clcc)
+   CC   = /all/CenterLine/bin/clcc
+   ANSI_CFLAGS  = -ansi -Xa
+
+   MOTIF_LIB_PATHS      = -L/home/tools1/B+W_UIMX_2.5/motif12/usr/lib \
+                           -L/home/local/X11R5/lib
+   MOTIF_INCLUDEPATHS   = -I/home/local/X11R5/include \
+                          -I/home/tools1/B+W_UIMX_2.5/motif12/usr/include
+   ifeq "$(PURIFYHOME)" ""
+      PURIFYHOME = /home/tools1/pure/purify2.1
+   endif
+   PLATSPEC = -Dsun
+   DEBUG = #/usr/lib/end.o for HP-UX.  Not needed for SunOS 4
+endif
+ifeq "$(UNAME)" "HP901"
+   # Gnu C Compiler
+   # CC = /home/local/bin/gcc # The C compiler to use.
+   # ANSI_CFLAGS = -ansi -pedantic # Turn on "anal retentive" mode.
+   # HP-UX Professional C compiler.
+   CC   = cc
+   ANSI_CFLAGS  = -Ae
+#   MOTIF_LIB_PATHS       = -L/usr/lib/X11R5
+   MOTIF_LIB_PATHS       = -L/usr/lib/X11R5 -L/usr/lib/Motif1.2
+   MOTIF_INCLUDEPATHS = -I/usr/include/Motif1.2 -I/usr/include/X11R5
+   ifeq "$(PURIFYHOME)" ""
+      PURIFYHOME = /all/pure/purify2.1_hp
+   endif
+   #PLATSPEC = -Wp,-H150000
+   DEBUG = /usr/lib/end.o
+endif
+
+INCLUDEPATHS    = -I. -I$(PURIFYHOME) $(MOTIF_INCLUDEPATHS)
+DEFINES         =  # -D_NO_PROTO
+CFLAGS          = $(INCLUDEPATHS) $(DEFINES) $(PLATSPEC) $(DEBUG) \
+                  -D_POSIX_SOURCE $(ANSI_CFLAGS) $(OPT)
+LIBPATHS        = -L. $(MOTIF_LIB_PATHS)
+STD_LIBS        = -lm
+MOTIF_LIBS      = -lXm -lXt -lX11
+LIBS            = $(MOTIF_LIBS) $(STD_LIBS)
+
+
+deliverables: xdesc $(ICONS)
+
+xdesc: $(OBJS) 
+	$(CC) $(OBJS)  -o $@ $(LIBPATHS) $(LIBS)
+	chmod a+rx $@
+
+# To load the source code in to objectcenter, type "make centerline" at
+# the objectcenter prompt.
+centerline:
+	#load xdesc1.c xdesc2.c xdesc3.c
+	#link
+
+################################################################################
+# Default rule for creating a ".o" file from a ".c" file.
+################################################################################
+$(UNAME)/%.o: %.c
+	@[ -d $(UNAME) ] || mkdir -p $(UNAME)
+	$(CC) -c $(CFLAGS) $< -o $@
+	@#unload $*.c
+	@#unload $*.o
+	@#load -C $(CFLAGS) $*.c
+
+# To run a fname.c file through the preprocessor only, type "make fname.i"
+%.i: %.c
+	$(CC) -C -E $(CFLAGS)  $*.c > $*.i
+
+
+depend depends: makefile
+	makedepend -p'$$(UNAME)/' $(CFLAGS) *.[c,l,y]
+
+# DO NOT DELETE THIS LINE -- make depend depends on it.
+
+$(UNAME)/xdesc1.o: editor1.h xdesc1.h xdesc2.h xdesc3.h
+$(UNAME)/xdesc2.o: editor.h xdesc1.h xdesc2.h
+$(UNAME)/xdesc3.o: editor1.h xdesc1.h xdesc3.h

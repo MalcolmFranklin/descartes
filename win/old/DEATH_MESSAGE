@@ -1,0 +1,5 @@
+X Error of failed request:  BadAlloc (insufficient resources for operation)
+  Major opcode of failed request:  53 (X_CreatePixmap)
+  Serial number of failed request:  4644
+  Current serial number in output stream:  4676
+

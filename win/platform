@@ -1,0 +1,61 @@
+#!/bin/sh
+
+# Returns the correct platform identifier.  Replaces the system command 'uname' for
+# all SAL functions and & Makefiles.
+
+# Solbourne uname: SunOS watneys 4.1C 4.1.3 sun4
+# Solaris uname:   SunOS wizard 5.3 Generic sun4m sparc
+# Sun 4.1.3 uname: SunOS hornet 4.1.3_U1 1 sun4m
+# Sun 4.1.1 uname: SunOS doc 4.1.1 1 sun4c
+# HP uname:        HP-UX boa A.09.01 A 9000/755 2001160274 two-user license
+# HP uname:        HP-UX python A.08.07 A 9000/720 2002746209
+
+SHOWSALVERSION="no"
+. shared_functions
+
+uname -a | $NAWK \
+' {
+   # For backward compatibility....
+   if ( $1 == "SunOS" )
+      if ( $3 == "4.1.1" ){
+	 print "SunOS"
+	 exit
+      }
+   if ( $1 == "HP-UX" )
+      if ( $3 == "A.08.07" ){
+	 print "HP-UX"
+	 exit
+      }
+
+   # For forward compatibility, display unique OS id, concatenated
+   # with the first three levels of the O.S. version (without periods or
+   # leading zeros).
+   if ( $1 == "SunOS" ){ 
+      OS = "Sun"
+   } else if ( $1 == "HP-UX" ){ 
+      OS = "HP"
+   } else {
+      printf ( "ERROR: Can not identify platform \"%s\"\n", $0 ) | "cat 1>&2"
+      exit 1
+   }
+   printf ( "%s", OS )
+
+   if ( $3 == "4.1C" ) # Its a Solbourne, use the next field...
+      $3 = $4
+   n = split( $3, ver, "." )
+   if ( n < 2 ){ 
+      printf ( "ERROR: Not enough numbers to determine OS version." ) | "cat 1>&2"
+      exit 1
+   }
+   x = 1
+   if ( OS == "HP" ) x++    # Skip the first number on HPs
+   gsub( "^[0]*", "", ver[x] )    # Remove leading zeros on the Major number.
+   printf( "%s", ver[x] )         # Print the major number.
+   x++; printf( "%s", ver[x] )    # Print the minor number.
+   x++; 
+   if ( n > 2 ){ # Print up to 3 levels if three exist.
+       if ( ver[x] == "3_U1" ) printf( "3" )  # Special hack for hornet....
+       else printf( "%s", ver[x] )  
+   }
+   printf( "\n" )
+}'

@@ -1,0 +1,245 @@
+Descartes' Trace Log  Ver 1.0   Time: Sun Aug 21 16:40:08 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/equaltst.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/equaltst.log.
+
+Contents of the Descartes specification file:
+55 55
+
+
+Module Title TEST_EQUAL(VALUES)
+$reference direct product - VALUES
+__(aDP_first) Direct Product VALUES
+ >> Go to Node first
+$match direct product - first
+__(aDP_first) Direct Product first
+ >> Go to Node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node first
+$match direct product - first
+__(aDP_succeed) Direct Product first
+__(aDP_succeed) Direct Product first
+ >> Succeed; Go to Node morefirst*
+$match sequence - morefirst*
+__(AS_first) Sequence Node morefirst*
+A sequecne pointer1 1
+Input_File 1 1
+ <<(Suc_2) Succeed; Back to node first
+$match direct product - first
+__(aDP_succeed) Direct Product first
+__(aDP_succeed) Direct Product first
+ << Succeed; Back to Node VALUES
+$reference direct product - VALUES
+__(aDP_succeed) Direct Product VALUES
+__(aDP_succeed) Direct Product VALUES
+ >> Succeed; Go to Node delimiter
+$match direct product - delimiter
+__(aDP_first) Direct Product delimiter
+ >> Go to Node ' '
+$literal - ' '
+__(AL_first) Literal ' '
+ => Unsuccessful matching at node ' ' with input string
+ << Back to Node delimiter
+$match direct product - delimiter
+__(aDP_fail) Direct Product delimiter
+ // All subnodes are tried; all of them failed
+ <- Backward input buffer pointer at location 1
+ ** Free a stack element at Node delimiter; adjust stack & input pointers.
+ << Back to Node VALUES
+$reference direct product - VALUES
+__(aDP_fail) Direct Product VALUES
+ ?? Try to check node first
+$match direct product - first
+__(aDP_next) Direct Product first
+ >> Go to the last processed morefirst* under node first
+$match sequence - morefirst*
+__(AS_next) Sequence Node morefirst*
+ >> (No. < upper) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node morefirst*
+$match sequence - morefirst*
+__(AS_succeed) Sequence Node morefirst*
+B sequecne pointer1 2
+A sequecne pointer2 2
+Input_File 1 2
+ <<(Suc_4) Succeed; Back to node first
+A sequecne pointer1 2
+$match direct product - first
+__(aDP_succeed) Direct Product first
+__(aDP_succeed) Direct Product first
+ << Succeed; Back to Node VALUES
+$reference direct product - VALUES
+__(aDP_succeed) Direct Product VALUES
+__(aDP_succeed) Direct Product VALUES
+ >> Succeed; Go to Node delimiter
+$match direct product - delimiter
+__(aDP_first) Direct Product delimiter
+ >> Go to Node ' '
+$literal - ' '
+__(AL_first) Literal ' '
+ => Successful matching at node ' ' with input string
+ -> Forward input buffer pointer to location 3
+ << Back to Node delimiter
+$match direct product - delimiter
+__(aDP_succeed) Direct Product delimiter
+__(aDP_succeed) Direct Product delimiter
+ >> Succeed; Go to Node moreblanks*
+$match sequence - moreblanks*
+__(AS_first) Sequence Node moreblanks*
+A sequecne pointer3 3
+Input_File 3 3
+ <<(Suc_2) Succeed; Back to node delimiter
+$match direct product - delimiter
+__(aDP_succeed) Direct Product delimiter
+__(aDP_succeed) Direct Product delimiter
+ << Succeed; Back to Node VALUES
+$reference direct product - VALUES
+__(aDP_succeed) Direct Product VALUES
+__(aDP_succeed) Direct Product VALUES
+ >> Succeed; Go to Node second
+$match direct product - second
+__(aDP_first) Direct Product second
+ >> Go to Node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 4
+ << Back to Node second
+$match direct product - second
+__(aDP_succeed) Direct Product second
+__(aDP_succeed) Direct Product second
+ >> Succeed; Go to Node moresecond*
+$match sequence - moresecond*
+__(AS_first) Sequence Node moresecond*
+A sequecne pointer4 4
+Input_File 4 4
+ <<(Suc_2) Succeed; Back to node second
+$match direct product - second
+__(aDP_succeed) Direct Product second
+__(aDP_succeed) Direct Product second
+ << Succeed; Back to Node VALUES
+$reference direct product - VALUES
+__(aDP_succeed) Direct Product VALUES
+__(aDP_succeed) Direct Product VALUES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Unsuccessful matching with module call
+ << Back to Node VALUES
+$reference direct product - VALUES
+__(aDP_fail) Direct Product VALUES
+ ?? Try to check node second
+$match direct product - second
+__(aDP_next) Direct Product second
+ >> Go to the last processed moresecond* under node second
+$match sequence - moresecond*
+__(AS_next) Sequence Node moresecond*
+ >> (No. < upper) Go to node DIGIT
+$reference direct product - DIGIT
+(ADP)_Node DIGIT
+__(ADP_first)Node DIGIT
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 5
+ << Back to Node moresecond*
+$match sequence - moresecond*
+__(AS_succeed) Sequence Node moresecond*
+B sequecne pointer4 5
+A sequecne pointer5 5
+Input_File 4 5
+ <<(Suc_4) Succeed; Back to node second
+A sequecne pointer4 5
+$match direct product - second
+__(aDP_succeed) Direct Product second
+__(aDP_succeed) Direct Product second
+ << Succeed; Back to Node VALUES
+$reference direct product - VALUES
+__(aDP_succeed) Direct Product VALUES
+__(aDP_succeed) Direct Product VALUES
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 6
+ << Back to Node VALUES
+$reference direct product - VALUES
+__(aDP_succeed) Direct Product VALUES
+__(aDP_succeed) Direct Product VALUES
+ << Succeed; Back to Node TEST_EQUAL(VALUES)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ >> Go to Node (FIRST)_EQUAL_(SECOND)
+__(SP_first) primitive  (FIRST)_EQUAL_(SECOND)
+__(SDP1_first)Node FIRST
+55 => Found a corresponding match node
+__(SDP1_first)Node SECOND
+55 => Found a corresponding match node
+equal compare 55,55
+equal compare 55,55
+ SUCCEED<< Go to Node ok
+$match direct product - ok
+__(sDP_first) Direct Product ok
+ >> Go to Node FIRST
+$reference direct product - FIRST
+(SDP)_Node FIRST
+__(SDP_first)Node FIRST
+match node->first FIRST
+match node->first->
+55Input_File 0 2
+ => Found a corresponding match node
+ << Back to Node ok
+$match direct product - ok
+__(sDP_succeed) Direct Product ok
+ >> Succeed; Go to Node ' equals '
+$literal - ' equals '
+__(SL_first) Literal ' equals '
+ => Output a string with Literal
+ << Back to Node ok
+$match direct product - ok
+__(sDP_succeed) Direct Product ok
+ >> Succeed; Go to Node SECOND
+$reference direct product - SECOND
+(SDP)_Node SECOND
+__(SDP_first)Node SECOND
+match node->second SECOND
+match node->second->
+55Input_File 3 5
+ => Found a corresponding match node
+ << Back to Node ok
+$match direct product - ok
+__(sDP_succeed) Direct Product ok
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(SDP)_Node NL
+__(SDP_first)Node NL
+ => Successfully matched at module call
+ << Back to Node ok
+$match direct product - ok
+__(sDP_succeed) Direct Product ok
+ << Succeed; Back to Node (FIRST)_EQUAL_(SECOND)
+__(SP1_succeed) Primitive1 (FIRST)_EQUAL_(SECOND)
+ << Succeed; Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node TEST_EQUAL(VALUES)
+Your specificaton ran successfully.
+Output file length = 13.  Contents:
+55 equals 55
+
+#####   THE  END   #####

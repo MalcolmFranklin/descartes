@@ -1,0 +1,17 @@
+7c7
+<  * $Date: 1994/05/24 01:57:11 $
+---
+>  * $Date: 1994/05/24 01:59:15 $
+17a18,21
+>  * Revision 1.39  1994/05/24  01:59:15  franklin
+>  * ObjectCenter also detected "defaults" instead of "default" inside
+>  * of two switch() statements.
+>  *
+163c167
+< static char    *rcsid = "@(#) $Id: analysis1.c,v 1.38 1994/05/24 01:57:11 franklin Exp $";
+---
+> static char    *rcsid = "@(#) $Id: analysis1.c,v 1.39 1994/05/24 01:59:15 franklin Exp $";
+4466c4470
+< 				defaults:
+---
+> 				default:

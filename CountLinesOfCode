@@ -1,0 +1,76 @@
+Article: 16948 of comp.software-eng
+Xref: newsgate comp.software.testing:1460 comp.software-eng:16948
+Path: newsgate!mogate!oakhill!cs.utexas.edu!howland.reston.ans.net!europa.eng.gtefsd.com!ulowell!MathWorks.Com!news2.near.net!info-server.bbn.com!noc.near.net!das-news.harvard.edu!spdcc!merk!epochsys!fjs
+From: fjs@epochsys.UUCP (Jay Shields)
+Newsgroups: comp.software.testing,comp.software-eng
+Subject: Re: Tools for counting non-commented source statements?
+Summary: Check comp.sources.unix archives
+Keywords: count KNCSS source statements
+Message-ID: <3349@epochsys.UUCP>
+Date: Wed, 18 May 94 07:59:31 MST
+References: <CpwMI5.2J4@world.std.com>
+Organization: Epoch Systems, Westboro MA
+Lines: 60
+
+In article <CpwMI5.2J4@world.std.com>, mandel@world.std.com (Alan Mandel) writes:
+> Hi all.
+> 
+> I'm looking around to see if there are any tools around
+> that count source statements (non-commented source
+> statements, lines of code, etc).
+> 
+> I briefly tried using the pre-processor to remove comments,
+> but the INCLUDE files are included for each module - not
+> an acceptable result!
+> 
+> Any pointers would be appreciated...
+> 
+
+There is a package called metrics that is in Volume 20 of the
+comp.sources.unix archive that contains a program called kdsi; it's a
+decent loc counter, if you don't want to bother to write one yourself.
+In fact, here is the man page for it:
+
+--------------------------------------------------------------------------------
+
+KDSI(L COSI)      Misc. Reference Manual Pages       KDSI(L COSI)
+ 
+NAME
+     kdsi - count number of lines of code in a C program
+ 
+SYNOPSIS
+     kdsi [ file ]*
+ 
+DESCRIPTION
+     Kdsi counts the lines of code in a C program.   It  provides
+     the following information:
+ 
+               lines of code
+               blank lines
+               comments lines
+               number of comments
+ 
+     If you specify no files, kdsi will read from stdin.  If  you
+     specify  more  than  one file on the command line, kdsi will
+     print the total for each category.
+ 
+SEE ALSO
+     wc(1)
+
+--------------------------------------------------------------------------------
+
+The metrics package also has stuff for McCabe & Halstead metrics. You can
+probably find it in lots of places, but I know you can get it from
+gatekeeper.dec.com in the directory:
+   pub/usenet/comp.sources.unix/volume20/metrics 
+
+There are 14 parts to the package. 
+
+
+-- 
+F. Jay Shields      | fjs@epoch.com                                  |
+Epoch Systems, Inc. |------------------------------------------------| 
+8 Technology Drive  | A tautology:                                   |
+Westboro, MA 01581  | my_opinion != employer's_opinion && my_opinion |
+
+

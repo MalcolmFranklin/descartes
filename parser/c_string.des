@@ -1,0 +1,17 @@
+OCCURRENCE_OF_(C_STRING)
+	C_STRING
+		b(1.. )
+			'c'
+		d
+			B#
+		NL
+
+	return
+		'The number of character c is '
+		B#
+		'.'
+		NL
+		'The string will be '
+		B
+		'.'
+		NL

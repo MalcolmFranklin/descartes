@@ -1,0 +1,15 @@
+TWO_OF_(OPERANDS)
+	OPERANDS
+		before_decimal(1.. )
+			BDIGIT
+		NL
+		after_decimal(1.. )
+			BDIGIT
+		NL
+	return
+		'Matched the input.'
+		NL
+BDIGIT
+	return+
+		'0'
+		'1'

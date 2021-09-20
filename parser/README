@@ -1,0 +1,4 @@
+The makefile builds a parser that will check the syntax
+of your Descartes spec.  Example run:
+	parser myfile.des > output
+

@@ -1,0 +1,65 @@
+Article: 51419 of comp.windows.x
+Path: newsgate!mogate!oakhill!cs.utexas.edu!howland.reston.ans.net!math.ohio-state.edu!usc!bloom-beacon.mit.edu!INTERNET!news-mail-gateway
+From: kk@unisql.UUCP (Kerry Kimbrough)
+Newsgroups: comp.windows.x
+Subject: C++ and callbacks
+Date: 5 May 1994 20:09:24 -0400
+Organization: The Internet
+Lines: 16
+Sender: news@athena.mit.edu
+Message-ID: <9405051609.AA10311@hyundai.unisql>
+References: <2q9v55$ted@bigblue.oit.unc.edu>
+NNTP-Posting-Host: bloom-beacon.mit.edu
+To: uncvx2.oit.unc.edu!brandon@cs.utexas.edu
+Cc: x.org!xpert@cs.utexas.edu
+
+
+For what it's worth:
+
+   : |> You have to use "extern C" linkage for any of
+   : |> your callbacks.  You can't register any C++ function directly.
+
+This is not true.
+
+   : Actually the function does not have to have "extern C" linkage.  It just
+   : can't be a non-static member function.
+
+This is true.
+
+Based on my experience with several large C++/Motif programs that have been
+ported to many platforms and C++ compilers.
+
+
+
+Article: 51427 of comp.windows.x
+Xref: newsgate comp.windows.x:51427 comp.lang.c++:61653 gnu.g++.help:5201
+Newsgroups: comp.windows.x,comp.lang.c++,gnu.g++.help
+Path: newsgate!mogate!oakhill!cs.utexas.edu!swrinde!emory!news-feed-2.peachnet.edu!news-feed-1.peachnet.edu!news.duke.edu!MathWorks.Com!yeshua.marcam.com!zip.eecs.umich.edu!newsxfer.itd.umich.edu!gumby!yale!yale.edu!noc.near.net!cambridge-news.cygnus.com!majipoor.cygnus.com!news!jason
+From: jason@cygnus.com (Jason Merrill)
+Subject: Re: C++ and callbacks
+In-Reply-To: brandon@uncvx2.oit.unc.edu's message of 5 May 1994 05:11:01 GMT
+Content-Type: text/plain; charset=US-ASCII
+Message-ID: <JASON.94May5173436@deneb.cygnus.com>
+Followup-To: comp.windows.x,comp.lang.c++,gnu.g++.help
+Sender: news@cygnus.com
+Nntp-Posting-Host: deneb.cygnus.com
+Organization: Cygnus Support, Mountain View, CA
+References: <pauld.767898877@sarge> <2q65gv$oln@bigblue.oit.unc.edu>
+	<2q67fpINNgv5@eccdb1.pms.ford.com> <2q9v55$ted@bigblue.oit.unc.edu>
+Mime-Version: 1.0
+Date: Thu, 5 May 94 17:34:36 MST
+Lines: 11
+
+>>>>> Brandon Van Every <brandon@uncvx2.oit.unc.edu> writes:
+
+> I can't find anything in Stroustrup that says this will work.  The default
+> linkage for all functions is "C++" (p. 524).  Given that, I'd say that not
+> using "extern C" is rather risky.
+
+But does anything say that it won't?  C and C++ use the same calling
+convention for plain functions, so C linkage v. C++ should have no effect
+on function pointers.
+
+Jason
+
+

@@ -1,0 +1,8 @@
+   total    blank lines w/   nb, nc    semi- preproc. file
+   lines    lines comments    lines   colons  direct.
+--------+--------+--------+--------+--------+--------+----
+     262       37       52      173       96        6 commands.c
+     161       29       42       90       52        6 util.c
+     173       32       30      111       62        3 xedit.c
+      69       12       30       27       14       12 xedit.h
+     665      110      154      401      224       27 total

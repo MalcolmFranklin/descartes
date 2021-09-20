@@ -1,0 +1,9 @@
+The aquarium image was rendered with rayshade from a script written by
+kilian@cray.com and Jerome A. Farm.
+
+These images are useful for testing the `display' program from
+contrib/ImageMagick.tar.gz on ftp.x.org.  `display' is a program that
+can display an image on any X server:
+
+  make
+  display *.miff

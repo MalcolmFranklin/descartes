@@ -1,0 +1,77 @@
+Baselines (for y.tab.c in hcheng/win)  Trying to find source '.y' file.
+==========================
+-rw-rw----  1 franklin    36677 Mar 25 12:40 ../y.tab.c
+-rw-rw----  1 franklin      796 Mar 25 17:36 y.tab.h
+linecount == 1315 4607 36677 ../y.tab.c
+==========================
+
+----------------------------------------------------------
+../../lee/des.y
+linecount == 1461 4964 40485 y.tab.c
+diff stats == 1654 6761 50288
+
+-rw-rw----  1 franklin    40485 Mar 25 17:38 y.tab.c
+-rw-rw----  1 franklin      625 Mar 25 17:38 y.tab.h
+----------------------------------------------------------
+../../lee/des1.y
+linecount == 1580 5337 44299 y.tab.c
+diff stats == 1578 6494 48434
+
+-rw-rw----  1 franklin    44299 Mar 25 17:38 y.tab.c
+-rw-rw----  1 franklin      644 Mar 25 17:38 y.tab.h
+----------------------------------------------------------
+../../lee/des2.y
+linecount == 1618 5558 44984 y.tab.c
+diff stats == 1451 6212 45882
+
+-rw-rw----  1 franklin    44984 Mar 25 17:38 y.tab.c
+-rw-rw----  1 franklin      644 Mar 25 17:38 y.tab.h
+----------------------------------------------------------
+../../lex/des.y
+linecount == 1340 4583 36639 y.tab.c
+diff stats == 1619 6523 49257
+
+-rw-rw----  1 franklin    36639 Mar 25 17:38 y.tab.c
+-rw-rw----  1 franklin      458 Mar 25 17:38 y.tab.h
+----------------------------------------------------------
+../../lex/des1.y
+linecount == 1319 4493 35131 y.tab.c
+diff stats == 1587 6431 47830
+
+-rw-rw----  1 franklin    35131 Mar 25 17:38 y.tab.c
+-rw-rw----  1 franklin      458 Mar 25 17:38 y.tab.h
+----------------------------------------------------------
+../../lex/real_des.y
+linecount == 790 3263 21201 y.tab.c
+diff stats == 1344 5974 42911
+
+-rw-rw----  1 franklin    21201 Mar 25 17:38 y.tab.c
+-rw-rw----  1 franklin      299 Mar 25 17:38 y.tab.h
+----------------------------------------------------------
+../../win/des.y
+linecount == 1563 5259 43770 y.tab.c
+diff stats == 1746 7160 53633
+
+-rw-rw----  1 franklin    43770 Mar 25 17:38 y.tab.c
+-rw-rw----  1 franklin      777 Mar 25 17:38 y.tab.h
+----------------------------------------------------------
+../../win/des1.y
+linecount == 1398 4846 37168 y.tab.c
+diff stats == 782 2713 18966
+
+-rw-rw----  1 franklin    37168 Mar 25 17:38 y.tab.c
+-rw-rw----  1 franklin      796 Mar 25 17:38 y.tab.h
+----------------------------------------------------------
+../../win/des2.y
+linecount == 1439 4949 39365 y.tab.c
+diff stats == 623 2291 13561
+
+-rw-rw----  1 franklin    39365 Mar 25 17:39 y.tab.c
+-rw-rw----  1 franklin      796 Mar 25 17:39 y.tab.h
+----------------------------------------------------------
+../../win/des3.y
+linecount == 1718 5823 48950 y.tab.c
+diff stats == 1332 5800 42676
+
+-rw-rw----  1 franklin    48950 Mar 25 17:39 y.tab.c
+-rw-rw----  1 franklin      796 Mar 25 17:39 y.tab.h

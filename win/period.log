@@ -1,0 +1,341 @@
+Descartes' Trace Log  Ver 1.0   Time: Mon Aug  8 10:07:20 1994
+--------------------------------------------------------------
+
+  #####   Beginning   #####
+
+
+Descartes specification file: "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/period.des.
+Log file:                     "/tmp_mnt/home/borg3/franklin/thesis/descartes/win/period.log.
+
+Contents of the Descartes specification file:
+3
+
+
+Module Title CONTROL_PERIOD_(TIME_SPAN)
+$reference direct product - TIME_SPAN
+__(aDP_first) Direct Product TIME_SPAN
+ >> Go to Node set_time
+$match direct product - set_time
+__(aDP_first) Direct Product set_time
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node set_time
+$match direct product - set_time
+__(aDP_succeed) Direct Product set_time
+__(aDP_succeed) Direct Product set_time
+ << Succeed; Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ << Succeed; Back to Node CONTROL_PERIOD_(TIME_SPAN)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ >> Go to Node (SET_TIME)_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_EQUAL_('0')
+__(SDP1_first)Node SET_TIME
+3 => Found a corresponding match node
+equal compare 3,0
+equal compare 3,0
+ FAIL<< Back to Node return+
+$match discriminated union - return+
+__(SDU_fail) Discriminated Union return+
+ ?? Try to check node (SET_TIME)_NOT_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_NOT_EQUAL_('0')
+__(SDP1_first)Node SET_TIME
+3 => Found a corresponding match node
+ => Found a corresponding match node
+ SUCCEED<< Go to Node decrement
+$match direct product - decrement
+__(sDP_first) Direct Product decrement
+ >> Go to Node (SET_TIME)_MINUS_('1')
+__(SP_first) primitive  (SET_TIME)_MINUS_('1')
+__(SDP1_first)Node SET_TIME
+3 => Found a corresponding match node
+2 SUCCEED<< Back to Node decrement
+$match direct product - decrement
+__(sDP_succeed) Direct Product decrement
+ << Succeed; Back to Node (SET_TIME)_NOT_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_NOT_EQUAL_('0')
+ >> Succeed; Go to Node CONTROL_PERIOD_(DECREMENT)
+$reference direct product - CONTROL_PERIOD_(DECREMENT)
+(SDP)_Node CONTROL_PERIOD_(DECREMENT)
+__(SDP_first)Node CONTROL_PERIOD_(DECREMENT)
+__(SM_first) module CONTROL_PERIOD_(DECREMENT)
+__(SDP1_first)Node DECREMENT
+2 => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/period.des].
+
+Module Title CONTROL_PERIOD_(TIME_SPAN)
+$reference direct product - TIME_SPAN
+__(aDP_first) Direct Product TIME_SPAN
+ >> Go to Node set_time
+$match direct product - set_time
+__(aDP_first) Direct Product set_time
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node set_time
+$match direct product - set_time
+__(aDP_succeed) Direct Product set_time
+__(aDP_succeed) Direct Product set_time
+ << Succeed; Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ << Succeed; Back to Node CONTROL_PERIOD_(TIME_SPAN)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ >> Go to Node (SET_TIME)_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_EQUAL_('0')
+__(SDP1_first)Node SET_TIME
+2 => Found a corresponding match node
+equal compare 2,0
+equal compare 2,0
+ FAIL<< Back to Node return+
+$match discriminated union - return+
+__(SDU_fail) Discriminated Union return+
+ ?? Try to check node (SET_TIME)_NOT_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_NOT_EQUAL_('0')
+__(SDP1_first)Node SET_TIME
+2 => Found a corresponding match node
+ => Found a corresponding match node
+ SUCCEED<< Go to Node decrement
+$match direct product - decrement
+__(sDP_first) Direct Product decrement
+ >> Go to Node (SET_TIME)_MINUS_('1')
+__(SP_first) primitive  (SET_TIME)_MINUS_('1')
+__(SDP1_first)Node SET_TIME
+2 => Found a corresponding match node
+1 SUCCEED<< Back to Node decrement
+$match direct product - decrement
+__(sDP_succeed) Direct Product decrement
+ << Succeed; Back to Node (SET_TIME)_NOT_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_NOT_EQUAL_('0')
+ >> Succeed; Go to Node CONTROL_PERIOD_(DECREMENT)
+$reference direct product - CONTROL_PERIOD_(DECREMENT)
+(SDP)_Node CONTROL_PERIOD_(DECREMENT)
+__(SDP_first)Node CONTROL_PERIOD_(DECREMENT)
+__(SM_first) module CONTROL_PERIOD_(DECREMENT)
+__(SDP1_first)Node DECREMENT
+1 => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/period.des].
+
+Module Title CONTROL_PERIOD_(TIME_SPAN)
+$reference direct product - TIME_SPAN
+__(aDP_first) Direct Product TIME_SPAN
+ >> Go to Node set_time
+$match direct product - set_time
+__(aDP_first) Direct Product set_time
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node set_time
+$match direct product - set_time
+__(aDP_succeed) Direct Product set_time
+__(aDP_succeed) Direct Product set_time
+ << Succeed; Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ << Succeed; Back to Node CONTROL_PERIOD_(TIME_SPAN)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ >> Go to Node (SET_TIME)_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_EQUAL_('0')
+__(SDP1_first)Node SET_TIME
+1 => Found a corresponding match node
+equal compare 1,0
+equal compare 1,0
+ FAIL<< Back to Node return+
+$match discriminated union - return+
+__(SDU_fail) Discriminated Union return+
+ ?? Try to check node (SET_TIME)_NOT_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_NOT_EQUAL_('0')
+__(SDP1_first)Node SET_TIME
+1 => Found a corresponding match node
+ => Found a corresponding match node
+ SUCCEED<< Go to Node decrement
+$match direct product - decrement
+__(sDP_first) Direct Product decrement
+ >> Go to Node (SET_TIME)_MINUS_('1')
+__(SP_first) primitive  (SET_TIME)_MINUS_('1')
+__(SDP1_first)Node SET_TIME
+1 => Found a corresponding match node
+0 SUCCEED<< Back to Node decrement
+$match direct product - decrement
+__(sDP_succeed) Direct Product decrement
+ << Succeed; Back to Node (SET_TIME)_NOT_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_NOT_EQUAL_('0')
+ >> Succeed; Go to Node CONTROL_PERIOD_(DECREMENT)
+$reference direct product - CONTROL_PERIOD_(DECREMENT)
+(SDP)_Node CONTROL_PERIOD_(DECREMENT)
+__(SDP_first)Node CONTROL_PERIOD_(DECREMENT)
+__(SM_first) module CONTROL_PERIOD_(DECREMENT)
+__(SDP1_first)Node DECREMENT
+0 => Found a corresponding match node
+
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+The name of the Descartes specification is [/tmp_mnt/home/borg3/franklin/thesis/descartes/win/period.des].
+
+Module Title CONTROL_PERIOD_(TIME_SPAN)
+$reference direct product - TIME_SPAN
+__(aDP_first) Direct Product TIME_SPAN
+ >> Go to Node set_time
+$match direct product - set_time
+__(aDP_first) Direct Product set_time
+ >> Go to Node INTEGER
+$reference direct product - INTEGER
+(ADP)_Node INTEGER
+__(ADP_first)Node INTEGER
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 1
+ << Back to Node set_time
+$match direct product - set_time
+__(aDP_succeed) Direct Product set_time
+__(aDP_succeed) Direct Product set_time
+ << Succeed; Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ >> Succeed; Go to Node NL
+$reference direct product - NL
+(ADP)_Node NL
+__(ADP_first)Node NL
+ => Successful matching with module call
+ -> Forward input buffer pointer to location 2
+ << Back to Node TIME_SPAN
+$reference direct product - TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+__(aDP_succeed) Direct Product TIME_SPAN
+ << Succeed; Back to Node CONTROL_PERIOD_(TIME_SPAN)
+The analysis procedure was successful.
+Continue synthesis procedure.
+$match discriminated union - return+
+__(SDU_first) Discriminated Union return+
+ >> Go to Node (SET_TIME)_EQUAL_('0')
+__(SP_first) primitive  (SET_TIME)_EQUAL_('0')
+__(SDP1_first)Node SET_TIME
+0 => Found a corresponding match node
+equal compare 0,0
+equal compare 0,0
+ SUCCEED<< Go to Node 'CONTROL PERIOD OVER'
+$literal - 'CONTROL PERIOD OVER'
+__(SL_first) Literal 'CONTROL PERIOD OVER'
+ => Output a string with Literal
+ << Back to Node (SET_TIME)_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_EQUAL_('0')
+ << Succeed; Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node CONTROL_PERIOD_(TIME_SPAN)
+Your specificaton ran successfully.
+Output file length = 3.  Contents:
+210
+
+
+  #####   THE  END OF SUB MODULE  #####
+
+
+  #####   THE  END OF SUB MODULE  #####
+ SUCCEED11<< Back to Node CONTROL_PERIOD_(DECREMENT)
+ << Back to Node (SET_TIME)_NOT_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_NOT_EQUAL_('0')
+ << Succeed; Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node CONTROL_PERIOD_(TIME_SPAN)
+Your specificaton ran successfully.
+Output file length = 3.  Contents:
+210
+
+
+  #####   THE  END OF SUB MODULE  #####
+
+
+  #####   THE  END OF SUB MODULE  #####
+ SUCCEED11<< Back to Node CONTROL_PERIOD_(DECREMENT)
+ << Back to Node (SET_TIME)_NOT_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_NOT_EQUAL_('0')
+ << Succeed; Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node CONTROL_PERIOD_(TIME_SPAN)
+Your specificaton ran successfully.
+Output file length = 3.  Contents:
+210
+
+
+  #####   THE  END OF SUB MODULE  #####
+
+
+  #####   THE  END OF SUB MODULE  #####
+ SUCCEED11<< Back to Node CONTROL_PERIOD_(DECREMENT)
+ << Back to Node (SET_TIME)_NOT_EQUAL_('0')
+__(SP1_succeed) Primitive1 (SET_TIME)_NOT_EQUAL_('0')
+ << Succeed; Back to Node return+
+$match discriminated union - return+
+__(SDU_succeed) Discriminated Union return+
+ << Succeed; Back to Node CONTROL_PERIOD_(TIME_SPAN)
+Your specificaton ran successfully.
+Output file length = 22.  Contents:
+210CONTROL PERIOD OVER
+#####   THE  END   #####

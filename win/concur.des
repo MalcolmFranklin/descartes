@@ -1,0 +1,31 @@
+(MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)
+	MESSAGE_ONE
+		input_one
+			INTEGER
+		NL
+
+	MESSAGE_TWO
+		input_two
+			INTEGER
+		NL
+	return
+		PARALLEL
+			PRODUCER_(INPUT_ONE)
+			COMSUMER_(INPUT_TWO)
+
+PRODUCER_(MESSAGE_ONE)
+	MESSAGE_ONE
+		input_one
+			INTEGER
+		NL
+	return
+		(INPUT_ONE)_PLUS_('2')
+
+
+COMSUMER_(MESSAGE_TWO)
+	MESSAGE_TWO
+		input_two
+			INTEGER
+		NL
+	return
+		(INPUT_TWO)_TIMES_('5')

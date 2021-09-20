@@ -1,0 +1,20 @@
+OCCURRENCE_OF_(C_STRING)
+	C_STRING
+		b(1.. )
+			'c'
+		d
+			DIGIT
+		NL
+	return
+		time
+			TIMER_(D)
+		var
+			'2'
+		(D)_PLUS_(VAR)
+		DELAY_('1')
+		check
+			GTIME_(TIME)
+		NL
+		(CHECK)_EQUAL_('TIMEOUT')
+			'The string will be '
+			B

@@ -1,0 +1,15 @@
+# xv -ninstall (Dont install your own colormap, let WM handle it.)
+#    -root
+#    -rmode	0: tiling
+# 		1: integer tiling
+# 		2: mirrored tilint
+# 		3: integer mirrored tiling
+# 		4: centered tiling
+# 		5: centered on a solid background
+# 		6: centered on a 'warp' background
+# 		7: centered on a 'brick' background
+#    -quit (Have xv go away after setting the root window)
+#    -mono (Force the image to greyscale)
+# GIF reading code based on gif2ras.c by Patrick J. Naughton
+# naughton@wind.sun.com
+xv -ninstall -root -rmode 0 -quit descart.gif

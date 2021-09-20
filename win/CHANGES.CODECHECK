@@ -1,0 +1,83 @@
+Bogositiies:
+Does not recognize ANSI varargs <stdarg.h>
+Incorrectly identifies "unsinged long int" as a "non-ANSI unsigned type"
+
+Spurious warnings about "ANSI C does not expand macros inside strings"
+
+Spurious "Function xxx has no prototype." messages for the following functions:
+void (*signal(int sig, void (*action)(int)))(int);	signal.h
+pid_t getpid(void);	unistd.h
+pid_t fork(void);	unistd.h
+void abort(void);	stdlib.h
+
+--------------------------------------------
+processing_situation_t
+tree_t
+
+(wid1.c)
+title_filter_subcallback_t
+Changed str_len -> len; "str" prefix is reserved by string.h
+
+(share_rtn.c)
+continue_msg_t
+ERROR_EXISTED to XERROR_EXISTED (E prefix is reserved by errno.h)
+
+(analysis1.h)
+top_of_stack (prefix "to" reserved by ctype.h)
+isempty() -> itisempty() prefix "is" is reserved by ctype.h
+Execution_Proc() -> execution_proc
+
+(exec_rtn1.h)
+#undefs for "S_"
+EXEC_RTN1_H to XEXEC_RTN1_H (E prefix is reserved by errno.h)
+(exec_rtn1.c)
+EOF_MARKER -> XEOF_MARKER
+Exec_Flags_Setting() -> exec_flags_setting()
+same for: Exec_Canvas_Setup Exec_Run Exec_Run1 Exec_Run2 Exec_Draw Exec_Proc
+	  Exec_Canvas
+Draw_Tree_Node() local variable str_len -> len; str prefix reserved by string.h
+
+(desc_struct.h)
+EQUAL -> ISEQUAL
+ELEMENT -> STACK_ELEMENT (E prefix is reserved by errno.h)
+Error_Counter -> error_counter
+
+(build_hoare_tree,c)
+Error_Code ->error_code (E prefix is reserved by errno.h)
+ ditto for: Error_Code, Error_Supplement
+"str" to "mystr"; prefix str is reserved by string.h
+
+(desc_table.h)
+Error_Code -> error_code
+
+
+(some_utils.c)
+isqempty -> qisempty (prefix "is" is reserved by ctype.h)
+
+(command_line.c)
+topShell -> AppTopShell (prefix "to" is reserved by ctype.h)
+switch_idx_t -> switch_idx_tt (suffix _t is reserved by POSIX.1)
+END_OF_SWITCHES -> THE_END_OF_SWITCHES (prefix E is reserved by errno.h)
+
+(main.c)
+EXIT_IDX -> XEXIT_IDX (prefix E is reserved by errno.h)
+ttoplevel -> ttoplevel ("to" prefix is reserved by ctype.h)
+toolbar_mgr -> ttoolbar_mgr ("to" prefix is reserved by ctype.h)
+Moved #include <string.h> before other include files, to eliminate codecheck
+warning about the prefix "str" being used before string.h was included.
+(either stdlib.h or stdio.h used an identifier beginning with "str").
+
+
+(need_before_ytab.h, des2.y, des.l)
+Changed element "str" of type NODE to pstr
+
+(des.l)
+Replace hardcoded constant 0x7FFFFFFF with INT_MAX from <limits.h>.
+
+(fifo.c)
+Moved #include ctype.h before string.h and stdio.h to shut up CodeCheck
+message: Prefix "to" was used 1 times before this #include.
+
+(token.c)
+token -> ttoken; prefix "to" is reserved by ctype.h
+token_yylex -> ttoken_yylex

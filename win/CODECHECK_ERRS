@@ -1,0 +1,348 @@
+
+Abraxas Software (R) CodeCheck Unix version 5.02
+Copyright (c) 1988-94 by Abraxas Software, Inc. All rights reserved.
+
+Checking ANSI C file analysis1.c with rules from ansi.cc, posix.cc:
+
+analysis1.c(201): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+exec_rtn1.h(125): Warning W1004: Precede this line with #undef S_Input_File
+exec_rtn1.h(129): Warning W1004: Precede this line with #undef S_Output_File
+some_utils.h(97): Warning W8025: non-ANSI unsigned type.
+analysis1.c(277): Warning W1004: Precede this line with #undef S_Hoare_Root_Dummy
+analysis1.c(278): Warning W1004: Precede this line with #undef S_Current_Node
+analysis1.c(279): Warning W1004: Precede this line with #undef S_Root_Stack
+analysis1.c(280): Warning W1004: Precede this line with #undef S_Temp_Stack
+analysis1.c(281): Warning W1004: Precede this line with #undef S_Current_Stack
+analysis1.c(687): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(700): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(723): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(733): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(743): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(1737): Warning W1004: Precede this line with #undef S_Check_Module
+analysis1.c(1741): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(1779): Warning W8006: ANSI C does not expand macros inside strings.
+analysis1.c(1840): Warning W1004: Precede this line with #undef S_Find_Corr_Match1
+analysis1.c(1966): Warning W1004: Precede this line with #undef S_Direct_Product1
+analysis1.c(2101): Warning W1004: Precede this line with #undef S_Parallel
+analysis1.c(2114): Warning W8023: Function shmget has no prototype.
+analysis1.c(2117): Warning W8023: Function shmat has no prototype.
+analysis1.c(2121): Warning W8023: Function shmget has no prototype.
+analysis1.c(2124): Warning W8023: Function shmat has no prototype.
+analysis1.c(2126): Warning W8023: Function shmget has no prototype.
+analysis1.c(2129): Warning W8023: Function shmat has no prototype.
+analysis1.c(2165): Warning W8023: Function getpid has no prototype.
+analysis1.c(2242): Warning W8023: Function fork has no prototype.
+analysis1.c(2244): Warning W8023: Function getpid has no prototype.
+analysis1.c(2253): Warning W8023: Function getpid has no prototype.
+analysis1.c(2262): Warning W8023: Function sem_close has no prototype.
+analysis1.c(2271): Warning W8023: Function getpid has no prototype.
+analysis1.c(2414): Warning W8023: Function shmctl has no prototype.
+analysis1.c(2415): Warning W8023: Function shmctl has no prototype.
+analysis1.c(2416): Warning W8023: Function shmctl has no prototype.
+analysis1.c(2417): Warning W8023: Function sem_close has no prototype.
+analysis1.c(2418): Warning W8023: Function sem_close has no prototype.
+analysis1.c(2573): Warning W1004: Precede this line with #undef S_Primitives
+analysis1.c(3021): Warning W8023: Function getpid has no prototype.
+analysis1.c(3022): Warning W8023: Function getpid has no prototype.
+analysis1.c(3024): Warning W8023: Function msgget has no prototype.
+analysis1.c(3031): Warning W8023: Function signal has no prototype.
+analysis1.c(3035): Warning W1004: Precede this line with #undef S_GTimer
+analysis1.c(3136): Warning W8023: Function getpid has no prototype.
+analysis1.c(3137): Warning W8023: Function msgget has no prototype.
+analysis1.c(3145): Warning W8023: Function getpid has no prototype.
+analysis1.c(3311): Warning W1004: Precede this line with #undef S_Timer
+analysis1.c(3407): Warning W8023: Function signal has no prototype.
+analysis1.c(3413): Warning W8023: Function getpid has no prototype.
+analysis1.c(3580): Warning W1004: Precede this line with #undef S_Delay
+analysis1.c(3803): Warning W1004: Precede this line with #undef S_Receive
+analysis1.c(3913): Warning W8023: Function msgget has no prototype.
+analysis1.c(4097): Warning W1004: Precede this line with #undef S_Send
+analysis1.c(4219): Warning W8023: Function msgget has no prototype.
+analysis1.c(4396): Warning W1004: Precede this line with #undef S_Primitives2
+analysis1.c(4543): Warning W8023: Function time has no prototype.
+analysis1.c(4720): Warning W1004: Precede this line with #undef S_Literal
+analysis1.c(4907): Warning W1004: Precede this line with #undef S_Module_Call
+analysis1.c(5160): Warning W1004: Precede this line with #undef S_Find_Corr_Match
+analysis1.c(5318): Warning W1004: Precede this line with #undef S_Find_Corr_Match2
+analysis1.c(5387): Warning W1004: Precede this line with #undef S_Direct_Product
+analysis1.c(5388): Warning W1004: Precede this line with #undef S_Temp_Stack
+analysis1.c(5865): Warning W1004: Precede this line with #undef S_Discriminated_Union
+analysis1.c(6080): Warning W1004: Precede this line with #undef S_Successful_Element
+analysis1.c(6209): Warning W1004: Precede this line with #undef S_Failed_Element
+analysis1.c(6247): Warning W1004: Precede this line with #undef S_Sequence
+analysis1.c(6379): Warning W1004: Precede this line with #undef S_Sequence_No
+analysis1.c(6608): Warning W1004: Precede this line with #undef S_Node_Type_Check
+analysis1.c(6735): Warning W1003: isempty: prefix "is" is reserved by ctype.h
+
+Warning W8024: Too many macros for some ANSI compilers.
+File analysis1.c check complete.
+
+Checking ANSI C file build_hoare_tree.c with rules from ansi.cc, posix.cc:
+
+build_hoare_tree.c(112): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+desc_table.h(98): Warning W8006: ANSI C does not expand macros inside strings.
+build_hoare_tree.h(116): Warning W1003: str: prefix str is reserved by string.h
+some_utils.h(97): Warning W8025: non-ANSI unsigned type.
+build_hoare_tree.c(188): Warning W8023: Function abort has no prototype.
+build_hoare_tree.c(229): Warning C0012: Undeclared variable: va_list
+build_hoare_tree.c(229): Warning C0000: Syntax error at args (identifier).
+  Expected comma, semicolon.
+build_hoare_tree.c(229): Warning C0006: Previous semicolon missing?
+build_hoare_tree.c(283): Warning W8023: Function va_start has no prototype.
+build_hoare_tree.c(283): Warning C0012: Undeclared variable: args
+build_hoare_tree.c(284): Warning W8023: Function va_arg has no prototype.
+build_hoare_tree.c(284): Warning C0012: Undeclared variable: args
+build_hoare_tree.c(284): Warning C0000: Syntax error at char.
+  Expected !, &, (, *, +, -, ~, ++, --, string, numeric constant, 
+    identifier, typedef name, sizeof.
+build_hoare_tree.c(286): Warning W8023: Function va_end has no prototype.
+build_hoare_tree.c(286): Warning C0012: Undeclared variable: args
+build_hoare_tree.c(655): Warning W1003: str: prefix str is reserved by string.h
+
+Warning W8024: Too many macros for some ANSI compilers.
+File build_hoare_tree.c check complete.
+
+Checking ANSI C file build_rtn.c with rules from ansi.cc, posix.cc:
+
+build_rtn.c(157): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+build_rtn.c(159): Warning W1002: Prefix str was used 2 times before this #include.
+need_before_ytab.h(55): Warning W1003: str: prefix str is reserved by string.h
+build_hoare_tree.h(116): Warning W1003: str: prefix str is reserved by string.h
+some_utils.h(97): Warning W8025: non-ANSI unsigned type.
+build_rtn.c(366): Warning W8006: ANSI C does not expand macros inside strings.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File build_rtn.c check complete.
+
+Checking ANSI C file command_line.c with rules from ansi.cc, posix.cc:
+
+command_line.c(95): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+command_line.h(42): Warning W1003: topShell: prefix "to" is reserved by ctype.h
+command_line.c(161): Warning W1003: END_OF_SWITCHES: prefix E is reserved by errno.h
+command_line.c(162): Warning W1003: switch_idx_t: suffix _t is reserved by POSIX.
+command_line.c(354): Warning W1003: topShell: prefix "to" is reserved by ctype.h
+File command_line.c check complete.
+
+Checking ANSI C file desc_struct.c with rules from ansi.cc, posix.cc:
+
+desc_struct.c(51): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+File desc_struct.c check complete.
+
+Checking ANSI C file exec_rtn1.c with rules from ansi.cc, posix.cc:
+
+exec_rtn1.c(250): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+exec_rtn1.c(253): Warning W1002: Prefix str was used 2 times before this #include.
+exec_rtn1.c(254): Warning W1002: Prefix "is"  was used 1 times before this #include.
+exec_rtn1.c(254): Warning W1002: Prefix "to" was used 2 times before this #include.
+exec_rtn1.h(125): Warning W1004: Precede this line with #undef S_Input_File
+exec_rtn1.h(129): Warning W1004: Precede this line with #undef S_Output_File
+some_utils.h(97): Warning W8025: non-ANSI unsigned type.
+exec_rtn1.c(322): Warning W8034: EXEC_HELP: prefix E is reserved by ANSI.
+exec_rtn1.c(323): Warning W8034: EOF_MARKER: prefix E is reserved by ANSI.
+exec_rtn1.c(340): Warning W1004: Precede this line with #undef S_Input_File
+exec_rtn1.c(344): Warning W1004: Precede this line with #undef S_Output_File
+exec_rtn1.c(404): Warning C0012: Undeclared variable: va_list
+exec_rtn1.c(404): Warning C0000: Syntax error at arguments.
+  Expected comma, semicolon.
+exec_rtn1.c(404): Warning C0006: Previous semicolon missing?
+exec_rtn1.c(407): Warning W8023: Function va_start has no prototype.
+exec_rtn1.c(407): Warning C0012: Undeclared variable: arguments
+exec_rtn1.c(408): Warning C0012: Undeclared variable: arguments
+exec_rtn1.c(413): Warning W8023: Function va_end has no prototype.
+exec_rtn1.c(413): Warning C0012: Undeclared variable: arguments
+exec_rtn1.c(617): Warning W8023: Function shmget has no prototype.
+exec_rtn1.c(620): Warning W8023: Function shmat has no prototype.
+exec_rtn1.c(622): Warning W8023: Function shmget has no prototype.
+exec_rtn1.c(625): Warning W8023: Function shmat has no prototype.
+exec_rtn1.c(627): Warning W8023: Function shmget has no prototype.
+exec_rtn1.c(630): Warning W8023: Function shmat has no prototype.
+exec_rtn1.c(632): Warning W8023: Function shmget has no prototype.
+exec_rtn1.c(635): Warning W8023: Function shmat has no prototype.
+exec_rtn1.c(735): Warning W8023: Function msgget has no prototype.
+exec_rtn1.c(737): Warning W8023: Function sem_open has no prototype.
+exec_rtn1.c(739): Warning W8023: Function sem_open has no prototype.
+exec_rtn1.c(751): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(753): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(761): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(763): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(831): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(833): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(933): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(935): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(946): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(948): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(1041): Warning W8023: Function sem_close has no prototype.
+exec_rtn1.c(1043): Warning W8023: Function msgctl has no prototype.
+exec_rtn1.c(1046): Warning W8023: Function shmctl has no prototype.
+exec_rtn1.c(1049): Warning W8023: Function shmctl has no prototype.
+exec_rtn1.c(1052): Warning W8023: Function shmctl has no prototype.
+exec_rtn1.c(1055): Warning W8023: Function shmctl has no prototype.
+exec_rtn1.c(1099): Warning W8006: ANSI C does not expand macros inside strings.
+exec_rtn1.c(1300): Warning W8023: Function sem_open has no prototype.
+exec_rtn1.c(1301): Warning W8023: Function sem_open has no prototype.
+exec_rtn1.c(1505): Warning W1003: str_len: prefix str is reserved by string.h
+exec_rtn1.c(2061): Warning W8023: Function msgget has no prototype.
+exec_rtn1.c(2064): Warning W8023: Function fork has no prototype.
+exec_rtn1.c(2083): Warning W8023: Function sem_close has no prototype.
+exec_rtn1.c(2084): Warning W8023: Function sem_close has no prototype.
+exec_rtn1.c(2085): Warning W8023: Function msgctl has no prototype.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File exec_rtn1.c check complete.
+
+Checking ANSI C file main.c with rules from ansi.cc, posix.cc:
+
+main.c(155): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+main.c(157): Warning W1002: Prefix str was used 1 times before this #include.
+some_utils.h(97): Warning W8025: non-ANSI unsigned type.
+command_line.h(42): Warning W1003: topShell: prefix "to" is reserved by ctype.h
+desc_struct.h(318): Warning W1004: Precede this line with #undef F_Hoare_Root_Dummy
+exec_rtn1.h(125): Warning W1004: Precede this line with #undef S_Input_File
+exec_rtn1.h(129): Warning W1004: Precede this line with #undef S_Output_File
+wid1.h(146): Warning W1004: Precede this line with #undef S_OUTPUT_EXTENSION
+wid1.h(163): Warning W8016: Only 31 chars are significant.
+wid1.h(165): Warning W8016: Only 31 chars are significant.
+wid1.h(166): Warning W8016: Only 31 chars are significant.
+wid1.h(185): Warning W8016: Only 31 chars are significant.
+main.h(48): Warning W8034: toplevel: prefix to is reserved by ANSI.
+main.c(232): Warning W1003: EXIT_IDX: prefix E is reserved by errno.h
+main.c(252): Warning W8016: Only 31 chars are significant.
+main.c(258): Warning W8034: toplevel: prefix to is reserved by ANSI.
+main.c(265): Warning W1003: toolbar_mgr: prefix "to" is reserved by ctype.h
+main.c(348): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(349): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(352): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(353): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(360): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(361): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(398): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(435): Warning W8006: ANSI C does not expand macros inside strings.
+main.c(582): Warning W8016: Only 31 chars are significant.
+main.c(836): Warning W8016: Only 31 chars are significant.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File main.c check complete.
+
+Checking ANSI C file msg.c with rules from ansi.cc, posix.cc:
+
+msg.c(51): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+msg.c(92): Warning W8023: Function msgsnd has no prototype.
+msg.c(106): Warning W8023: Function msgrcv has no prototype.
+msg.c(125): Warning W8023: Function msgrcv has no prototype.
+File msg.c check complete.
+
+Checking ANSI C file semops.c with rules from ansi.cc, posix.cc:
+
+semops.c(94): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(97): Warning W8025: non-ANSI unsigned type.
+File semops.c check complete.
+
+Checking ANSI C file share_rtn.c with rules from ansi.cc, posix.cc:
+
+share_rtn.c(73): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+desc_struct.h(318): Warning W1004: Precede this line with #undef F_Hoare_Root_Dummy
+share_rtn.c(194): Warning W8006: ANSI C does not expand macros inside strings.
+File share_rtn.c check complete.
+
+Checking ANSI C file fifo.c with rules from ansi.cc, posix.cc:
+
+fifo.c(111): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+fifo.c(114): Warning W1002: Prefix "to" was used 2 times before this #include.
+fifo.c(115): Warning W1002: Prefix E was used 2 times before this #include.
+some_utils.h(97): Warning W8025: non-ANSI unsigned type.
+fifo.c(281): Warning W8023: Function signal has no prototype.
+fifo.c(284): Warning W8006: ANSI C does not expand macros inside strings.
+fifo.c(284): Warning W8023: Function getpid has no prototype.
+fifo.c(285): Warning W8023: Function getpid has no prototype.
+fifo.c(286): Warning W8006: ANSI C does not expand macros inside strings.
+fifo.c(329): Warning W8023: Function signal has no prototype.
+fifo.c(359): Warning W8023: Function getpid has no prototype.
+fifo.c(366): Warning W8023: Function getpid has no prototype.
+fifo.c(440): Warning W8023: Function getpid has no prototype.
+fifo.c(447): Warning W8023: Function getpid has no prototype.
+fifo.c(513): Warning W8023: Function getpid has no prototype.
+fifo.c(560): Warning W8023: Function getpid has no prototype.
+fifo.c(584): Warning W8023: Function getpid has no prototype.
+fifo.c(663): Warning W8023: Function getpid has no prototype.
+fifo.c(669): Warning W8023: Function getpid has no prototype.
+fifo.c(686): Warning W8023: Function getpid has no prototype.
+fifo.c(711): Warning W8023: Function getpid has no prototype.
+fifo.c(791): Warning W8023: Function getpid has no prototype.
+fifo.c(796): Warning W8023: Function getpid has no prototype.
+fifo.c(798): Warning W8023: Function getpid has no prototype.
+fifo.c(801): Warning W8023: Function getpid has no prototype.
+fifo.c(829): Warning W8023: Function getpid has no prototype.
+fifo.c(840): Warning W8023: Function fork has no prototype.
+fifo.c(851): Warning W8023: Function fork has no prototype.
+fifo.c(863): Warning W8023: Function fork has no prototype.
+fifo.c(875): Warning W8023: Function fork has no prototype.
+fifo.c(975): Warning W8023: Function getpid has no prototype.
+fifo.c(978): Warning W8023: Function fork has no prototype.
+File fifo.c check complete.
+
+Checking ANSI C file some_utils.c with rules from ansi.cc, posix.cc:
+
+some_utils.c(71): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+some_utils.h(97): Warning W8025: non-ANSI unsigned type.
+some_utils.c(218): Warning W8025: non-ANSI unsigned type.
+some_utils.c(221): Warning W8025: non-ANSI unsigned type.
+some_utils.c(222): Warning W8025: non-ANSI unsigned type.
+some_utils.c(592): Warning C0012: Undeclared variable: va_list
+some_utils.c(592): Warning C0000: Syntax error at arguments (identifier).
+  Expected comma, semicolon.
+some_utils.c(592): Warning C0006: Previous semicolon missing?
+some_utils.c(594): Warning W8023: Function va_start has no prototype.
+some_utils.c(594): Warning C0012: Undeclared variable: arguments
+some_utils.c(598): Warning C0012: Undeclared variable: arguments
+some_utils.c(600): Warning W8023: Function abort has no prototype.
+some_utils.c(601): Warning W8023: Function va_end has no prototype.
+some_utils.c(601): Warning C0012: Undeclared variable: arguments
+File some_utils.c check complete.
+
+Checking ANSI C file token.c with rules from ansi.cc, posix.cc:
+
+token.c(46): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+need_before_ytab.h(55): Warning W1003: str: prefix str is reserved by string.h
+desc_struct.h(318): Warning W1004: Precede this line with #undef F_Hoare_Root_Dummy
+token.c(90): Warning W8034: token: prefix to is reserved by ANSI.
+token.c(105): Warning W1003: token_yylex: prefix "to" is reserved by ctype.h
+File token.c check complete.
+
+Checking ANSI C file wid1.c with rules from ansi.cc, posix.cc:
+
+wid1.c(310): Warning W1000: Precede all headers with #define _POSIX_SOURCE
+wid1.c(313): Warning W1002: Prefix str was used 1 times before this #include.
+desc_struct.h(318): Warning W1004: Precede this line with #undef F_Hoare_Root_Dummy
+exec_rtn1.h(125): Warning W1004: Precede this line with #undef S_Input_File
+exec_rtn1.h(129): Warning W1004: Precede this line with #undef S_Output_File
+some_utils.h(97): Warning W8025: non-ANSI unsigned type.
+command_line.h(42): Warning W1003: topShell: prefix "to" is reserved by ctype.h
+main.h(48): Warning W8034: toplevel: prefix to is reserved by ANSI.
+wid1.h(146): Warning W1004: Precede this line with #undef S_OUTPUT_EXTENSION
+wid1.h(163): Warning W8016: Only 31 chars are significant.
+wid1.h(165): Warning W8016: Only 31 chars are significant.
+wid1.h(166): Warning W8016: Only 31 chars are significant.
+wid1.h(185): Warning W8016: Only 31 chars are significant.
+wid1.c(426): Warning W8016: Only 31 chars are significant.
+wid1.c(441): Warning W8016: Only 31 chars are significant.
+wid1.c(447): Warning W8016: Only 31 chars are significant.
+wid1.c(948): Warning C0012: Undeclared variable: va_list
+wid1.c(948): Warning C0000: Syntax error at arguments (identifier).
+  Expected comma, semicolon.
+wid1.c(948): Warning C0006: Previous semicolon missing?
+wid1.c(956): Warning W8023: Function va_start has no prototype.
+wid1.c(956): Warning C0012: Undeclared variable: arguments
+wid1.c(976): Warning C0012: Undeclared variable: arguments
+wid1.c(986): Warning W8023: Function va_end has no prototype.
+wid1.c(986): Warning C0012: Undeclared variable: arguments
+wid1.c(1002): Warning W8016: Only 31 chars are significant.
+wid1.c(1355): Warning W8016: Only 31 chars are significant.
+wid1.c(1411): Warning W1003: str: prefix str is reserved by string.h
+wid1.c(1412): Warning W1003: str_len: prefix str is reserved by string.h
+wid1.c(1417): Warning W8023: Function msgget has no prototype.
+
+Warning W8024: Too many macros for some ANSI compilers.
+File wid1.c check complete.
+
+Project analysis1.c completed.
+15571 source lines, 235313 header lines.

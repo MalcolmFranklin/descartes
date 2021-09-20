@@ -1,0 +1,852 @@
+CAP sym TELEGRAM_REPORT 268
+rule 20 yylval TELEGRAM_REPORT 266  
+token TELEGRAM_REPORT
+sym (
+CAP sym TELEGRAM_STREAM 268
+rule 20 yylval TELEGRAM_STREAM 266  
+token TELEGRAM_STREAM
+sym )
+rule 3 indent 0
+indent 0
+rule 30 new line
+REFER sym TELEGRAM_STREAM 266
+indent 1
+rule 30 new line
+rule 4 indent 0
+rule 61 1
+rule 62 2
+MATCH sym telegram 267
+rule 192 267
+yylval telegram 267  
+token telegram
+rule 16 
+indent 2
+rule 13 
+rule 14 *
+rule 30 new line
+rule 122 telegram * 267 indent2
+rule 122 telegram* * 267 indent2
+* SEQUENCE
+rule 122 telegram* 68
+rule 61 1
+rule 62 2
+rule 62 3
+MATCH sym word_sequence 267
+rule 192 267
+yylval word_sequence 267  
+token word_sequence
+rule 16 
+indent 3
+rule 13 
+rule 14 *
+rule 30 new line
+rule 124 word_sequence * 267 indent 3
+rule 124 word_sequence* * 267 indent 3
+* SEQUENCE
+rule 124 word_sequence* 68
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+MATCH sym anyword 267
+rule 192 267
+yylval anyword 267  
+token anyword
+indent 4
+rule 30 new line
+rule 123 anyword 267 item_type 0
+rule 123 anyword 267 indent4
+rule 123anyword 65
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+rule 62 5
+MATCH sym generic_word 267
+rule 192 267
+yylval generic_word 267  
+token generic_word
+rule 15 
+indent 5
+rule 13 
+rule 14 +
+rule 30 new line
+rule 124 generic_word + 267 indent 5
+rule 124 generic_word+ + 267 indent 5
+* UNION
+rule 124 generic_word+ 66
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+rule 62 5
+rule 62 6
+MATCH sym non_special_non_chargeable_word 267
+rule 192 267
+yylval non_special_non_chargeable_word 267  
+token non_special_non_chargeable_word
+indent 6
+rule 30 new line
+rule 123 non_special_non_chargeable_word 267 item_type 0
+rule 123 non_special_non_chargeable_word 267 indent6
+rule 123non_special_non_chargeable_word 65
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+rule 62 5
+rule 62 6
+rule 62 7
+rule 17 
+indent 7
+rule 30 new line
+rule 123 's' 265 item_type 0
+rule 123 's' 265 indent7
+rule 123's' 129
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+rule 62 5
+rule 62 6
+rule 62 7
+rule 17 
+indent 7
+rule 30 new line
+rule 123 't' 265 item_type 0
+rule 123 't' 265 indent7
+rule 123't' 129
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+rule 62 5
+rule 62 6
+rule 62 7
+rule 17 
+indent 7
+rule 30 new line
+rule 123 'o' 265 item_type 0
+rule 123 'o' 265 indent7
+rule 123'o' 129
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+rule 62 5
+rule 62 6
+rule 62 7
+rule 17 
+indent 7
+rule 30 new line
+rule 123 'p' 265 item_type 0
+rule 123 'p' 265 indent7
+rule 123'p' 129
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+rule 62 5
+rule 62 6
+MATCH sym chargeable_word 267
+rule 192 267
+yylval chargeable_word 267  
+token chargeable_word
+rule 16 
+indent 6
+rule 13 
+rule 14 *
+rule 30 new line
+rule 124 chargeable_word * 267 indent 6
+rule 124 chargeable_word* * 267 indent 6
+* SEQUENCE
+rule 124 chargeable_word* 68
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+rule 62 5
+rule 62 6
+rule 62 7
+rule 62 8
+REFER sym WORDCHAR 266
+rule 18 
+indent 8
+rule 30 new line
+rule 123 WORDCHAR 266 item_type 0
+rule 123 WORDCHAR 266 indent8
+rule 123WORDCHAR 131
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+MATCH sym blank 267
+rule 192 267
+yylval blank 267  
+token blank
+rule 16 
+indent 4
+rule 13 
+rule 14 *
+rule 30 new line
+rule 124 blank * 267 indent 4
+rule 124 blank* * 267 indent 4
+* SEQUENCE
+rule 124 blank* 68
+rule 61 1
+rule 62 2
+rule 62 3
+rule 62 4
+rule 62 5
+rule 17 
+indent 5
+rule 30 new line
+rule 123 ' ' 265 item_type 0
+rule 123 ' ' 265 indent5
+rule 123' ' 129
+rule 61 1
+rule 62 2
+rule 62 3
+rule 17 
+indent 3
+rule 30 new line
+rule 123 'zzzz' 265 item_type 0
+rule 123 'zzzz' 265 indent3
+rule 123'zzzz' 129
+rule 61 1
+rule 62 2
+MATCH sym blank 267
+rule 192 267
+yylval blank 267  
+token blank
+rule 16 
+indent 2
+rule 13 
+rule 14 *
+rule 30 new line
+rule 124 blank * 267 indent 2
+rule 124 blank* * 267 indent 2
+* SEQUENCE
+rule 124 blank* 68
+rule 61 1
+rule 62 2
+rule 62 3
+rule 17 
+indent 3
+rule 30 new line
+rule 123 ' ' 265 item_type 0
+rule 123 ' ' 265 indent3
+rule 123' ' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'zzzz' 265 item_type 0
+rule 123 'zzzz' 265 indent2
+rule 123'zzzz' 129
+rule 61 1
+rule 62 2
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 123 NL 258 item_type 0
+rule 123 NL 258 indent2
+rule 123NL 131
+sym return
+rule 8 
+rule 7 
+indent 0
+rule 30 new line
+rule 101 indent0
+rule 61 1
+rule 62 2
+REFER sym TELEGRAM 266
+rule 18 
+rule 16 
+indent 2
+rule 13 
+rule 14 *
+rule 30 new line
+rule 122 TELEGRAM * 266 indent2
+rule 122 TELEGRAM* * 266 indent2
+* SEQUENCE
+rule 122 TELEGRAM* 133
+rule 61 1
+rule 62 2
+rule 62 3
+rule 17 
+indent 3
+rule 30 new line
+rule 123 'Number of chargeable words: ' 265 item_type 0
+rule 123 'Number of chargeable words: ' 265 indent3
+rule 123'Number of chargeable words: ' 129
+rule 61 1
+rule 62 2
+rule 62 3
+REFER sym CHARGEABLE_WORD 266
+rule 18 
+rule 201 
+rule 143 
+indent 3
+rule 30 new line
+rule 124 CHARGEABLE_WORD # 266 indent 3
+rule 124 CHARGEABLE_WORD# # 266 indent 3
+rule 124 CHARGEABLE_WORD# 136
+rule 61 1
+rule 62 2
+rule 62 3
+rule 18 
+rule 18 
+indent 3
+rule 30 new line
+rule 123 NL 258 item_type 0
+rule 123 NL 258 indent3
+rule 123NL 131
+REFER sym NON_CHARGEABLE_WORD 266
+rule 11 
+rule 10 indent0
+rule 1 
+rule 0 
+indent 0
+rule 30 new line
+sym return
+rule 15 
+indent 0
+rule 13 
+rule 14 +
+rule 30 new line
+rule 102 return + indent0
+* UNION
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 121 'stop' 265 item_type0
+rule 121 'stop' 265 indent2
+rule 121 'stop' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'zzzz' 265 item_type 0
+rule 123 'zzzz' 265 indent2
+rule 123'zzzz' 129
+REFER sym WORDCHAR 266
+rule 11 
+rule 10 indent0
+rule 1 
+rule 01 
+ indent 0
+rule 30 new line
+sym return
+rule 15 
+indent 0
+rule 13 
+rule 14 +
+rule 30 new line
+rule 102 return + indent0
+* UNION
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 121 '0' 265 item_type0
+rule 121 '0' 265 indent2
+rule 121 '0' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 '1' 265 item_type 0
+rule 123 '1' 265 indent2
+rule 123'1' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 '2' 265 item_type 0
+rule 123 '2' 265 indent2
+rule 123'2' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 '3' 265 item_type 0
+rule 123 '3' 265 indent2
+rule 123'3' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 '4' 265 item_type 0
+rule 123 '4' 265 indent2
+rule 123'4' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 '5' 265 item_type 0
+rule 123 '5' 265 indent2
+rule 123'5' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 '6' 265 item_type 0
+rule 123 '6' 265 indent2
+rule 123'6' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 '7' 265 item_type 0
+rule 123 '7' 265 indent2
+rule 123'7' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 '8' 265 item_type 0
+rule 123 '8' 265 indent2
+rule 123'8' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 '9' 265 item_type 0
+rule 123 '9' 265 indent2
+rule 123'9' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'A' 265 item_type 0
+rule 123 'A' 265 indent2
+rule 123'A' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'B' 265 item_type 0
+rule 123 'B' 265 indent2
+rule 123'B' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'C' 265 item_type 0
+rule 123 'C' 265 indent2
+rule 123'C' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'D' 265 item_type 0
+rule 123 'D' 265 indent2
+rule 123'D' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'E' 265 item_type 0
+rule 123 'E' 265 indent2
+rule 123'E' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'F' 265 item_type 0
+rule 123 'F' 265 indent2
+rule 123'F' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'G' 265 item_type 0
+rule 123 'G' 265 indent2
+rule 123'G' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'H' 265 item_type 0
+rule 123 'H' 265 indent2
+rule 123'H' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'I' 265 item_type 0
+rule 123 'I' 265 indent2
+rule 123'I' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'J' 265 item_type 0
+rule 123 'J' 265 indent2
+rule 123'J' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'K' 265 item_type 0
+rule 123 'K' 265 indent2
+rule 123'K' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'L' 265 item_type 0
+rule 123 'L' 265 indent2
+rule 123'L' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'M' 265 item_type 0
+rule 123 'M' 265 indent2
+rule 123'M' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'N' 265 item_type 0
+rule 123 'N' 265 indent2
+rule 123'N' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'O' 265 item_type 0
+rule 123 'O' 265 indent2
+rule 123'O' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'P' 265 item_type 0
+rule 123 'P' 265 indent2
+rule 123'P' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'Q' 265 item_type 0
+rule 123 'Q' 265 indent2
+rule 123'Q' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'R' 265 item_type 0
+rule 123 'R' 265 indent2
+rule 123'R' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'S' 265 item_type 0
+rule 123 'S' 265 indent2
+rule 123'S' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'T' 265 item_type 0
+rule 123 'T' 265 indent2
+rule 123'T' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'U' 265 item_type 0
+rule 123 'U' 265 indent2
+rule 123'U' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'V' 265 item_type 0
+rule 123 'V' 265 indent2
+rule 123'V' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'W' 265 item_type 0
+rule 123 'W' 265 indent2
+rule 123'W' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'X' 265 item_type 0
+rule 123 'X' 265 indent2
+rule 123'X' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'Y' 265 item_type 0
+rule 123 'Y' 265 indent2
+rule 123'Y' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'Z' 265 item_type 0
+rule 123 'Z' 265 indent2
+rule 123'Z' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'a' 265 item_type 0
+rule 123 'a' 265 indent2
+rule 123'a' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'b' 265 item_type 0
+rule 123 'b' 265 indent2
+rule 123'b' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'c' 265 item_type 0
+rule 123 'c' 265 indent2
+rule 123'c' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'd' 265 item_type 0
+rule 123 'd' 265 indent2
+rule 123'd' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'e' 265 item_type 0
+rule 123 'e' 265 indent2
+rule 123'e' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'f' 265 item_type 0
+rule 123 'f' 265 indent2
+rule 123'f' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'g' 265 item_type 0
+rule 123 'g' 265 indent2
+rule 123'g' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'h' 265 item_type 0
+rule 123 'h' 265 indent2
+rule 123'h' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'i' 265 item_type 0
+rule 123 'i' 265 indent2
+rule 123'i' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'j' 265 item_type 0
+rule 123 'j' 265 indent2
+rule 123'j' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'k' 265 item_type 0
+rule 123 'k' 265 indent2
+rule 123'k' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'l' 265 item_type 0
+rule 123 'l' 265 indent2
+rule 123'l' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'm' 265 item_type 0
+rule 123 'm' 265 indent2
+rule 123'm' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'n' 265 item_type 0
+rule 123 'n' 265 indent2
+rule 123'n' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'o' 265 item_type 0
+rule 123 'o' 265 indent2
+rule 123'o' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'p' 265 item_type 0
+rule 123 'p' 265 indent2
+rule 123'p' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'q' 265 item_type 0
+rule 123 'q' 265 indent2
+rule 123'q' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'r' 265 item_type 0
+rule 123 'r' 265 indent2
+rule 123'r' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 's' 265 item_type 0
+rule 123 's' 265 indent2
+rule 123's' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 't' 265 item_type 0
+rule 123 't' 265 indent2
+rule 123't' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'u' 265 item_type 0
+rule 123 'u' 265 indent2
+rule 123'u' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'v' 265 item_type 0
+rule 123 'v' 265 indent2
+rule 123'v' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'w' 265 item_type 0
+rule 123 'w' 265 indent2
+rule 123'w' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'x' 265 item_type 0
+rule 123 'x' 265 indent2
+rule 123'x' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'y' 265 item_type 0
+rule 123 'y' 265 indent2
+rule 123'y' 129
+rule 61 1
+rule 62 2
+rule 17 
+indent 2
+rule 30 new line
+rule 123 'z' 265 item_type 0
+rule 123 'z' 265 indent2
+rule 123'z' 129
+rule 11 
+rule 10 indent0
+rule 1 
+rule 01 

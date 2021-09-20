@@ -1,0 +1,466 @@
+Article: 51269 of comp.windows.x
+Path: newsgate!mogate!oakhill!cs.utexas.edu!howland.reston.ans.net!pipex!warwick!str-ccsun!strath-cs!uknet!EU.net!uunet!hp81.prod.aol.net!search01.news.aol.com!not-for-mail
+From: paent@aol.com (PAENT)
+Newsgroups: comp.windows.x
+Subject: Re: C++ and callbacks
+Date: 4 May 1994 06:40:04 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 24
+Sender: news@search01.news.aol.com
+Message-ID: <2q7u24$j7v@search01.news.aol.com>
+References: <pauld.767898877@sarge>
+NNTP-Posting-Host: search01.news.aol.com
+
+In article <pauld.767898877@sarge>, pauld@verdix.com (Paul Durbin) writes:
+
+Using C++ for X callbacks is *easy*. Make your callback a static member:
+
+protected:
+       static void okCallback( Widget,XtPointer,XtPointer);
+       virtual void doOK( /* whatever args you need */ );
+
+Then in the code:
+void myClass::okCallback(Widget w,XtPointer client,XtPointer call)
+{
+        myClass *obj = (myClass *)client;
+        // you have access to all the static members as well
+        // as public and protected methods
+        obj->doOK( /* args */ );
+}
+To make this work:
+ XtAddCallback( w, XmNactivateCallback,
+          &myClass::okCallback, (XtPointer)this );
+
+so that 'this' is the clientData. It just puts a simple function between
+Xt and your real method (doOK in the example).
+
+Good luck.
+
+
+Article: 51317 of comp.windows.x
+Xref: newsgate comp.windows.x:51317 comp.lang.c++:61510 gnu.g++.help:5185
+Newsgroups: comp.windows.x,comp.lang.c++,gnu.g++.help
+Path: newsgate!mogate!oakhill!cs.utexas.edu!howland.reston.ans.net!europa.eng.gtefsd.com!MathWorks.Com!news.duke.edu!news-feed-1.peachnet.edu!umn.edu!milli!ianhogg
+From: ianhogg@milli.cs.umn.edu (Ian J Hogg)
+Subject: Re: C++ and callbacks
+Message-ID: <CpAn01.5Dy@news.cis.umn.edu>
+Sender: news@news.cis.umn.edu (Usenet News Administration)
+Nntp-Posting-Host: milli.cs.umn.edu
+Organization: University of Minnesota, Minneapolis, CSci dept.
+References: <pauld.767898877@sarge> <2q5f97INNt6o@eccdb1.pms.ford.com>
+Date: Wed, 4 May 94 12:46:01 MST
+Lines: 46
+
+In article <2q5f97INNt6o@eccdb1.pms.ford.com> poorman@cc4032.pms.ford.com (Glenn M. Poorman) writes:
+>In article <pauld.767898877@sarge>, pauld@verdix.com (Paul Durbin) writes:
+>|> I attempt to use a member function as callback but all three arguments (to the
+>|> callback) are garbage. If I make it a friend then the arguments are correct,
+>|> but then I can't get to the class data, without reference thru an instance of
+>|> the class and I don't want the data to be static.
+>|> 
+>|> So, what is causing this problem? Could I possibly use the *this pointer as
+>|> the client_data to the callback, then cast to the appropriate class?
+>
+>The problem is that the first argument of any non-static member function in
+>C++ is the "this" pointer.  So if you try to register a member function
+>as a callback with (i.e. Motif), it won't work because Motif doesn't know
+>that the function it is calling is a member function and it will not pass
+>the "this" pointer.
+>
+  Your compiler should not have allowed you to pass a pointer to a member
+function as the callback parameter.  Pointers to member functions are not
+compatible with pointers to functions.
+
+Try compiling this little snip of code and see what happens:
+#include <Xm/Xm.h>
+
+class bogus {
+public:
+  void my_callback(Widget, XtPointer, XtPointer);
+};
+
+int main(int, char **)
+{
+    Widget w;
+
+    XtAddCallback(w, "my_callback", &bogus::my_callback, NULL);
+}
+
+All of my compilers give errors similar to:
+
+CC: "testijh.C", line 12: error: bad argument  3 type for XtAddCallback(): void
+(bogus::*)(Widget, XtPointer, XtPointer) ( XtCallbackProc expected) (1264)
+
+PS. Just a nit, but it is Xt that handles callbacks not Motif.
+
+--
+===============================================================================
+Ian Hogg						ianhogg@cs.umn.edu
+                                                        (612) 424-6332
+
+
+Article: 51318 of comp.windows.x
+Xref: newsgate comp.windows.x:51318 comp.lang.c++:61511 gnu.g++.help:5186
+Newsgroups: comp.windows.x,comp.lang.c++,gnu.g++.help
+Path: newsgate!mogate!oakhill!cs.utexas.edu!howland.reston.ans.net!europa.eng.gtefsd.com!MathWorks.Com!news.duke.edu!news-feed-1.peachnet.edu!umn.edu!milli!ianhogg
+From: ianhogg@milli.cs.umn.edu (Ian J Hogg)
+Subject: Re: C++ and callbacks
+Message-ID: <CpAn8x.5I1@news.cis.umn.edu>
+Sender: news@news.cis.umn.edu (Usenet News Administration)
+Nntp-Posting-Host: milli.cs.umn.edu
+Organization: University of Minnesota, Minneapolis, CSci dept.
+References: <pauld.767898877@sarge> <2q65gv$oln@bigblue.oit.unc.edu> <2q67fpINNgv5@eccdb1.pms.ford.com>
+Date: Wed, 4 May 94 12:52:19 MST
+Lines: 29
+
+In article <2q67fpINNgv5@eccdb1.pms.ford.com> poorman@cc4032.pms.ford.com (Glenn M. Poorman) writes:
+>In article <2q65gv$oln@bigblue.oit.unc.edu>, brandon@uncvx2.oit.unc.edu (Brandon Van Every) writes:
+>|> Paul Durbin (pauld@verdix.com) wrote:
+>|> : I attempt to use a member function as callback but all three arguments (to the
+>|> : callback) are garbage. If I make it a friend then the arguments are correct,
+>|> : but then I can't get to the class data, without reference thru an instance of
+>|> : the class and I don't want the data to be static.
+>|> 
+>|> : So, what is causing this problem? 
+>|> 
+>|> Motif is based on C, not C++.  You have to use "extern C" linkage for any of
+>|> your callbacks.  You can't register any C++ function directly.  You have to
+>|> write a plain C front end for anything you want to have callbacked.
+>
+>Actually the function does not have to have "extern C" linkage.  It just
+>can't be a non-static member function.
+>
+
+Actually, the callback function should have "C" linkage.  I have used a 
+compiler that passed arguments differently  for C linkage and C++ linkage.
+So, if I had a free standing function with C++ linkage and used it as a 
+callback function, the parameters would be messed up.  This is not an issue 
+with most compilers but be aware it could be.  
+
+Can anyone guess the compiler in question?
+--
+===============================================================================
+Ian Hogg						ianhogg@cs.umn.edu
+                                                        (612) 424-6332
+
+
+Article: 51347 of comp.windows.x
+Xref: newsgate comp.windows.x:51347 comp.lang.c++:61548 gnu.g++.help:5187
+Path: newsgate!mogate!oakhill!cs.utexas.edu!swrinde!emory!news-feed-2.peachnet.edu!concert!bigblue.oit.unc.edu!uncvx2!brandon
+From: brandon@uncvx2.oit.unc.edu (Brandon Van Every)
+Newsgroups: comp.windows.x,comp.lang.c++,gnu.g++.help
+Subject: Re: C++ and callbacks
+Followup-To: comp.windows.x,comp.lang.c++,gnu.g++.help
+Date: Wed, 4 May 94 22:11:01 MST
+Organization: The University of North Carolina at Chapel Hill
+Lines: 28
+Distribution: world
+Message-ID: <2q9v55$ted@bigblue.oit.unc.edu>
+References: <pauld.767898877@sarge> <2q65gv$oln@bigblue.oit.unc.edu> <2q67fpINNgv5@eccdb1.pms.ford.com>
+NNTP-Posting-Host: uncvx2.oit.unc.edu
+X-Newsreader: TIN [version 1.2 PL2]
+
+Glenn M. Poorman (poorman@cc4032.pms.ford.com) wrote:
+: In article <2q65gv$oln@bigblue.oit.unc.edu>, brandon@uncvx2.oit.unc.edu (Brandon Van Every) writes:
+: |> Paul Durbin (pauld@verdix.com) wrote:
+: |> : I attempt to use a member function as callback but all three arguments (to the
+: |> : callback) are garbage. If I make it a friend then the arguments are correct,
+: |> : but then I can't get to the class data, without reference thru an instance of
+: |> : the class and I don't want the data to be static.
+: |> 
+: |> : So, what is causing this problem? 
+: |> 
+: |> Motif is based on C, not C++.  You have to use "extern C" linkage for any of
+: |> your callbacks.  You can't register any C++ function directly.  You have to
+: |> write a plain C front end for anything you want to have callbacked.
+
+: Actually the function does not have to have "extern C" linkage.  It just
+: can't be a non-static member function.
+
+
+I can't find anything in Stroustrup that says this will work.  The default
+linkage for all functions is "C++" (p. 524).  Given that, I'd say that not
+using "extern C" is rather risky.
+
+Cheers,
+Brandon
+
+--
+Brandon Van Every             "No more LaunchPAD .Sigs!  HA HA HA HA HA HA!!!"
+brandon@uncvx2.oit.unc.edu    
+
+
+Article: 51494 of comp.windows.x
+Xref: newsgate comp.windows.x.motif:20408 comp.windows.x:51494 comp.lang.c++:61754 gnu.g++.help:5212
+Newsgroups: comp.windows.x.motif,comp.windows.x,comp.lang.c++,gnu.g++.help
+Path: newsgate!mogate!oakhill!cs.utexas.edu!math.ohio-state.edu!magnus.acs.ohio-state.edu!csn!qwerty.fsl.noaa.gov!bora.fsl.noaa.gov!bear
+From: bear@bora.fsl.noaa.gov (Bear Giles)
+Subject: Re: Encapsulation problem(was Re: C++ and callbacks)
+Message-ID: <1994May6.192407.1707@fsl.noaa.gov>
+Sender: news@fsl.noaa.gov (USENET News System)
+Organization: Forecast Systems Labs, NOAA, Boulder, CO USA
+References: <1994May5.075259.12146@reks.uia.ac.be> <CpC8rr.M8D@news.cis.umn.edu> <1994May6.063343.15396@reks.uia.ac.be>
+Date: Fri, 6 May 94 12:24:07 MST
+Lines: 50
+
+In article <1994May6.063343.15396@reks.uia.ac.be> rgeens@wins.uia.ac.be (Ronald.Geens) writes:
+>
+>OK, here is a question for the guru's then :
+>How to go about encapsulating callbacks in an object ?
+>All the Motif-C++ bindings I've seen allow for it, and I think all of them
+>do it in the same  way : by using static member functions ....
+
+They might cheat.  :-)
+
+Or, you could just spell it out:
+
+foo.h------------------------------------------------------------
+extern "C" void safe_callback (Widget, XtPointer, XtPointer);
+
+class Foo
+  {
+  friend safe_callback (Widget, XtPointer, XtPointer);
+
+  void callback (Widget, XtPointer);
+  void install (Widget);
+  };
+
+foo.cc-----------------------------------------------------------
+
+void safe_callback (Widget w, XtPointer call, XtPointer client)
+   {
+   Foo * foo = (Foo *) client;
+   if (foo != 0)
+      foo->callback (w, call);
+   }
+
+void Foo::callback (Widget w, XtPointer call)
+   {
+   // do callback work here...
+   }
+
+void Foo::install (Widget w)
+   {
+   ::XtAddCallback (w, (event), safe_callback, (XtPointer) this);
+   }
+
+BTW, it is perfectly safe to use this type of code in an abstract base class
+(where "callback()" is pure abstract), then use inheritance to define
+the specific action required.  If you do this, rename "callback" something
+related to the event, e.g., "expose()", "popdown", "tick", etc.
+
+
+-- 
+Bear Giles
+bear@fsl.noaa.gov
+
+
+Article: 51547 of comp.windows.x
+Xref: newsgate comp.windows.x:51547 comp.lang.c++:61819 gnu.g++.help:5224
+Newsgroups: comp.windows.x,comp.lang.c++,gnu.g++.help
+Path: newsgate!mogate!oakhill!cs.utexas.edu!swrinde!ihnp4.ucsd.edu!library.ucla.edu!csulb.edu!csus.edu!netcom.com!rfg
+From: rfg@netcom.com (Ronald F. Guilmette)
+Subject: Re: C++ and callbacks
+Message-ID: <rfgCpG7y7.3BF@netcom.com>
+Organization: Netcom Online Communications Services (408-241-9760 login: guest)
+References: <2q9v55$ted@bigblue.oit.unc.edu> <JASON.94May5173436@deneb.cygnus.com> <CpEBxp.9w2@news.cis.umn.edu>
+Date: Sat, 7 May 94 13:08:31 MST
+Lines: 37
+
+In article <CpEBxp.9w2@news.cis.umn.edu> ianhogg@milli.cs.umn.edu (Ian J Hogg) writes:
+>In article <JASON.94May5173436@deneb.cygnus.com> jason@cygnus.com (Jason Merrill) writes:
+>>>>>>> Brandon Van Every <brandon@uncvx2.oit.unc.edu> writes:
+>>
+>>> I can't find anything in Stroustrup that says this will work.  The default
+>>> linkage for all functions is "C++" (p. 524).  Given that, I'd say that not
+>>> using "extern C" is rather risky.
+>>
+>>But does anything say that it won't?  C and C++ use the same calling
+>>convention for plain functions, so C linkage v. C++ should have no effect
+>>on function pointers.
+>
+>Where does anything say that C and C++ use the same calling convention for 
+>plain functions.
+
+In the case of fully prototyped functions, I cannot imagine any good
+reason why this should NOT be the case.  Can you?  If so, I would love
+to hear the reason.
+
+>As I've stated before I know of at least one compiler that
+>passes arguments for C++ linkage functions differently than C linkage functions.
+
+OK.  So why don't you stop beating around the bush and tell us which compiler
+you are referring to.  (You don't expect us just to take you word for it
+do you??)
+
+>Are you saying this compiler is broken?
+
+If no one else does, then I will say (at least) that the compiler in question
+is screwy and/or that it generates code (in one language or the other) which
+is less efficient (in terms of parameter passing) than it should be.
+
+-- 
+
+-- Ron Guilmette, Sunnyvale, CA ---------- RG Consulting -------------------
+---- domain addr: rfg@netcom.com ----------- Purveyors of Compiler Test ----
+---- uucp addr: ...!uunet!netcom!rfg ------- Suites and Bullet-Proof Shoes -
+
+
+Article: 51624 of comp.windows.x
+Xref: newsgate comp.windows.x:51624 comp.lang.c++:61939 gnu.g++.help:5233
+Newsgroups: comp.windows.x,comp.lang.c++,gnu.g++.help
+Path: newsgate!mogate!oakhill!cs.utexas.edu!swrinde!gatech!newsxfer.itd.umich.edu!zip.eecs.umich.edu!umn.edu!milli!ianhogg
+From: ianhogg@milli.cs.umn.edu (Ian J Hogg)
+Subject: Re: C++ and callbacks
+Message-ID: <CpJKJz.KBD@news.cis.umn.edu>
+Sender: news@news.cis.umn.edu (Usenet News Administration)
+Nntp-Posting-Host: milli.cs.umn.edu
+Organization: University of Minnesota, Minneapolis, CSci dept.
+References: <JASON.94May5173436@deneb.cygnus.com> <CpEBxp.9w2@news.cis.umn.edu> <JASON.94May6154541@deneb.cygnus.com>
+Date: Mon, 9 May 94 08:31:46 MST
+Lines: 19
+
+In article <JASON.94May6154541@deneb.cygnus.com> jason@cygnus.com (Jason Merrill) writes:
+>>>>>> Ian J Hogg <ianhogg@milli.cs.umn.edu> writes:
+>
+>> Where does anything say that C and C++ use the same calling convention
+>> for plain functions.  As I've stated before I know of at least one
+>> compiler that passes arguments for C++ linkage functions differently than
+>> C linkage functions.  Are you saying this compiler is broken?
+>
+>I was only referring to my perception of existing practice; evidently I was
+>mistaken.  It does seem strange to me that they would alter the calling
+>convention, but I suppose they had their reasons.
+
+It was the Zortech compiler for SYSV/386.  They claimed their "C++" linkage
+parameter passing was more efficient.  
+
+--
+===============================================================================
+Ian Hogg						ianhogg@cs.umn.edu
+                                                        (612) 424-6332
+
+
+Article: 51633 of comp.windows.x
+Xref: newsgate comp.windows.x:51633 comp.lang.c++:61954 gnu.g++.help:5235
+Newsgroups: comp.windows.x,comp.lang.c++,gnu.g++.help
+Path: newsgate!mogate!oakhill!cs.utexas.edu!howland.reston.ans.net!gatech!newsxfer.itd.umich.edu!ncar!csn!qwerty.fsl.noaa.gov!bora.fsl.noaa.gov!bear
+From: bear@bora.fsl.noaa.gov (Bear Giles)
+Subject: Re: C++ and callbacks
+Message-ID: <1994May9.163157.3426@fsl.noaa.gov>
+Sender: news@fsl.noaa.gov (USENET News System)
+Organization: Forecast Systems Labs, NOAA, Boulder, CO USA
+References: <CpEBxp.9w2@news.cis.umn.edu> <JASON.94May6154541@deneb.cygnus.com> <CpJKJz.KBD@news.cis.umn.edu>
+Date: Mon, 9 May 94 09:31:57 MST
+Lines: 66
+
+In article <CpJKJz.KBD@news.cis.umn.edu> ianhogg@milli.cs.umn.edu (Ian J Hogg) writes:
+>In article <JASON.94May6154541@deneb.cygnus.com> jason@cygnus.com (Jason Merrill) writes:
+>>>>>>> Ian J Hogg <ianhogg@milli.cs.umn.edu> writes:
+>>
+>>> Where does anything say that C and C++ use the same calling convention
+>>> for plain functions.  As I've stated before I know of at least one
+>>> compiler that passes arguments for C++ linkage functions differently than
+>>> C linkage functions.  Are you saying this compiler is broken?
+>>
+>>I was only referring to my perception of existing practice; evidently I was
+>>mistaken.  It does seem strange to me that they would alter the calling
+>>convention, but I suppose they had their reasons.
+
+If people followed the language standards, instead of bitching when
+they got caught with their hands in the cookie jar, nobody would have
+noticed.
+
+(Okay, that's a little strong because most companies do use the same
+calling conventions -- probably because they see so many people abusing
+it.  However, if you follow the ARM and use "extern C" and never try
+to call member functions from C, *you would never notice the "problem"*.)
+
+>It was the Zortech compiler for SYSV/386.  They claimed their "C++" linkage
+>parameter passing was more efficient.  
+
+C++ requires all function have prototypes, which allows the compiler
+to remove arguments from the stack in the *called* function for any
+function with a fixed number of arguments (99%).
+
+Assember code looks like:
+
+   push _var1                foo:  code..
+   push _var2                      ret 4
+   call foo
+   whatever...
+
+C does not require function prototypes (although it will use them if
+available) and there is nothing to prevent a developer from specifying
+too many or too few parameters.  Therefore, the *calling* function
+
+Assember code looks like:
+
+   push _var2                foo:  code..
+   push _var1                      ret
+   call foo
+   pop 4
+   whatever...
+
+The first approach is slightly faster, and is the one normally implemented.
+It is also the "pascal" convention available on PC compilers, and this
+performance improvement is why the MS/Windows SDK uses the "pascal" 
+modifier on all procedures.
+
+BTW, note that the arguments in the second example were pushed on the stack
+in reversed order.  In C, since you don't know the number of arguments you
+need to push them from right-to-left, so that the left-most argument is
+always on the top of the stack.
+
+In contrast, in C++ you (generally) know how many arguments are present
+and you can push them in any order.  I believe this also allows a slightly
+more efficient "stack frame", but am not sure -- my assembler/HL interfaces
+always used the C conventions.
+
+-- 
+Bear Giles
+bear@fsl.noaa.gov
+
+
+Article: 51657 of comp.windows.x
+Xref: newsgate gnu.g++.help:5245 comp.windows.x:51657 comp.lang.c++:62008
+Path: newsgate!mogate!oakhill!cs.utexas.edu!howland.reston.ans.net!news.intercon.com!news1.digex.net!news.iac.net!news
+From: maw@iac.net
+Newsgroups: gnu.g++.help,comp.windows.x,comp.lang.c++
+Subject: Re: C++ and callbacks
+Date: Mon, 09 May 94 17:50:36 PDT
+Organization: Internet Access Cincinnati 513-887-8877
+Lines: 24
+Message-ID: <2qmhj4$m5k@great-miami.iac.net>
+References: <CpC8rr.M8D@news.cis.umn.edu>
+NNTP-Posting-Host: 199.6.41.86
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Newsreader: NEWTNews & Chameleon -- TCP/IP for MS Windows from NetManage
+
+
+
+> I wasn't even trying to use member functions as callbacks becuase you need a
+> normal function as glue.  Once I figured out the problem I just declared all
+> my callbacks like this:
+> 
+> extern "C" void my_callback(Widget w, XtPointer client_data, XtPointer cbs)
+> {
+>    /* do stuff here */
+> }
+> 
+> Anytime you are passing a pointer to a function as a parameter to a function
+> with "C" linkage, the passed function pointer should be declared with
+> "C" linkage.
+
+You can use static member functions as callbacks in Xt.  A better solution though is
+to adapt a Callback class that uses client data to pass the this pointer to
+a callback.  For a example of this solution, refer to the description of gina
+in The X Resource (Issue 2, Spring 1992).
+
+Hope this helps!
+
+Mike Wood
+maw@iac.net
+
+

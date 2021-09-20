@@ -1,0 +1,899 @@
+Warning: Cannot convert string "<Key>InsertChar" to type VirtualBinding
+Warning: Cannot convert string "<Key>DeleteChar" to type VirtualBinding
+Warning: Cannot convert string "<Key>InsertLine" to type VirtualBinding
+Warning: Cannot convert string "<Key>DeleteLine" to type VirtualBinding
+sym (
+CAP sym MESSAGE_ONE 267
+rule 20 yylval MESSAGE_ONE 265  
+token MESSAGE_ONE
+sym )
+CAP sym _PROCESSOR_COMSMER_ 267
+rule 20 yylval _PROCESSOR_COMSMER_ 265  
+token _PROCESSOR_COMSMER_
+rule 31 indent 0 0
+sym (
+CAP sym MESSAGE_TWO 267
+rule 20 yylval MESSAGE_TWO 265  
+token MESSAGE_TWO
+sym )
+indent 0
+rule 33 
+rule 2 
+rule 31 (MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO) indent 0 0
+Build_Hoare_Tree(): type = 1000 0010 = 0x82; name = (MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO); level = 0
+Current_Node->name = "(MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)"
+	MODULE_TITLE
+x=(name2 MESSAGE_ONE
+x=(name2 MESSAGE_TWO
+name2 MESSAGE_ONE
+name1 _PROCESSOR_COMSMER_
+level_no = 0 Immediate son of "ROOT_DUMMY"
+rule 30 new line
+REFER sym MESSAGE_ONE 265
+indent 1
+rule 30 new line
+rule 4 indent 0
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = MESSAGE_ONE; level = 1
+Current_Node->name = "MESSAGE_ONE"
+name1 MESSAGE_ONE
+level_no = 1 Immediate son of "(MESSAGE_ONE)_PROCESSOR_COMSMER_(MESSAGE_TWO)"
+rule 61 1
+rule 62 2
+MATCH sym input_one 266
+rule 192 266
+yylval input_one 266  
+token input_one
+indent 2
+rule 30 new line
+rule 121 input_one 266 item_type0
+rule 121 input_one 266 indent2
+rule 121 input_one 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = input_one; level = 2
+Current_Node->name = "input_one"
+level_no = 2 Immediate son of "MESSAGE_ONE"
+rule 61 1
+rule 62 2
+rule 62 3
+REFER sym INTEGER 265
+rule 18 
+indent 3
+rule 30 new line
+rule 123 INTEGER 265 item_type 0
+rule 123 INTEGER 265 indent3
+rule 123INTEGER 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = INTEGER; level = 3
+Current_Node->name = "INTEGER"
+name1 INTEGER
+level_no = 3 Immediate son of "input_one"
+rule 61 1
+rule 62 2
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 123 NL 257 item_type 0
+rule 123 NL 257 indent2
+rule 123NL 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = NL; level = 2
+Current_Node->name = "NL"
+name1 NL
+level_no = 2  Another sibling of "INTEGER"
+level_no = 2
+rule 61 1
+REFER sym MESSAGE_TWO 265
+rule 18 
+indent 1
+rule 30 new line
+rule 123 MESSAGE_TWO 265 item_type 0
+rule 123 MESSAGE_TWO 265 indent1
+rule 123MESSAGE_TWO 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = MESSAGE_TWO; level = 1
+Current_Node->name = "MESSAGE_TWO"
+name1 MESSAGE_TWO
+level_no = 1  Another sibling of "NL"
+level_no = 1
+rule 61 1
+rule 62 2
+MATCH sym input_two 266
+rule 192 266
+yylval input_two 266  
+token input_two
+indent 2
+rule 30 new line
+rule 123 input_two 266 item_type 0
+rule 123 input_two 266 indent2
+rule 123input_two 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = input_two; level = 2
+Current_Node->name = "input_two"
+level_no = 2 Immediate son of "MESSAGE_TWO"
+rule 61 1
+rule 62 2
+rule 62 3
+REFER sym INTEGER 265
+rule 18 
+indent 3
+rule 30 new line
+rule 123 INTEGER 265 item_type 0
+rule 123 INTEGER 265 indent3
+rule 123INTEGER 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = INTEGER; level = 3
+Current_Node->name = "INTEGER"
+name1 INTEGER
+level_no = 3 Immediate son of "input_two"
+rule 61 1
+rule 62 2
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 123 NL 257 item_type 0
+rule 123 NL 257 indent2
+rule 123NL 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = NL; level = 2
+Current_Node->name = "NL"
+name1 NL
+level_no = 2  Another sibling of "INTEGER"
+level_no = 2
+sym return
+rule 8 
+rule 7 
+indent 0
+rule 30 new line
+rule 101 indent0
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = return; level = 1
+Current_Node->name = "return"
+level_no = 1  Another sibling of "NL"
+level_no = 1
+rule 61 1
+rule 62 2
+PARALLEL sym PARALLEL
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 121 PARALLEL 241 item_type241
+rule 121 PARALLEL 241 indent2
+rule 121 PARALLEL 241
+Build_Hoare_Tree(): type = 1111 0001 = 0xF1; name = PARALLEL; level = 2
+Current_Node->name = "PARALLEL"
+name1 PARALLEL
+level_no = 2 Immediate son of "return"
+rule 61 1
+rule 62 2
+rule 62 3
+CAP sym PRODUCER_ 267
+rule 20 yylval PRODUCER_ 265  
+token PRODUCER_
+sym (
+CAP sym INPUT_ONE 267
+rule 20 yylval INPUT_ONE 265  
+token INPUT_ONE
+sym )
+rule 003 indent 3
+indent 3
+rule 184 
+rule 30 new line
+rule 123 PRODUCER_(INPUT_ONE) 265 item_type 265
+rule 123 PRODUCER_(INPUT_ONE) 241 indent3
+rule 123PRODUCER_(INPUT_ONE) 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = PRODUCER_(INPUT_ONE); level = 3
+Current_Node->name = "PRODUCER_(INPUT_ONE)"
+x=(name2 INPUT_ONE
+name1 PRODUCER_
+level_no = 3 Immediate son of "PARALLEL"
+rule 61 1
+rule 62 2
+rule 62 3
+CAP sym COMSUMER_ 267
+rule 20 yylval COMSUMER_ 265  
+token COMSUMER_
+sym (
+CAP sym INPUT_TWO 267
+rule 20 yylval INPUT_TWO 265  
+token INPUT_TWO
+sym )
+rule 003 indent 3
+indent 3
+rule 184 
+rule 30 new line
+rule 123 COMSUMER_(INPUT_TWO) 265 item_type 265
+rule 123 COMSUMER_(INPUT_TWO) 241 indent3
+rule 123COMSUMER_(INPUT_TWO) 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = COMSUMER_(INPUT_TWO); level = 3
+Current_Node->name = "COMSUMER_(INPUT_TWO)"
+x=(name2 INPUT_TWO
+name1 COMSUMER_
+level_no = 3  Immediate sibling of PRODUCER_(INPUT_ONE)
+CAP sym PRODUCER_ 267
+rule 11 
+rule 10 indent0
+rule 1 
+rule 0 
+rule 20 yylval PRODUCER_ 265  
+token PRODUCER_
+sym (
+CAP sym MESSAGE_ONE 267
+rule 20 yylval MESSAGE_ONE 265  
+token MESSAGE_ONE
+sym )
+rule 3 indent 0
+indent 0
+Build_Hoare_Tree(): type = 1000 0010 = 0x82; name = PRODUCER_(MESSAGE_ONE); level = 0
+Current_Node->name = "PRODUCER_(MESSAGE_ONE)"
+	MODULE_TITLE
+x=(name2 MESSAGE_ONE
+name1 PRODUCER_
+level_no = 0 Immediate son of "ROOT_DUMMY"
+rule 30 new line
+REFER sym MESSAGE_ONE 265
+indent 1
+rule 30 new line
+rule 4 indent 0
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = MESSAGE_ONE; level = 1
+Current_Node->name = "MESSAGE_ONE"
+name1 MESSAGE_ONE
+level_no = 1 Immediate son of "PRODUCER_(MESSAGE_ONE)"
+rule 61 1
+rule 62 2
+MATCH sym input_one 266
+rule 192 266
+yylval input_one 266  
+token input_one
+indent 2
+rule 30 new line
+rule 121 input_one 266 item_type0
+rule 121 input_one 266 indent2
+rule 121 input_one 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = input_one; level = 2
+Current_Node->name = "input_one"
+level_no = 2 Immediate son of "MESSAGE_ONE"
+rule 61 1
+rule 62 2
+rule 62 3
+REFER sym INTEGER 265
+rule 18 
+indent 3
+rule 30 new line
+rule 123 INTEGER 265 item_type 0
+rule 123 INTEGER 265 indent3
+rule 123INTEGER 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = INTEGER; level = 3
+Current_Node->name = "INTEGER"
+name1 INTEGER
+level_no = 3 Immediate son of "input_one"
+rule 61 1
+rule 62 2
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 123 NL 257 item_type 0
+rule 123 NL 257 indent2
+rule 123NL 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = NL; level = 2
+Current_Node->name = "NL"
+name1 NL
+level_no = 2  Another sibling of "INTEGER"
+level_no = 2
+sym return
+rule 8 
+rule 7 
+indent 0
+rule 30 new line
+rule 101 indent0
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = return; level = 1
+Current_Node->name = "return"
+level_no = 1  Another sibling of "NL"
+level_no = 1
+rule 61 1
+rule 62 2
+sym (
+CAP sym INPUT_ONE 267
+rule 20 yylval INPUT_ONE 265  
+token INPUT_ONE
+sym )
+CAP sym _PLUS_ 193
+rule 20 yylval _PLUS_ 193  
+token _PLUS_
+rule 0041 indent 2 2
+rule 0041 (INPUT_ONE)_PLUS_ (INPUT_ONE)_PLUS_
+sym (
+rule 193 yylval '2' 264  
+token '2'
+sym )
+indent 2
+rule 0044 
+rule 0044 (INPUT_ONE)_PLUS_('2') (INPUT_ONE)_PLUS_('2')
+rule 2 
+rule 184 
+rule 30 new line
+rule 121 (INPUT_ONE)_PLUS_('2') 261 item_type193
+rule 121 (INPUT_ONE)_PLUS_('2') 257 indent2
+rule 121 (INPUT_ONE)_PLUS_('2') 193
+Build_Hoare_Tree(): type = 1100 0001 = 0xC1; name = (INPUT_ONE)_PLUS_('2'); level = 2
+Current_Node->name = "(INPUT_ONE)_PLUS_('2')"
+x=(name2 INPUT_ONE
+x=(name2 '2'
+name2 INPUT_ONE
+name1 _PLUS_
+level_no = 2 Immediate son of "return"
+CAP sym COMSUMER_ 267
+rule 11 
+rule 10 indent0
+rule 1 
+rule 01 
+rule 20 yylval COMSUMER_ 265  
+token COMSUMER_
+sym (
+CAP sym MESSAGE_TWO 267
+rule 20 yylval MESSAGE_TWO 265  
+token MESSAGE_TWO
+sym )
+rule 3 indent 0
+indent 0
+Build_Hoare_Tree(): type = 1000 0010 = 0x82; name = COMSUMER_(MESSAGE_TWO); level = 0
+Current_Node->name = "COMSUMER_(MESSAGE_TWO)"
+	MODULE_TITLE
+x=(name2 MESSAGE_TWO
+name1 COMSUMER_
+level_no = 0 Immediate son of "ROOT_DUMMY"
+rule 30 new line
+REFER sym MESSAGE_TWO 265
+indent 1
+rule 30 new line
+rule 4 indent 0
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = MESSAGE_TWO; level = 1
+Current_Node->name = "MESSAGE_TWO"
+name1 MESSAGE_TWO
+level_no = 1 Immediate son of "COMSUMER_(MESSAGE_TWO)"
+rule 61 1
+rule 62 2
+MATCH sym input_two 266
+rule 192 266
+yylval input_two 266  
+token input_two
+indent 2
+rule 30 new line
+rule 121 input_two 266 item_type0
+rule 121 input_two 266 indent2
+rule 121 input_two 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = input_two; level = 2
+Current_Node->name = "input_two"
+level_no = 2 Immediate son of "MESSAGE_TWO"
+rule 61 1
+rule 62 2
+rule 62 3
+REFER sym INTEGER 265
+rule 18 
+indent 3
+rule 30 new line
+rule 123 INTEGER 265 item_type 0
+rule 123 INTEGER 265 indent3
+rule 123INTEGER 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = INTEGER; level = 3
+Current_Node->name = "INTEGER"
+name1 INTEGER
+level_no = 3 Immediate son of "input_two"
+rule 61 1
+rule 62 2
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 123 NL 257 item_type 0
+rule 123 NL 257 indent2
+rule 123NL 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = NL; level = 2
+Current_Node->name = "NL"
+name1 NL
+level_no = 2  Another sibling of "INTEGER"
+level_no = 2
+sym return
+rule 8 
+rule 7 
+indent 0
+rule 30 new line
+rule 101 indent0
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = return; level = 1
+Current_Node->name = "return"
+level_no = 1  Another sibling of "NL"
+level_no = 1
+rule 61 1
+rule 62 2
+sym (
+CAP sym INPUT_TWO 267
+rule 20 yylval INPUT_TWO 265  
+token INPUT_TWO
+sym )
+CAP sym _TIMES_ 195
+rule 20 yylval _TIMES_ 195  
+token _TIMES_
+rule 0041 indent 2 2
+rule 0041 (INPUT_TWO)_TIMES_ (INPUT_TWO)_TIMES_
+sym (
+rule 193 yylval '5' 264  
+token '5'
+sym )
+indent 2
+rule 0044 
+rule 0044 (INPUT_TWO)_TIMES_('5') (INPUT_TWO)_TIMES_('5')
+rule 2 
+rule 184 
+rule 30 new line
+rule 121 (INPUT_TWO)_TIMES_('5') 261 item_type195
+rule 121 (INPUT_TWO)_TIMES_('5') 257 indent2
+rule 121 (INPUT_TWO)_TIMES_('5') 195
+Build_Hoare_Tree(): type = 1100 0011 = 0xC3; name = (INPUT_TWO)_TIMES_('5'); level = 2
+Current_Node->name = "(INPUT_TWO)_TIMES_('5')"
+x=(name2 INPUT_TWO
+x=(name2 '5'
+name2 INPUT_TWO
+name1 _TIMES_
+level_no = 2 Immediate son of "return"
+rule 11 
+rule 10 indent0
+rule 1 
+rule 01 
+Child process forked() successfully.  Child will execute exec_run() now.
+e = 1000 0011 = 0x83; name = MESSAGE_TWO; level = 1
+Current_Node->name = "MESSAGE_TWO"
+name1 MESSAGE_TWO
+level_no = 1 Immediate son of "COMSUMER_(MESSAGE_TWO)"
+rule 61 1
+rule 62 2
+MATCH sym input_two 266
+rule 192 266
+yylval input_two 266  
+token input_two
+indent 2
+rule 30 new line
+rule 121 input_two 266 item_type0
+rule 121 input_two 266 indent2
+rule 121 input_two 65
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = input_two; level = 2
+Current_Node->name = "input_two"
+level_no = 2 Immediate son of "MESSAGE_TWO"
+rule 61 1
+rule 62 2
+rule 62 3
+REFER sym INTEGER 265
+rule 18 
+indent 3
+rule 30 new line
+rule 123 INTEGER 265 item_type 0
+rule 123 INTEGER 265 indent3
+rule 123INTEGER 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = INTEGER; level = 3
+Current_Node->name = "INTEGER"
+name1 INTEGER
+level_no = 3 Immediate son of "input_two"
+rule 61 1
+rule 62 2
+rule 18 
+rule 18 
+indent 2
+rule 30 new line
+rule 123 NL 257 item_type 0
+rule 123 NL 257 indent2
+rule 123NL 131
+Build_Hoare_Tree(): type = 1000 0011 = 0x83; name = NL; level = 2
+Current_Node->name = "NL"
+name1 NL
+level_no = 2  Another sibling of "INTEGER"
+level_no = 2
+sym return
+rule 8 
+rule 7 
+indent 0
+rule 30 new line
+rule 101 indent0
+Build_Hoare_Tree(): type = 0100 0001 = 0x41; name = return; level = 1
+Current_Node->name = "return"
+level_no = 1  Another sibling of "NL"
+level_no = 1
+rule 61 1
+rule 62 2
+sym (
+CAP sym INPUT_TWO 267
+rule 20 yylval INPUT_TWO 265  
+token INPUT_TWO
+sym )
+CAP sym _TIMES_ 195
+rule 20 yylval _TIMES_ 195  
+token _TIMES_
+rule 0041 indent 2 2
+rule 0041 (INPUT_TWO)_TIMES_ (INPUT_TWO)_TIMES_
+sym (
+rule 193 yylval '5' 264  
+token '5'
+sym )
+indent 2
+rule 0044 
+rule 0044 (INPUT_TWO)_TIMES_('5') (INPUT_TWO)_TIMES_('5')
+rule 2 
+rule 184 
+rule 30 new line
+rule 121 (INPUT_TWO)_TIMES_('5') 261 item_type195
+rule 121 (INPUT_TWO)_TIMES_('5') 257 indent2
+rule 121 (INPUT_TWO)_TIMES_('5') 195
+Build_Hoare_Tree(): type = 1100 0011 = 0xC3; name = (INPUT_TWO)_TIMES_('5'); level = 2
+Current_Node->name = "(INPUT_TWO)_TIMES_('5')"
+x=(name2 INPUT_TWO
+x=(name2 '5'
+name2 INPUT_TWO
+name1 _TIMES_
+level_no = 2 Immediate son of "return"
+rule 11 
+rule 10 indent0
+rule 1 
+rule 01 
+drawing diagram 
+*---- In exec_draw() Draw_Flag = 0; Hoare_Root_Dummy->level_point = 1134816 ----*
+Drawing the Hoare tree structure in block diagram.(level_no)node->MESSAGE_ONE
+(level_no)node->input_one
+(level_no)node->INTEGER
+(back)node->NL
+(back)node->MESSAGE_TWO
+(level_no)node->input_two
+(level_no)node->INTEGER
+(back)node->NL
+(back)node->return
+(level_no)node->PARALLEL
+(level_no)node->PRODUCER_(INPUT_ONE)
+(back)node->COMSUMER_(INPUT_TWO)
+(level_no)node->MESSAGE_ONE
+(level_no)node->input_one
+(level_no)node->INTEGER
+(back)node->NL
+(back)node->return
+(level_no)node->(INPUT_ONE)_PLUS_('2')
+(level_no)node->MESSAGE_TWO
+(level_no)node->input_two
+(level_no)node->INTEGER
+(back)node->NL
+(back)node->return
+(level_no)node->(INPUT_TWO)_TIMES_('5')
+__(sDP_first) Direct Product return
+sDP -1 1 
+addr1 0xef094000 
+BBinformation of cur node 355 498
+check parameteres 
+sub module _PROCESSOR_COMSMER_
+2check parameteres 
+check parameteres 
+ search  parameter
+initial search->MESSAGE_ONE input_one
+initial search->input_one input_one
+matching in tree 
+matched node name ->input_one
+match in analysis tree 0
+match in analysis tree 0
+match with match node 12<=
+ => Found a corresponding match node for para
+ put the input data to file buffer
+before in file -
+put input data >>
+before enqueue addr2 0xe0e48 
+before enqueue
+ enqueue
+empty
+ after enqueue
+check parameteres 
+sub module _PROCESSOR_COMSMER_
+2check parameteres 
+check parameteres 
+ search  parameter
+initial search->MESSAGE_ONE input_two
+initial search->input_one input_two
+initial search->INTEGER input_two
+initial search->NL input_two
+initial search->MESSAGE_TWO input_two
+initial search->input_two input_two
+matching in tree 
+matched node name ->input_two
+match in analysis tree 0
+match in analysis tree 0
+match with match node 24<=
+ => Found a corresponding match node for para
+ put the input data to file buffer
+before in file -
+put input data >>
+before enqueue addr2 0x12ac20 
+before enqueue
+ enqueue
+not empty
+ after enqueue
+    concurrent  execution    
+destroy_child2parent( 0x166730 ) called by PID 26820 line 701 of fifo.c
+__(sDP_first) Direct Product return
+sDP -1 1 
+addr1 0xef094000 
+BBinformation of cur node 355 498
+check parameteres 
+sub module _PROCESSOR_COMSMER_
+2check parameteres 
+check parameteres 
+ search  parameter
+initial search->MESSAGE_ONE input_one
+initial search->input_one input_one
+matching in tree 
+matched node name ->input_one
+match in analysis tree 0
+match in analysis tree 0
+match with match node 12<=
+ => Found a corresponding match node for para
+ put the input data to file buffer
+before in file -
+put input data >>
+before enqueue addr2 0xe0e48 
+before enqueue
+ enqueue
+empty
+ after enqueue
+check parameteres 
+sub module _PROCESSOR_COMSMER_
+2check parameteres 
+check parameteres 
+ search  parameter
+initial search->MESSAGE_ONE input_two
+initial search->input_one input_two
+initial search->INTEGER input_two
+initial search->NL input_two
+initial search->MESSAGE_TWO input_two
+initial search->input_two input_two
+matching in tree 
+matched node name ->input_two
+match in analysis tree 0
+match in analysis tree 0
+match with match node 24<=
+ => Found a corresponding match node for para
+ put the input data to file buffer
+before in file -
+put input data >>
+before enqueue addr2 0x12ac20 
+before enqueue
+ enqueue
+not empty
+ after enqueue
+    concurrent  execution    
+destroy_child2parent( 0x166730 ) called by PID 26821 line 701 of fifo.c
+ before go to exec 
+__ parallel--Process id= 26821
+before dqueue
+before dqueue
+after dqueue addr1 0xe0e48 and 1
+in file -12
+ len 3 
+exection in file -12
+<=
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+Begin to execute specification.
+Module Title PRODUCER_(MESSAGE_ONE)
+Begin to execute specification.
+Module Title PRODUCER_(MESSAGE_ONE)
+Module Title PRODUCER_(MESSAGE_ONE)
+GO TO ANALYSIS 
+
+
+  ##### THE BEGINNING SUB MODULE 
+
+
+__(sDP_first) Direct Product return
+sDP -1 1 
+check parameteres 
+ search  parameter
+initial search->MESSAGE_ONE input_one
+initial search->input_one input_one
+matching in tree 
+matched node name ->input_one
+match in analysis tree 0
+match in analysis tree 0
+match with match node 12<=
+ => Found a corresponding match node for para
+pointer loc 2
+pointer loc 2
+pointer loc 3
+=====>para_data 2------ '2'
+sep 2 3 4
+sum of  
+sum of  12,122
+
+sum of  12,122
+
+sum of output 12, 2
+paramers 122
+sum of output 12, 2
+sum of output 14 2
+ => Output a string l
+ => Output a string with Literal
+ SUCCEED<< Back to Node 
+__(sDP_succeed) Direct Product return
+sDP w output file ptr 0
+end w output file ptr 0
+FREE DATA (null) 
+FREE DATA 14 
+FREE DATA (null) 
+ after  exec 
+before SUCCEED--2------
+SUCCEED--2------
+In crtical section : pid count 2
+FREE P_CNT  1
+destroy_child2parent( 0x166730 ) called by PID 26821 line 701 of fifo.c
+ before go to exec 
+__ parallel--Process id= 26820
+before dqueue
+before dqueue
+after dqueue addr1 0x12ac20 and 2
+in file -24
+ len 3 
+exection in file -24
+<=
+
+  ##### THE BEGINNING SUB MODULE #####
+
+
+Begin to execute specification.
+Module Title COMSUMER_(MESSAGE_TWO)
+Begin to execute specification.
+Module Title COMSUMER_(MESSAGE_TWO)
+Module Title COMSUMER_(MESSAGE_TWO)
+GO TO ANALYSIS 
+
+
+  ##### THE BEGINNING SUB MODULE 
+
+
+__(sDP_first) Direct Product return
+sDP -1 1 
+check parameteres 
+ search  parameter
+initial search->MESSAGE_TWO input_two
+initial search->input_two input_two
+matching in tree 
+matched node name ->input_two
+match in analysis tree 0
+match in analysis tree 0
+match with match node 24<=
+ => Found a corresponding match node for para
+pointer loc 2
+pointer loc 2
+pointer loc 3
+=====>para_data 5------ '5'
+sep 2 3 4
+sum of  
+sum of  24,245
+
+sum of  24,245
+
+sum of output 24, 5
+paramers 245
+sum of output 24, 5
+sum of output 120 5
+ => Output a string l
+ => Output a string with Literal
+ SUCCEED<< Back to Node 
+__(sDP_succeed) Direct Product return
+sDP w output file ptr 0
+end w output file ptr 0
+FREE DATA (null) 
+FREE DATA 120 
+FREE DATA (null) 
+ after  exec 
+before SUCCEED--2------
+SUCCEED--2------
+In crtical section : pid count 2
+FREE P_CNT  2
+destroy_child2parent( 0x166730 ) called by PID 26820 line 701 of fifo.c
+__(sDP_first) Direct Product return
+sDP -1 1 
+addr1 0xef094000 
+BBinformation of cur node 355 498
+check parameteres 
+sub module _PROCESSOR_COMSMER_
+2check parameteres 
+check parameteres 
+ search  parameter
+initial search->MESSAGE_ONE input_one
+initial search->input_one input_one
+matching in tree 
+matched node name ->input_one
+match in analysis tree 0
+match in analysis tree 0
+match with match node 12<=
+ => Found a corresponding match node for para
+ put the input data to file buffer
+before in file -
+put input data >>
+before enqueue addr2 0xe0e48 
+before enqueue
+ enqueue
+empty
+ after enqueue
+check parameteres 
+sub module _PROCESSOR_COMSMER_
+2check parameteres 
+check parameteres 
+ search  parameter
+initial search->MESSAGE_ONE input_two
+initial search->input_one input_two
+initial search->INTEGER input_two
+initial search->NL input_two
+initial search->MESSAGE_TWO input_two
+initial search->input_two input_two
+matching in tree 
+matched node name ->input_two
+match in analysis tree 0
+match in analysis tree 0
+match with match node 24<=
+ => Found a corresponding match node for para
+ put the input data to file buffer
+before in file -
+put input data >>
+before enqueue addr2 0x12ac20 
+before enqueue
+ enqueue
+not empty
+ after enqueue
+    concurrent  execution    
+__ parent --Process id= 26793
+##parent        waiting###
+##parent        waiting###
+ FINISH  ---- WAITING 
+finish waiting one processor 
+ after  go to exec 
+PACTIVITY --2------
+SUCCEED--------
+before old in file -old in file -12
+24
+ => Output a string with Literal
+information of cur node 355 498
+BEFORE FINISH PARALELL 
+BEFORE FINISH PARALELL 
+ SUCCEED<< Back to Node 
+END PARALLEL
+__(sDP_succeed) Direct Product return
+sDP w output file ptr 0
+end w output file ptr 0
+end of execution proc 
+
+####final file length 0 0
+Shutting down the server line 1207 of exec_rtn1.c
+destroy_child2parent( 0x166730 ) called by PID 26793 line 701 of fifo.c
+destroy_fifos() is blasting the following:
+Shared parent FIFO:
+fd		= 5
+bufsiz	= 4096
+pathname	= "/tmp/fifo.26590.26590"
+semaphore	= 0
+fromstr	= ""
+data_gbuf	= ""
+reply_htab	= 0xEF508
+
+Child FIFOs:
+pid	= 26793
+childstr	= ""
+fd		= 6
+bufsiz	= 4096
+pathname	= "/tmp/fifo.26590.26793"
+data_gbuf	= "(Null)"
+
+destroy_child2parent( 0x10B878 ) called by PID 26590 line 701 of fifo.c
+pid	= 26821
+childstr	= ""
+fd		= 7
+bufsiz	= 4096
+pathname	= "/tmp/fifo.26590.26821"
+data_gbuf	= "(Null)"
+
+destroy_child2parent( 0x135828 ) called by PID 26590 line 701 of fifo.c
+pid	= 26820
+childstr	= ""
+fd		= 8
+bufsiz	= 4096
+pathname	= "/tmp/fifo.26590.26820"
+data_gbuf	= "(Null)"
+
+destroy_child2parent( 0x106FB8 ) called by PID 26590 line 701 of fifo.c

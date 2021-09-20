@@ -1,0 +1,39 @@
+From jem@xpat.postech.ac.kr Thu Jun  2 10:23:11 1994
+Return-Path: <jem@xpat.postech.ac.kr>
+Received: from motsps.sps.mot.com by chdasic (4.1/SMI-4.1)
+	id AA22053; Thu, 2 Jun 94 10:23:09 MST
+Received: by motsps.sps.mot.com (4.1/SMI-4.1/Email-2.1)
+	id AA23547; Thu, 2 Jun 94 10:23:06 MST
+Received: from xpat.postech.ac.kr by spsgate.sps.mot.com (4.1/SMI-4.1/Email 2.1 10/25/93)
+	id AA02887; Thu, 2 Jun 94 10:20:37 MST
+Received: from xpat (localhost [127.0.0.1]) by xpat.postech.ac.kr (8.6.7/8.6.6) with ESMTP id CAA15080 for <franklin@chdasic.sps.mot.com>; Fri, 3 Jun 1994 02:19:20 +0900
+Message-Id: <199406021719.CAA15080@xpat.postech.ac.kr>
+To: franklin@chdasic (Malcolm Franklin)
+Subject: Re: SharedPrint 
+In-Reply-To: Your message of Thu, 02 Jun 1994 10:00:31 MST.
+Mime-Version: 1.0
+Content-Type: text/plain; charset="us-ascii"
+Content-Id: <15074.770577557.1@xpat>
+Date: Fri, 03 Jun 1994 02:19:18 +0900
+From: "John Milburn" <jem@xpat.postech.ac.kr>
+Status: OR
+
+In message <9406021700.AA21631@chdasic> you write:
+
+>In a recent post to comp.sys.hp.apps, you mentioned an HP product called
+>"SharedPrint" to drive a PCL printer.  I am looking for software to print
+>PostScript files on a PCL-3/4 printer (OkiLaser 400).  Can "SharedPrint" do
+>this?  If so, do you have a contact for obtaining it.
+
+SharedPrint is an HP product, and only runs on their computers, as far
+as I know.  It shouldn't have any trouble driving a fully compatible
+PCL-3 or PCL-4 device.
+
+As I mentioned, I'm using it to support printing for about 30 hosts,
+which include macintosh, DOS, and unix machines.
+
+You can contact any HP sale-thing, who should be able to find it.  I
+bought it as part of the 'MPower' multimedia package from HP.
+
+-jem
+

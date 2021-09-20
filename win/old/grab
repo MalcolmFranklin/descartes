@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if [ "${1}" = "" ]
+then
+	echo ${0}: usage \"${0} WINDOW_ID outfile_name\"
+	echo "	" Output will be written to outfilename.gif
+	exit `false`
+fi
+if [ "${2}" = "" ]
+then
+	echo ${0}: usage \"${0} WINDOW_ID outfile_name\"
+	echo "	" Output will be written to outfilename.gif
+	exit `false`
+fi
+
+set -x
+sleep 3 ; xwd -frame -screen -id ${1} -out junk.xwd ; convert junk.xwd ${2}.gif
+rm junk.xwd
+

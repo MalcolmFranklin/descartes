@@ -1,0 +1,4 @@
+#!/bin/csh 
+
+ipcs | awk '/^[qms][ ,	]/{ print "ipcrm -" $1 " " $2 }'
+

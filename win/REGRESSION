@@ -1,0 +1,23 @@
+#!/bin/csh -x
+
+set PLATFORM = `platform`
+
+foreach RCSFILE ( `/bin/ls RCS/*.output,v` )
+	set BASENAME = (`echo $RCSFILE:t |sed -e 's:.output,v::'`)
+	set SPECFILE = ${BASENAME}.des
+	set OUTFILE = ${BASENAME}.output
+	set INFILE = ${BASENAME}.input
+	echo Running $SPECFILE
+	if ( ! -e $SPECFILE ) co $SPECFILE
+	if ( ! -e $INFILE ) co $INFILE
+
+	h4.${PLATFORM} -iconic True -batch True -infile ${SPECFILE}
+
+	echo ----------------------------------------------------------------
+	echo Regression results for $SPECFILE
+	echo ----------------------------------------------------------------
+
+	rcsdiff $OUTFILE
+
+	echo ----------------------------------------------------------------
+end

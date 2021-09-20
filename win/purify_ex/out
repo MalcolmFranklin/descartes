@@ -1,0 +1,111 @@
+Purify'd purifyx  (pid 24534 at Wed Jul 27 14:50:13 1994) 
+Purify 2.1.0 SunOS 4.1, Copyright 1992, 1993 Pure Software Inc.
+For contact information type: "purify -help"
+Purify licensed to Motorola Inc.
+
+****  Purify'd purifyx  (pid 24534)  ****
+Purify (umr): uninitialized memory read:
+  * This is occurring while in:
+	strcpy       [p9.o, pc=0xce6c]
+	umr_and_free [line 7, purifyx.c, pc=0x22cf4]
+	main         [line 19, purifyx.c, pc=0x22d84]
+	start        [crt0.o, pc=0x2064]
+  * Reading 1 byte from 0xcd7c8 in the heap.
+  * This is at the beginning of a malloc'd block of 2 bytes.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	main         [line 13, purifyx.c, pc=0x22d4c]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd purifyx  (pid 24534)  ****
+Purify (fmr): free memory read:
+  * This is occurring while in:
+	main         [line 20, purifyx.c, pc=0x22d98]
+	start        [crt0.o, pc=0x2064]
+  * Reading 1 byte from 0xcd810 in the heap.
+  * This is at the beginning of a freed block of 2 bytes.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	main         [line 14, purifyx.c, pc=0x22d64]
+	start        [crt0.o, pc=0x2064]
+  * There have been 0 frees since this block was freed from:
+	free         [p6.o, pc=0x48e0]
+	umr_and_free [line 8, purifyx.c, pc=0x22cfc]
+	main         [line 19, purifyx.c, pc=0x22d84]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd purifyx  (pid 24534)  ****
+Purify (fmw): free memory write:
+  * This is occurring while in:
+	main         [line 21, purifyx.c, pc=0x22ddc]
+	start        [crt0.o, pc=0x2064]
+  * Writing 1 byte to 0xcd810 in the heap.
+  * This is at the beginning of a freed block of 2 bytes.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	main         [line 14, purifyx.c, pc=0x22d64]
+	start        [crt0.o, pc=0x2064]
+  * There have been 0 frees since this block was freed from:
+	free         [p6.o, pc=0x48e0]
+	umr_and_free [line 8, purifyx.c, pc=0x22cfc]
+	main         [line 19, purifyx.c, pc=0x22d84]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd purifyx  (pid 24534)  ****
+Purify (abw): array bounds write:
+  * This is occurring while in:
+	main         [line 25, purifyx.c, pc=0x22e64]
+	start        [crt0.o, pc=0x2064]
+  * Writing 1 byte to 0xcd7ca in the heap.
+  * This is 1 byte past end of a malloc'd block at 0xcd7c8 of 2 bytes.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	main         [line 13, purifyx.c, pc=0x22d4c]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd purifyx  (pid 24534)  ****
+Purify (abr): array bounds read:
+  * This is occurring while in:
+	main         [line 26, purifyx.c, pc=0x22ea0]
+	start        [crt0.o, pc=0x2064]
+  * Reading 1 byte from 0xcd7ca in the heap.
+  * This is 1 byte past end of a malloc'd block at 0xcd7c8 of 2 bytes.
+  * This block was allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	main         [line 13, purifyx.c, pc=0x22d4c]
+	start        [crt0.o, pc=0x2064]
+
+****  Purify'd purifyx  (pid 24534)  ****
+Purify: Searching for all memory leaks...
+
+There are 2 leaked bytes (100% of the 2 allocated bytes in the heap)
+
+Purify (mlk): 2 bytes at 0xcd7c8 lost, allocated from:
+	malloc       [p6.o, pc=0x46d4]
+	main         [line 13, purifyx.c, pc=0x22d4c]
+	start        [crt0.o, pc=0x2064]
+
+
+Purify Heap Analysis (combining suppressed and unsuppressed chunks)
+
+                         Chunks      Bytes
+              Leaked          1          2
+  Potentially Leaked          0          0
+              In-Use          0          0
+  ----------------------------------------
+     Total Allocated          1          2
+
+****  Purify'd purifyx  (pid 24534)  ****
+  * 5 access errors.
+  * Basic memory usage:
+      278520 code
+      551712 data/bss
+       16392 heap
+        2408 stack
+  * Shared library memory usage:
+      696320 libc_pure_210.so.1.9	(shared code)
+       16384 libc_pure_210.so.1.9	(private data)
+        8192 libinternal_stubs.so.1.0	(shared code)
+        8192 libinternal_stubs.so.1.0	(private data)
+
+

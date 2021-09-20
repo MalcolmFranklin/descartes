@@ -1,0 +1,30 @@
+   total    blank lines w/   nb, nc    semi- preproc. file
+   lines    lines comments    lines   colons  direct.
+--------+--------+--------+--------+--------+--------+----
+    1521      213      276     1071      549       22 add_window.c
+      57        7       35       15       12        3 add_window.h
+     177       11       30      136       34        5 cursor.c
+    2760      376      678     1794      926       26 events.c
+      87        9       35       43       39        4 events.h
+      93       14       49       30       31        4 gc.c
+      44        5       35        4        1        3 gc.h
+     769      106      155      511      305       20 iconmgr.c
+      89        8       39       52       45        3 iconmgr.h
+     584       70       60      459      240       11 icons.c
+      52        5       30       18       11        3 icons.h
+     234       23      103      112       71        4 list.c
+      51        7       35        9        6        3 list.h
+    2960      451      397     2147     1151       21 menus.c
+     154       18       80      101       74       19 menus.h
+    1071      140      127      822      334       75 parse.c
+     110        8       35       67        4       63 parse.h
+    1189      127      297      787      458       21 resize.c
+      53        6       35       12        9        3 resize.h
+     261       24      182      203      182       14 screen.h
+     834      112      147      624      462       20 twm.c
+     363       48      138      268      165       77 twm.h
+     893      103      175      630      337       19 util.c
+      51        6       35       10        7        3 util.h
+      29        2       26        1        1        0 version.c
+      43        4       35        4        1        3 version.h
+   14529     1903     3269     9930     5455      449 total
